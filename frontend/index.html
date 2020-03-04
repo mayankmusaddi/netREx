@@ -83,7 +83,7 @@
 
 								<!-- Break -->
 								<div class="12u$">
-									<textarea name="query" id="message" placeholder="Enter Query Gene List" rows="6" class="query"></textarea>
+									<textarea name="genes" id="message" placeholder="Enter Query Gene List" rows="6" class="genes"></textarea>
 								</div>
 								<!-- Break -->
 								<div class="12u$">
@@ -128,14 +128,8 @@
 				$('#example').click(()=>{
 					$("#condition").val('1');
 					$("#tissue-root").attr('checked', true).trigger('click');
-					$('textarea.query').val('Os02g0255500,Os01g0285300,Os06g0644200,Os03g0437200,Os10g0575000,Os12g0586000,Os06g0211200,Os02g0766700,Os09g0456200,Os08g0472000,Os02g0776400,Os03g0316200,Os07g0687900,Os05g0528000,Os11g0177400,Os05g0537400,Os01g0583100,Os07g0164900,Os10g0457600,Os04g0209200,Os12g0617400,Os03g0645900,Os07g0154100,Os01g0385400,Os02g0526400,Os01g0165000,Os01g0615100,Os03g0125100,Os03g0128700,Os05g0595100,Os11g0113700');
+					$('textarea.genes').val('Os02g0255500,Os01g0285300,Os06g0644200,Os03g0437200,Os10g0575000,Os12g0586000,Os06g0211200,Os02g0766700,Os09g0456200,Os08g0472000,Os02g0776400,Os03g0316200,Os07g0687900,Os05g0528000,Os11g0177400,Os05g0537400,Os01g0583100,Os07g0164900,Os10g0457600,Os04g0209200,Os12g0617400,Os03g0645900,Os07g0154100,Os01g0385400,Os02g0526400,Os01g0165000,Os01g0615100,Os03g0125100,Os03g0128700,Os05g0595100,Os11g0113700');
 				});
-
-				// $('form').submit(()=>{
-				// 	console.log("submitted");
-				// 	console.log($(this).serialize());
-				// 	alert("Submitted");
-				// })
 			});
 			</script>
 

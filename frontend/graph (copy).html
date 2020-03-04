@@ -1,8 +1,8 @@
 <!-- Import Sigma JS -->
-<script src="./sigma/sigma.min.js"></script>
-<script src="./sigma/sigma.layout.forceAtlas2.min.js"></script>
-<script src="./sigma/sigma.parsers.json.min.js"></script>
-<script src="./sigma/sigma.plugins.filter.js"></script>
+<script src="../sigma/sigma.min.js"></script>
+<script src="../sigma/sigma.layout.forceAtlas2.min.js"></script>
+<script src="../sigma/sigma.parsers.json.min.js"></script>
+<script src="../sigma/sigma.plugins.filter.js"></script>
 
 <!-- Add some CSS so we can see the graph! -->
 <style>
@@ -19,22 +19,27 @@
 
 <!-- A placeholder for the graph -->
 <div id="network-graph"></div>
-
 <body></body>
 
+<!-- The most basic usage of the Sigma JSON parser -->
 <script>
+  
 
-s = new sigma({ 
-    graph: data,
-    container: 'network-graph',
-    renderer: {
-    container: document.getElementById('network-graph'),
-    type: sigma.renderers.canvas
-  }
-    // settings: {
-    //     defaultNodeColor: '#ec5148'
-    // }
-});
+// var data = JSON.parse("./data/data.json");
+// let data = require('./data/data.json');
+
+// console.log(data);
+// s = new sigma({ 
+//         graph: data,
+//         container: 'network-graph',
+//         // settings: {
+//         //     defaultNodeColor: '#ec5148'
+//         // }
+// });
+
+// var fdata = data.filter(function(d){
+//   return d.nodes.label == "";
+// });
 
 // Add a method to the graph model that returns an
 // object with every neighbors of a node inside:
@@ -49,13 +54,34 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
   return neighbors;
 });
 
-filter = new sigma.plugins.filter(s);
-var selectedNode;
+// sigma.parsers.json( "/json/drought.json",
+sigma.parsers.json( "/json/data.json",
 
-var edges = s.graph.edges(); 
-for (var i = 0; i < edges.length; i += 1){
+{container: 'network-graph',renderer: {
+  container: document.getElementById('network-graph'),
+  type: sigma.renderers.canvas
+}},
+
+
+function(s) { //This function is passed an instance of Sigma s
+  filter = new sigma.plugins.filter(s);
+
+  // nodeId = parseInt(getParameterByName('node_id'));
+  var selectedNode;
+  // s.graph.nodes().forEach(function(node, i, a) {
+    // console.log(node);
+    // if (node.id == nodeId) {
+      // selectedNode = node;
+      // return;
+    // }
+  // });
+
+  var edges = s.graph.edges(); 
+  //Using for loopx
+  for (var i = 0; i < edges.length; i += 1){
+    // console.log(edges[i])
     edges[i].type = 'curve';
-}
+  }
 
   // filter
   // .nodesBy(function(n) {
@@ -130,10 +156,8 @@ for (var i = 0; i < edges.length; i += 1){
       node.x = Math.cos(Math.PI * 2 * i / a.length);
       node.y = Math.sin(Math.PI * 2 * i / a.length);
     });
-
     //Call refresh to render the new graph
     s.refresh();
-
     s.startForceAtlas2();
     setTimeout(function () {
       console.log('stopping')
@@ -141,8 +165,9 @@ for (var i = 0; i < edges.length; i += 1){
       }, 4000);
 
       console.log(data);
-
     if (selectedNode != undefined){
       s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
     }
+  }
+  );
 </script>

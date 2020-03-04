@@ -1,0 +1,17 @@
+{
+  "name": "netrex",
+  "version": "1.0.0",
+  "description": "Graphical Visualisation of Rice Gene Expression Data",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Musaddi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "new-line": "^1.1.1"
+  }
+}

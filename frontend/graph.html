@@ -42,9 +42,10 @@ s = new sigma({
     renderer: {
     container: document.getElementById('network-graph'),
     type: sigma.renderers.canvas
-  }
+    },
     // settings: {
-    //     defaultNodeColor: '#ec5148'
+    //     defaultNodeColor: '#ec5148',
+    //     defaultEdgeType: 'curve',
     // }
 });
 
@@ -55,18 +56,6 @@ var edges = s.graph.edges();
 for (var i = 0; i < edges.length; i += 1){
     edges[i].type = 'curve';
 }
-// filter
-// .edgesBy(function(e) {
-//   return e.size <= 50;
-// }, 'query')
-// .apply();
-
-// filter
-// .nodesBy(function(n) {
-//   return this.degree(n.id) >= 70;
-// }, 'query2')
-// .apply();
-
 
 // We first need to save the original colors of our
 // nodes and edges, like this:
@@ -107,6 +96,7 @@ s.bind('overNode', function(e) {
   s.graph.edges().forEach(function(e) {
     e.color = e.originalColor;
   });
+
 });
 
 
@@ -125,7 +115,7 @@ setTimeout(
     console.log('stopping');
     s.stopForceAtlas2();
   }, 
-  2000);
+  1000);
 
 console.log(data);
 

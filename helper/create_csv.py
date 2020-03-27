@@ -1,5 +1,6 @@
 def create_csv(filename):
     f = open(filename+".txt","r")
+    
     w = open(filename+".csv","w+")
     label = {}
     w.write("id,Label\n")
@@ -22,6 +23,7 @@ def create_csv(filename):
 
 def create_csv2(filename):
     f = open(filename+"_.csv","r")
+
     w = open(filename+".csv","w+")
     label = {}
     w.write("id,Label\n")
@@ -44,4 +46,4 @@ def create_csv2(filename):
 
 if __name__=="__main__":
     # create_csv("black")
-    create_csv2("drought")
+    create_csv("drought")

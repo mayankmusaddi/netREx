@@ -5,6 +5,7 @@ const path = require('path');
 app.use(express.static('frontend'));
 app.use(express.urlencoded({ extended: false }));
 
+// for transfering data to frontend
 const Transform = require('stream').Transform;
 const fs = require('fs');
 const parser = new Transform();
@@ -30,12 +31,7 @@ app.use('/graph', (req, res) => {
     ids = getIds(nodes);
     const edges = droughtFile.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
 
-    // console.log("nodes are : " + JSON.stringify(queryNodes));
-    // console.log("edges are : " + JSON.stringify(queryEdges));
-
     var graph = {nodes,edges};
-    // var data = {"nodes":[{"label":"Os02g0255500","x":-4931.6689453125,"y":-5871.0087890625,"id":"849","attributes":{},"color":"rgb(251,107,179)","size":15.35714340209961},{"label":"Os03g0125100","x":2569.989501953125,"y":1035.5997314453125,"id":"1968","attributes":{},"color":"rgb(186,33,129)","size":32.207794189453125},{"label":"Os05g0595100","x":1072.404541015625,"y":-264.5103454589844,"id":"1832","attributes":{},"color":"rgb(191,35,130)","size":31.623376846313477},{"label":"Os05g0537400","x":1179.7547607421875,"y":-1118.58837890625,"id":"530","attributes":{},"color":"rgb(235,57,138)","size":26.363636016845703},{"label":"Os06g0211200","x":1050.8961181640625,"y":-1478.802978515625,"id":"1946","attributes":{},"color":"rgb(250,96,169)","size":17.792207717895508},{"label":"Os06g0644200","x":851.94287109375,"y":1938.9376220703125,"id":"767","attributes":{},"color":"rgb(250,99,172)","size":17.01298713684082},{"label":"Os03g0128700","x":-140.12554931640625,"y":1478.4541015625,"id":"2488","attributes":{},"color":"rgb(250,93,166)","size":18.376625061035156},{"label":"Os01g0385400","x":1854.7205810546875,"y":-1500.9466552734375,"id":"578","attributes":{},"color":"rgb(250,101,174)","size":16.623376846313477},{"label":"Os03g0316200","x":2596.373779296875,"y":68.50589752197266,"id":"402","attributes":{},"color":"rgb(195,37,131)","size":31.136363983154297},{"label":"Os05g0528000","x":3226.343994140625,"y":2470.477783203125,"id":"1698","attributes":{},"color":"rgb(252,112,183)","size":14.285715103149414},{"label":"Os01g0583100","x":2236.453125,"y":-402.72607421875,"id":"401","attributes":{},"color":"rgb(200,40,132)","size":30.55194664001465},{"label":"Os07g0687900","x":2450.542724609375,"y":331.40826416015625,"id":"741","attributes":{},"color":"rgb(201,40,132)","size":30.454545974731445},{"label":"Os10g0575000","x":-311.5296325683594,"y":3147.80615234375,"id":"579","attributes":{},"color":"rgb(250,95,168)","size":17.889610290527344},{"label":"Os12g0617400","x":1871.71923828125,"y":-373.4381408691406,"id":"1657","attributes":{},"color":"rgb(247,69,145)","size":23.53896141052246},{"label":"Os09g0456200","x":4178.32080078125,"y":469.55535888671875,"id":"130","attributes":{},"color":"rgb(252,112,183)","size":14.188312530517578},{"label":"Os01g0615100","x":-1201.6790771484375,"y":2084.091796875,"id":"1411","attributes":{},"color":"rgb(248,75,151)","size":22.272727966308594},{"label":"Os07g0154100","x":2755.5634765625,"y":816.5668334960938,"id":"343","attributes":{},"color":"rgb(165,22,126)","size":34.83766174316406},{"label":"Os11g0177400","x":307.69537353515625,"y":-1182.7978515625,"id":"2072","attributes":{},"color":"rgb(250,101,174)","size":16.623376846313477},{"label":"Os03g0645900","x":3085.723876953125,"y":1615.3533935546875,"id":"2586","attributes":{},"color":"rgb(165,22,126)","size":34.83766174316406},{"label":"Os03g0437200","x":444.89654541015625,"y":2747.210205078125,"id":"1253","attributes":{},"color":"rgb(247,71,147)","size":23.246753692626953},{"label":"Os04g0209200","x":-1067.8690185546875,"y":1613.6304931640625,"id":"2400","attributes":{},"color":"rgb(250,96,169)","size":17.694805145263672},{"label":"Os08g0472000","x":809.3718872070312,"y":-1044.866943359375,"id":"2870","attributes":{},"color":"rgb(248,78,153)","size":21.59090805053711},{"label":"Os11g0113700","x":-5160.6083984375,"y":-2642.437255859375,"id":"452","attributes":{},"color":"rgb(253,127,197)","size":10.97402572631836},{"label":"Os02g0776400","x":-4804.05126953125,"y":-5898.78173828125,"id":"652","attributes":{},"color":"rgb(250,96,169)","size":17.792207717895508},{"label":"Os02g0766700","x":2363.678466796875,"y":-207.0554962158203,"id":"777","attributes":{},"color":"rgb(199,39,131)","size":30.74675178527832},{"label":"Os02g0526400","x":85.67914581298828,"y":245.30227661132812,"id":"2018","attributes":{},"color":"rgb(215,47,134)","size":28.798702239990234},{"label":"Os07g0164900","x":1105.2535400390625,"y":2693.407470703125,"id":"1152","attributes":{},"color":"rgb(250,98,171)","size":17.305194854736328},{"label":"Os01g0165000","x":-641.8411865234375,"y":395.7676696777344,"id":"2553","attributes":{},"color":"rgb(247,71,147)","size":23.246753692626953},{"label":"Os10g0457600","x":684.1773071289062,"y":2744.2138671875,"id":"1182","attributes":{},"color":"rgb(214,46,134)","size":28.896102905273438},{"label":"Os01g0285300","x":-3539.56982421875,"y":-4724.373046875,"id":"61","attributes":{},"color":"rgb(252,119,189)","size":12.727272987365723},{"label":"Os12g0586000","x":-913.8814697265625,"y":2352.77685546875,"id":"134","attributes":{},"color":"rgb(248,80,155)","size":21.103897094726562}],"edges":[{"source":"741","target":"777","id":"62543","attributes":{"pcc":"0.886380123562338","k":"14"},"color":"rgb(167,23,126)","size":1},{"source":"343","target":"777","id":"32271","attributes":{"pcc":"0.915625661107838","k":"7"},"color":"rgb(155,17,124)","size":1},{"source":"2018","target":"2488","id":"121592","attributes":{"pcc":"0.834301444344551","k":"12"},"color":"rgb(190,34,130)","size":1},{"source":"777","target":"1832","id":"64815","attributes":{"pcc":"0.857300985002465","k":"37"},"color":"rgb(180,29,128)","size":1},{"source":"343","target":"741","id":"32267","attributes":{"pcc":"0.912092798841897","k":"8"},"color":"rgb(156,18,124)","size":1},{"source":"652","target":"849","id":"56064","attributes":{"pcc":"0.779260388592483","k":"77"},"color":"rgb(213,46,134)","size":1},{"source":"343","target":"401","id":"32233","attributes":{"pcc":"0.878399888867055","k":"23"},"color":"rgb(171,25,127)","size":1},{"source":"401","target":"741","id":"37108","attributes":{"pcc":"0.881379662320583","k":"19"},"color":"rgb(169,24,127)","size":1},{"source":"777","target":"1968","id":"64820","attributes":{"pcc":"0.886274607072246","k":"13"},"color":"rgb(167,23,126)","size":1},{"source":"1832","target":"2018","id":"115683","attributes":{"pcc":"0.897107345359258","k":"9"},"color":"rgb(163,21,125)","size":1},{"source":"343","target":"1968","id":"32371","attributes":{"pcc":"0.931705987570037","k":"1"},"color":"rgb(148,13,123)","size":1},{"source":"741","target":"1832","id":"62626","attributes":{"pcc":"0.831907727688835","k":"71"},"color":"rgb(191,35,130)","size":1},{"source":"401","target":"777","id":"37113","attributes":{"pcc":"0.976719027693611","k":"1"},"color":"rgb(128,4,120)","size":1},{"source":"530","target":"1657","id":"47339","attributes":{"pcc":"0.808574675017769","k":"24"},"color":"rgb(201,40,132)","size":1},{"source":"402","target":"2586","id":"37441","attributes":{"pcc":"0.840816553350368","k":"56"},"color":"rgb(187,33,129)","size":1},{"source":"530","target":"2018","id":"47359","attributes":{"pcc":"0.843479382590958","k":"57"},"color":"rgb(186,32,129)","size":1},{"source":"1832","target":"2870","id":"115741","attributes":{"pcc":"0.858881516791309","k":"20"},"color":"rgb(179,29,128)","size":1},{"source":"530","target":"777","id":"47288","attributes":{"pcc":"0.818932612021093","k":"81"},"color":"rgb(196,38,131)","size":1},{"source":"134","target":"1411","id":"15543","attributes":{"pcc":"0.862565876032641","k":"40"},"color":"rgb(177,28,128)","size":1},{"source":"777","target":"1657","id":"64805","attributes":{"pcc":"0.800994431211567","k":"39"},"color":"rgb(204,41,132)","size":1},{"source":"401","target":"1657","id":"37187","attributes":{"pcc":"0.802440786843181","k":"35"},"color":"rgb(203,41,132)","size":1},{"source":"1152","target":"1253","id":"86565","attributes":{"pcc":"0.624627203697094","k":"57"},"color":"rgb(248,81,156)","size":1},{"source":"401","target":"402","id":"37081","attributes":{"pcc":"0.912942201531246","k":"9"},"color":"rgb(156,17,124)","size":1},{"source":"402","target":"741","id":"37301","attributes":{"pcc":"0.92853845320555","k":"5"},"color":"rgb(149,14,123)","size":1},{"source":"401","target":"530","id":"37095","attributes":{"pcc":"0.86876990088317","k":"29"},"color":"rgb(175,27,127)","size":1},{"source":"530","target":"1946","id":"47355","attributes":{"pcc":"0.805664405004922","k":"68"},"color":"rgb(202,40,132)","size":1},{"source":"579","target":"1253","id":"50958","attributes":{"pcc":"0.819831930674658","k":"11"},"color":"rgb(196,37,131)","size":1},{"source":"402","target":"777","id":"37304","attributes":{"pcc":"0.931776364311713","k":"4"},"color":"rgb(148,13,123)","size":1},{"source":"1657","target":"2072","id":"109848","attributes":{"pcc":"0.749625603115581","k":"52"},"color":"rgb(226,52,136)","size":1},{"source":"2018","target":"2553","id":"121595","attributes":{"pcc":"0.890340321598403","k":"13"},"color":"rgb(165,22,126)","size":1},{"source":"741","target":"1968","id":"62633","attributes":{"pcc":"0.847362884714393","k":"44"},"color":"rgb(184,31,129)","size":1},{"source":"343","target":"2586","id":"32425","attributes":{"pcc":"0.926591905095473","k":"4"},"color":"rgb(150,15,123)","size":1},{"source":"343","target":"402","id":"32234","attributes":{"pcc":"0.934054526072023","k":"2"},"color":"rgb(147,13,123)","size":1},{"source":"530","target":"1832","id":"47348","attributes":{"pcc":"0.881728390083112","k":"20"},"color":"rgb(169,24,127)","size":1},{"source":"1152","target":"1182","id":"86562","attributes":{"pcc":"0.671119959068051","k":"25"},"color":"rgb(247,70,146)","size":1},{"source":"741","target":"2586","id":"62674","attributes":{"pcc":"0.821761162623328","k":"82"},"color":"rgb(195,37,131)","size":1},{"source":"402","target":"1968","id":"37395","attributes":{"pcc":"0.899331254566191","k":"7"},"color":"rgb(162,20,125)","size":1},{"source":"1946","target":"2870","id":"119458","attributes":{"pcc":"0.830979562251513","k":"38"},"color":"rgb(191,35,130)","size":1},{"source":"402","target":"1832","id":"37389","attributes":{"pcc":"0.831775270801342","k":"72"},"color":"rgb(191,35,130)","size":1},{"source":"530","target":"2870","id":"47404","attributes":{"pcc":"0.866711977148419","k":"17"},"color":"rgb(176,27,128)","size":1},{"source":"401","target":"1832","id":"37197","attributes":{"pcc":"0.883420979971358","k":"16"},"color":"rgb(168,24,126)","size":1},{"source":"401","target":"1968","id":"37203","attributes":{"pcc":"0.864922458525489","k":"25"},"color":"rgb(176,28,128)","size":1},{"source":"1182","target":"1253","id":"87994","attributes":{"pcc":"0.791762365109016","k":"73"},"color":"rgb(208,43,133)","size":1},{"source":"1657","target":"1832","id":"109837","attributes":{"pcc":"0.774945719100092","k":"61"},"color":"rgb(215,47,134)","size":1},{"source":"1968","target":"2586","id":"120078","attributes":{"pcc":"0.909714380539768","k":"4"},"color":"rgb(157,18,124)","size":1}]}
-    // console.log(JSON.stringify(graph));
 
     parser._transform = function(data, encoding, done) {
         const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
@@ -51,6 +47,49 @@ app.use('/graph', (req, res) => {
     .on('end', () => {
         res.write('\n<!-- End stream -->')
     }).pipe(res);
+
+});
+
+app.use('/graph1', (req, res) => {
+    var query = req.body;
+    console.log("Query2: "+JSON.stringify(query));
+
+    const query_nodes = droughtFile.nodes.filter(d => query.genes.includes(d.label));
+    query_ids = getIds(query_nodes);
+    const node_edges = droughtFile.edges.filter(d => query_ids.includes(d.source) || query_ids.includes(d.target));
+    
+    neighbor_ids = [];
+    for (var i = 0; i < node_edges.length; i++ ) {
+        if(!query_ids.includes(node_edges[i].source))
+            neighbor_ids.push(node_edges[i].source);
+        if(!query_ids.includes(node_edges[i].target))
+            neighbor_ids.push(node_edges[i].target);
+    }
+
+    const neighbour_nodes = droughtFile.nodes.filter(d => neighbor_ids.includes(d.id));
+    neighbour_nodes.sort((a, b) => a.attributes.rank - b.attributes.rank);
+    neighbour_nodes.length = 100;
+
+    var nodes = query_nodes.concat(neighbour_nodes);
+    ids = getIds(nodes);
+    const edges = droughtFile.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
+    var graph = {nodes,edges};
+
+    parser._transform = function(data, encoding, done) {
+        const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
+        this.push(str);
+        done();
+    };
+
+    res.write('<!-- Begin stream -->\n');
+    fs
+    .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
+    .pipe(newLineStream())
+    .pipe(parser)
+    .on('end', () => {
+        res.write('\n<!-- End stream -->')
+    }).pipe(res);
+
 });
 
 app.listen(3000, function(){

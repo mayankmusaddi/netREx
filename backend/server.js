@@ -5,6 +5,10 @@ const path = require('path');
 app.use(express.static('frontend'));
 app.use(express.urlencoded({ extended: false }));
 
+// view engine setup
+app.set('views', path.join(__dirname, '/../frontend'));
+app.set('view engine', 'pug');
+
 // for transfering data to frontend
 const Transform = require('stream').Transform;
 const fs = require('fs');
@@ -32,21 +36,22 @@ app.use('/graph', (req, res) => {
     const edges = droughtFile.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
 
     var graph = {nodes,edges};
+    res.render('graph',{data: graph});
 
-    parser._transform = function(data, encoding, done) {
-        const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
-        this.push(str);
-        done();
-    };
+    // parser._transform = function(data, encoding, done) {
+    //     const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
+    //     this.push(str);
+    //     done();
+    // };
 
-    res.write('<!-- Begin stream -->\n');
-    fs
-    .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-    .pipe(newLineStream())
-    .pipe(parser)
-    .on('end', () => {
-        res.write('\n<!-- End stream -->')
-    }).pipe(res);
+    // res.write('<!-- Begin stream -->\n');
+    // fs
+    // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
+    // .pipe(newLineStream())
+    // .pipe(parser)
+    // .on('end', () => {
+    //     res.write('\n<!-- End stream -->')
+    // }).pipe(res);
 
 });
 

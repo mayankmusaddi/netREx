@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require('path');
+const url = require('url');
 
 app.use(express.static('frontend'));
 app.use(express.urlencoded({ extended: false }));
@@ -9,13 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, '/../frontend'));
 app.set('view engine', 'pug');
 
-// for transfering data to frontend
-const Transform = require('stream').Transform;
-const fs = require('fs');
-const parser = new Transform();
-const newLineStream = require('new-line');
-
-let droughtFile = require('../frontend/json/drought.json');
+let droughtFile = require('../frontend/json/drought_full.json');
 
 // Note: The includes method is not supported in Edge 13 (and earlier versions).
 
@@ -27,37 +22,52 @@ function getIds(nodes) {
     return ids;
 };
 
-app.use('/graph', (req, res) => {
+function initTF(nodes) {
+    for (var i=0; i<nodes.length; i++) {
+        nodes[i].type = 'circle';
+        if ("tf" in nodes[i].attributes) {
+            nodes[i].type = 'equilateral';
+            nodes[i].equilateral = {numPoints : 3};
+        }
+    }
+};
+
+function initNeighbour(nodes) {
+    console.log("get executed");
+    for (var i=0; i<nodes.length; i++) {
+        if(nodes[i].attributes.neighbor!="true"){
+            nodes[i].size = 70;
+            nodes[i].borderColor = 'red';
+        }
+    }
+};
+
+app.use('/network', (req, res) => {
     var query = req.body;
     console.log("Query: "+JSON.stringify(query));
 
+    if(query.neighbor=="on")
+        res.redirect(307,'/neighborhood_network');
+    else
+        res.redirect(307,'/simple_network');
+
+
+});
+
+app.use('/simple_network', (req, res) => {
+    var query = req.body;
+
     const nodes = droughtFile.nodes.filter(d => query.genes.includes(d.label));
     ids = getIds(nodes);
+    initTF(nodes);
     const edges = droughtFile.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
 
     var graph = {nodes,edges};
     res.render('graph',{data: graph});
-
-    // parser._transform = function(data, encoding, done) {
-    //     const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
-    //     this.push(str);
-    //     done();
-    // };
-
-    // res.write('<!-- Begin stream -->\n');
-    // fs
-    // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-    // .pipe(newLineStream())
-    // .pipe(parser)
-    // .on('end', () => {
-    //     res.write('\n<!-- End stream -->')
-    // }).pipe(res);
-
 });
 
-app.use('/graph1', (req, res) => {
+app.use('/neighborhood_network', (req, res) => {
     var query = req.body;
-    console.log("Query2: "+JSON.stringify(query));
 
     const query_nodes = droughtFile.nodes.filter(d => query.genes.includes(d.label));
     query_ids = getIds(query_nodes);
@@ -75,26 +85,19 @@ app.use('/graph1', (req, res) => {
     neighbour_nodes.sort((a, b) => a.attributes.rank - b.attributes.rank);
     neighbour_nodes.length = 100;
 
+    for (var i=0; i < neighbour_nodes.length;i++ ) {
+        neighbour_nodes[i].attributes.neighbor = "true";
+    }
+
     var nodes = query_nodes.concat(neighbour_nodes);
     ids = getIds(nodes);
+    initTF(nodes);
+    initNeighbour(nodes);
+
     const edges = droughtFile.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
     var graph = {nodes,edges};
 
-    parser._transform = function(data, encoding, done) {
-        const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
-        this.push(str);
-        done();
-    };
-
-    res.write('<!-- Begin stream -->\n');
-    fs
-    .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-    .pipe(newLineStream())
-    .pipe(parser)
-    .on('end', () => {
-        res.write('\n<!-- End stream -->')
-    }).pipe(res);
-
+    res.render('graph',{data: graph});
 });
 
 app.listen(3000, function(){

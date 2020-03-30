@@ -51,7 +51,7 @@
 					<p> Aenean iaculis, neque sed pretium egestas, nunc lacus tempus enim, nec tincidunt urna massa a libero. Aenean mattis bibendum est, a pharetra elit. Morbi commodo lectus quis blandit mattis. Cras pharetra quam quis tincidunt tempus. Donec a sem magna. Nullam purus purus, fermentum id lorem sit amet, porta elementum neque. Proin vulputate metus ac faucibus luctus.</p>
 					<p>Ut congue purus sed elit consectetur tempus. Duis convallis, quam quis pellentesque vestibulum, tellus arcu hendrerit ante, sed dictum felis nisl vitae magna. Integer et sapien a erat molestie tempor. Cras est odio, suscipit id porttitor id, mollis et ligula. Curabitur molestie mi molestie accumsan faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer porta malesuada pellentesque. Morbi imperdiet dictum velit, eu volutpat sem posuere non. Fusce ullamcorper gravida velit, sed sollicitudin libero iaculis id. Ut eu neque non odio fringilla faucibus nec quis neque. Quisque et nisi fermentum, tincidunt libero a, condimentum ligula. Quisque ultrices blandit lacinia. Nulla velit lorem, placerat nec eros ut, fermentum pharetra dolor. Maecenas arcu ipsum, mattis et suscipit sed, convallis nec lectus. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; </p> -->
 					<h3>Network Viewer</h3>
-						<form action="/graph" method="POST">
+						<form action="/network" method="POST">
 						<!-- <form id="formsubmit" action=""> -->
 							<div class="row uniform">
 								<!-- Break -->
@@ -84,6 +84,11 @@
 								<!-- Break -->
 								<div class="12u$">
 									<textarea name="genes" id="message" placeholder="Enter Query Gene List" rows="6" class="genes"></textarea>
+								</div>
+								<!-- Break -->
+								<div class="6u 12u$(small)">
+									<input type="checkbox" id="neighbor" name="neighbor">
+									<label for="neighbor">Show top 100 neighbours of the queried genes</label>
 								</div>
 								<!-- Break -->
 								<div class="12u$">
@@ -129,6 +134,7 @@
 					$("#condition").val('1');
 					$("#tissue-root").attr('checked', true).trigger('click');
 					$('textarea.genes').val('Os02g0255500,Os01g0285300,Os06g0644200,Os03g0437200,Os10g0575000,Os12g0586000,Os06g0211200,Os02g0766700,Os09g0456200,Os08g0472000,Os02g0776400,Os03g0316200,Os07g0687900,Os05g0528000,Os11g0177400,Os05g0537400,Os01g0583100,Os07g0164900,Os10g0457600,Os04g0209200,Os12g0617400,Os03g0645900,Os07g0154100,Os01g0385400,Os02g0526400,Os01g0165000,Os01g0615100,Os03g0125100,Os03g0128700,Os05g0595100,Os11g0113700');
+					$('#neighbor').prop('checked', false);
 				});
 			});
 			</script>

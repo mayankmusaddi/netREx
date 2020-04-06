@@ -2,6 +2,13 @@
 html
   head
     meta(charset='utf-8')
+    link(rel='stylesheet', href='assets/css/main.css')
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.scrolly.min.js')
+    script(src='assets/js/skel.min.js')
+    script(src='assets/js/util.js')
+    script(src='assets/js/main.js')
+
     script(src='./sigma/sigma.min.js')
     script(src='./sigma/sigma.layout.forceAtlas2.min.js')
     script(src='./sigma/sigma.plugins.filter.js')
@@ -12,20 +19,76 @@ html
 
     // Add some CSS so we can see the graph!
     style.
+      * {
+        box-sizing: border-box;
+      }
+      .options {
+        width: 25%;
+        height: 85vh;
+        float: left;
+        padding: 15px;
+        margin: 0px;
+        border: 1px solid red;
+      }
+      .view {
+        width: 75%;
+        float: left;
+        padding: 15px;
+        border: 1px solid red;
+      }
       #network-graph {
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: fixed;
+        height: 85vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
       }
 
   body
-    // A placeholder for the graph
-    #network-graph
+    header#header
+      a.logo(href='index.html') NetREx
+    .view
+      // A placeholder for the graph
+      #network-graph
+      
+    .options
+      .12u
+        ul.actions
+          li
+            a#original.button.special.big Original
+        ul.actions
+          li
+            a#module.button.special.big Module
+        ul.actions
+          li
+            a#regulation.button.special.big Regulation
 
 script.
+  // Receiving data from the backend
   var data = !{JSON.stringify(data)};
+
+  const colors = {
+    "Black" : '#000000',
+    "Blue" : '#0000FF',
+    "Brown" : '#A52A2A',
+    "Cyan" : '#00FFFF',
+    "Green" : '#008000',
+    "GreenYellow" : '#ADFF2F',
+    "Grey" : '#808080',
+    "Grey60" : '#C0C0C0',
+    "LightCyan" : '#E0FFFF',
+    "lightGreen" : '#90EE90',
+    "lightYellow" : '#FFFFE0',
+    "Magenta" : '#FF00FF',
+    "MidnightBlue" : '#191970',
+    "Pink" : '#FFC0CB',
+    "Purple" : '#800080',
+    "Red" : '#FF0000',
+    "royalBlue" : '#4169E1',
+    "Salmon" : '#FA8072',
+    "Tan" : '#D2B48C',
+    "Turquoise" : '#40E0D0',
+    "Yellow" : '#FFFF00',
+  };
 
   // Add a method to the graph model that returns an object with every neighbors of a node inside:
   sigma.classes.graph.addMethod('neighbors', function(nodeId) {
@@ -39,6 +102,7 @@ script.
     return neighbors;
   });
 
+  // Doesn't Work ??
   sigma.classes.graph.addMethod('reorderNodes', function (id) {
       var l = this.nodesArray.length;
       var temp = null;
@@ -71,18 +135,17 @@ script.
   filter = new sigma.plugins.filter(s);
   var selectedNode;
 
-  var edges = s.graph.edges(); 
-
+  var edges = s.graph.edges();
   for (var i = 0; i < edges.length; i += 1){
       edges[i].type = 'curve';
       edges[i].size = 0.1;
       edges[i].color = "pink";
   }
 
-  // We first need to save the original colors of our
-  // nodes and edges, like this:
+  // We first need to save the original colors of our nodes and edges, like this:
   s.graph.nodes().forEach(function(n) {
     n.originalColor = n.color;
+    n.firstColor = n.color;
     n.originalBorderColor = n.borderColor;
   });
   s.graph.edges().forEach(function(e) {
@@ -167,3 +230,25 @@ script.
   if (selectedNode != undefined){
     s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
   }
+
+  $(document).ready(()=>{
+    $('#original').click(()=>{
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.firstColor;
+        n.color = n.originalColor;
+      });
+      s.refresh();
+      console.log("clicked 1");
+    });
+    $('#module').click(()=>{
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = colors[n.attributes.wgcna_modules];
+        n.color = n.originalColor;
+      });
+      s.refresh();
+      console.log("clicked 2");
+    });
+    $('#regulation').click(()=>{
+      console.log("clicked 3");
+    });
+  });

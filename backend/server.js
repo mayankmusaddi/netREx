@@ -33,7 +33,6 @@ function initTF(nodes) {
 };
 
 function initNeighbour(nodes) {
-    console.log("get executed");
     for (var i=0; i<nodes.length; i++) {
         if(nodes[i].attributes.neighbor!="true"){
             nodes[i].size = 70;

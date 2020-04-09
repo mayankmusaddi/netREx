@@ -61,6 +61,10 @@ html
         ul.actions
           li
             a#regulation.button.special.big Regulation
+            .select-wrapper
+              select#reg_time()
+                option(value='') - Regulation Time -
+
 
 script.
   // Receiving data from the backend
@@ -231,6 +235,19 @@ script.
     s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
   }
 
+  if(s.graph.nodes().length > 0){
+    const props = Object.keys(s.graph.nodes()[0].attributes);
+    props.sort();
+    var select = document.getElementById("reg_time");
+    for(const prop of props){
+      if(prop.substring(0,3) === "fc_"){
+        var val = "reg_"+prop.substring(3);
+        var txt = prop.substring(3).match(/[a-zA-Z]+|[0-9]+/g).join(" ");
+        select.options[select.options.length] = new Option(txt, val);
+      }
+    }
+  };
+
   $(document).ready(()=>{
     $('#original').click(()=>{
       s.graph.nodes().forEach(function(n) {
@@ -238,7 +255,6 @@ script.
         n.color = n.originalColor;
       });
       s.refresh();
-      console.log("clicked 1");
     });
     $('#module').click(()=>{
       s.graph.nodes().forEach(function(n) {
@@ -246,9 +262,20 @@ script.
         n.color = n.originalColor;
       });
       s.refresh();
-      console.log("clicked 2");
     });
     $('#regulation').click(()=>{
-      console.log("clicked 3");
+      var val = $("#reg_time").val();
+      s.graph.nodes().forEach(function(n) {
+        var color = colors["Grey"];
+        if(n.attributes.hasOwnProperty(val)){
+          if(n.attributes[val] === "Up")
+            color = colors["Red"];
+          else
+            color = colors["Blue"];
+        }
+        n.originalColor = color;
+        n.color = n.originalColor;
+      });
+      s.refresh();
     });
   });

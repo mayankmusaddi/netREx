@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, '/../frontend'));
 app.set('view engine', 'pug');
 
-let droughtFile = require('../frontend/json/drought_full.json');
+let droughtFile = require('../frontend/json/aba_full.json');
 
 // Note: The includes method is not supported in Edge 13 (and earlier versions).
 

@@ -1,0 +1,101 @@
+id,Label,TF,KEGG,kTotal,Rank,WGCNA_Modules, IntraModular Connectivity,Description,GO
+0,Os06g0271900,,,36.2338049598957,4446,GreenYellow,16.0523534221383,Hypothetical protein.,
+1,Os12g0620000,,,32.1628716774616,4868,GreenYellow,15.7684953053583,Similar to Leucine Rich Repeat family protein.,"Biological Process: protein phosphorylation (GO:0006468), Molecular Function: protein kinase activity (GO:0004672), Molecular Function: protein serine/threonine kinase activity (GO:0004674), Molecular Function: protein binding (GO:0005515), Molecular Function: ATP binding (GO:0005524), Molecular Function: transferase activity, transferring phosphorus-containing groups (GO:0016772)"
+2,Os03g0293850,,,34.1597798554284,4644,GreenYellow,15.2606588326721,Similar to Ribosomal protein S15 containing protein.,
+3,Os11g0633500,,,26.7784335587814,5510,GreenYellow,14.0306836540515,Similar to NBS-LRR disease resistance protein homologue (Fragment).,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+4,Os01g0650800,,,29.993214407506,5119,GreenYellow,13.7992788780359,"Transposon, En/Spm-like domain containing protein.",
+5,Os09g0310800,,,26.0787895573628,5599,GreenYellow,13.7549619931108,"Similar to Glycosyl hydrolase family 9 protein, expressed.",
+6,Os03g0424200,,,33.9696998375587,4662,GreenYellow,13.22722261994,Serine/threonine protein kinase-related domain containing protein.,"Biological Process: protein phosphorylation (GO:0006468), Biological Process: protein ubiquitination (GO:0016567), Cellular Component: ubiquitin ligase complex (GO:0000151), Molecular Function: protein kinase activity (GO:0004672), Molecular Function: protein tyrosine kinase activity (GO:0004713), Molecular Function: ubiquitin-protein ligase activity (GO:0004842), Molecular Function: ATP binding (GO:0005524), Molecular Function: transferase activity, transferring phosphorus-containing groups (GO:0016772)"
+7,Os11g0692000,,,36.0993981318114,4457,GreenYellow,13.0496069298703,Hypothetical protein.,
+8,Os02g0508500,,,37.1741658780867,4362,GreenYellow,12.5410361111424,"Conserved hypothetical protein., Transposase, MuDR, plant domain containing protein.",
+9,Os06g0621500,,,29.3905697075881,5181,GreenYellow,12.1242952275699,Conserved hypothetical protein.,
+10,Os03g0784600,,,31.3402430841958,4971,GreenYellow,12.0269983439382,Conserved hypothetical protein.,
+11,Os02g0464400,,,31.1799157078099,4982,GreenYellow,11.9611030697775,"Similar to D-mannose binding lectin family protein, expressed.",
+12,Os06g0146200,,,20.4030126696156,6479,GreenYellow,11.748645570017,Conserved hypothetical protein.,
+13,Os06g0506100,,,27.4535280824093,5434,GreenYellow,11.7420778758652,Pentatricopeptide repeat domain containing protein.,Molecular Function: binding (GO:0005488)
+14,Os07g0434100,,,20.6582797857784,6434,GreenYellow,11.7115458489147,Hypothetical gene.,
+15,Os01g0923400,,,23.8294745187213,5947,GreenYellow,11.586289985874,Hypothetical conserved gene.,
+16,Os12g0511500,,,27.2831900828857,5454,GreenYellow,11.0785012159766,Disease resistance protein domain containing protein.,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+17,Os12g0197600,,,19.6113269972811,6628,GreenYellow,11.0100703531055,Hypothetical gene.,
+18,Os09g0131400,,,32.3010405897162,4852,GreenYellow,10.8848354215435,"Hypothetical protein., Similar to tobamovirus multiplication 3.",
+19,Os02g0824000,,,25.5772631505804,5684,GreenYellow,10.7885805737696,Hypothetical conserved gene.,Molecular Function: binding (GO:0005488)
+20,Os05g0169500,,,22.2496749297143,6169,GreenYellow,10.6734596072371,Hypothetical protein.,
+21,Os10g0446600,,,26.8617934990578,5500,GreenYellow,10.3806597260505,Conserved hypothetical protein.,
+22,Os06g0113950,,,30.9457285133542,5009,GreenYellow,10.3756172590406,"Hypothetical conserved gene., Similar to RuBisCO large subunit-binding protein subunit beta.",
+23,Os09g0498000,,,22.6809420852479,6105,GreenYellow,10.2427909473931,Hypothetical gene.,
+24,Os02g0304800,,,25.0522051078319,5763,GreenYellow,10.2325264115702,Hypothetical conserved gene.,Molecular Function: binding (GO:0005488)
+25,Os06g0361500,,,20.3461230629033,6487,GreenYellow,10.2290215570745,"Similar to cDNA clone:J013000C15, full insert sequence.",
+26,Os12g0416300,,,24.1026912944306,5907,GreenYellow,10.2187928241668,"Conserved hypothetical protein., Hypothetical gene.",
+27,Os02g0818800,,,27.3018114548965,5452,GreenYellow,10.0734325683584,Pentatricopeptide repeat domain containing protein.,
+28,Os01g0359400,,,27.4709445918523,5430,GreenYellow,9.90036063082518,NB-ARC domain containing protein.,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+29,Os03g0751800,,,22.8849401127248,6076,GreenYellow,9.81665366617081,Conserved hypothetical protein.,
+30,Os08g0246800,FAR1,,31.5410334561606,4947,GreenYellow,9.77432023896563,"Conserved hypothetical protein., Hypothetical conserved gene.",
+31,Os01g0364100,,,24.6297518525889,5829,GreenYellow,9.76857316353301,Similar to OSIGBa0145M07.8 protein.,"Biological Process: protein phosphorylation (GO:0006468), Molecular Function: protein kinase activity (GO:0004672), Molecular Function: protein serine/threonine kinase activity (GO:0004674), Molecular Function: calcium ion binding (GO:0005509), Molecular Function: protein binding (GO:0005515), Molecular Function: ATP binding (GO:0005524), Molecular Function: transferase activity, transferring phosphorus-containing groups (GO:0016772)"
+32,Os01g0500600,,,30.2573684954981,5078,GreenYellow,9.65473978589714,Hypothetical protein.,
+33,Os01g0646800,,,17.8921254595702,6923,GreenYellow,9.53932921125721,Conserved hypothetical protein.,
+34,Os11g0266500,,,26.1523139539487,5588,GreenYellow,9.4838001233416,"Similar to NB-ARC domain containing protein, expressed., Conserved hypothetical protein.",
+35,Os11g0616900,,,32.5474303649556,4818,GreenYellow,9.41671775216217,"Hypothetical gene., Hypothetical protein.",
+36,Os07g0591800,,,20.0341561994338,6536,GreenYellow,9.26417692316194,Conserved hypothetical protein.,
+37,Os01g0357800,,,34.3663820223908,4621,GreenYellow,9.20278521211085,Pentatricopeptide repeat domain containing protein.,Molecular Function: binding (GO:0005488)
+38,Os03g0608200,,,27.1898229731374,5464,GreenYellow,9.04643836105529,Non-protein coding transcript.,
+39,Os03g0597200,,,16.9599468588907,7091,GreenYellow,8.99478739894035,"Pentatricopeptide repeat protein, Chloroplast development",Molecular Function: protein binding (GO:0005515)
+40,Os11g0205800,,,21.7937114238201,6251,GreenYellow,8.87495610014058,"Similar to F-box domain containing protein, expressed.",
+41,Os02g0518500,C2H2,,16.4243713651391,7208,GreenYellow,8.87190846973725,"Similar to Zinc finger, C2H2-type.","Cellular Component: intracellular (GO:0005622), Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: zinc ion binding (GO:0008270)"
+42,Os04g0269900,,,18.2564087790186,6853,GreenYellow,8.8145620798243,Conserved hypothetical protein.,
+43,Os05g0587400,,,17.6415886264409,6961,GreenYellow,8.78610294150835,"Prefoldin domain containing protein., Non-protein coding transcript.",
+44,Os02g0290000,,,24.5870407541725,5834,GreenYellow,8.59764294177062,Pentatricopeptide repeat domain containing protein.,Molecular Function: binding (GO:0005488)
+45,Os04g0503700,,"N-Glycan biosynthesis, Metabolic pathways",18.2999256749377,6848,GreenYellow,8.25542053360638,"Alpha-1, 2 glucosyltransferase Alg10 domain containing protein., Similar to DIE2/ALG10 family.","Cellular Component: integral to membrane (GO:0016021), Molecular Function: transferase activity, transferring hexosyl groups (GO:0016758)"
+46,Os08g0238100,,,25.4103651961149,5709,GreenYellow,8.07065799032206,Similar to Pentatricopeptide repeat protein PPR986-12.,
+47,Os08g0166400,,,17.4052036640427,7002,GreenYellow,8.0638277424104,"Zinc finger, PMZ-type domain containing protein.",Molecular Function: zinc ion binding (GO:0008270)
+48,Os07g0158900,,,28.7224265144431,5277,GreenYellow,8.05296581319637,"Cyclin-like F-box domain containing protein., Hypothetical conserved gene.","Molecular Function: protein binding (GO:0005515),"
+49,Os07g0227700,,,24.2324869690751,5885,GreenYellow,7.92534377395941,"EGF-like region, conserved site domain containing protein.",
+50,Os05g0435500,,,13.2514126260033,7893,GreenYellow,7.91836565542471,Conserved hypothetical protein.,
+51,Os05g0102200,,,16.4000000861349,7214,GreenYellow,7.70225562172437,"Zinc finger, CCHC retroviral-type domain containing protein.","Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: zinc ion binding (GO:0008270)"
+52,Os06g0188550,,,14.4528327343052,7624,GreenYellow,7.58861071899793,Conserved hypothetical protein.,
+53,Os08g0461600,,,17.8341996637554,6932,GreenYellow,7.54859326201644,"Zinc finger, CCHC-type domain containing protein.","Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: zinc ion binding (GO:0008270)"
+54,Os06g0271500,,,33.0893718191541,4757,GreenYellow,7.52513294973684,"Transposon, En/Spm-like domain containing protein., Similar to OSIGBa0132O24.3 protein.",
+55,Os06g0188500,,,18.8526931249783,6751,GreenYellow,7.46809954084727,Non-protein coding transcript.,
+56,Os02g0542200,FAR1,,30.8100048089433,5021,GreenYellow,7.44660649024624,Similar to H0525E10.9 protein.,"Biological Process: regulation of transcription, DNA-dependent (GO:0006355), Molecular Function: sequence-specific DNA binding transcription factor activity (GO:0003700), Molecular Function: zinc ion binding (GO:0008270), Molecular Function: sequence-specific DNA binding (GO:0043565)"
+57,Os02g0770300,,,17.2741093258636,7028,GreenYellow,7.34335380700357,Conserved hypothetical protein.,
+58,Os09g0327800,,,21.4040621074049,6311,GreenYellow,7.30523180427111,Similar to Pi5-2.,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+59,Os01g0934500,,,15.9179983633381,7313,GreenYellow,7.21791448749,"Hypothetical protein., Hypothetical gene.",
+60,Os02g0132600,,,21.3902485875237,6314,GreenYellow,7.21334044932604,"Conserved hypothetical protein., Hypothetical conserved gene.",
+61,Os05g0237100,,,18.4236873091641,6828,GreenYellow,7.19797984837056,"Cyclin, C-terminal domain containing protein.","Biological Process: regulation of cyclin-dependent protein kinase activity (GO:0000079), Biological Process: regulation of cell cycle (GO:0051726), Cellular Component: nucleus (GO:0005634), Molecular Function: protein kinase binding (GO:0019901)"
+62,Os10g0494950,,,13.4491398546094,7847,GreenYellow,7.18490880699982,Protein of unknown function DUF3615 domain containing protein.,
+63,Os12g0187500,,,14.1115946908515,7700,GreenYellow,7.16827411649057,Similar to C2 domain containing protein.,Molecular Function: protein binding (GO:0005515)
+64,Os02g0453800,,,14.0754475005154,7708,GreenYellow,7.10401278089383,Conserved hypothetical protein.,
+65,Os11g0680200,,,15.3133087975545,7451,GreenYellow,7.03884910211741,Pentatricopeptide repeat domain containing protein.,Molecular Function: binding (GO:0005488)
+66,Os10g0421500,,,14.9141168784539,7532,GreenYellow,7.0327629004698,"Similar to cDNA clone:J013149A17, full insert sequence., Similar to cDNA clone:J033095I19, full insert sequence.",
+67,Os12g0289800,,,17.6182244162415,6965,GreenYellow,7.02570491699301,Hypothetical conserved gene.,Molecular Function: binding (GO:0005488)
+68,Os09g0322600,,,20.8718627408309,6402,GreenYellow,7.02363780946639,"Hypothetical gene., Hypothetical protein.",
+69,Os02g0502500,,,16.7821551598506,7140,GreenYellow,6.95609104405148,Protein kinase-like domain containing protein.,"Molecular Function: transferase activity, transferring phosphorus-containing groups (GO:0016772)"
+70,Os01g0595300,,,17.1407938313256,7055,GreenYellow,6.93839665314901,"MULE transposase, conserved domain domain containing protein.","Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: zinc ion binding (GO:0008270)"
+71,Os01g0553600,,,33.6869982536709,4701,GreenYellow,6.93690179059898,Conserved hypothetical protein.,
+72,Os11g0661000,,,14.1757939771995,7687,GreenYellow,6.90842363881193,"Pentatricopeptide repeat domain containing protein., Non-protein coding transcript.","Molecular Function: binding (GO:0005488),"
+73,Os03g0591000,,,20.7399833348937,6420,GreenYellow,6.83703105750292,"Non-protein coding transcript., Hypothetical protein.",
+74,Os01g0153700,,,20.1021905908589,6524,GreenYellow,6.8010698307217,Conserved hypothetical protein.,
+75,Os03g0666850,,,16.8672887130044,7113,GreenYellow,6.78147965918929,Hypothetical conserved gene.,
+76,Os12g0596000,,"Lipoic acid metabolism, Metabolic pathways",17.7710970574701,6939,GreenYellow,6.78111860038068,Similar to Lipoyltransferase (EC 2.3.1.-) (Lipoyl-[acyl-carrier protein]-protein- N-lipoyltransferase) (Lipoate-protein ligase B).,
+77,Os05g0275100,,,21.1748897436137,6353,GreenYellow,6.75992409197612,Pentatricopeptide repeat domain containing protein.,Molecular Function: binding (GO:0005488)
+78,Os10g0204300,,,21.9345125870211,6227,GreenYellow,6.71747353359729,Similar to Phosphoenolpyruvate carboxykinase.,
+79,Os11g0308432,,,18.3391675370741,6846,GreenYellow,6.6466325450771,Hypothetical conserved gene.,
+80,Os07g0465100,,,17.3124061514202,7019,GreenYellow,6.59947927172858,Conserved hypothetical protein.,
+81,Os02g0703900,,,24.6997596014141,5819,GreenYellow,6.55488637007974,Similar to Nodulin-like protein.,Cellular Component: membrane (GO:0016020)
+82,Os07g0457300,,,20.6673503246134,6429,GreenYellow,6.55033125887789,Protein of unknown function DUF1446 family protein.,
+83,Os10g0130800,,,13.1421805769286,7923,GreenYellow,6.52011913620765,Conserved hypothetical protein.,
+84,Os11g0615900,,,19.7709774063324,6595,GreenYellow,6.50898968454595,Conserved hypothetical protein.,
+85,Os08g0197500,,,13.6411459214239,7800,GreenYellow,6.47648572573527,Cyclin-like F-box domain containing protein.,Molecular Function: protein binding (GO:0005515)
+86,Os08g0296700,,,17.2643768613524,7030,GreenYellow,6.33285459254289,NB-ARC domain containing protein.,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+87,Os09g0129400,,,21.9476728282816,6224,GreenYellow,6.33252878945664,Conserved hypothetical protein.,
+88,Os11g0686400,,,21.6972986561893,6268,GreenYellow,6.3143417700225,Similar to WRKY transcription factor 41.,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+89,Os03g0338200,,,16.1611075741027,7262,GreenYellow,6.28891530291822,Conserved hypothetical protein.,
+90,Os11g0708000,,,17.0704617049807,7072,GreenYellow,6.24301006857693,"Hypothetical protein., Hypothetical gene.",
+91,Os10g0116000,,,23.7825319701846,5952,GreenYellow,6.20570830674588,Pentatricopeptide repeat domain containing protein.,Molecular Function: binding (GO:0005488)
+92,Os09g0357250,,,11.9776944156036,8189,GreenYellow,6.11478192931835,Conserved hypothetical protein.,
+93,Os03g0674600,,,11.0874809825234,8424,GreenYellow,6.10218203884848,Similar to Growth regulating factor (Fragment).,
+94,Os02g0316900,,,16.9496991255939,7095,GreenYellow,6.08816562638606,B-block binding subunit of TFIIIC domain containing protein.,
+95,Os02g0716100,,,27.50906323702,5416,GreenYellow,6.06528553904207,Hypothetical conserved gene.,
+96,Os06g0268500,,,17.1148329696597,7061,GreenYellow,6.01024549344966,Similar to OSIGBa0139J17.1 protein.,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)"
+97,Os02g0830300,,,19.7978695650758,6589,GreenYellow,6.00769311215065,Conserved hypothetical protein.,
+98,Os08g0554400,C2H2,,24.5079537268499,5845,GreenYellow,5.97738356100565,"Zinc finger, C2H2-type domain containing protein.","Cellular Component: intracellular (GO:0005622), Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: zinc ion binding (GO:0008270)"
+99,Os06g0248400,,,18.3413388373948,6844,GreenYellow,5.9679918895453,"Poly(ADP-ribose) polymerase, catalytic region domain containing protein.",Molecular Function: NAD+ ADP-ribosyltransferase activity (GO:0003950)

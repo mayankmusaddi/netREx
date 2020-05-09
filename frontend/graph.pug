@@ -1,281 +1,581 @@
-// Import Sigma JS
-html
+doctype html
+html.no-js(lang='zxx')
   head
     meta(charset='utf-8')
-    link(rel='stylesheet', href='assets/css/main.css')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title App Landing Template 
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // <link rel="manifest" href="site.webmanifest">
+    link(rel='shortcut icon', type='image/x-icon', href='assets/img/favicon.ico')
+    // Place favicon.ico in the root directory
+    // CSS here
+    link(rel='stylesheet', href='assets/css/bootstrap.min.css')
+    link(rel='stylesheet', href='assets/css/owl.carousel.min.css')
+    link(rel='stylesheet', href='assets/css/slicknav.css')
+    link(rel='stylesheet', href='assets/css/animate.min.css')
+    link(rel='stylesheet', href='assets/css/magnific-popup.css')
+    link(rel='stylesheet', href='assets/css/fontawesome-all.min.css')
+    link(rel='stylesheet', href='assets/css/themify-icons.css')
+    link(rel='stylesheet', href='assets/css/slick.css')
+    link(rel='stylesheet', href='assets/css/nice-select.css')
+    link(rel='stylesheet', href='assets/css/style.css')
+    link(rel='stylesheet', href='assets/css/responsive.css')
     script(src='assets/js/jquery.min.js')
-    script(src='assets/js/jquery.scrolly.min.js')
-    script(src='assets/js/skel.min.js')
-    script(src='assets/js/util.js')
-    script(src='assets/js/main.js')
-
-    script(src='./sigma/sigma.min.js')
-    script(src='./sigma/sigma.layout.forceAtlas2.min.js')
-    script(src='./sigma/sigma.plugins.filter.js')
-    script(src='./sigma/shape-library.js')
-    script(src='./sigma/sigma.renderers.customShapes.js')
-    script(src='./sigma/sigma.plugins.animate.js')
-    script(src='./sigma/sigma.layout.noverlap.js')
-
     // Add some CSS so we can see the graph!
     style.
-      * {
-        box-sizing: border-box;
-      }
-      .options {
-        width: 25%;
-        height: 85vh;
-        float: left;
-        padding: 15px;
-        margin: 0px;
-        border: 1px solid red;
-      }
-      .view {
-        width: 75%;
-        float: left;
-        padding: 15px;
-        border: 1px solid red;
-      }
       #network-graph {
-        height: 85vh;
-        width: 100%;
-        padding: 0;
-        margin: 0;
+      height: 70vh;
+      width: 100%;
+      padding: 0;
+      margin: 0;
       }
-
+      table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      }
   body
-    header#header
-      a.logo(href='index.html') NetREx
-    .view
-      // A placeholder for the graph
-      #network-graph
-      
-    .options
-      .12u
-        ul.actions
-          li
-            a#original.button.special.big Original
-        ul.actions
-          li
-            a#module.button.special.big Module
-        ul.actions
-          li
-            a#regulation.button.special.big Regulation
-            .select-wrapper
-              select#reg_time()
-                option(value='') - Regulation Time -
+    // Preloader Start
+    #preloader-active
+      .preloader.d-flex.align-items-center.justify-content-center
+        .preloader-inner.position-relative
+          .preloader-circle
+          .preloader-img.pere-text
+            // netrex
+            img(src='assets/img/logo/f1.png', alt='')
+    // Preloader Start
+    header
+      // Header Start
+      .header-area.header-transparrent
+        .main-header.header-sticky
+          .container
+            .row.align-items-center
+              // Logo
+              .col-xl-2.col-lg-2.col-md-2
+                .logo
+                  a(href='index.html')
+                    img(src='assets/img/logo/f1.png', alt='', style='width:100px')
+                  // <div>NetREx</div>
+              .col-xl-10.col-lg-10.col-md-10
+                // Main-menu
+                .main-menu.f-right.d-none.d-lg-block
+                  nav
+                    ul#navigation
+                      li
+                        a(href='index.html') Home
+                      li
+                        a(href='elements.html') Overview
+                      li.active
+                        a(href='query.html') Visualise
+                        ul.submenu
+                          li
+                            a(href='query.html/network-viewer') Network Viewer
+                          li
+                            a(href='query.html/module-viewer') Module Viewer
+                      li
+                        a(href='dataset.html') Datasets
+                      li
+                        a(href='contact.html') Contact
+              // Mobile Menu
+              .col-12
+                .mobile_menu.d-block.d-lg-none
+      // Header End
+      // Slider Area Start
+      .services-area(style='margin-bottom: -100px;')
+      // Slider Area End
+      // Start Sample Area
+      section.sample-text-area
+        .container
+          .row
+            #network-graph.col-lg-8.col-md-8(style='border: 1px solid black;')
+              // <h3 class="mb-30">Graph Area</h3>
+            .col-lg-3.col-md-4.mt-sm-30
+              .single-element-widget
+                h3.mb-30 Options
+                .switch-wrap.d-flex.justify-content-between
+                  p Original
+                  .primary-switch
+                    input#original.colorswitch(type='checkbox', checked='')
+                    label(for='original')
+                .switch-wrap.d-flex.justify-content-between
+                  p Module
+                  .confirm-switch
+                    input#module.colorswitch(type='checkbox')
+                    label(for='module')
+                .switch-wrap.d-flex.justify-content-between
+                  p Regulation
+                  #regtimeHead.default-select(style='margin-top: -7px;')
+                    select#regtime(name='time')
+                      option(value='') - Time -
+                  .confirm-switch
+                    input#regulation.colorswitch(type='checkbox')
+                    label(for='regulation')
+                //
+                  <div class="button-group-area mt-40">
+                  <a href="#" class="genric-btn success circle">Force Atlas</a>
+                  <a href="#" class="genric-btn warning circle">Force Atlas</a>
+                  </div>
+      // End Sample Area
+      // Start Table
+      .container.box_1170
+        .row
+          .col-sm-2
+            .form-group.form-contact
+              input#searchField.form-control.valid(type='text', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Search'", placeholder='Search')
+          .btn-group.d-flex.justify-content-center.col-sm-6(style='padding: 5px;')
+            button#tablefunc.tableswitch.btn.btn-primary Function
+            button#tabledesc.tableswitch.btn.btn-primary.active Description
+            button#tablefc.tableswitch.btn.btn-primary Fold Change
+          .col-sm-2
+            p Rows per page: 
+          .col-sm-1
+            select#changeRows(name='rowsPerPage')
+              option(value='1') 1
+              option(value='5', selected='') 5
+              option(value='10') 10
+              option(value='15') 15
+        #table-sortable
+      // End Table
+      footer
+        // Footer Start
+        .footer-main
+          .footer-area.footer-padding
+            .container
+              .row.justify-content-between
+                .col-lg-3.col-md-4.col-sm-8
+                  .single-footer-caption.mb-30
+                    // logo
+                    .footer-logo
+                      a(href='index.html')
+                        img(src='assets/img/logo/f1.png', alt='', style='width:100px')
+                    .footer-tittle
+                      .footer-pera
+                        p.info1 A visualizer for the correlation network of rice genes based on fold changes.
+                .col-lg-2.col-md-4.col-sm-5
+                  .single-footer-caption.mb-50
+                    .footer-tittle
+                      h4 Quick Links
+                      ul
+                        li
+                          a(href='index.html') Home
+                        li
+                          a(href='overview.html') About
+                        li
+                          a(href='query.html') Visualise
+                        li
+                          a(href='datasets.html') Datasets
+                        li
+                          a(href='contact.html') Contact
+                .col-lg-2.col-md-4.col-sm-7
+                  .single-footer-caption.mb-50
+                    .footer-tittle
+                      h4 Support
+                      ul
+                        li
+                          a(href='contact.html') Report a bug
+                        li
+                          a(href='contact.html') Privacy Policy
+                        li
+                          a(href='contact.html') Terms & Conditions
+                        li
+                          a(href='contact.html') Sitemap
+                        li
+                          a(href='contact.html') FAQs
+                .col-lg-3.col-md-6.col-sm-8
+                  .single-footer-caption.mb-50
+                    .footer-tittle
+                      h4 Newsletter
+                      .footer-pera.footer-pera2
+                        p For notification for any updates please subscribe!
+                      // Form
+                      .footer-form
+                        #mc_embed_signup
+                          form.subscribe_form.relative.mail_part(target='_blank', action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01', method='get', novalidate='true')
+                            input#newsletter-form-email.placeholder.hide-on-focus(type='email', name='EMAIL', placeholder=' Email Address ', onfocus="this.placeholder = ''", onblur="this.placeholder = ' Email Address '")
+                            .form-icon
+                              button#newsletter-submit.email_icon.newsletter-submit.button-contactForm(type='submit', name='submit')
+                                img(src='assets/img/shape/form_icon.png', alt='')
+                            .mt-10.info
+              // Copy-Right
+              .row.align-items-center
+                .col-xl-12
+                  .footer-copy-right
+                    p
+                      // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                      | Copyright ©
+                      script.
+                        document.write(new Date().getFullYear());
+                      |  All rights reserved | This application is made with 
+                      i.ti-heart(aria-hidden='true')
+                      |  by 
+                      a(href='https://researchweb.iiit.ac.in/~mayank.musaddi', target='_blank') Mayank Musaddi
+                      // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+                      // Footer End
+      script(src='./assets/js/vendor/modernizr-3.5.0.min.js')
+      // Jquery, Popper, Bootstrap
+      script(src='./assets/js/vendor/jquery-1.12.4.min.js')
+      script(src='./assets/js/popper.min.js')
+      script(src='./assets/js/bootstrap.min.js')
+      // Jquery Mobile Menu
+      script(src='./assets/js/jquery.slicknav.min.js')
+      // Jquery Slick , Owl-Carousel Plugins
+      script(src='./assets/js/owl.carousel.min.js')
+      script(src='./assets/js/slick.min.js')
+      // One Page, Animated-HeadLin
+      script(src='./assets/js/wow.min.js')
+      script(src='./assets/js/animated.headline.js')
+      script(src='./assets/js/jquery.magnific-popup.js')
+      // Scrollup, nice-select, sticky
+      script(src='./assets/js/jquery.scrollUp.min.js')
+      script(src='./assets/js/jquery.nice-select.min.js')
+      script(src='./assets/js/jquery.sticky.js')
+      // contact js
+      // <script src="./assets/js/contact.js"></script>
+      script(src='./assets/js/jquery.form.js')
+      script(src='./assets/js/jquery.validate.min.js')
+      script(src='./assets/js/mail-script.js')
+      script(src='./assets/js/jquery.ajaxchimp.min.js')
+      // Jquery Plugins, main Jquery
+      script(src='./assets/js/plugins.js')
+      script(src='./assets/js/main.js')
+      // Non graph related JS here
+      script(src='./assets/js/table-sortable.js')
+      script.
+        var data = !{JSON.stringify(data)};
 
-
-script.
-  // Receiving data from the backend
-  var data = !{JSON.stringify(data)};
-
-  const colors = {
-    "Black" : '#000000',
-    "Blue" : '#0000FF',
-    "Brown" : '#A52A2A',
-    "Cyan" : '#00FFFF',
-    "Green" : '#008000',
-    "GreenYellow" : '#ADFF2F',
-    "Grey" : '#808080',
-    "Grey60" : '#C0C0C0',
-    "LightCyan" : '#E0FFFF',
-    "lightGreen" : '#90EE90',
-    "lightYellow" : '#FFFFE0',
-    "Magenta" : '#FF00FF',
-    "MidnightBlue" : '#191970',
-    "Pink" : '#FFC0CB',
-    "Purple" : '#800080',
-    "Red" : '#FF0000',
-    "royalBlue" : '#4169E1',
-    "Salmon" : '#FA8072',
-    "Tan" : '#D2B48C',
-    "Turquoise" : '#40E0D0',
-    "Yellow" : '#FFFF00',
-  };
-
-  // Add a method to the graph model that returns an object with every neighbors of a node inside:
-  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
-    var k,
-      neighbors = {},
-      index = this.allNeighborsIndex[nodeId] || {};
-
-    for (k in index)
-      neighbors[k] = this.nodesIndex[k];
-
-    return neighbors;
-  });
-
-  // Doesn't Work ??
-  sigma.classes.graph.addMethod('reorderNodes', function (id) {
-      var l = this.nodesArray.length;
-      var temp = null;
-      //remove node from the nodesArray
-      for (let i = 0; i < l; i++)
-          if (this.nodesArray[i].id === id) {
-              temp = this.nodesArray.splice(i, 1);
-              break;
-          }
-      //push the node into the end
-      this.nodesArray.push(temp[0]);
-      return this;
-  });
-
-  s = new sigma({ 
-      graph: data,
-      container: 'network-graph',
-      renderer: {
+        $('.colorswitch').click(function(){
+        $('.colorswitch').each(function(){
+        $(this).prop('checked', false);
+        });
+        $(this).prop('checked', true);
+        });
+        $('.tableswitch').click(function(){
+        $('.tableswitch').each(function(){
+        $(this).removeClass("active");
+        });
+        $(this).addClass("active");
+        });
+        function sortByTime(dict) {
+        var sortedDay = [];
+        var sortedHour = [];
+        for(var key in dict) {
+        var time = key.split(" ");
+        if(time[1]=="day")
+        sortedDay[sortedDay.length] = parseInt(time[0],10);
+        else
+        sortedHour[sortedHour.length] = parseInt(time[0],10);
+        }
+        sortedDay.sort((a,b)=>a-b);
+        sortedHour.sort((a,b)=>a-b);
+        var tempDict = {};
+        for(var i = 0; i < sortedHour.length; i++) {
+        var key = [sortedHour[i],"hr"].join(" ")
+        tempDict[key] = dict[key];
+        }
+        for(var i = 0; i < sortedDay.length; i++) {
+        var key = [sortedDay[i],"day"].join(" ")
+        tempDict[key] = dict[key];
+        }
+        return tempDict;
+        }
+        // for adding regulation timestamps in select
+        if(data.nodes.length > 0){
+        const props = Object.keys(data.nodes[0].attributes);
+        var timestamps= {};
+        for(const prop of props){
+        if(prop.substring(0,3) === "fc_"){
+        var val = "reg_"+prop.substring(3);
+        var txt = prop.substring(3).match(/[a-zA-Z]+|[0-9]+/g).join(" ");
+        timestamps[txt]=val;
+        }
+        }
+        timestamps = sortByTime(timestamps);
+        var $el = $("#regtime");
+        $el.empty(); // remove old timestamps
+        $.each(timestamps, function(key,value) {
+        $el.append($("<option></option>")
+        .attr("value", value).text(key));
+        });
+        var $el = $("#regtimeHead > div > ul");
+        $el.empty(); // remove old timestamps
+        $.each(timestamps, function(key,value) {
+        $el.append($("<li></li>")
+        .attr("data-value", value).attr("class", "option").text(key));
+        });
+        };
+        var tabledata = [];
+        var columnsDesc = {
+        'label': 'Label',
+        'tf': 'TF',
+        'wgcna_modules': 'Module',
+        'description': 'Description',
+        'msu_loc': 'MSU ID'
+        };
+        var columnsFunc = {
+        'label': 'Label',
+        'go': 'GO',
+        'mapman': 'Mapman',
+        }
+        var columnsFC = {
+        'label': 'Label',
+        }
+        Object.keys(timestamps).forEach(function(key) {
+        var time = timestamps[key].substring(4);
+        columnsFC["fc_"+time] = "FC "+key;
+        columnsFC["pval_"+time] = "Pval "+key;
+        });
+        for(var i in data.nodes){
+        var label = data.nodes[i].label;
+        var attr = data.nodes[i].attributes;
+        attr['label'] = label;
+        tabledata.push(attr);
+        Object.keys(columnsDesc).forEach(function(key) {
+        if (!attr.hasOwnProperty(key)) {
+        attr[key]='-';
+        }
+        });
+        Object.keys(columnsFunc).forEach(function(key) {
+        if (!attr.hasOwnProperty(key)) {
+        attr[key]='-';
+        }
+        });
+        Object.keys(columnsFC).forEach(function(key) {
+        if (!attr.hasOwnProperty(key)) {
+        attr[key]='-';
+        }
+        });
+        }
+        var table =
+        $('#table-sortable').tableSortable({
+        data: tabledata,
+        columns: columnsDesc,
+        rowsPerPage: 5,
+        pagination: true,
+        searchField: '#searchField',
+        });
+        $(document).ready(()=>{
+        $('#changeRows').on('change', function() {
+        table.updateRowsPerPage(parseInt($(this).val(), 10));
+        })
+        $("#tablefunc").click(function(){
+        table.options.columns = columnsFunc;
+        table.refresh(true);
+        });
+        $("#tablefc").click(function(){
+        table.options.columns = columnsFC;
+        table.refresh(true);
+        });
+        $("#tabledesc").click(function(){
+        table.options.columns = columnsDesc;
+        table.refresh(true);
+        });
+        });
+      // Sigma Related JS here
+      // <script src="assets/js/jquery.min.js"></script>
+      script(src='./sigma/sigma.min.js')
+      script(src='./sigma/sigma.layout.forceAtlas2.min.js')
+      script(src='./sigma/sigma.plugins.filter.js')
+      script(src='./sigma/shape-library.js')
+      script(src='./sigma/sigma.renderers.customShapes.js')
+      script(src='./sigma/sigma.plugins.animate.js')
+      script(src='./sigma/sigma.layout.noverlap.js')
+      script.
+        // Receiving data from the backend
+        const colors = {
+        "Black" : '#000000',
+        "Blue" : '#0000FF',
+        "Brown" : '#A52A2A',
+        "Cyan" : '#00FFFF',
+        "Green" : '#008000',
+        "GreenYellow" : '#ADFF2F',
+        "Grey" : '#808080',
+        "Grey60" : '#C0C0C0',
+        "LightCyan" : '#E0FFFF',
+        "lightGreen" : '#90EE90',
+        "lightYellow" : '#FFFFE0',
+        "Magenta" : '#FF00FF',
+        "MidnightBlue" : '#191970',
+        "Pink" : '#FFC0CB',
+        "Purple" : '#800080',
+        "Red" : '#FF0000',
+        "royalBlue" : '#4169E1',
+        "Salmon" : '#FA8072',
+        "Tan" : '#D2B48C',
+        "Turquoise" : '#40E0D0',
+        "Yellow" : '#FFFF00',
+        };
+        // Add a method to the graph model that returns an object with every neighbors of a node inside:
+        sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+        var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
+        for (k in index)
+        neighbors[k] = this.nodesIndex[k];
+        return neighbors;
+        });
+        // Doesn't Work ??
+        sigma.classes.graph.addMethod('reorderNodes', function (id) {
+        var l = this.nodesArray.length;
+        var temp = null;
+        //remove node from the nodesArray
+        for (let i = 0; i < l; i++)
+        if (this.nodesArray[i].id === id) {
+        temp = this.nodesArray.splice(i, 1);
+        break;
+        }
+        //push the node into the end
+        this.nodesArray.push(temp[0]);
+        return this;
+        });
+        s = new sigma({
+        graph: data,
+        container: 'network-graph',
+        renderer: {
         container: document.getElementById('network-graph'),
         type: sigma.renderers.canvas
-      },
-      settings: {
+        },
+        settings: {
         minNodeSize: 1,
         maxNodeSize: 15,
-          //- enableNodeHovering: true, ??
-          //- enableEdgeHovering: true, ??
-      }
-  });
-
-  filter = new sigma.plugins.filter(s);
-  var selectedNode;
-
-  var edges = s.graph.edges();
-  for (var i = 0; i < edges.length; i += 1){
-      edges[i].type = 'curve';
-      edges[i].size = 0.1;
-      //- edges[i].color = "pink";
-  }
-
-  // We first need to save the original colors of our nodes and edges, like this:
-  s.graph.nodes().forEach(function(n) {
-    n.originalColor = n.color;
-    n.firstColor = n.color;
-    n.originalBorderColor = n.borderColor;
-  });
-  s.graph.edges().forEach(function(e) {
-    e.originalColor = e.color;
-  });
-
-  // When a node is clicked, we check for each node if it is a neighbor of the clicked one. If not, we set its color as grey, and else, it takes its original color. We do the same for the edges, and we only keep edges that have both extremities colored.
-  s.bind('overNode', function(e) {
-    var nodeId = e.data.node.id,
+        //- enableNodeHovering: true, ??
+        //- enableEdgeHovering: true, ??
+        }
+        });
+        filter = new sigma.plugins.filter(s);
+        var selectedNode;
+        var edges = s.graph.edges();
+        for (var i = 0; i < edges.length; i += 1){
+        edges[i].type = 'curve';
+        edges[i].size = 0.1;
+        //- edges[i].color = "pink";
+        }
+        // We first need to save the original colors of our nodes and edges, like this:
+        s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.color;
+        n.firstColor = n.color;
+        n.originalBorderColor = n.borderColor;
+        });
+        s.graph.edges().forEach(function(e) {
+        e.originalColor = e.color;
+        });
+        // When a node is clicked, we check for each node if it is a neighbor of the clicked one. If not, we set its color as grey, and else, it takes its original color. We do the same for the edges, and we only keep edges that have both extremities colored.
+        s.bind('overNode', function(e) {
+        var nodeId = e.data.node.id,
         toKeep = s.graph.neighbors(nodeId);
-    toKeep[nodeId] = e.data.node;
-
-    s.graph.nodes().forEach(function(n) {
-      if (toKeep[n.id]){
+        toKeep[nodeId] = e.data.node;
+        s.graph.nodes().forEach(function(n) {
+        if (toKeep[n.id]){
         n.color = n.originalColor;
         n.borderColor = n.originalBorderColor;
         //- s.graph.reorderNodes(n.id); ??
-      }
-      else{
+        }
+        else{
         n.color = '#eee';
         n.borderColor = '#eee';
-      }
-    });
-
-      s.graph.edges().forEach(function(e) {
+        }
+        });
+        s.graph.edges().forEach(function(e) {
         if (toKeep[e.source] && toKeep[e.target])
-          e.color = e.originalColor;
+        e.color = e.originalColor;
         else
-          e.color = '#eee';
-      });
-      s.refresh()
-    });
-    // When the stage is clicked, we just color each node and edge with its original color.
-    s.bind('outNode', function(e) {
-      s.graph.nodes().forEach(function(n) {
+        e.color = '#eee';
+        });
+        s.refresh()
+        });
+        // When the stage is clicked, we just color each node and edge with its original color.
+        s.bind('outNode', function(e) {
+        s.graph.nodes().forEach(function(n) {
         n.color = n.originalColor;
         n.borderColor = n.originalBorderColor;
-      });
-
-    s.graph.edges().forEach(function(e) {
-      e.color = e.originalColor;
-    });
-
-  });
-
-
-  //Initialize nodes as a circle
-  s.graph.nodes().forEach(function(node, i, a) {
-      node.x = Math.cos(Math.PI * 2 * i / a.length);
-      node.y = Math.sin(Math.PI * 2 * i / a.length);
-  });
-
-  //Call refresh to render the new graph
-  CustomShapes.init(s);
-  s.refresh();
-
-  s.startForceAtlas2();
-  setTimeout(
-    function () {
-      console.log('stopping');
-      s.stopForceAtlas2();
-    }, 
-    1000);
-
-  var config = {
-    nodeMargin: 3.0,
-    scaleNodes: 1.3,
-  };
-  // Configure the algorithm
-  var listener = s.configNoverlap(config);
-  // Bind all events:
-  listener.bind('start stop interpolate', function(event) {
-    console.log(event.type);
-  });
-  // Start the algorithm:
-  s.startNoverlap();
-
-  //- console.log(data);
-  console.log(s.graph.nodes());
-  console.log(s.graph.edges());
-
-  if (selectedNode != undefined){
-    s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
-  }
-
-  if(s.graph.nodes().length > 0){
-    const props = Object.keys(s.graph.nodes()[0].attributes);
-    props.sort();
-    var select = document.getElementById("reg_time");
-    for(const prop of props){
-      if(prop.substring(0,3) === "fc_"){
-        var val = "reg_"+prop.substring(3);
-        var txt = prop.substring(3).match(/[a-zA-Z]+|[0-9]+/g).join(" ");
-        select.options[select.options.length] = new Option(txt, val);
-      }
-    }
-  };
-
-  $(document).ready(()=>{
-    $('#original').click(()=>{
-      s.graph.nodes().forEach(function(n) {
+        });
+        s.graph.edges().forEach(function(e) {
+        e.color = e.originalColor;
+        });
+        });
+        //Initialize nodes as a circle
+        s.graph.nodes().forEach(function(node, i, a) {
+        node.x = Math.cos(Math.PI * 2 * i / a.length);
+        node.y = Math.sin(Math.PI * 2 * i / a.length);
+        });
+        //Call refresh to render the new graph
+        CustomShapes.init(s);
+        s.refresh();
+        s.startForceAtlas2();
+        setTimeout(
+        function () {
+        console.log('stopping');
+        s.stopForceAtlas2();
+        },
+        1000);
+        var config = {
+        nodeMargin: 3.0,
+        scaleNodes: 1.3,
+        };
+        // Configure the algorithm
+        var listener = s.configNoverlap(config);
+        // Bind all events:
+        listener.bind('start stop interpolate', function(event) {
+        console.log(event.type);
+        });
+        // Start the algorithm:
+        s.startNoverlap();
+        //- console.log(data);
+        console.log(s.graph.nodes());
+        console.log(s.graph.edges());
+        if (selectedNode != undefined){
+        s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
+        };
+        $(document).ready(()=>{
+        $('#original').click(()=>{
+        s.graph.nodes().forEach(function(n) {
         n.originalColor = n.firstColor;
         n.color = n.originalColor;
-      });
-      s.refresh();
-    });
-    $('#module').click(()=>{
-      s.graph.nodes().forEach(function(n) {
+        });
+        s.refresh();
+        });
+        $('#module').click(()=>{
+        s.graph.nodes().forEach(function(n) {
         n.originalColor = colors[n.attributes.wgcna_modules];
         n.color = n.originalColor;
-      });
-      s.refresh();
-    });
-    $('#regulation').click(()=>{
-      var val = $("#reg_time").val();
-      s.graph.nodes().forEach(function(n) {
+        });
+        s.refresh();
+        });
+        $('#regulation').click(()=>{
+        var val = $("#regtime").val();
+        s.graph.nodes().forEach(function(n) {
         var color = colors["Grey"];
         if(n.attributes.hasOwnProperty(val)){
-          if(n.attributes[val] === "Up")
-            color = colors["Red"];
-          else
-            color = colors["Blue"];
+        if(n.attributes[val] === "Up")
+        color = colors["Red"];
+        else
+        color = colors["Blue"];
         }
         n.originalColor = color;
         n.color = n.originalColor;
-      });
-      s.refresh();
-    });
-  });
+        });
+        s.refresh();
+        });
+        $(function(){
+        $('#regtime').change(function(){
+        var val= $(this).val();
+        var regTrigger = document.getElementById('regulation');
+        if(regTrigger.checked){
+        s.graph.nodes().forEach(function(n) {
+        var color = colors["Grey"];
+        if(n.attributes.hasOwnProperty(val)){
+        if(n.attributes[val] === "Up")
+        color = colors["Red"];
+        else
+        color = colors["Blue"];
+        }
+        n.originalColor = color;
+        n.color = n.originalColor;
+        });
+        s.refresh();
+        }
+        })
+        $('#regtime').trigger('change');
+        });
+        });
+  // All JS Custom Plugins Link Here here

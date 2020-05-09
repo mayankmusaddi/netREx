@@ -27,7 +27,6 @@
    <link rel="stylesheet" href="assets/css/responsive.css">
 
    <script src='assets/js/jquery.min.js'></script>
-
    <!-- Add some CSS so we can see the graph! -->
 	<style>
 		#network-graph {
@@ -36,6 +35,11 @@
       	  padding: 0;
       	  margin: 0;
       	}
+		  table {
+		    display: block;
+		    overflow-x: auto;
+		    white-space: nowrap;
+		}
   	</style>
 </head>
 
@@ -47,13 +51,14 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <!-- netrex -->
+                    <img src="assets/img/logo/f1.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-	<!-- Preloader Start -->
-	
+    <!-- Preloader Start -->
+
     <header>
         <!-- Header Start -->
        <div class="header-area header-transparrent ">
@@ -63,7 +68,8 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
+                                <!-- <div>NetREx</div> -->
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -71,17 +77,15 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">    
-                                        <li class="active"><a href="index.html"> Home</a></li>
-                                        <li><a href="feature.html">Feature</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="pricing.html">Pricing</a></li>
-                                        <li><a href="#">Pages</a>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="elements.html">Overview</a></li>
+                                        <li class="active"><a href="query.html">Visualise</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="single-blog.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
+                                                <li><a href="query.html/network-viewer">Network Viewer</a></li>
+                                                <li><a href="query.html/module-viewer">Module Viewer</a></li>
                                             </ul>
                                         </li>
+                                        <li><a href="dataset.html">Datasets</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -143,10 +147,10 @@
 								</div>
 							</div>
 							
-							<div class="button-group-area mt-40">
+							<!-- <div class="button-group-area mt-40">
 								<a href="#" class="genric-btn success circle">Force Atlas</a>
 								<a href="#" class="genric-btn warning circle">Force Atlas</a>
-							</div>
+							</div> -->
 
 						</div>
 					</div>
@@ -156,128 +160,53 @@
 	<!-- End Sample Area -->
 
 	<!-- Start Table -->
-	<div class="whole-wrap">
-		<div class="container box_1170">
-			<div class="section-top-border">
-				<h3 class="mb-30">Table</h3>
-				<div class="progress-table-wrap">
-					<div class="progress-table">
-						<div class="table-head">
-							<div class="serial">#</div>
-							<div class="country">Countries</div>
-							<div class="visit">Visits</div>
-							<div class="percentage">Percentages</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">01</div>
-							<div class="country"> <img src="assets/img/elements/f1.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-1" role="progressbar" style="width: 80%"
-										aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">02</div>
-							<div class="country"> <img src="assets/img/elements/f2.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-2" role="progressbar" style="width: 30%"
-										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">03</div>
-							<div class="country"> <img src="assets/img/elements/f3.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-3" role="progressbar" style="width: 55%"
-										aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">04</div>
-							<div class="country"> <img src="assets/img/elements/f4.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-4" role="progressbar" style="width: 60%"
-										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">05</div>
-							<div class="country"> <img src="assets/img/elements/f5.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-5" role="progressbar" style="width: 40%"
-										aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">06</div>
-							<div class="country"> <img src="assets/img/elements/f6.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-6" role="progressbar" style="width: 70%"
-										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">07</div>
-							<div class="country"> <img src="assets/img/elements/f7.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-7" role="progressbar" style="width: 30%"
-										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-						<div class="table-row">
-							<div class="serial">08</div>
-							<div class="country"> <img src="assets/img/elements/f8.jpg" alt="flag">Canada</div>
-							<div class="visit">645032</div>
-							<div class="percentage">
-								<div class="progress">
-									<div class="progress-bar color-8" role="progressbar" style="width: 60%"
-										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+	<div class="container box_1170">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="form-group form-contact">
+					<input class="form-control valid" type="text" id="searchField" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'" placeholder="Search">
 				</div>
 			</div>
-		</div>
+			<div class="btn-group d-flex justify-content-center col-sm-6" style="padding: 5px;">
+				<button class="tableswitch btn btn-primary" id="tablefunc" >Function</button>
+				<button class="tableswitch btn btn-primary active" id="tabledesc" >Description</button>
+				<button class="tableswitch btn btn-primary" id="tablefc" >Fold Change</button>
+			</div>
+			<div class="col-sm-2">
+				<p>Rows per page: </p>
+			</div>
+			<div class="col-sm-1">
+				<select name="rowsPerPage" id="changeRows">
+					<option value="1">1</option>
+					<option value="5" selected>5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+				</select>
+			</div>
+		</div>	
+
+		<div id="table-sortable"></div>
 	</div>
 	<!-- End Table -->
+
 	
 	<footer>
+
 		<!-- Footer Start-->
 	   <div class="footer-main">
-		 <div class="footer-area footer-padding2">
+		 <div class="footer-area footer-padding">
 			 <div class="container">
 				 <div class="row  justify-content-between">
 					 <div class="col-lg-3 col-md-4 col-sm-8">
 						  <div class="single-footer-caption mb-30">
 							   <!-- logo -->
 							  <div class="footer-logo">
-								  <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+								  <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
 							  </div>
 							  <div class="footer-tittle">
 								  <div class="footer-pera">
-									  <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+									  <p class="info1">A visualizer for the correlation network of rice genes based on fold changes.</p>
 								 </div>
 							  </div>
 						  </div>
@@ -287,11 +216,11 @@
 							 <div class="footer-tittle">
 								 <h4>Quick Links</h4>
 								 <ul>
-									 <li><a href="#">About</a></li>
-									 <li><a href="#">Features</a></li>
-									 <li><a href="#">Pricing</a></li>
-									 <li><a href="#">Download</a></li>
-									 <li><a href="#">Reviews</a></li>
+									 <li><a href="index.html">Home</a></li>
+									 <li><a href="overview.html">About</a></li>
+									 <li><a href="query.html">Visualise</a></li>
+									 <li><a href="datasets.html">Datasets</a></li>
+									 <li><a href="contact.html">Contact</a></li>
 								 </ul>
 							 </div>
 						 </div>
@@ -301,11 +230,11 @@
 							 <div class="footer-tittle">
 								 <h4>Support</h4>
 								 <ul>
-									 <li><a href="#">Report a bug</a></li>
-									 <li><a href="#">Privacy Policy</a></li>
-									 <li><a href="#">Terms & Conditions</a></li>
-									 <li><a href="#">Sitemap</a></li>
-									 <li><a href="#">FAQs</a></li>
+									 <li><a href="contact.html">Report a bug</a></li>
+									 <li><a href="contact.html">Privacy Policy</a></li>
+									 <li><a href="contact.html">Terms & Conditions</a></li>
+									 <li><a href="contact.html">Sitemap</a></li>
+									 <li><a href="contact.html">FAQs</a></li>
 								 </ul>
 							 </div>
 						 </div>
@@ -315,7 +244,7 @@
 							 <div class="footer-tittle">
 								 <h4>Newsletter</h4>
 								 <div class="footer-pera footer-pera2">
-								  <p>Heaven fruitful doesn't over lesser in days. Appear </p>
+								  <p>For notification for any updates please subscribe!</p>
 							  </div>
 							  <!-- Form -->
 							  <div class="footer-form">
@@ -337,9 +266,9 @@
 				 <div class="row align-items-center">
 					 <div class="col-xl-12 ">
 						 <div class="footer-copy-right">
-							 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This application is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://researchweb.iiit.ac.in/~mayank.musaddi" target="_blank">Mayank Musaddi</a>
+   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 						 </div>
 					 </div>
 				 </div>
@@ -351,43 +280,195 @@
 	</footer>
 </body>
 
-<!-- JS here -->
-	
-		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		
-		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
-	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+<!-- All JS Custom Plugins Link Here here -->
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 
-		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-		<script src="./assets/js/slick.min.js"></script>
-		
-		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-		<script src="./assets/js/jquery.magnific-popup.js"></script>
-		
-		<!-- Scrollup, nice-select, sticky -->
-        <script src="./assets/js/jquery.scrollUp.min.js"></script>
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
-        
-        <!-- contact js -->
-        <!-- <script src="./assets/js/contact.js"></script> -->
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-		<script src="./assets/js/main.js"></script>
-		
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Scrollup, nice-select, sticky -->
+<script src="./assets/js/jquery.scrollUp.min.js"></script>
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
+
+<!-- contact js -->
+<!-- <script src="./assets/js/contact.js"></script> -->
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<!-- Non graph related JS here -->
+<script src="./assets/js/table-sortable.js"></script>
+<script>
+	// var data={};
+	
+	$('.colorswitch').click(function(){
+		$('.colorswitch').each(function(){
+			$(this).prop('checked', false); 
+		}); 
+		$(this).prop('checked', true);
+	});
+
+	$('.tableswitch').click(function(){
+		$('.tableswitch').each(function(){
+			$(this).removeClass("active");
+		}); 
+		$(this).addClass("active");
+	});
+
+	function sortByTime(dict) {
+		var sortedDay = [];
+		var sortedHour = [];
+		for(var key in dict) {
+			var time = key.split(" ");
+			if(time[1]=="day")
+				sortedDay[sortedDay.length] = parseInt(time[0],10);
+			else
+				sortedHour[sortedHour.length] = parseInt(time[0],10);
+		}
+		sortedDay.sort((a,b)=>a-b);
+		sortedHour.sort((a,b)=>a-b);
+
+		var tempDict = {};
+		for(var i = 0; i < sortedHour.length; i++) {
+			var key = [sortedHour[i],"hr"].join(" ")
+			tempDict[key] = dict[key];
+		}
+		for(var i = 0; i < sortedDay.length; i++) {
+			var key = [sortedDay[i],"day"].join(" ")
+			tempDict[key] = dict[key];
+		}
+		return tempDict;
+	}
+
+	// for adding regulation timestamps in select
+	if(data.nodes.length > 0){
+		const props = Object.keys(data.nodes[0].attributes);
+
+		var timestamps= {};
+		for(const prop of props){
+			if(prop.substring(0,3) === "fc_"){
+				var val = "reg_"+prop.substring(3);
+				var txt = prop.substring(3).match(/[a-zA-Z]+|[0-9]+/g).join(" ");
+				timestamps[txt]=val;
+			}
+		}
+		timestamps = sortByTime(timestamps);
+
+		var $el = $("#regtime");
+		$el.empty(); // remove old timestamps
+		$.each(timestamps, function(key,value) {
+			$el.append($("<option></option>")
+		   		.attr("value", value).text(key));
+		});
+		var $el = $("#regtimeHead > div > ul");
+		$el.empty(); // remove old timestamps
+		$.each(timestamps, function(key,value) {
+			$el.append($("<li></li>")
+		    	.attr("data-value", value).attr("class", "option").text(key));
+		});
+	};
+
+
+	var tabledata = [];
+	var columnsDesc = {
+	    'label': 'Label',
+	    'tf': 'TF',
+	    'wgcna_modules': 'Module',
+	    'description': 'Description',
+	    'msu_loc': 'MSU ID'
+	};
+	var columnsFunc = {
+		'label': 'Label',
+		'go': 'GO',
+		'mapman': 'Mapman',
+	}
+	var columnsFC = {
+		'label': 'Label',
+	}
+	Object.keys(timestamps).forEach(function(key) {
+		var time = timestamps[key].substring(4);
+		columnsFC["fc_"+time] = "FC "+key;
+		columnsFC["pval_"+time] = "Pval "+key;
+	});
+
+	for(var i in data.nodes){
+		var label = data.nodes[i].label;
+		var attr = data.nodes[i].attributes;
+		attr['label'] = label;
+		tabledata.push(attr);
+
+		Object.keys(columnsDesc).forEach(function(key) {
+			if (!attr.hasOwnProperty(key)) {
+        		attr[key]='-';
+    		}
+		});
+
+		Object.keys(columnsFunc).forEach(function(key) {
+			if (!attr.hasOwnProperty(key)) {
+        		attr[key]='-';
+    		}
+		});
+
+		Object.keys(columnsFC).forEach(function(key) {
+			if (!attr.hasOwnProperty(key)) {
+        		attr[key]='-';
+    		}
+		});
+	}
+
+	var table = 
+		$('#table-sortable').tableSortable({
+		    data: tabledata,
+		    columns: columnsDesc,
+		    rowsPerPage: 5,
+			pagination: true,
+			searchField: '#searchField',
+		});
+
+	$(document).ready(()=>{
+		$('#changeRows').on('change', function() {
+		  table.updateRowsPerPage(parseInt($(this).val(), 10));
+		})
+
+		$("#tablefunc").click(function(){
+			table.options.columns = columnsFunc;
+			table.refresh(true);
+		});
+
+		$("#tablefc").click(function(){
+			table.options.columns = columnsFC;
+			table.refresh(true);
+		});
+
+		$("#tabledesc").click(function(){
+			table.options.columns = columnsDesc;
+			table.refresh(true);
+		});
+	});
+</script>
+
+
+<!-- Sigma Related JS here -->
+
 		<!-- <script src="assets/js/jquery.min.js"></script> -->
 		<script src='./sigma/sigma.min.js'></script>
     	<script src='./sigma/sigma.layout.forceAtlas2.min.js'></script>
@@ -564,43 +645,10 @@
 
 			if (selectedNode != undefined){
 			  s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
-			}
-
-			$('.colorswitch').click(function(){
-				$('.colorswitch').each(function(){
-					$(this).prop('checked', false); 
-				}); 
-				$(this).prop('checked', true);
-			});
-
-			// for adding regulation timestamps in select
-			if(s.graph.nodes().length > 0){
-			  const props = Object.keys(s.graph.nodes()[0].attributes);
-			  props.sort();
-			  var select = document.getElementById("reg_time");
-			  var options = {};
-			  for(const prop of props){
-				if(prop.substring(0,3) === "fc_"){
-				  var val = "reg_"+prop.substring(3);
-				  var txt = prop.substring(3).match(/[a-zA-Z]+|[0-9]+/g).join(" ");
-				  options[txt]=val;
-				}
-			  var $el = $("#regtime");
-			  $el.empty(); // remove old options
-			  $.each(options, function(key,value) {
-			    $el.append($("<option></option>")
-			       .attr("value", value).text(key));
-			  });
-			  var $el = $("#regtimeHead > div > ul");
-			  $el.empty(); // remove old options
-			  $.each(options, function(key,value) {
-			    $el.append($("<li></li>")
-			       .attr("data-value", value).attr("class", "option").text(key));
-			  });
-			  }
 			};
 
 			$(document).ready(()=>{
+
 			  $('#original').click(()=>{
 				s.graph.nodes().forEach(function(n) {
 				  n.originalColor = n.firstColor;

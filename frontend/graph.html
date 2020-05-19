@@ -26,7 +26,12 @@
    <link rel="stylesheet" href="assets/css/style.css">
    <link rel="stylesheet" href="assets/css/responsive.css">
 
+   <link rel="stylesheet" href="assets/js/DataTables/datatables.min.css">
+   <link rel="stylesheet" href="assets/js/DataTables/dataTables.bootstrap.min.css">
+   <link rel="stylesheet" href="assets/js/DataTables/buttons.dataTables.min.css">
+
    <script src='assets/js/jquery.min.js'></script>
+   <script src='assets/js/lodash.min.js'></script>
    <!-- Add some CSS so we can see the graph! -->
 	<style>
 		#network-graph {
@@ -35,10 +40,13 @@
       	  padding: 0;
       	  margin: 0;
       	}
-		  table {
+		table {
 		    display: block;
 		    overflow-x: auto;
-		    white-space: nowrap;
+		    /* white-space: nowrap; */
+		}
+		.dt-buttons {
+		  left:10%;
 		}
   	</style>
 </head>
@@ -118,7 +126,7 @@
 
 					<div class="col-lg-3 col-md-4 mt-sm-30">
 						<div class="single-element-widget">
-							<h3 class="mb-30">Options</h3>
+							<h3 class="mb-30" id="options">Options</h3>
 							<div class="switch-wrap d-flex justify-content-between">
 								<p>Original</p>
 								<div class="primary-switch">
@@ -147,10 +155,10 @@
 								</div>
 							</div>
 							
-							<!-- <div class="button-group-area mt-40">
-								<a href="#" class="genric-btn success circle">Force Atlas</a>
-								<a href="#" class="genric-btn warning circle">Force Atlas</a>
-							</div> -->
+							<div class="button-group-area mt-40">
+								<a id="downloadimg" class="genric-btn success circle">Download Image</a>
+								<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
+							</div>
 
 						</div>
 					</div>
@@ -162,31 +170,11 @@
 	<!-- Start Table -->
 
 	<div class="container box_1170">
-		<div class="row">
-			<div class="col-sm-2">
-				<div class="form-group form-contact">
-					<input class="form-control valid" type="text" id="searchField" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search'" placeholder="Search">
-				</div>
-			</div>
-			<div class="btn-group d-flex justify-content-center col-sm-6" style="padding: 5px;">
-				<button class="tableswitch btn btn-primary" id="tablefunc" >Function</button>
-				<button class="tableswitch btn btn-primary active" id="tabledesc" >Description</button>
-				<button class="tableswitch btn btn-primary" id="tablefc" >Fold Change</button>
-			</div>
-			<div class="col-sm-2">
-				<p>Rows per page: </p>
-			</div>
-			<div class="col-sm-1">
-				<select name="rowsPerPage" id="changeRows">
-					<option value="1">1</option>
-					<option value="5" selected>5</option>
-					<option value="10">10</option>
-					<option value="15">15</option>
-				</select>
-			</div>
-		</div>	
 
-		<div id="table-sortable"></div>
+		<table id="data-table" class="display" style="width:100%">
+			<thead><tr></tr></thead>
+		</table>
+
 	</div>
 	<!-- End Table -->
 
@@ -317,21 +305,21 @@
 
 <!-- Non graph related JS here -->
 <script src="./assets/js/table-sortable.js"></script>
+<script src="./assets/js/DataTables/datatables.min.js"></script>
+<script src="./assets/js/DataTables/dataTables.buttons.min.js"></script>
+<script src="./assets/js/DataTables/buttons.colVis.min.js"></script>
+<script src="./assets/js/DataTables/buttons.html5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
+
 <script>
-	// var data={};
 	
 	$('.colorswitch').click(function(){
 		$('.colorswitch').each(function(){
 			$(this).prop('checked', false); 
 		}); 
 		$(this).prop('checked', true);
-	});
-
-	$('.tableswitch').click(function(){
-		$('.tableswitch').each(function(){
-			$(this).removeClass("active");
-		}); 
-		$(this).addClass("active");
 	});
 
 	function sortByTime(dict) {
@@ -387,83 +375,134 @@
 		});
 	};
 
-
-	var tabledata = [];
-	var columnsDesc = {
-	    'label': 'Label',
-	    'tf': 'TF',
-	    'wgcna_modules': 'Module',
-	    'description': 'Description',
-	    'msu_loc': 'MSU ID'
-	};
-	var columnsFunc = {
-		'label': 'Label',
-		'go': 'GO',
-		'mapman': 'Mapman',
-	}
-	var columnsFC = {
-		'label': 'Label',
-	}
-	Object.keys(timestamps).forEach(function(key) {
-		var time = timestamps[key].substring(4);
-		columnsFC["fc_"+time] = "FC "+key;
-		columnsFC["pval_"+time] = "Pval "+key;
-	});
-
-	for(var i in data.nodes){
-		var label = data.nodes[i].label;
-		var attr = data.nodes[i].attributes;
-		attr['label'] = label;
-		tabledata.push(attr);
-
-		Object.keys(columnsDesc).forEach(function(key) {
-			if (!attr.hasOwnProperty(key)) {
-        		attr[key]='-';
-    		}
-		});
-
-		Object.keys(columnsFunc).forEach(function(key) {
-			if (!attr.hasOwnProperty(key)) {
-        		attr[key]='-';
-    		}
-		});
-
-		Object.keys(columnsFC).forEach(function(key) {
-			if (!attr.hasOwnProperty(key)) {
-        		attr[key]='-';
-    		}
-		});
-	}
-
-	var table = 
-		$('#table-sortable').tableSortable({
-		    data: tabledata,
-		    columns: columnsDesc,
-		    rowsPerPage: 5,
-			pagination: true,
-			searchField: '#searchField',
-		});
-
 	$(document).ready(()=>{
-		$('#changeRows').on('change', function() {
-		  table.updateRowsPerPage(parseInt($(this).val(), 10));
-		})
 
-		$("#tablefunc").click(function(){
-			table.options.columns = columnsFunc;
-			table.refresh(true);
+		$(document).ready(function() {
+			var columns = [
+			{ data: "label" },
+    		{ data: "attributes.tf" },
+    		{ data: "attributes.wgcna_modules"},
+    		{ data: "attributes.description"},
+			{ data: "attributes.msu_loc"},
+			
+    		{ data: "attributes.go"},
+			{ data: "attributes.mapman"},
+		];
+
+		$("#data-table>thead>tr").append( $('<th />', {text : 'Label'}) );
+		$("#data-table>thead>tr").append( $('<th />', {text : 'TF'}) );
+		$("#data-table>thead>tr").append( $('<th />', {text : 'Module'}) );
+		$("#data-table>thead>tr").append( $('<th />', {text : 'Description'}) );
+		$("#data-table>thead>tr").append( $('<th />', {text : 'MSU ID'}) );
+
+		$("#data-table>thead>tr").append( $('<th />', {text : 'GO'}) );
+		$("#data-table>thead>tr").append( $('<th />', {text : 'Mapman'}) );
+
+		var desc_ind=[1,2,3,4];
+		var func_ind=[5,6];
+		var fc_ind=[];
+		var ind = 7;
+
+		Object.keys(timestamps).forEach(function(key) {
+			var time = timestamps[key].substring(4);
+			columns.push({data: "attributes.fc_"+time});
+			columns.push({data: "attributes.pval_"+time});
+
+			$("#data-table>thead>tr").append( $('<th />', {text : "FC "+key}) );
+			$("#data-table>thead>tr").append( $('<th />', {text : "Pval "+key}) );
+
+			fc_ind.push(ind);
+			ind++;
+			fc_ind.push(ind);
+			ind++;
 		});
 
-		$("#tablefc").click(function(){
-			table.options.columns = columnsFC;
-			table.refresh(true);
+		const set = (obj, path, val) => { 
+		    const keys = path.split('.');
+		    const lastKey = keys.pop();
+		    const lastObj = keys.reduce((obj, key) => obj[key] = obj[key] || {}, obj); 
+		    lastObj[lastKey] = val;
+		};
+
+		for(var i in data.nodes){
+			for(var j in columns){
+				var attr = columns[j]["data"];	
+				if(!_.has(data.nodes[i], attr)){
+					set(data.nodes[i], attr, '-');
+				}
+			}
+		}
+
+	    var table = $('#data-table').DataTable( {
+	        data: data.nodes,
+			columns: columns,
+			dom: 'lBfrtip',
+			buttons: [
+            	{
+            	    extend: 'colvisGroup',
+            	    text: 'Description',
+					className: "tabledesc",
+            	    show: [ ...desc_ind],
+					hide: [ ...func_ind, ...fc_ind]
+            	},
+            	{
+            	    extend: 'colvisGroup',
+            	    text: 'Function',
+					className: "tablefunc",
+            	    show: [ ...func_ind ],
+            	    hide: [ ...desc_ind, ...fc_ind]
+            	},
+            	{
+            	    extend: 'colvisGroup',
+            	    text: 'Fold Change',
+					className: "tablefc",
+            	    show: [ ...fc_ind ],
+            	    hide: [ ...desc_ind, ...func_ind]
+            	}
+        	],
 		});
 
-		$("#tabledesc").click(function(){
-			table.options.columns = columnsDesc;
-			table.refresh(true);
+		new $.fn.dataTable.Buttons( table, {
+    	    buttons: [
+				{
+            	    extend: 'copyHtml5',
+            	    text: '<i class="fas fa-copy"></i> Copy',
+            	    titleAttr: 'Copy'
+            	},
+            	{
+            	    extend: 'excelHtml5',
+            	    text: '<i class="fas fa-file-excel"></i> Excel',
+            	    titleAttr: 'Excel'
+            	},
+            	{
+            	    extend: 'csvHtml5',
+            	    text: '<i class="fas fa-file-csv"></i> CSV',
+            	    titleAttr: 'CSV'
+            	},
+            	{
+            	    extend: 'pdfHtml5',
+            	    text: '<i class="fas fa-file-pdf"></i> PDF',
+            	    titleAttr: 'PDF'
+            	},
+    	    ]
+    	} );
+    	table.buttons( 1, null ).container().appendTo(
+    	    table.table().container()
+		);
+		$('.dt-button').addClass('btn btn-primary');
+		table.button('.tabledesc').trigger();
+		$('.tabledesc').addClass("active")
+
+		$('.buttons-colvisGroup').click(function(){
+			$('.buttons-colvisGroup').each(function(){
+				console.log("Clicked");
+				$(this).removeClass("active");
+			}); 
+			$(this).addClass("active");
 		});
+	});	
 	});
+
 </script>
 
 
@@ -476,7 +515,8 @@
     	<script src='./sigma/shape-library.js'></script>
     	<script src='./sigma/sigma.renderers.customShapes.js'></script>
     	<script src='./sigma/sigma.plugins.animate.js'></script>
-    	<script src='./sigma/sigma.layout.noverlap.js'></script>
+		<script src='./sigma/sigma.layout.noverlap.js'></script>
+		<script src="./sigma/sigma.renderers.snapshot.js"></script>
 		
 		<script>
 			// Receiving data from the backend
@@ -623,6 +663,11 @@
 			  function () {
 				console.log('stopping');
 				s.stopForceAtlas2();
+				// console.log(s.renderers[0].snapshot({format: 'png', background: 'white', filename: 'my-graph.png', labels: false}));
+				// var graphimage = s.renderers[0].snapshot({format: 'png', background: 'white', filename: 'my-graph.png', labels: false});
+				// var url = graphimage.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+				// window.open(url);
+				// <a href="data:image/jpeg;base64,/9j/4AAQSkZ..." download="filename.jpg"></a>
 			  }, 
 			  1000);
 		  
@@ -647,7 +692,26 @@
 			  s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
 			};
 
+			
+
 			$(document).ready(()=>{
+			  $('#downloadimg').click(()=>{
+				var graphimage = s.renderers[0].snapshot({format: 'jpg', background: 'white', filename: 'graph.jpg', labels: true});
+
+				var link = document.getElementById("imgdownload");
+				if(link)
+					link.remove();
+				
+				var link = document.createElement("a");
+				link.id = 'imgdownload';
+				link.href = graphimage;
+				link.download = "graph.jpg";
+
+				var options = document.getElementById("options");
+				options.appendChild(link);
+
+				document.getElementById('imgdownload').click();
+				});
 
 			  $('#original').click(()=>{
 				s.graph.nodes().forEach(function(n) {

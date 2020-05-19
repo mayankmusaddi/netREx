@@ -1,13 +1,12 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 20/02/2020 09:43
+  	Creation date: 13/09/2018 08:45
   	*/
 
 @font-face {
   font-family: "Flaticon";
   src: url("../fonts/Flaticon.eot");
   src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/Flaticon.woff2") format("woff2"),
        url("../fonts/Flaticon.woff") format("woff"),
        url("../fonts/Flaticon.ttf") format("truetype"),
        url("../fonts/Flaticon.svg#Flaticon") format("svg");
@@ -25,10 +24,35 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-
 }
 
-.flaticon-businessman:before { content: "\f100"; }
-.flaticon-pay:before { content: "\f101"; }
-.flaticon-plane:before { content: "\f102"; }
-.flaticon-support:before { content: "\f103"; }
+.flaticon-001-animal-testing:before { content: "\f100"; }
+.flaticon-002-atom:before { content: "\f101"; }
+.flaticon-003-bacteria:before { content: "\f102"; }
+.flaticon-004-petri-dish:before { content: "\f103"; }
+.flaticon-005-dna-structure:before { content: "\f104"; }
+.flaticon-006-light-bulb:before { content: "\f105"; }
+.flaticon-007-book:before { content: "\f106"; }
+.flaticon-008-corrosive:before { content: "\f107"; }
+.flaticon-009-dna:before { content: "\f108"; }
+.flaticon-010-flask:before { content: "\f109"; }
+.flaticon-011-genetics:before { content: "\f10a"; }
+.flaticon-012-genetical:before { content: "\f10b"; }
+.flaticon-013-gmo:before { content: "\f10c"; }
+.flaticon-014-petri-dish-1:before { content: "\f10d"; }
+.flaticon-015-test-tube:before { content: "\f10e"; }
+.flaticon-016-laboratory:before { content: "\f10f"; }
+.flaticon-017-magnet:before { content: "\f110"; }
+.flaticon-018-mathematics:before { content: "\f111"; }
+.flaticon-019-molecular:before { content: "\f112"; }
+.flaticon-020-chemistry:before { content: "\f113"; }
+.flaticon-021-momentum:before { content: "\f114"; }
+.flaticon-022-nano:before { content: "\f115"; }
+.flaticon-023-periodic-table:before { content: "\f116"; }
+.flaticon-024-research:before { content: "\f117"; }
+.flaticon-025-rocket:before { content: "\f118"; }
+.flaticon-026-radiation:before { content: "\f119"; }
+.flaticon-027-text:before { content: "\f11a"; }
+.flaticon-028-document:before { content: "\f11b"; }
+.flaticon-029-ecology:before { content: "\f11c"; }
+.flaticon-030-astronomy:before { content: "\f11d"; }

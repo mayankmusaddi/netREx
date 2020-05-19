@@ -203,6 +203,7 @@
         slidesToShow: 3,
         slidesToScroll: 1,
         loop: true,
+        autoWidth:true,
         autoplay:true,
         speed: 3000,
         smartSpeed:2000,

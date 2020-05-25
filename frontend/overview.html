@@ -1,0 +1,345 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>NetREx</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link rel="manifest" href="site.webmanifest"> -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+	<!-- Place favicon.ico in the root directory -->
+
+	
+ <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/slicknav.css">
+   <link rel="stylesheet" href="assets/css/animate.min.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+   <link rel="stylesheet" href="assets/css/themify-icons.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/nice-select.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+	
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <!-- netrex -->
+                    <img src="assets/img/logo/f1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+       <div class="header-area header-transparrent ">
+            <div class="main-header header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
+                                <!-- <div>NetREx</div> -->
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">    
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class="active"><a href="overview.html">Overview</a></li>
+                                        <li><a href="query.html">Visualise</a>
+                                            <!-- <ul class="submenu">
+                                                <li><a href="query.html/network-viewer">Network Viewer</a></li>
+                                                <li><a href="query.html/module-viewer">Module Viewer</a></li>
+                                            </ul> -->
+                                        </li>
+                                        <li><a href="dataset.html">Datasets</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+	
+	<!-- Slider Area Start-->
+
+	<div class="services-area">
+		<div class="container">
+			<!-- Section-tittle -->
+			<div class="row d-flex justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-tittle text-center mb-80">
+						<h2>Overview​</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Slider Area End-->
+
+	<!-- Start Sample Area -->
+	<section class="sample-text-area">
+		<div class="container box_1170">
+			<h3 class="text-heading">Introduction</h3>
+			<p class="sample-text">
+				Entities in a biological system seldom work in isolation. There is a coordinated association between
+				them at every level of the molecular hierarchy. These associations are context-specific and involve
+				making and breaking of links among the entities depending upon the developmental stage, tissue and
+				environmental conditions. In field conditions, plants are generally exposed to multiple stresses. Thus
+				finding processes that are common or unique across various stress conditions can provide novel
+				insights clues towards multi-stress tolerant crops. Hence NetREx or "Network-based Rice Expression
+				Analysis Server for Abiotic Stress Conditions" comes into the picture which aims to represent this
+				coordinated association between genes of the rice plant under several Abiotic conditions.
+			</p>
+		</div>
+	</section>
+	<!-- End Sample Area -->
+
+	<!-- Start Align Area -->
+	<div class="whole-wrap">
+		<div class="container box_1170">
+			<div class="section-top-border">
+				<h3 class="mb-30">Graph Construction</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="assets/img/elements/coexpression.png" alt="" class="img-fluid">
+					</div>
+					<div class="col-md-9 mt-sm-20">
+						<p>A typical transcriptomic experiment (microarray or RNA-seq) typically detects thousands of genes
+							differentially expressed with respect to control conditions. A functional analysis of such a large set of
+							genes is a daunting task. A popular approach is to construct co-expression networks based on the
+							similarity of gene expression profiles. Here, nodes represent genes and edges represent the strength of
+							correlations between them. Highly correlated genes can then be grouped into functional modules,
+							reducing the dimensionality of data. Another approach is to convert raw correlation values (Pearson or
+							Spearman) to highest reciprocal ranks (HRRs) or mutual ranks (MR). Several studies have shown that the 
+							biological relevance of ranked-based methods are more significant and robust than those
+							constructed using raw PCCs because they intuitively consider PCCs of the neighbourhood of gene
+							pairs as well.</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3 class="text-heading">Dataset</h3>
+				<p class="sample-text">
+					For the construction of this resource we have considered publicly available mRNA-seq data from
+					TENOR database (Kawahara et al., 2016) that hosts genome-wide time-course transcriptome study of
+					rice shoots and roots under a wide variety of conditions, viz., environmental stresses (e.g., drought,
+					cold, flood, salinity), nutrient deficiencies and excesses (e.g., phosphate), heavy metal toxicity stress
+					(e.g., cadmium) and plant hormone treatments (abscisic acid (ABA) and jasmonic acid (JA)) have
+					been used. All the experiments have been performed using a single mRNA-Seq platform under
+					standardized laboratory conditions and from the same rice cultivar Oryza sativa L. (cv. Nipponbare),
+					making it possible to compare gene expressions across different stress conditions. In NetREx, data for
+					four stress conditions (drought, cold, flood and osmotic stress) and two hormonal treatments (ABA
+					and JA) from seedlings (10 days after germination) have been considered for network construction
+					and analysis. First we construct a global rank-based stress network across four stress conditions and
+					two hormonal treatments, separately for root and shoot tissues. Stress-specific networks are then
+					derived from these global networks using differentially expressed genes.
+				</p>
+			</div>
+
+			<div class="section-top-border">
+				<h3 class="mb-30">Views</h3>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Network Viewer</h4>
+							<p>This module displays connectivity between query genes for a given stress and tissue. There are 
+								3 coloring options:
+								By default the nodes are sized and colored according to their degree. With the module option the
+								nodes are colored according to the module to which they belong. With the regulation option 
+								nodes are colour-coded based on up/down-regulation across time-points.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Network Neighbourhood Viewer</h4>
+							<p>In this view, the top 100 neighbours of the query genes based on
+								the k Total (connectivity in the whole network) is displayed. This module inherits most of the features
+								available in the “Network Viewer” and can be used by ticking the checkbox present
+								after the network viewer query box.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Module Viewer</h4>
+							<p>In NetREx, using WGCNA R package, we have identified co-expressed gene
+								modules for both root and shoot HRR networks. In this view, the top 100 highly connected
+								genes based on their within-module connectivity is shown and the genes are displayed with colour of the modules they belong to. 
+								The “Module Attribute” table provides the GO enriched terms for biological processes.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<h3 class="mb-30">Conclusion</h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<blockquote class="generic-blockquote">
+							Clusters of co-expressed genes often represent coordinated biological processes. Analysis of gene 
+							co-expression networks have been helpful in functional annotation of uncharacterized genes
+							In systems biology, network neighbourhood analysis is an important aspect as it facilitates a
+							“guilt-by-association” strategy by which we can find interesting genes which are closely
+							interacting/co-expressed with the initial “seed genes”.
+							Biologists are often interested in processes that are common across various stress conditions.
+							Modifying genes responsive to multiple stress conditions might help in developing multi-stress
+							resistant crops. At the same time, processes that are unique to a given stress might provide cues to
+							novel signalling or metabolic cascades associated with the specific stress.
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Align Area -->
+	
+	<footer>
+
+		<!-- Footer Start-->
+	   <div class="footer-main">
+		 <div class="footer-area footer-padding">
+			 <div class="container">
+				 <div class="row  justify-content-between">
+					 <div class="col-lg-3 col-md-4 col-sm-8">
+						  <div class="single-footer-caption mb-30">
+							   <!-- logo -->
+							  <div class="footer-logo">
+								  <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
+							  </div>
+							  <div class="footer-tittle">
+								  <div class="footer-pera">
+									  <p class="info1">A visualizer for the correlation network of rice genes based on fold changes.</p>
+								 </div>
+							  </div>
+						  </div>
+					 </div>
+					 <div class="col-lg-2 col-md-4 col-sm-5">
+						 <div class="single-footer-caption mb-50">
+							 <div class="footer-tittle">
+								 <h4>Quick Links</h4>
+								 <ul>
+									 <li><a href="index.html">Home</a></li>
+									 <li><a href="overview.html">About</a></li>
+									 <li><a href="query.html">Visualise</a></li>
+									 <li><a href="datasets.html">Datasets</a></li>
+									 <li><a href="contact.html">Contact</a></li>
+								 </ul>
+							 </div>
+						 </div>
+					 </div>
+					 <div class="col-lg-2 col-md-4 col-sm-7">
+						 <div class="single-footer-caption mb-50">
+							 <div class="footer-tittle">
+								 <h4>Support</h4>
+								 <ul>
+									 <li><a href="contact.html">Report a bug</a></li>
+									 <li><a href="contact.html">Privacy Policy</a></li>
+									 <li><a href="contact.html">Terms & Conditions</a></li>
+									 <li><a href="contact.html">Sitemap</a></li>
+									 <li><a href="contact.html">FAQs</a></li>
+								 </ul>
+							 </div>
+						 </div>
+					 </div>
+					 <div class="col-lg-3 col-md-6 col-sm-8">
+						 <div class="single-footer-caption mb-50">
+							 <div class="footer-tittle">
+								 <h4>Newsletter</h4>
+								 <div class="footer-pera footer-pera2">
+								  <p>For notification for any updates please subscribe!</p>
+							  </div>
+							  <!-- Form -->
+							  <div class="footer-form">
+								  <div id="mc_embed_signup">
+									  <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+										  <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
+										  <div class="form-icon">
+											  <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><img src="assets/img/shape/form_icon.png" alt=""></button>
+										  </div>
+										  <div class="mt-10 info"></div>
+									  </form>
+								  </div>
+							  </div>
+							 </div>
+						 </div>
+					 </div>
+				 </div>
+				 <!-- Copy-Right -->
+				 <div class="row align-items-center">
+					 <div class="col-xl-12 ">
+						 <div class="footer-copy-right">
+							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This application is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://researchweb.iiit.ac.in/~mayank.musaddi" target="_blank">Mayank Musaddi</a>
+   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+						 </div>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	   </div>
+		<!-- Footer End-->
+ 
+	</footer>
+<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+		<script src="./assets/js/slick.min.js"></script>
+		
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+		<script src="./assets/js/animated.headline.js"></script>
+		<script src="./assets/js/jquery.magnific-popup.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        
+</body>
+</html>

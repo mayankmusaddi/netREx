@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>App Landing Template </title>
+	<title>NetREx</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -86,12 +86,12 @@
                                 <nav>
                                     <ul id="navigation">    
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="elements.html">Overview</a></li>
+                                        <li><a href="overview.html">Overview</a></li>
                                         <li class="active"><a href="query.html">Visualise</a>
-                                            <ul class="submenu">
+                                            <!-- <ul class="submenu">
                                                 <li><a href="query.html/network-viewer">Network Viewer</a></li>
                                                 <li><a href="query.html/module-viewer">Module Viewer</a></li>
-                                            </ul>
+                                            </ul> -->
                                         </li>
                                         <li><a href="dataset.html">Datasets</a></li>
                                         <li><a href="contact.html">Contact</a></li>
@@ -109,6 +109,7 @@
        </div>
         <!-- Header End -->
     </header>
+	
 	<!-- Slider Area Start-->
 
 	<div class="services-area" style="margin-bottom: -100px;">
@@ -304,7 +305,6 @@
 <script src="./assets/js/main.js"></script>
 
 <!-- Non graph related JS here -->
-<script src="./assets/js/table-sortable.js"></script>
 <script src="./assets/js/DataTables/datatables.min.js"></script>
 <script src="./assets/js/DataTables/dataTables.buttons.min.js"></script>
 <script src="./assets/js/DataTables/buttons.colVis.min.js"></script>
@@ -314,7 +314,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
 
 <script>
-	
+	// var data = !{JSON.stringify(data)};
+
 	$('.colorswitch').click(function(){
 		$('.colorswitch').each(function(){
 			$(this).prop('checked', false); 
@@ -347,6 +348,7 @@
 		return tempDict;
 	}
 
+	console.log(data);
 	// for adding regulation timestamps in select
 	if(data.nodes.length > 0){
 		const props = Object.keys(data.nodes[0].attributes);

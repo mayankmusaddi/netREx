@@ -43,7 +43,7 @@ function initNeighbour(nodes) {
     for (var i=0; i<nodes.length; i++) {
         if(nodes[i].attributes.neighbor!="true"){
             nodes[i].size = 70;
-            nodes[i].borderColor = 'red';
+            nodes[i].borderColor = '#39ff14';
         }
     }
 };
@@ -78,21 +78,21 @@ app.use('/simple_network', (req, res) => {
     const edges = file.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
 
     var graph = {nodes,edges};
-    // res.render('graph',{data: graph});
+    res.render('graph',{data: graph});
 
-    parser._transform = function(data, encoding, done) {
-        const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
-        this.push(str);
-        done();
-    };
-    res.write('<!-- Begin stream -->\n');
-    fs
-    .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-    .pipe(newLineStream())
-    .pipe(parser)
-    .on('end', () => {
-        res.write('\n<!-- End stream -->')
-    }).pipe(res);
+    // parser._transform = function(data, encoding, done) {
+    //     const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
+    //     this.push(str);
+    //     done();
+    // };
+    // res.write('<!-- Begin stream -->\n');
+    // fs
+    // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
+    // .pipe(newLineStream())
+    // .pipe(parser)
+    // .on('end', () => {
+    //     res.write('\n<!-- End stream -->')
+    // }).pipe(res);
 
     // res.sendFile(path.join(__dirname, '/../frontend/graph.html'));
 });
@@ -129,6 +129,20 @@ app.use('/neighborhood_network', (req, res) => {
     var graph = {nodes,edges};
 
     res.render('graph',{data: graph});
+
+    // parser._transform = function(data, encoding, done) {
+    //     const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
+    //     this.push(str);
+    //     done();
+    // };
+    // res.write('<!-- Begin stream -->\n');
+    // fs
+    // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
+    // .pipe(newLineStream())
+    // .pipe(parser)
+    // .on('end', () => {
+    //     res.write('\n<!-- End stream -->')
+    // }).pipe(res);
 });
 
 app.listen(3000, function(){

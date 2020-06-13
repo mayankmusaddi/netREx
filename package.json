@@ -4,7 +4,7 @@
   "description": "Graphical Visualisation of Rice Gene Expression Data",
   "main": "backend/server.js",
   "scripts": {
-    "start": "node backend/server",
+    "start": "nodemon backend/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mayank Musaddi",
@@ -13,6 +13,7 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "new-line": "^1.1.1",
+    "nodemon": "^2.0.4",
     "pug": "^2.0.4"
   },
   "bundledDependencies": {

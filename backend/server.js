@@ -53,11 +53,15 @@ app.use('/network', (req, res) => {
     console.log("Query: "+JSON.stringify(query));
     file = require(jsonpath+query.condition+query.tissue)
 
+    // if(query.neighbor=="on")
+    //     res.redirect(307,'/netrex/neighborhood_network');
+    // else
+    //     res.redirect(307,'/netrex/simple_network');
+
     if(query.neighbor=="on")
         res.redirect(307,'/neighborhood_network');
     else
         res.redirect(307,'/simple_network');
-
 
 });
 
@@ -78,21 +82,21 @@ app.use('/simple_network', (req, res) => {
     const edges = file.edges.filter(d => ids.includes(d.source) && ids.includes(d.target));
 
     var graph = {nodes,edges};
-    res.render('graph',{data: graph});
+    // res.render('graph',{data: graph});
 
-    // parser._transform = function(data, encoding, done) {
-    //     const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
-    //     this.push(str);
-    //     done();
-    // };
-    // res.write('<!-- Begin stream -->\n');
-    // fs
-    // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-    // .pipe(newLineStream())
-    // .pipe(parser)
-    // .on('end', () => {
-    //     res.write('\n<!-- End stream -->')
-    // }).pipe(res);
+    parser._transform = function(data, encoding, done) {
+        const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
+        this.push(str);
+        done();
+    };
+    res.write('<!-- Begin stream -->\n');
+    fs
+    .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
+    .pipe(newLineStream())
+    .pipe(parser)
+    .on('end', () => {
+        res.write('\n<!-- End stream -->')
+    }).pipe(res);
 
     // res.sendFile(path.join(__dirname, '/../frontend/graph.html'));
 });

@@ -1,0 +1,65 @@
+table {border-collapse:collapse; table-layout:fixed;}
+table td {word-wrap:break-word;}
+
+#network-graph {
+  height: 80vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #c5c5c5;
+  position: relative;
+}
+#neighborhood-graph {
+  height: 80vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #c5c5c5;
+  position: relative;
+}
+table {
+  display: inline-table;
+	overflow-x: auto;
+    /* white-space: nowrap; */
+}
+.dt-buttons {
+  left:20%;
+}
+#sidepanel, #sidepanelN {
+  background-color: #1A6DC4;
+  padding-top: 50px;
+}
+#sidepanel > div > div > p{
+  color: white;
+}
+#sidepanelN > div > div > p{
+  color: white;
+}
+#expand, #expandN{
+  font-size: 36px;
+  position: absolute;
+  color: #c5c5c5;
+  float: right;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+}
+#expand:hover{
+  color: grey;
+}
+#expandN:hover{
+  color: grey;
+}
+#nav-tabContent,#nav-tabContentN{
+  padding-top: 20px;
+}
+#querytable,#querytableN{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#show-neighborhood{
+  color: cornflowerblue;
+}
+#show-expression{
+  margin-top: 50px;
+}

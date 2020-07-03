@@ -41,8 +41,8 @@
       	  margin: 0;
       	}
 		table {
-		    display: block;
-		    overflow-x: auto;
+		    display: inline-table;
+			overflow-x: auto;
 		    /* white-space: nowrap; */
 		}
 		.dt-buttons {
@@ -172,10 +172,30 @@
 
 	<div class="container box_1170">
 
-		<table id="data-table" class="display" style="width:100%">
-			<thead><tr></tr></thead>
-		</table>
+		<!-- Nav tabs -->
+		<!-- <ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#example4-tab1" aria-controls="example4-tab1" role="tab" data-toggle="tab">Tab 1</a></li>
+			<li role="presentation"><a href="#example4-tab2" aria-controls="example4-tab2" role="tab" data-toggle="tab">Tab 2</a></li>
+		</ul> -->
 
+		<nav>
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+			  <a class="nav-item nav-link active" id="nav-node-tab" data-toggle="tab" href="#nav-node" role="tab" aria-controls="nav-node" aria-selected="true">Nodes</a>
+			  <a class="nav-item nav-link" id="nav-edge-tab" data-toggle="tab" href="#nav-edge" role="tab" aria-controls="nav-edge" aria-selected="false">Edges</a>
+			</div>
+		</nav>
+		<div class="tab-content" id="nav-tabContent">
+			<div class="tab-pane fade show active" id="nav-node" role="tabpanel" aria-labelledby="nav-node-tab">
+				<table id="data-table" class="display" style="width:100%">
+					<thead><tr></tr></thead>
+				</table>
+			</div>
+			<div class="tab-pane fade" id="nav-edge" role="tabpanel" aria-labelledby="nav-edge-tab">
+				<table id="edge-table" class="display" style="width:100%">
+					<thead><tr></tr></thead>
+				</table>
+			</div>
+		</div>
 	</div>
 	<!-- End Table -->
 
@@ -382,14 +402,13 @@
 
 	$(document).ready(()=>{
 
-		$(document).ready(function() {
-			var columns = [
+		var columns = [
 			{ data: "label" },
     		{ data: "attributes.tf" },
     		{ data: "attributes.wgcna_modules"},
     		{ data: "attributes.description"},
 			{ data: "attributes.msu_loc"},
-			{ data: null,},
+			{ data: null},
 
     		{ data: "attributes.go"},
 			{ data: "attributes.mapman"},
@@ -443,13 +462,20 @@
 		}
 
 	    var table = $('#data-table').DataTable( {
-	        data: data.nodes,
+			data: data.nodes,
 			columnDefs: [ 
 				{
         	    	targets: [5],
         	    	data: null,
         	    	defaultContent: "<button class='btn-light'>Click!</button>"
-        		} 
+				},
+				{
+					render: function(data,type,row){
+						let num = data.split("E");
+						return parseFloat(num[0]).toFixed(3)+(num.length==2?('E'+num[1]):'');
+					},
+					targets: [ ...fc_ind],
+				}
 			],
 			columns: columns,
 			dom: 'lBfrtip',
@@ -480,7 +506,8 @@
 
 		$('#data-table tbody').on( 'click', 'button', function () {
     	    var data = table.row( $(this).parents('tr') ).data();
-			window.open("http://expression.ic4r.org/expression-api?term="+data.label, "hello", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
+			console.log(data.label);
+			window.open("http://expression.ic4r.org/expression-api?term="+data.label, "Expression Chart", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
     	} );
 
 		new $.fn.dataTable.Buttons( table, {
@@ -510,7 +537,8 @@
     	table.buttons( 1, null ).container().appendTo(
     	    table.table().container()
 		);
-		$('.dt-button').addClass('btn btn-primary');
+		// $('.dt-button').addClass('btn btn-primary');
+
 		table.button('.tabledesc').trigger();
 		$('.tabledesc').addClass("active")
 
@@ -520,7 +548,64 @@
 			}); 
 			$(this).addClass("active");
 		});
-	});	
+
+		//Edge Table
+
+		var edgecolumns = [
+			{ data: "source" },
+    		{ data: "target" },
+    		{ data: "attributes.pcc"},
+    		{ data: "attributes.k"}
+		];
+
+		$("#edge-table>thead>tr").append( $('<th />', {text : 'Source'}) );
+		$("#edge-table>thead>tr").append( $('<th />', {text : 'Target'}) );
+		$("#edge-table>thead>tr").append( $('<th />', {text : 'PCC'}) );
+		$("#edge-table>thead>tr").append( $('<th />', {text : 'HRR'}) );
+
+		var edgetable = $('#edge-table').DataTable( {
+			data: data.edges,
+			columns: edgecolumns,
+			dom: 'lfrtiBp',
+			// responsive: true,
+			columnDefs: [
+            	{
+            	    render: function ( d, type, row ) {
+						let node = data.nodes.find(o => o.id === d);
+            	        return node.label;
+            	    },
+            	    targets: [ 0, 1 ],
+				},
+				{
+					render: function(data,type,row){
+						return parseFloat(data).toFixed(3);
+					},
+					targets: [ 2 ],
+				}
+			],
+			buttons: [
+				{
+            	    extend: 'copyHtml5',
+            	    text: '<i class="fas fa-copy"></i> Copy',
+            	    titleAttr: 'Copy'
+            	},
+            	{
+            	    extend: 'excelHtml5',
+            	    text: '<i class="fas fa-file-excel"></i> Excel',
+            	    titleAttr: 'Excel'
+            	},
+            	{
+            	    extend: 'csvHtml5',
+            	    text: '<i class="fas fa-file-csv"></i> CSV',
+            	    titleAttr: 'CSV'
+            	},
+            	{
+            	    extend: 'pdfHtml5',
+            	    text: '<i class="fas fa-file-pdf"></i> PDF',
+            	    titleAttr: 'PDF'
+            	},
+    	    ]
+		});
 	});
 
 </script>
@@ -577,21 +662,6 @@
 			  return neighbors;
 			});
 
-			// Doesn't Work ??
-			sigma.classes.graph.addMethod('reorderNodes', function (id) {
-				var l = this.nodesArray.length;
-				var temp = null;
-				//remove node from the nodesArray
-				for (let i = 0; i < l; i++)
-					if (this.nodesArray[i].id === id) {
-						temp = this.nodesArray.splice(i, 1);
-						break;
-					}
-				//push the node into the end
-				this.nodesArray.push(temp[0]);
-				return this;
-			});
-
 			s = new sigma({ 
 				graph: data,
 				container: 'network-graph',
@@ -602,8 +672,6 @@
 				settings: {
 				  minNodeSize: 1,
 				  maxNodeSize: 15,
-					//- enableNodeHovering: true, ??
-					//- enableEdgeHovering: true, ??
 				}
 			});
 
@@ -614,7 +682,6 @@
 			for (var i = 0; i < edges.length; i += 1){
 				edges[i].type = 'curve';
 				edges[i].size = 0.1;
-				//- edges[i].color = "pink";
 			}
 
 			// We first need to save the original colors of our nodes and edges, like this:
@@ -637,7 +704,6 @@
 				if (toKeep[n.id]){
 				  n.color = n.originalColor;
 				  n.borderColor = n.originalBorderColor;
-				  //- s.graph.reorderNodes(n.id); ??
 				}
 				else{
 				  n.color = '#eee';
@@ -682,11 +748,6 @@
 			  function () {
 				console.log('stopping');
 				s.stopForceAtlas2();
-				// console.log(s.renderers[0].snapshot({format: 'png', background: 'white', filename: 'my-graph.png', labels: false}));
-				// var graphimage = s.renderers[0].snapshot({format: 'png', background: 'white', filename: 'my-graph.png', labels: false});
-				// var url = graphimage.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
-				// window.open(url);
-				// <a href="data:image/jpeg;base64,/9j/4AAQSkZ..." download="filename.jpg"></a>
 			  }, 
 			  1000);
 		  

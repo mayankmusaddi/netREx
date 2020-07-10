@@ -64,7 +64,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
+                                <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:130px"></a>
                                 <!-- <div>NetREx</div> -->
                             </div>
                         </div>
@@ -74,12 +74,13 @@
                                 <nav>
                                     <ul id="navigation">    
                                         <li><a href="index.html">Home</a></li>
-                                        <li class="active"><a href="overview.html">Overview</a></li>
-                                        <li><a href="query.html">Visualise</a>
-                                            <!-- <ul class="submenu">
-                                                <li><a href="query.html/network-viewer">Network Viewer</a></li>
-                                                <li><a href="query.html/module-viewer">Module Viewer</a></li>
-                                            </ul> -->
+                                        <li><a href="overview.html">Overview</a></li>
+                                        <li><a href="query.html">Query</a>
+                                        <li><a>Browse</a>
+                                            <ul class="submenu">
+                                                <li><a href="module.html">Module Wise</a></li>
+                                                <li><a href="condition.html">Condition Wise</a></li>
+                                            </ul>
                                         </li>
                                         <li><a href="dataset.html">Datasets</a></li>
                                         <li><a href="contact.html">Contact</a></li>
@@ -235,11 +236,12 @@
 					</div>
 					<!-- End Table -->
 	
-					<a id="show-neighborhood" >
+					<!-- <a id="show-neighborhood" >
 						Show graph containing top 
-						<span><input type="text" value="100" placeholder="<300" style="width:50px;" id="neighbor-number" required></span> 
+						
 						neighbours of queried genes
-					</a>
+					</a> -->
+					<p><button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><span><input type="text" value="100" placeholder="<300" style="width:50px;" id="neighbor-number" required></span> </p>
 
 					<div id="neighborhood-view" style="display: none;">
 
@@ -319,11 +321,9 @@
 					</div>
 
 				</div>
-				<!-- End Graph Area -->
-
 			</div>
 			<!-- End Graph Area -->
-
+			
 			<!-- Start Expression Area -->
 			<div>
 				<p><button type="button" class="btn-outline-secondary" id="show-expression">Expression Viewer</button></p>
@@ -366,7 +366,7 @@
 								 <ul>
 									 <li><a href="index.html">Home</a></li>
 									 <li><a href="overview.html">About</a></li>
-									 <li><a href="query.html">Visualise</a></li>
+									 <li><a href="query.html">Query</a></li>
 									 <li><a href="datasets.html">Datasets</a></li>
 									 <li><a href="contact.html">Contact</a></li>
 								 </ul>
@@ -533,12 +533,8 @@
 				contentType: "application/json; charset=utf-8",
 				success: function (graph) {
 					$('#network-view').show();
-	
-					$('#show-network').css({
-						"cursor": "wait",
-						"pointer-events": "none"
-					});
-					load_graph(graph,'network-graph','');
+					$('#show-network').prop('disabled', true);
+					load_graph(graph,'network-graph','',true);
 					load_table(graph,'');
 				},
 				error: function(){
@@ -549,27 +545,24 @@
 		});
 	
 		$('#show-neighborhood').click(function(){
-			$.ajax({
-				type: "POST",
-				url: "/neighborhood_network",
-				data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
-				contentType: "application/json; charset=utf-8",
-				success: function (graph) {
-					$('#neighborhood-view').show();
-	
-					// $('#show-network').css({
-					//     "cursor": "wait",
-					//     "pointer-events": "none"
-					// });
-	
-					load_graph(graph,'neighborhood-graph','N');
-					load_table(graph,'N');
-				},
-				error: function(){
-					alert('Error');
-				}
-			});
-			
+			if($('#neighbor-number').val()>0){
+				$.ajax({
+					type: "POST",
+					url: "/neighborhood_network",
+					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
+					contentType: "application/json; charset=utf-8",
+					success: function (graph) {
+						// $('#neighborhood-graph').html('<span class="fas fa-expand-arrows-alt" id="expandN" ></span>');
+						$('#neighborhood-view').show();
+						$('#show-neighborhood').prop('disabled', true);
+						load_graph(graph,'neighborhood-graph','N',true);
+						load_table(graph,'N');
+					},
+					error: function(){
+						alert('Error');
+					}
+				});
+			}
 		});
 		
 		$('#show-expression').click(function(){
@@ -580,11 +573,7 @@
 				contentType: "application/json; charset=utf-8",
 				success: function (data) {
 					$('#expression-view').show();
-	
-					$('#show-expression').css({
-						"cursor": "wait",
-						"pointer-events": "none"
-					});
+					$('#show-expression').prop('disabled', true);
 					load_expression(data);
 				},
 				error: function(){

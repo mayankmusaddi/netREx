@@ -10,7 +10,7 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
     return neighbors;
 });
 
-function load_graph(data, graphid, N){
+function load_graph(data, graphid, N, move){
     var timestamps = getTimestamps(data);
 
     function expand() {
@@ -145,41 +145,38 @@ function load_graph(data, graphid, N){
         
     });
     
-    
-    //Initialize nodes as a circle
-    s.graph.nodes().forEach(function(node, i, a) {
-        node.x = Math.cos(Math.PI * 2 * i / a.length);
-        node.y = Math.sin(Math.PI * 2 * i / a.length);
-    });
-    
-    //Call refresh to render the new graph
-    CustomShapes.init(s);
-    s.refresh();
-    
-    s.startForceAtlas2();
-    setTimeout(
-        function () {
-            console.log('stopping');
-            s.stopForceAtlas2();
-        }, 
-    1000);
+    if(move){
+        //Initialize nodes as a circle
+        s.graph.nodes().forEach(function(node, i, a) {
+            node.x = Math.cos(Math.PI * 2 * i / a.length);
+            node.y = Math.sin(Math.PI * 2 * i / a.length);
+        });
         
-    var config = {
-        nodeMargin: 3.0,
-        scaleNodes: 1.3,
-    };
-    // Configure the algorithm
-    var listener = s.configNoverlap(config);
-    // Bind all events:
-    listener.bind('start stop interpolate', function(event) {
-        console.log(event.type);
-    });
-    // Start the algorithm:
-    s.startNoverlap();
-    
-    //- console.log(data);
-    console.log(s.graph.nodes());
-    console.log(s.graph.edges());
+        //Call refresh to render the new graph
+        CustomShapes.init(s);
+        s.refresh();
+        
+        s.startForceAtlas2();
+        setTimeout(
+            function () {
+                console.log('stopping');
+                s.stopForceAtlas2();
+            }, 
+        1000);
+            
+        var config = {
+            nodeMargin: 3.0,
+            scaleNodes: 1.3,
+        };
+        // Configure the algorithm
+        var listener = s.configNoverlap(config);
+        // Bind all events:
+        listener.bind('start stop interpolate', function(event) {
+            console.log(event.type);
+        });
+        // Start the algorithm:
+        s.startNoverlap();
+    }
     
     if (selectedNode != undefined){
         s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});

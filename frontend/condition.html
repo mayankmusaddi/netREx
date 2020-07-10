@@ -21,9 +21,21 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
 			<link rel="stylesheet" href="assets/css/style.css">
+
+			<link rel="stylesheet" href="assets/js/DataTables/datatables.min.css">
+   			<link rel="stylesheet" href="assets/js/DataTables/dataTables.bootstrap.min.css">
+			<link rel="stylesheet" href="assets/js/DataTables/buttons.dataTables.min.css">
+			<link rel="stylesheet" href="assets/css/app.css">
+
+			<script src='assets/js/lodash.min.js'></script>
 			
 			<script src='https://kit.fontawesome.com/a076d05399.js'></script>
    </head>
+   <style>
+		.dt-buttons{
+			left:10%;
+		}
+	</style>
 
    <body>
        
@@ -61,8 +73,8 @@
                                     <ul id="navigation">    
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="overview.html">Overview</a></li>
-                                        <li class="active"><a href="query.html">Query</a>
-                                        <li><a>Browse</a>
+                                        <li><a href="query.html">Query</a>
+                                        <li class="active"><a>Browse</a>
                                             <ul class="submenu">
                                                 <li><a href="module.html">Module Wise</a></li>
                                                 <li><a href="condition.html">Condition Wise</a></li>
@@ -88,34 +100,22 @@
     <main>
     <!-- Slider Area Start-->
 
-	<!-- <div class="services-area">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-8">
-					<div class="section-tittle text-center mb-80">
-						<h2>Visualisations</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 	<div class="services-area" style="margin-bottom: -40px;">
 	</div>
 	<!-- Slider Area End-->
 
 	<!-- Start Sample Area -->
 	<section class="sample-text-area">
-		<div class="container box_1170" id="network-viewer">
-			<h3 class="text-heading">Gene Query Visualisation</h3>
+		<div class="container box_1170 border-top-generic">
+			<h3 class="text-heading">Condition Browse</h3>
 				<p class="sample-text">
-                	A query based search which graphically displays all the connections of the queried genes, with the option 
-                	for viewing the module colors, the regulations at different time stamps, and immediate neighbours.
+					Browsing through the complete database of genes that play a key role at the specified tissue 
+					level when exposed through different abiotic stress conditions or phytohormone changes.
 				</p>
 
 			<div class="row">
 				<div class="col-lg-8">
-					<form class="form-contact" id="query-form" action="/validate.html" method="get">
+					<form class="form-contact" action="/load" id="conditionForm">
 					<!-- </form class="form-contact" action="/netrex/network" method="post"> -->
 						<div class="row">
 
@@ -159,25 +159,23 @@
 									</select>
 								</div>
 							</div>
-							
-							<div class="col-sm-12">
-								<div class="form-group">
-									<textarea class="form-control w-100" name="genes" id="genes" cols="30" rows="9"	 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Comma/Space separated Query Gene List (<300)'" placeholder=" Enter Comma/Space separated Query Gene List (<300)" required></textarea>
-								</div>
-							</div>
-
-							<a id="example" class="genric-btn link">Load Example</a>
 
 						</div>
 
 						<div class="form-group mt-3">
 							<button type="submit" class="button boxed-btn">Send</button>
-							<button type="reset" class="button boxed-btn">Reset</button>
 						</div>
 					</form>
 				</div>
 				
 				<div class="col-lg-3 offset-lg-1">
+					<div class="media contact-info">
+						<span class="contact-info__icon"><i class="fas fa-microscope"></i></span>
+						<div class="media-body">
+							<h3>Tissue Type</h3>
+							<p>DEGs determined in a tissue-specific manner</p>
+						</div>
+					</div>
 					<div class="media contact-info">
 						<span class="contact-info__icon"><i class="fas fa-cloud-sun-rain"></i></span>
 						<div class="media-body">
@@ -185,45 +183,37 @@
 							<p>Coordinated association between genes when exposed to stress</p>
 						</div>
 					</div>
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-microscope"></i></span>
-						<div class="media-body">
-							<h3>Tissue Type</h3>
-							<p>Differentially expressed genes (DEGs) are determined in a tissue-specific manner</p>
-						</div>
-					</div>
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-dna"></i></span>
-						<div class="media-body">
-							<h3>Query Gene List</h3>
-							<p>For Gene Specific Connections</p>
-						</div>
-					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="container box_1170" id="module-viewer">
-			<div class="section-top-border"></div>
-			<h3 class="text-heading">NetREx Browse</h3>
-				<p class="sample-text">
-					Browse the database related to the species Oryza Sativa classified on the basis of WGCNA modules 
-					or the various stress conditions upon which the up and down regulation of the genes are specified.
-				</p>
-
-			<div class="row">
-				<div class="col-lg-8">
-					<div class="row">
-						<div class="input-group-icon col-sm-12">
-							<a href="module.html" class="button boxed-btn" style="margin-top: 20px;">Browse by Module</a>
-						</div>
-						<div class="input-group-icon col-sm-12">
-							<a href="condition.html" class="button boxed-btn" style="margin-top: 20px;">Browse by Stress Condition</a>
-						</div>
+			<div class="container box_1170" id="loading-image" style="display: none;">
+				<img src="assets/loading.gif" style="width: 70px;"><p>Please wait while data is being fetched. It'll take less than a minute...</p>
+			</div>
+			
+			<!-- Start Table -->
+			<div id="querytable" style="display: none;">
+				<nav>
+					<div class="nav nav-tabs" id="nav-tab" role="tablist">
+					  <a class="nav-item nav-link active" id="nav-node-tab" data-toggle="tab" href="#nav-node" role="tab" aria-controls="nav-node" aria-selected="true">Nodes</a>
+					  <!-- <a class="nav-item nav-link" id="nav-edge-tab" data-toggle="tab" href="#nav-edge" role="tab" aria-controls="nav-edge" aria-selected="false">Edges</a> -->
 					</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="nav-node" role="tabpanel" aria-labelledby="nav-node-tab">
+						<table id="data-table" class="display" style="width:100%">
+							<thead><tr></tr></thead>
+						</table>
+					</div>
+					<!-- <div class="tab-pane fade" id="nav-edge" role="tabpanel" aria-labelledby="nav-edge-tab">
+						<table id="edge-table" class="display" style="width:100%">
+							<thead><tr></tr></thead>
+						</table>
+					</div> -->
 				</div>
 			</div>
+			<!-- End Table -->
 		</div>
+
 	</section>
     <!-- End Sample Area -->
 
@@ -345,95 +335,103 @@
         <script src="./assets/js/jquery.form.js"></script>
         <script src="./assets/js/jquery.validate.min.js"></script>
         <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+	</body>
         
-		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-		<script src="./assets/js/main.js"></script>
+	<!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+	<script src="./assets/js/main.js"></script>
+
+	<script src="./assets/js/helper.js"></script>
+
+	<script src="./assets/js/DataTables/datatables.min.js"></script>
+	<script src="./assets/js/DataTables/dataTables.buttons.min.js"></script>
+	<script src="./assets/js/DataTables/buttons.colVis.min.js"></script>
+	<script src="./assets/js/DataTables/buttons.html5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
+	<script src="./assets/js/load_table.js"></script>
 		
-		<!-- Personalised Scripts -->
-		<script type="text/javascript">
-			$("#query-form").submit(function(e) {
-				var text = $('textarea#genes').val();
-				var genes = text.split(/[ ,]+/).filter(Boolean);
-				if(genes.length > 300){
-					alert("Enter Less than 300 Genes");
-					e.preventDefault(); // avoid to execute the actual submit of the form.
+	<!-- Personalised Scripts -->
+	<script type="text/javascript">
+		// this is the id of the form
+		$("#conditionForm").submit(function(e) {
+			$("#loading-image").show();
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+			var form = $(this);
+			var url = form.attr('action');
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: form.serialize(),
+				// contentType: "application/json; charset=utf-8",
+				success: function (graph) {
+					$("#loading-image").hide();
+
+					if ($.fn.DataTable.isDataTable("#data-table")) {
+					  $('#data-table').DataTable().clear().destroy();
+					};
+					$('#data-table').html('<thead><tr></tr></thead>');
+
+					$('#querytable').show();
+					load_table(graph,'');
+				},
+				error: function(){
+					alert('Error');
 				}
 			});
-			$(document).ready(()=>{
-
-				$('#example').click(()=>{
-					$("#select-condition").show();
-
-					$("#speciesN").val('rice');
-					$("#speciesHead > div > span").html("Oryza Sativa");
-
-					$("#tissueN").val('root');
-					$("#tissueHead > div > span").html("Root");
-
-					$("#conditionTypeN").val('stress').trigger('change');
-					$("#conditionTypeHead > div > span").html("Abiotic Stress");
-
-					$("#conditionN").val('drought');
-					$("#conditionHead > div > span").html("Drought");
-
-					$('textarea#genes').val('Os02g0255500,Os01g0285300,Os06g0644200,Os03g0437200,Os10g0575000,Os12g0586000,Os06g0211200,Os02g0766700,Os09g0456200,Os08g0472000,Os02g0776400,Os03g0316200,Os07g0687900,Os05g0528000,Os11g0177400,Os05g0537400,Os01g0583100,Os07g0164900,Os10g0457600,Os04g0209200,Os12g0617400,Os03g0645900,Os07g0154100,Os01g0385400,Os02g0526400,Os01g0165000,Os01g0615100,Os03g0125100,Os03g0128700,Os05g0595100,Os11g0113700');
-					$('#neighbor').prop('checked', false);
-				});
-
-				$(function(){
-					$('#conditionTypeN').change(function(){
-						var data= $(this).val();
-
-						var options = {
-							'- Condition -' : '',
-						};
-						var stressCondition = {
-							'- Condition -' : '',
-							'Drought' : 'drought',
-							'Cold' : 'cold',
-							'Flood' : 'flood',
-							'Osmosis' : 'osmo',
-						};
-						var hormoneCondition = {
-							'- Condition -' : '',
-							'ABA' : 'aba',
-							'JA' : 'ja',
-						};
-						
-						if(data == "stress"){
-							$("#select-condition").show();
-							$("#conditionN").val('');
-							$("#conditionHead > div > span").html("- Condition -");
-							options = stressCondition;
-						}
-						else if(data == "hormone"){
-							$("#select-condition").show();
-							$("#conditionN").val('');
-							$("#conditionHead > div > span").html("- Condition -");
-							options = hormoneCondition;
-						}
-						else{
-							$("#select-condition").hide();
-						}
-
-						var $el = $("#conditionN");
-						$el.empty(); // remove old options
-						$.each(options, function(key,value) {
-						  $el.append($("<option></option>")
-						     .attr("value", value).text(key));
-						});
-						var $el = $("#conditionHead > div > ul");
-						$el.empty(); // remove old options
-						$.each(options, function(key,value) {
-						  $el.append($("<li></li>")
-						     .attr("data-value", value).attr("class", "option").text(key));
-						});
-				   });
-				   $('#conditionTypeN').trigger('change');
-				});
+		});
+		$(document).ready(()=>{
+			$(function(){
+				$('#conditionTypeN').change(function(){
+					var data= $(this).val();
+					var options = {
+						'- Condition -' : '',
+					};
+					var stressCondition = {
+						'- Condition -' : '',
+						'Drought' : 'drought',
+						'Cold' : 'cold',
+						'Flood' : 'flood',
+						'Osmosis' : 'osmo',
+					};
+					var hormoneCondition = {
+						'- Condition -' : '',
+						'ABA' : 'aba',
+						'JA' : 'ja',
+					};
+					
+					if(data == "stress"){
+						$("#select-condition").show();
+						$("#conditionN").val('');
+						$("#conditionHead > div > span").html("- Condition -");
+						options = stressCondition;
+					}
+					else if(data == "hormone"){
+						$("#select-condition").show();
+						$("#conditionN").val('');
+						$("#conditionHead > div > span").html("- Condition -");
+						options = hormoneCondition;
+					}
+					else{
+						$("#select-condition").hide();
+					}
+					var $el = $("#conditionN");
+					$el.empty(); // remove old options
+					$.each(options, function(key,value) {
+					  $el.append($("<option></option>")
+					     .attr("value", value).text(key));
+					});
+					var $el = $("#conditionHead > div > ul");
+					$el.empty(); // remove old options
+					$.each(options, function(key,value) {
+					  $el.append($("<li></li>")
+					     .attr("data-value", value).attr("class", "option").text(key));
+					});
+			   });
+			   $('#conditionTypeN').trigger('change');
 			});
-		</script>
-</body>
+		});
+	</script>
 </html>

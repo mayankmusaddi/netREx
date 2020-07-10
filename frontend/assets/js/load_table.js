@@ -37,7 +37,7 @@ function load_table(data, N){
         columns.push({data: "attributes.pval_"+time});
 
         $("#data-table"+N+">thead>tr").append( $('<th />', {text : "FC "+key}) );
-        $("#data-table"+N+">thead>tr").append( $('<th />', {text : "Pval "+key}) );
+        $("#data-table"+N+">thead>tr").append( $('<th />', {text : "p-value "+key}) );
 
         fc_ind.push(ind);
         ind++;

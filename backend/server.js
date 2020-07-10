@@ -94,46 +94,16 @@ app.use('/validate', (req, res) => {
 
     data = {nodes: nodes, valid: valid, invalid: invalid, metadata: metadata};
     res.send(data);
-
-    // res.render('graph',{data: data});
-    // parser._transform = function(d, encoding, done) {
-    //     const str = d.toString().replace('<body>', '<body><script>var data = '+JSON.stringify(data)+';</script>');
-    //     this.push(str);
-    //     done();
-    // };
-    // res.write('<!-- Begin stream -->\n');
-    // fs
-    // .createReadStream(path.join(__dirname+'/../frontend/validate.html'))
-    // .pipe(newLineStream())
-    // .pipe(parser)
-    // .on('end', () => {
-    //     res.write('\n<!-- End stream -->')
-    // }).pipe(res);
-});
-
-app.use('/network', (req, res) => {
-    var query = req.body;
-    console.log("Query: "+JSON.stringify(query));
-    file = require(jsonpath+query.condition+query.tissue)
-
-    // if(query.neighbor=="on")
-    //     res.redirect(307,'/netrex/neighborhood_network');
-    // else
-    //     res.redirect(307,'/netrex/simple_network');
-
-    if(query.neighbor=="on")
-        res.redirect(307,'/neighborhood_network');
-    else
-        res.redirect(307,'/simple_network');
-
 });
 
 app.use('/module', (req, res) => {
     var query = req.body;
     console.log("Query: "+JSON.stringify(query));
     file = require(jsonpath+query.tissue+query.module)
+    res.send(file);
+
+    // res.render('graph',{data: file});
     
-    res.render('graph',{data: file});
     // parser._transform = function(d, encoding, done) {
     //     const str = d.toString().replace('</body>', '<script>var data = '+JSON.stringify(data)+';</script></body>');
     //     this.push(str);
@@ -147,6 +117,13 @@ app.use('/module', (req, res) => {
     // .on('end', () => {
     //     res.write('\n<!-- End stream -->')
     // }).pipe(res);
+});
+
+app.use('/load', (req, res) => {
+    var query = req.body;
+    console.log("Query: "+JSON.stringify(query));
+    file = require(jsonpath+query.condition+query.tissue);
+    res.send(file);
 });
 
 app.use('/expression', (req, res) => {
@@ -228,21 +205,6 @@ app.use('/neighborhood_network', (req, res) => {
     var graph = {nodes,edges};
 
     res.send(graph);
-    // res.render('graph',{data: graph});
-
-    // parser._transform = function(data, encoding, done) {
-    //     const str = data.toString().replace('</body>', '<script>var data = '+JSON.stringify(graph)+';</script></body>');
-    //     this.push(str);
-    //     done();
-    // };
-    // res.write('<!-- Begin stream -->\n');
-    // fs
-    // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-    // .pipe(newLineStream())
-    // .pipe(parser)
-    // .on('end', () => {
-    //     res.write('\n<!-- End stream -->')
-    // }).pipe(res);
 });
 
 app.listen(3000, function(){

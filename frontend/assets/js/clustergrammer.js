@@ -13536,8 +13536,12 @@ var Clustergrammer =
 	    if (matrix.opacity_function === 'linear') {
 	      matrix.opacity_scale = d3.scale.linear().domain([0, matrix.abs_max_val]).clamp(true).range([0.0, 1.0]);
 	    } else if (matrix.opacity_function === 'log') {
-	      matrix.opacity_scale = d3.scale.log().domain([0.001, matrix.abs_max_val]).clamp(true).range([0.0, 1.0]);
-	    }
+		  matrix.opacity_scale = d3.scale.log().domain([0.001, matrix.abs_max_val]).clamp(true).range([0.0, 1.0]);
+	    } else if (matrix.opacity_function === '-linear') {
+			matrix.opacity_scale = d3.scale.linear().domain([0, matrix.abs_max_val]).clamp(true).range([1.0, 0.0]);
+		} else if (matrix.opacity_function === '-log') {
+			matrix.opacity_scale = d3.scale.log().domain([0.001, matrix.abs_max_val]).clamp(true).range([1.0, 0.0]);
+		}
 	  } else {
 	    if (matrix.opacity_function === 'linear') {
 	      matrix.opacity_scale = d3.scale.linear().domain([0, params.input_domain]).clamp(true).range([0.0, 1.0]);
@@ -14560,7 +14564,6 @@ var Clustergrammer =
 
 	// current matrix can change with downsampling
 	module.exports = function make_matrix_rows(params, current_matrix, row_names = 'all', ds_level = -1) {
-
 	  // defaults
 	  var y_scale = params.viz.y_scale;
 	  var make_tip = true;
@@ -14587,7 +14590,7 @@ var Clustergrammer =
 	      var class_string = root_tip_selector + ' d3-tip ' + root_tip_selector + '_tile_tip';
 	      return class_string;
 	    }).style('display', 'none').direction('nw').offset([0, 0]).html(function (d) {
-	      var inst_value = String(parseFloat(d.value).toFixed(3));
+		  var inst_value = String(parseFloat(d.value).toFixed(3));
 	      var tooltip_string;
 
 	      if (params.keep_orig) {
@@ -14595,8 +14598,7 @@ var Clustergrammer =
 	        tooltip_string = '<p>' + d.row_name + ' and ' + d.col_name + '</p>' + '<p> normalized value: ' + inst_value + '</p>' + '<div> original value: ' + orig_value + '</div>';
 	      } else {
 	        tooltip_string = '<p>' + d.row_name + ' and ' + d.col_name + '</p>' + '<div> value: ' + inst_value + '</div>';
-	      }
-
+		  }
 	      return tooltip_string;
 	    });
 	  } else {
@@ -28728,29 +28730,45 @@ var Clustergrammer =
 	  var defs = main_svg.append("defs");
 
 	  //Append a linearGradient element to the defs and give it a unique id
-	  var linearGradient = defs.append("linearGradient").attr("id", "linear-gradient");
+	  var linearGradient = defs.append("linearGradient").attr("id", params.root.replace('#','')+'_'+"linear-gradient");
+
+	  var posGradient = params.matrix.tile_colors[0];
+	  var zeroGradient = "white";
+	  var negGradient = params.matrix.tile_colors[1];
 
 	  var special_case = 'none';
 
 	  // no negative numbers
 	  if (min_link >= 0) {
 
+		if(params.opacity_scale[0]==='-'){
+			let temp = posGradient;
+			posGradient = zeroGradient
+			zeroGradient = temp;
+		}
+
 	    //Set the color for the start (0%)
-	    linearGradient.append("stop").attr("offset", "0%").attr("stop-color", "white");
+	    linearGradient.append("stop").attr("offset", "0%").attr("stop-color", zeroGradient);
 
 	    //Set the color for the end (100%)
-	    linearGradient.append("stop").attr("offset", "100%").attr("stop-color", "red");
+	    linearGradient.append("stop").attr("offset", "100%").attr("stop-color", posGradient);
 
 	    special_case = 'all_postiive';
 
 	    // no positive numbers
 	  } else if (max_link <= 0) {
 
+		if(params.opacity_scale[0]==='-'){
+			let temp = negGradient;
+			negGradient = zeroGradient
+			zeroGradient = temp;
+		}
+
 	    //Set the color for the start (0%)
-	    linearGradient.append("stop").attr("offset", "0%").attr("stop-color", "blue");
+	    linearGradient.append("stop").attr("offset", "0%").attr("stop-color", negGradient);
 
 	    //Set the color for the end (100%)
-	    linearGradient.append("stop").attr("offset", "100%").attr("stop-color", "white");
+	    linearGradient.append("stop").attr("offset", "100%").attr("stop-color", zeroGradient);
 
 	    special_case = 'all_negative';
 	  }
@@ -28758,17 +28776,17 @@ var Clustergrammer =
 	  // both postive and negative numbers
 	  else {
 	      //Set the color for the start (0%)
-	      linearGradient.append("stop").attr("offset", "0%").attr("stop-color", "blue");
+	      linearGradient.append("stop").attr("offset", "0%").attr("stop-color", negGradient);
 
 	      //Set the color for the end (100%)
-	      linearGradient.append("stop").attr("offset", "50%").attr("stop-color", "white");
+	      linearGradient.append("stop").attr("offset", "50%").attr("stop-color", zeroGradient);
 
 	      //Set the color for the end (100%)
-	      linearGradient.append("stop").attr("offset", "100%").attr("stop-color", "red");
+	      linearGradient.append("stop").attr("offset", "100%").attr("stop-color", posGradient);
 	    }
 
 	  // make colorbar
-	  main_svg.append('rect').classed('background', true).attr('height', colorbar_height + 'px').attr('width', colorbar_width + 'px').attr('fill', 'url(#linear-gradient)').attr('transform', 'translate(' + bar_margin_left + ', ' + bar_margin_top + ')').attr('stroke', 'grey').attr('stroke-width', '0.25px');
+	  main_svg.append('rect').classed('background', true).attr('height', colorbar_height + 'px').attr('width', colorbar_width + 'px').attr('fill', 'url(#'+params.root.replace('#','')+'_'+'linear-gradient)').attr('transform', 'translate(' + bar_margin_left + ', ' + bar_margin_top + ')').attr('stroke', 'grey').attr('stroke-width', '0.25px');
 
 	  // make title
 	  ///////////////

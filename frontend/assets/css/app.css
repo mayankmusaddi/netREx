@@ -57,9 +57,12 @@ table {
   margin-top: 30px;
   margin-bottom: 20px;
 }
-#show-neighborhood{
+/* #show-neighborhood{
   color: cornflowerblue;
-}
+} */
 #show-expression{
+  margin-top: 50px;
+}
+#show-neighborhood{
   margin-top: 50px;
 }

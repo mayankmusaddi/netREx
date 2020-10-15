@@ -1,10 +1,9 @@
-function load_table(data, N, s){    
+function load_module_table(data){
     $(document).ready(()=>{
 
     var columns = [
         { data: "label" },
         { data: "attributes.tf" },
-        { data: "attributes.wgcna_modules"},
         { data: "attributes.description"},
         { data: "attributes.msu_loc"},
         { data: null},
@@ -14,36 +13,18 @@ function load_table(data, N, s){
         { data: "attributes.kegg"},
     ];
 
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Label'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'TF'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Module'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Description'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'MSU ID'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'IC4R	Expression'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'Label'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'TF'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'Description'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'MSU ID'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'IC4R	Expression'}) );
 
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'GO'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Mapman'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'KEGG'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'GO'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'Mapman'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'KEGG'}) );
 
-    var desc_ind=[1,2,3,4,5];
-    var func_ind=[6,7,8];
-    var fc_ind=[];
-    var ind = 9;
-
-    var timestamps = getTimestamps(data);
-    Object.keys(timestamps).forEach(function(key) {
-        var time = timestamps[key].substring(4);
-        columns.push({data: "attributes.fc_"+time});
-        columns.push({data: "attributes.pval_"+time});
-
-        $("#data-table"+N+">thead>tr").append( $('<th />', {text : "FC "+key}) );
-        $("#data-table"+N+">thead>tr").append( $('<th />', {text : "p-value "+key}) );
-
-        fc_ind.push(ind);
-        ind++;
-        fc_ind.push(ind);
-        ind++;
-    });
+    var desc_ind=[1,2,3,4];
+    var func_ind=[5,6,7];
 
     const set = (obj, path, val) => { 
         const keys = path.split('.');
@@ -61,29 +42,13 @@ function load_table(data, N, s){
         }
     }
 
-    var table = $("#data-table"+N).DataTable( {
+    var table = $("#data-table").DataTable( {
         data: data.nodes,
         columnDefs: [ 
             {
                 targets: [5],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
-            },
-            {
-                render: function(data,type,row){
-                    let num = data.split("E");
-                    return parseFloat(num[0]).toFixed(3)+(num.length==2?('E'+num[1]):'');
-                },
-                targets: [ ...fc_ind],
-            },
-            {
-                // The `data` parameter refers to the data for the cell (defined by the
-                // `data` option, which defaults to the column being worked with, in
-                // this case `data: 0`.
-                render : function ( d, type, row ) {
-                    return "<a target='_blank' href=/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
-                },
-                targets: 2
             },
         ],
         columns: columns,
@@ -94,36 +59,22 @@ function load_table(data, N, s){
                 text: 'Description',
                 className: "tabledesc",
                 show: [ ...desc_ind],
-                hide: [ ...func_ind, ...fc_ind]
+                hide: [ ...func_ind]
             },
             {
                 extend: 'colvisGroup',
                 text: 'Function',
                 className: "tablefunc",
                 show: [ ...func_ind ],
-                hide: [ ...desc_ind, ...fc_ind]
+                hide: [ ...desc_ind]
             },
-            {
-                extend: 'colvisGroup',
-                text: 'Fold Change',
-                className: "tablefc",
-                show: [ ...fc_ind ],
-                hide: [ ...desc_ind, ...func_ind]
-            }
         ]
     });
 
-    $("#data-table"+N+' tbody').on( 'click', 'button', function () {
+    $("#data-table tbody").on( 'click', 'button', function () {
         var data = table.row( $(this).parents('tr') ).data();
-        // console.log(data.label);
         window.open("http://expression.ic4r.org/expression-api?term="+data.label, "Expression Chart", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
     } );
-
-    $('#data-table'+N).on( 'mouseenter', 'tbody tr', function () {
-        var rowData = table.row( this ).data();
-        var renderer = s.renderers[0];
-        renderer.dispatchEvent('overNode', {node:s.graph.nodes(rowData.id)});
-      } );
 
     new $.fn.dataTable.Buttons( table, {
         buttons: [
@@ -152,7 +103,6 @@ function load_table(data, N, s){
     table.buttons( 1, null ).container().appendTo(
         table.table().container()
     );
-    // $('.dt-button').addClass('btn btn-primary');
 
     table.button('.tabledesc').trigger();
     $('.tabledesc').addClass("active")
@@ -173,12 +123,12 @@ function load_table(data, N, s){
         { data: "attributes.k"}
     ];
 
-    $("#edge-table"+N+">thead>tr").append( $('<th />', {text : 'Source'}) );
-    $("#edge-table"+N+">thead>tr").append( $('<th />', {text : 'Target'}) );
-    $("#edge-table"+N+">thead>tr").append( $('<th />', {text : 'PCC'}) );
-    $("#edge-table"+N+">thead>tr").append( $('<th />', {text : 'HRR'}) );
+    $("#edge-table>thead>tr").append( $('<th />', {text : 'Source'}) );
+    $("#edge-table>thead>tr").append( $('<th />', {text : 'Target'}) );
+    $("#edge-table>thead>tr").append( $('<th />', {text : 'PCC'}) );
+    $("#edge-table>thead>tr").append( $('<th />', {text : 'HRR'}) );
 
-    var edgetable = $("#edge-table"+N).DataTable( {
+    var edgetable = $("#edge-table").DataTable( {
         data: data.edges,
         columns: edgecolumns,
         dom: 'lfrtiBp',

@@ -10,17 +10,11 @@
   "author": "Mayank Musaddi",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "new-line": "^1.1.1",
-    "nodemon": "^2.0.4",
-    "pug": "^2.0.4"
+    "nodemon": "^2.0.4"
   },
   "bundledDependencies": {
-    "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "new-line": "^1.1.1",
-    "pug": "^2.0.4"
+    "nodemon": "^2.0.4"
   }
 }

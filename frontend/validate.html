@@ -201,6 +201,18 @@
 										<label for="original"></label>
 									</div>
 								</div>
+
+								<div class="switch-wrap justify-content-between">
+									<p>Other Conditions</p>
+									<div class="switch-wrap d-flex justify-content-between">
+										<div id="otherCondHead">
+											<select name="cond" id="otherCond">
+												<option value="">- Conditions -</option>
+											</select>
+										</div>
+									</div>
+									<a id="load" class="genric-btn success circle">Load</a>
+								</div>
 								
 								<div class="button-group-area mt-40">
 									<a id="downloadimg" class="genric-btn success circle">Download Image</a>
@@ -235,12 +247,7 @@
 						</div>
 					</div>
 					<!-- End Table -->
-	
-					<!-- <a id="show-neighborhood" >
-						Show graph containing top 
-						
-						neighbours of queried genes
-					</a> -->
+
 					<p><button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><span><input type="text" value="100" placeholder="<300" style="width:50px;" id="neighbor-number" required></span> </p>
 
 					<div id="neighborhood-view" style="display: none;">
@@ -537,8 +544,9 @@
 				success: function (graph) {
 					$('#network-view').show();
 					$('#show-network').prop('disabled', true);
-					var s = load_graph(graph,'network-graph','',true);
 					graph.tissue = data.metadata.tissue;
+					graph.condition = data.metadata.condition;
+					var s = load_graph(graph,'network-graph','',true);
 					load_table(graph,'',s);
 				},
 				error: function(){
@@ -559,8 +567,9 @@
 						// $('#neighborhood-graph').html('<span class="fas fa-expand-arrows-alt" id="expandN" ></span>');
 						$('#neighborhood-view').show();
 						$('#show-neighborhood').prop('disabled', true);
-						var s = load_graph(graph,'neighborhood-graph','N',true);
 						graph.tissue = data.metadata.tissue;
+						graph.condition = data.metadata.condition;
+						var s = load_graph(graph,'neighborhood-graph','N',true);
 						load_table(graph,'N',s);
 					},
 					error: function(){

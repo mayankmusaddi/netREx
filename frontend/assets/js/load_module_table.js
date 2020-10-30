@@ -46,7 +46,7 @@ function load_module_table(data){
         data: data.nodes,
         columnDefs: [ 
             {
-                targets: [5],
+                targets: [4],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
             },

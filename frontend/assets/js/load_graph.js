@@ -11,12 +11,8 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
 });
 
 function load_graph(data, graphid, N, move){
-    console.log(data);
-    
-    var timestamps = getTimestamps(data);
-
     function expand() {
-		$('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-10 col-md-10');
+        $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-10 col-md-10');
 		$('#sidepanel'+N).hide();
 		$('#expand'+N).addClass('fa fa-bars').removeClass('fas fa-expand-arrows-alt');
 		s.renderers[0].resize();
@@ -24,7 +20,7 @@ function load_graph(data, graphid, N, move){
 	    $(this).one("click", compress);
 	}
 	function compress() {
-		$('#'+graphid).addClass('col-lg-10 col-md-10').removeClass('col-lg-12 col-md-12');
+        $('#'+graphid).addClass('col-lg-10 col-md-10').removeClass('col-lg-12 col-md-12');
 		$('#sidepanel'+N).show();
 		$('#expand'+N).addClass('fas fa-expand-arrows-alt').removeClass('fa fa-bars');
 		s.renderers[0].resize();
@@ -32,7 +28,10 @@ function load_graph(data, graphid, N, move){
 	    $(this).one("click", expand);
 	}
 	$('#expand'+N).one("click", expand);
-        
+    
+    // Populate select timestamp options
+    var timestamps = getTimestamps(data);
+
 	var $el = $('#regtime'+N);
 	$el.empty(); // remove old timestamps
 	$.each(timestamps, function(key,value) {
@@ -44,7 +43,32 @@ function load_graph(data, graphid, N, move){
 	$.each(timestamps, function(key,value) {
 		$el.append($("<li></li>")
 	    	.attr("data-value", value).attr("class", "option").text(key));
+    });
+    
+    // Populate other condition options
+    var conditions = {
+        'Drought' : 'drought',
+        'Cold' : 'cold',
+        'Flood' : 'flood',
+        'Osmosis' : 'osmo',
+        'ABA' : 'aba',
+        'JA' : 'ja',
+    };
+    let toRemove = Object.keys(conditions).find(key => conditions[key] === data.condition);
+    delete conditions[toRemove];
+
+    var $el = $('#otherCond'+N);
+	$el.empty(); // remove old conditions
+	$.each(conditions, function(key,value) {
+		$el.append($("<option></option>")
+	   		.attr("value", value).text(key));
 	});
+	var $el = $('#otherCondHead'+N+' > div > ul');
+	$el.empty(); // remove old conditions
+	$.each(conditions, function(key,value) {
+		$el.append($("<li></li>")
+	    	.attr("data-value", value).attr("class", "option").text(key));
+    });
 
     $('.colorswitch'+N).click(function(){
 		$('.colorswitch'+N).each(function(){
@@ -183,8 +207,27 @@ function load_graph(data, graphid, N, move){
     if (selectedNode != undefined){
         s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
     };
+
+    function updateQueryStringParameter(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+          return uri.replace(re, '$1' + key + "=" + value + '$2');
+        }
+        else {
+          return uri + separator + key + "=" + value;
+        }
+    }
     
     $(document).ready(()=>{
+
+        $('#load'+N).click(()=>{
+            var val = $('#otherCond'+N).val();
+            // var qs = window.location.search.substring(1);
+            var qs = window.location.href;
+            var url = updateQueryStringParameter(qs,'condition', val);
+            window.open(url, "_blank"); 
+        });
 
         $('#downloadimg'+N).click(()=>{
             var graphimage = s.renderers[0].snapshot({format: 'jpg', background: 'white', filename: 'graph.jpg', labels: true});

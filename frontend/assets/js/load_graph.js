@@ -185,7 +185,6 @@ function load_graph(data, graphid, N, move){
         s.startForceAtlas2();
         setTimeout(
             function () {
-                console.log('stopping');
                 s.stopForceAtlas2();
             }, 
         1000);
@@ -223,7 +222,6 @@ function load_graph(data, graphid, N, move){
 
         $('#load'+N).click(()=>{
             var val = $('#otherCond'+N).val();
-            // var qs = window.location.search.substring(1);
             var qs = window.location.href;
             var url = updateQueryStringParameter(qs,'condition', val);
             window.open(url, "_blank"); 

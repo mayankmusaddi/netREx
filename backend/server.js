@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const fs = require('fs')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -10,6 +11,7 @@ app.use(express.static("frontend"));
 app.set("views", path.join(__dirname, "/../frontend"));
 
 const jsonpath = "../frontend/json/";
+const datapath = "./frontend/data/";
 let file = require(jsonpath + "droughtroot.json");
 
 // Note: The includes method is not supported in Edge 13 (and earlier versions).
@@ -64,6 +66,21 @@ function sortByTime(dict) {
   }
   return tempDict;
 }
+
+//var csv is the CSV file with headers
+function csvJSON(csv){
+  var lines=csv.split("\n");
+  var result = [];
+  var headers=lines[0].split("\t");
+  for(var i=1;i<lines.length-1;i++){
+      var obj = {};
+      var currentline=lines[i].split("\t");
+      for(var j=0;j<headers.length;j++)
+          obj[headers[j]] = currentline[j];
+      result.push(obj);
+  }
+  return result;
+}
 // --------------------------------------------------
 
 app.use("/validate", (req, res) => {
@@ -88,23 +105,12 @@ app.use("/module", (req, res) => {
   var query = req.body;
   console.log("Query: " + JSON.stringify(query));
   file = require(jsonpath + query.tissue + query.module);
-  res.send(file);
 
-  // res.render('graph',{data: file});
-
-  // parser._transform = function(d, encoding, done) {
-  //     const str = d.toString().replace('</body>', '<script>var data = '+JSON.stringify(data)+';</script></body>');
-  //     this.push(str);
-  //     done();
-  // };
-  // res.write('<!-- Begin stream -->\n');
-  // fs
-  // .createReadStream(path.join(__dirname+'/../frontend/graph.html'))
-  // .pipe(newLineStream())
-  // .pipe(parser)
-  // .on('end', () => {
-  //     res.write('\n<!-- End stream -->')
-  // }).pipe(res);
+  fs.readFile(datapath + query.tissue + "_modules_GO/" + query.module + ".txt", 'utf8', (err, data) => {
+    if (err) throw err;
+    file.go = csvJSON(data);
+    res.send(file);
+  })
 });
 
 app.use("/load", (req, res) => {

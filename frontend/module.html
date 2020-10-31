@@ -169,12 +169,18 @@
 				<nav>
 					<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					  <a class="nav-item nav-link active" id="nav-node-tab" data-toggle="tab" href="#nav-node" role="tab" aria-controls="nav-node" aria-selected="true">Nodes</a>
+					  <a class="nav-item nav-link" id="nav-go-tab" data-toggle="tab" href="#nav-go" role="tab" aria-controls="nav-go" aria-selected="false">GO</a>
 					  <a class="nav-item nav-link" id="nav-edge-tab" data-toggle="tab" href="#nav-edge" role="tab" aria-controls="nav-edge" aria-selected="false">Edges</a>
 					</div>
 				</nav>
 				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="nav-node" role="tabpanel" aria-labelledby="nav-node-tab">
 						<table id="data-table" class="display" style="width:100%">
+							<thead><tr></tr></thead>
+						</table>
+					</div>
+					<div class="tab-pane fade" id="nav-go" role="tabpanel" aria-labelledby="nav-go-tab">
+						<table id="go-table" class="display" style="width:100%">
 							<thead><tr></tr></thead>
 						</table>
 					</div>
@@ -389,10 +395,16 @@
 					if ($.fn.DataTable.isDataTable("#edge-table")) {
 					  $('#edge-table').DataTable().clear().destroy();
 					};
+					if ($.fn.DataTable.isDataTable("#go-table")) {
+					  $('#go-table').DataTable().clear().destroy();
+					};
 					$('#data-table').html('<thead><tr></tr></thead>');
+					$('#go-table').html('<thead><tr></tr></thead>');
 					$('#edge-table').html('<thead><tr></tr></thead>');
+
 					$('#show-network').show();
 					$('#querytable').show();
+					
 					load_module_table(graph);
 				},
 				error: function(){

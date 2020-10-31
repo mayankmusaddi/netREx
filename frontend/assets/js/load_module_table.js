@@ -115,7 +115,6 @@ function load_module_table(data){
     });
 
     //Edge Table
-
     var edgecolumns = [
         { data: "source" },
         { data: "target" },
@@ -171,5 +170,44 @@ function load_module_table(data){
             },
         ]
     });
+
+    //GO Table
+    let goheaders = Object.keys(data.go[0]);
+    var gocolumns = [];
+
+    goheaders.forEach( (val) => {
+        $("#go-table>thead>tr").append( $('<th />', {text : val}) );
+        gocolumns.push({data : val});
+    });
+
+    var gotable = $("#go-table").DataTable( {
+        data: data.go,
+        columns: gocolumns,
+        dom: 'lfrtiBp',
+        // responsive: true,
+        buttons: [
+            {
+                extend: 'copyHtml5',
+                text: '<i class="fas fa-copy"></i> Copy',
+                titleAttr: 'Copy'
+            },
+            {
+                extend: 'excelHtml5',
+                text: '<i class="fas fa-file-excel"></i> Excel',
+                titleAttr: 'Excel'
+            },
+            {
+                extend: 'csvHtml5',
+                text: '<i class="fas fa-file-csv"></i> CSV',
+                titleAttr: 'CSV'
+            },
+            {
+                extend: 'pdfHtml5',
+                text: '<i class="fas fa-file-pdf"></i> PDF',
+                titleAttr: 'PDF'
+            },
+        ]
+    });
+
     });
 }

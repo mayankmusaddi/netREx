@@ -107,7 +107,7 @@ app.use("/module", (req, res) => {
   file = require(jsonpath + query.tissue + query.module);
 
   fs.readFile(datapath + query.tissue + "_modules_GO/" + query.module + ".txt", 'utf8', (err, data) => {
-    if (err) throw err;
+    if (err) console.log(err);
     file.go = csvJSON(data);
     res.send(file);
   })
@@ -135,7 +135,6 @@ app.use("/expression", (req, res) => {
     }
   }
   timestamps = sortByTime(timestamps);
-  // var timestamps = getTimestamps(req.body);
 
   row_nodes = [];
   var i = 0;

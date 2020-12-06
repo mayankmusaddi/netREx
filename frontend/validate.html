@@ -523,6 +523,7 @@
 	$(".sample-text-area").hide();
 	$.ajax({
         type: "POST",
+        // url: "/netrex/validate",
         url: "/validate",
         data: JSON.stringify(query),
         contentType: "application/json; charset=utf-8",
@@ -553,6 +554,7 @@
 		$('#show-network').click(function(){
 			$.ajax({
 				type: "POST",
+				// url: "/netrex/simple_network",
 				url: "/simple_network",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
@@ -575,6 +577,7 @@
 			if($('#neighbor-number').val()>0){
 				$.ajax({
 					type: "POST",
+					// url: "/netrex/neighborhood_network",
 					url: "/neighborhood_network",
 					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
 					contentType: "application/json; charset=utf-8",
@@ -597,6 +600,7 @@
 		$('#show-expression').click(function(){
 			$.ajax({
 				type: "POST",
+				// url: "/netrex/expression",
 				url: "/expression",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",

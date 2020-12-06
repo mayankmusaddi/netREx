@@ -2,10 +2,20 @@ Docker Tips:
     docker system prune (To remove all dangling images)
     docker rmi <image name> (To remove certain image)
 
+Step 0: Run npm pack to create tarball
 Step 1: Build Docker Image (docker build -t <image name> <path to DockerFile folder>)
 Step 2: Export Docker Image (docker save -o <tar file name> <image name>)
 Step 3: SCP Tar Image to Server (scp <tar file> <server>:~ )
 Step 4: Load tar image into Docker (docker load -i <tar file>)
 Step 5: Run Docker image (docker run -d -p 3000:3000 <image name>)
 
+Docker Commands:
+    docker image ls (To Display all the created images)
+    docker ps (To see the current running containers)
+    docker stop <container name> 
+    docker rm <container name> (To remove container completely)
+    docker exec <container name> <command> (Execute listed command inside container)
+    docker exec -it <mycontainer> bash
+
+Help:
 https://github.com/jacomyal/sigma.js/issues/448

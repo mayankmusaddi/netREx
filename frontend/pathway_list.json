@@ -1,0 +1,176 @@
+{
+  "Global and overview maps": {
+    "Metabolic pathways": "01100",
+    "Biosynthesis of secondary metabolites": "01110",
+    "Carbon metabolism": "01200",
+    "2-Oxocarboxylic acid metabolism": "01210",
+    "Fatty acid metabolism": "01212",
+    "Biosynthesis of amino acids": "01230"
+  },
+  "Carbohydrate metabolism": {
+    "Glycolysis / Gluconeogenesis": "00010",
+    "Citrate cycle (TCA cycle)": "00020",
+    "Pentose phosphate pathway": "00030",
+    "Pentose and glucuronate interconversions": "00040",
+    "Fructose and mannose metabolism": "00051",
+    "Galactose metabolism": "00052",
+    "Ascorbate and aldarate metabolism": "00053",
+    "Starch and sucrose metabolism": "00500",
+    "Amino sugar and nucleotide sugar metabolism": "00520",
+    "Pyruvate metabolism": "00620",
+    "Glyoxylate and dicarboxylate metabolism": "00630",
+    "Propanoate metabolism": "00640",
+    "Butanoate metabolism": "00650",
+    "C5-Branched dibasic acid metabolism": "00660",
+    "Inositol phosphate metabolism": "00562"
+  },
+  "Energy metabolism": {
+    "Oxidative phosphorylation": "00190",
+    "Photosynthesis": "00195",
+    "Photosynthesis - antenna proteins": "00196",
+    "Carbon fixation in photosynthetic organisms": "00710",
+    "Nitrogen metabolism": "00910",
+    "Sulfur metabolism": "00920"
+  },
+  "Lipid metabolism": {
+    "Fatty acid biosynthesis": "00061",
+    "Fatty acid elongation": "00062",
+    "Fatty acid degradation": "00071",
+    "Synthesis and degradation of ketone bodies": "00072",
+    "Cutin, suberine and wax biosynthesis": "00073",
+    "Steroid biosynthesis": "00100",
+    "Glycerolipid metabolism": "00561",
+    "Glycerophospholipid metabolism": "00564",
+    "Ether lipid metabolism": "00565",
+    "Sphingolipid metabolism": "00600",
+    "Arachidonic acid metabolism": "00590",
+    "Linoleic acid metabolism": "00591",
+    "alpha-Linolenic acid metabolism": "00592",
+    "Biosynthesis of unsaturated fatty acids": "01040"
+  },
+  "Nucleotide metabolism": {
+    "Purine metabolism": "00230",
+    "Pyrimidine metabolism": "00240"
+  },
+  "Amino acid metabolism": {
+    "Alanine, aspartate and glutamate metabolism": "00250",
+    "Glycine, serine and threonine metabolism": "00260",
+    "Cysteine and methionine metabolism": "00270",
+    "Valine, leucine and isoleucine degradation": "00280",
+    "Valine, leucine and isoleucine biosynthesis": "00290",
+    "Lysine biosynthesis": "00300",
+    "Lysine degradation": "00310",
+    "Arginine biosynthesis": "00220",
+    "Arginine and proline metabolism": "00330",
+    "Histidine metabolism": "00340",
+    "Tyrosine metabolism": "00350",
+    "Phenylalanine metabolism": "00360",
+    "Tryptophan metabolism": "00380",
+    "Phenylalanine, tyrosine and tryptophan biosynthesis": "00400"
+  },
+  "Metabolism of other amino acids": {
+    "beta-Alanine metabolism": "00410",
+    "Taurine and hypotaurine metabolism": "00430",
+    "Phosphonate and phosphinate metabolism": "00440",
+    "Selenocompound metabolism": "00450",
+    "Cyanoamino acid metabolism": "00460",
+    "Glutathione metabolism": "00480"
+  },
+  "Glycan biosynthesis and metabolism": {
+    "N-Glycan biosynthesis": "00510",
+    "Various types of N-glycan biosynthesis": "00513",
+    "Other types of O-glycan biosynthesis": "00514",
+    "Glycosaminoglycan degradation": "00531",
+    "Glycosylphosphatidylinositol (GPI)-anchor biosynthesis": "00563",
+    "Glycosphingolipid biosynthesis - lacto and neolacto series": "00601",
+    "Glycosphingolipid biosynthesis - globo and isoglobo series": "00603",
+    "Glycosphingolipid biosynthesis - ganglio series": "00604",
+    "Other glycan degradation": "00511"
+  },
+  "Metabolism of cofactors and vitamins": {
+    "Thiamine metabolism": "00730",
+    "Riboflavin metabolism": "00740",
+    "Vitamin B6 metabolism": "00750",
+    "Nicotinate and nicotinamide metabolism": "00760",
+    "Pantothenate and CoA biosynthesis": "00770",
+    "Biotin metabolism": "00780",
+    "Lipoic acid metabolism": "00785",
+    "Folate biosynthesis": "00790",
+    "One carbon pool by folate": "00670",
+    "Porphyrin and chlorophyll metabolism": "00860",
+    "Ubiquinone and other terpenoid-quinone biosynthesis": "00130"
+  },
+  "Metabolism of terpenoids and polyketides": {
+    "Terpenoid backbone biosynthesis": "00900",
+    "Monoterpenoid biosynthesis": "00902",
+    "Sesquiterpenoid and triterpenoid biosynthesis": "00909",
+    "Diterpenoid biosynthesis": "00904",
+    "Carotenoid biosynthesis": "00906",
+    "Brassinosteroid biosynthesis": "00905",
+    "Zeatin biosynthesis": "00908",
+    "Limonene and pinene degradation": "00903",
+    "Polyketide sugar unit biosynthesis": "00523"
+  },
+  "Biosynthesis of other secondary metabolites": {
+    "Phenylpropanoid biosynthesis": "00940",
+    "Stilbenoid, diarylheptanoid and gingerol biosynthesis": "00945",
+    "Flavonoid biosynthesis": "00941",
+    "Flavone and flavonol biosynthesis": "00944",
+    "Anthocyanin biosynthesis": "00942",
+    "Isoquinoline alkaloid biosynthesis": "00950",
+    "Tropane, piperidine and pyridine alkaloid biosynthesis": "00960",
+    "Caffeine metabolism": "00232",
+    "Betalain biosynthesis": "00965",
+    "Glucosinolate biosynthesis": "00966",
+    "Benzoxazinoid biosynthesis": "00402",
+    "Monobactam biosynthesis": "00261",
+    "Biosynthesis of various secondary metabolites - part 2": "00998"
+  },
+  "Transcription": {
+    "RNA polymerase": "03020",
+    "Basal transcription factors": "03022",
+    "Spliceosome": "03040"
+  },
+  "Translation": {
+    "Ribosome": "03010",
+    "Aminoacyl-tRNA biosynthesis": "00970",
+    "RNA transport": "03013",
+    "mRNA surveillance pathway": "03015",
+    "Ribosome biogenesis in eukaryotes": "03008"
+  },
+  "Folding, sorting and degradation": {
+    "Protein export": "03060",
+    "Protein processing in endoplasmic reticulum": "04141",
+    "SNARE interactions in vesicular transport": "04130",
+    "Ubiquitin mediated proteolysis": "04120",
+    "Sulfur relay system": "04122",
+    "Proteasome": "03050",
+    "RNA degradation": "03018"
+  },
+  "Replication and repair": {
+    "DNA replication": "03030",
+    "Base excision repair": "03410",
+    "Nucleotide excision repair": "03420",
+    "Mismatch repair": "03430",
+    "Homologous recombination": "03440",
+    "Non-homologous end-joining": "03450"
+  },
+  "Membrane transport": {
+    "ABC transporters": "02010"
+  },
+  "Signal transduction": {
+    "MAPK signaling pathway - plant": "04016",
+    "Phosphatidylinositol signaling system": "04070",
+    "Plant hormone signal transduction": "04075"
+  },
+  "Transport and catabolism": {
+    "Endocytosis": "04144",
+    "Phagosome": "04145",
+    "Peroxisome": "04146",
+    "Autophagy - other": "04136"
+  },
+  "Environmental adaptation": {
+    "Circadian rhythm - plant": "04712",
+    "Plant-pathogen interaction": "04626"
+  }
+}

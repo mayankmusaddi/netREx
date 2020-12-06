@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const fs = require('fs')
+// const csv = require('csv-parser');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -118,6 +119,41 @@ app.use("/load", (req, res) => {
   console.log("Query: " + JSON.stringify(query));
   file = require(jsonpath + query.condition + query.tissue);
   res.send(file);
+});
+
+app.use("/pathway", (req, res) => {
+  var query = req.body;
+  console.log("Query: " + JSON.stringify(query));
+  file = require(jsonpath + query.condition + query.tissue);
+  {
+  // fs.readFile(datapath + "kegg_pathway_hierarchy.csv", 'utf8', (err, data) => {
+  //   if (err) console.log(err);
+  //   var lines=data.split("\n");
+  //   var result = {};
+  //   var tag = "";
+  //   for(var i=0;i<lines.length;i++){
+  //     var line = lines[i].split("\t");
+  //     if(line.length == 1){
+  //       tag = line[0];
+  //       result[tag] = {};
+  //     }
+  //     else
+  //       result[tag][line[1]] = line[0]
+  //   }
+  //   console.log(result);
+  //   let d = JSON.stringify(result,null,2);
+  //   fs.writeFileSync('pathway_list.json', d);
+  // })
+  }
+  var path_list = require("../frontend/data/gene_list.json");
+  var all_genes = file.nodes.map((d) => d.label);
+  var filtered_list = {};
+  for(var path in path_list){
+    gene_list = path_list[path];
+    path_genes = gene_list.filter((d) => all_genes.includes(d));
+    filtered_list[path] = path_genes;
+  }
+  res.send(filtered_list);
 });
 
 app.use("/expression", (req, res) => {

@@ -122,6 +122,8 @@ function load_graph(data, graphid, N, move){
         edges[i].type = 'curve';
         edges[i].size = 0.1;
     }
+
+    console.log(s.graph.nodes());
     
     // We first need to save the original colors of our nodes and edges, like this:
     s.graph.nodes().forEach(function(n) {

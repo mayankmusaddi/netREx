@@ -166,7 +166,7 @@
 						</div>
 
 						<div class="form-group mt-3">
-							<button type="submit" class="button boxed-btn">Send</button>
+							<button type="submit" class="button boxed-btn">Load Pathways</button>
 						</div>
 					</form>
 				</div>
@@ -194,51 +194,18 @@
 			</div>
 			
 			<div class="row" id="pathway_options" style="display: none;">
-				<select id="gene-select" multiple="multiple">
-				</select>
-
-				<!-- <div class="col-lg-8">
-					<form class="form-contact" action="/pathway" id="pathwayForm">
-						<div class="row">
-
-							<div class="input-group-icon col-sm-12">
-								<div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
-								<div class="form-select" id="pathHead">
-									<select name="path" id="path" required>
-										<option value="">- Path -</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="input-group-icon col-sm-12" style="display: none;" id="select-path">
-								<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
-								<div class="form-select" id="path2Head">
-									<select name="path2" id="path2" required>
-										<option value="">- Sub Path -</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="input-group-icon col-sm-12" style="display: none;" id="select-genes">
-								<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
-								<div class="form-select" id="genesHead">
-									<select name="genes" id="genes" required>
-										<option value="">- Genes -</option>
-									</select>
-								</div>
-							</div>
-
-						</div>
-
+				<form class="form-contact" id="pathwayForm" style="width: 2500px;">
+					<div class="row">
+						<select id="gene-select" multiple="multiple">
+						</select>
 						<div class="form-group mt-3">
 							<button type="submit" class="button boxed-btn">Send</button>
 						</div>
-					</form>
-				</div> -->
+					</div>
+				</form>
 			</div>
 
 		</div>
-
 	</section>
     <!-- End Sample Area -->
 
@@ -384,6 +351,26 @@
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
 		
+		$("#pathwayForm").submit(function(e) {
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+
+			var selectobject = $("[id*=treemultiselect-0-]:checked");
+			var genes = [];
+			for(i=0;i<selectobject.length;i++)
+				genes.push($(selectobject[i]).parent().data("value"));
+			genes = genes.join();
+
+			const params = new URLSearchParams({
+				species:$("#speciesN").val(),
+				tissue:$("#tissueN").val(),
+				conditionType:$("#conditionTypeN").val(),
+				condition:$("#conditionN").val(),
+				genes: genes,
+			});
+			var url = "/validate.html?"+params.toString();
+			window.location.replace(url);
+		});
+
 		$("#conditionForm").submit(function(e) {
 			$("#loading-image").show();
 			e.preventDefault(); // avoid to execute the actual submit of the form.
@@ -407,7 +394,6 @@
 		function loadGenes(data){
 			$(document).ready(()=>{
 				$(function(){
-
 					$.getJSON('./pathway_list.json', function(paths) {
 						for(path in paths){
 							var subpaths = paths[path];
@@ -419,42 +405,14 @@
 								});
 							}
 						}
-
 						var tree = $("#gene-select").treeMultiselect({ 
 							searchable: true,
 							enableSelectAll: true, 
 							sortable: true,
-        					maxSelections: 100,
+        					maxSelections: 300,
 							startCollapsed: true
 						});
 					});
-
-					// $('#path2').change(function(){
-					// 	var selected = $(this).val();
-					// 	if(selected in data){
-					// 		$("#select-genes").show();
-					// 		var $el1 = $("#genes");
-					// 		var $el2 = $("#genesHead > div > ul");
-					// 		$el1.empty(); // remove old options
-					// 		$el2.empty(); // remove old options
-
-					// 		data[selected].forEach((item, index) => {
-					// 			$el1.append($("<option></option>")
-					// 			.attr("value", item).text(item));
-					// 			$el2.append($("<li></li>")
-					// 			.attr("data-value", item).attr("class", "option").text(item));
-					// 			}
-					// 		);
-
-					// 		$el1.val('');
-					// 		$("#genesHead > div > span").html("- Genes -");
-					// 	}
-					// 	else{
-					// 		$("#select-genes").hide();
-					// 	}
-					// });
-					// $('#path2').trigger('change');
-
 				});
 			});
 
@@ -462,44 +420,6 @@
 
 		$(document).ready(()=>{
 			$(function(){
-
-				// $.getJSON('./pathway_list.json', function(data) {
-				// 	//do stuff with your data here
-				// 	var $el1 = $("#path");
-				// 	var $el2 = $("#pathHead > div > ul");
-				// 	for(key in data){
-				// 		$el1.append($("<option></option>")
-				// 		   .attr("value", key).text(key));
-				// 		$el2.append($("<li></li>")
-				// 	     .attr("data-value", key).attr("class", "option").text(key));
-				// 	}
-
-				// 	$('#path').change(function(){
-				// 		var selected = $(this).val();
-				// 		if(selected in data){
-				// 			$("#select-path").show();
-				// 			var $el1 = $("#path2");
-				// 			var $el2 = $("#path2Head > div > ul");
-				// 			$el1.empty(); // remove old options
-				// 			$el2.empty(); // remove old options
-
-				// 			for(key in data[selected]){
-				// 				$el1.append($("<option></option>")
-				// 				.attr("value", data[selected][key]).text(key));
-				// 				$el2.append($("<li></li>")
-				// 				.attr("data-value", data[selected][key]).attr("class", "option").text(key));
-				// 			}
-				// 			$el1.val('');
-				// 			$("#path2Head > div > span").html("- Sub Path -");
-				// 		}
-				// 		else{
-				// 			$("#select-path").hide();
-				// 		}
-				// 	});
-				// 	$('#path').trigger('change');
-				// });
-
-
 				$('#conditionTypeN').change(function(){
 					var data= $(this).val();
 					var options = {
@@ -546,7 +466,7 @@
 					     .attr("data-value", value).attr("class", "option").text(key));
 					});
 			   });
-			   $('#conditionTypeN').trigger('change');
+			   	$('#conditionTypeN').trigger('change');
 			});
 		});
 	</script>

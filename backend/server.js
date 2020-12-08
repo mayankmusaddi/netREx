@@ -123,7 +123,6 @@ app.use("/load", (req, res) => {
 
 app.use("/pathway", (req, res) => {
   var query = req.body;
-  console.log("Query: " + JSON.stringify(query));
   file = require(jsonpath + query.condition + query.tissue);
   {
   // fs.readFile(datapath + "kegg_pathway_hierarchy.csv", 'utf8', (err, data) => {
@@ -154,6 +153,11 @@ app.use("/pathway", (req, res) => {
     filtered_list[path] = path_genes;
   }
   res.send(filtered_list);
+});
+
+app.use("/submit", (req, res) => {
+  var query = req.body;
+  console.log(query);
 });
 
 app.use("/expression", (req, res) => {

@@ -10,6 +10,35 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
     return neighbors;
 });
 
+function loadPaths(pathway){
+    $(document).ready(()=>{
+        $(function(){
+            $('#path').change(function(){
+                var data= $(this).val();
+                var nodeids = pathway[data];
+                s.graph.nodes().forEach(function(n) {
+                    if (nodeids.includes(n.id)){
+                        n.color = n.originalColor;
+                        n.borderColor = n.originalBorderColor;
+                    }
+                    else{
+                        n.color = '#eee';
+                        n.borderColor = '#eee';
+                    }
+                });
+                s.graph.edges().forEach(function(e) {
+                    if (nodeids.includes(e.source) && nodeids.includes(e.target))
+                    e.color = e.originalColor;
+                    else
+                    e.color = '#eee';
+                });
+                s.refresh()
+            });
+            $('#path').trigger('change');
+        });
+    });
+}
+
 function load_graph(data, graphid, N, move){
     function expand() {
         $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-10 col-md-10');
@@ -69,6 +98,35 @@ function load_graph(data, graphid, N, move){
 		$el.append($("<li></li>")
 	    	.attr("data-value", value).attr("class", "option").text(key));
     });
+    
+    // Populate Pathway Dropdown
+    console.log(data.nodes);
+    var pathway = {};
+    $.getJSON('./pathway_list.json', function(paths) {
+        for(path in paths){
+            var subpaths = paths[path];
+            for(subpath in subpaths){
+                data.nodes.forEach(function(n) {
+                    if("kegg" in n.attributes && n.attributes.kegg.includes(subpath)){
+                        if(!(subpath in pathway))
+                            pathway[subpath] = [];
+                        pathway[subpath].push(n.id);
+                    }
+                });
+            }
+        }
+        var $el = $('#path'+N);
+        $.each(pathway, function(key,value) {
+            $el.append($("<option></option>")
+                   .attr("value", key).text(key));
+        });
+        var $el = $('#pathHead'+N+' > div > ul');
+        $.each(pathway, function(key,value) {
+            $el.append($("<li></li>")
+                .attr("data-value", key).attr("class", "option").text(key));
+        });
+        // loadPaths(pathway);
+    });
 
     $('.colorswitch'+N).click(function(){
 		$('.colorswitch'+N).each(function(){
@@ -122,8 +180,6 @@ function load_graph(data, graphid, N, move){
         edges[i].type = 'curve';
         edges[i].size = 0.1;
     }
-
-    console.log(s.graph.nodes());
     
     // We first need to save the original colors of our nodes and edges, like this:
     s.graph.nodes().forEach(function(n) {
@@ -192,7 +248,7 @@ function load_graph(data, graphid, N, move){
         1000);
             
         var config = {
-            nodeMargin: 3.0,
+            nodeMargin: 1.0,
             scaleNodes: 1.3,
         };
         // Configure the algorithm
@@ -271,7 +327,6 @@ function load_graph(data, graphid, N, move){
         
         $(function(){
             $('#regtime'+N).change(function(){
-                console.log("Select Change working");
                 var val= $(this).val();
                 var regTrigger = document.getElementById('regulation');
 
@@ -288,7 +343,6 @@ function load_graph(data, graphid, N, move){
                         n.color = n.originalColor;
                     });
                     s.refresh();
-                    console.log("Refreshed by Select");
                 }
             })
             $('#regtime'+N).trigger('change');

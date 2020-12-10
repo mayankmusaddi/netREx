@@ -213,6 +213,17 @@
 									</div>
 									<a id="load" class="genric-btn success circle">Load</a>
 								</div>
+
+								<div class="switch-wrap justify-content-between">
+									<p>Pathways</p>
+									<div class="switch-wrap d-flex justify-content-between">
+										<div id="pathHead">
+											<select name="path" id="path">
+												<option value="">- Pathways -</option>
+											</select>
+										</div>
+									</div>
+								</div>
 								
 								<div class="button-group-area mt-40">
 									<a id="downloadimg" class="genric-btn success circle">Download Image</a>
@@ -298,6 +309,18 @@
 											<div id="otherCondHeadN">
 												<select name="cond" id="otherCondN">
 													<option value="">- Conditions -</option>
+												</select>
+											</div>
+										</div>
+										<a id="loadN" class="genric-btn success circle">Load</a>
+									</div>
+
+									<div class="switch-wrap justify-content-between">
+										<p>Pathways</p>
+										<div class="switch-wrap d-flex justify-content-between">
+											<div id="pathHeadN">
+												<select name="path" id="pathN">
+													<option value="">- Pathways -</option>
 												</select>
 											</div>
 										</div>
@@ -492,10 +515,9 @@
 <script src="./assets/js/helper.js"></script>
 
 <script src="./assets/js/d3.js"></script>
-<script src="./assets/js/jquery-1.11.2.min.js"></script>
+<!-- <script src="./assets/js/jquery-1.11.2.min.js"></script> // Causing Issue with Trigger Change in Select  -->
 
 <script src="./assets/js/bootstrap.min.js"></script>
-<!-- <script src="./assets/js/underscore-min.js"></script> // Causing Issue with Complete Data -->
 <script src="./assets/js/clustergrammer.js"></script>
 <script src="./assets/js/load_expression.js"></script>
 
@@ -617,6 +639,5 @@
 			
 		});
 	}
-
 </script>
 </html>

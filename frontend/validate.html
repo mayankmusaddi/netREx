@@ -166,6 +166,7 @@
 
 						<!-- Start Network Area -->
 						<div class="col-lg-10 col-md-10"  id="network-graph">
+							<span class='fas fa-sync-alt' id="refresh" ></span>
 							<span class='fas fa-expand-arrows-alt' id="expand" ></span>
 						</div>
 						<!-- End Network Area -->
@@ -203,6 +204,17 @@
 								</div>
 
 								<div class="switch-wrap justify-content-between">
+									<p>Pathways</p>
+									<div class="switch-wrap d-flex justify-content-between">
+										<div id="pathHead">
+											<select name="path" id="path">
+												<option value="">- Pathways -</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="switch-wrap justify-content-between">
 									<p>Other Conditions</p>
 									<div class="switch-wrap d-flex justify-content-between">
 										<div id="otherCondHead">
@@ -212,17 +224,6 @@
 										</div>
 									</div>
 									<a id="load" class="genric-btn success circle">Load</a>
-								</div>
-
-								<div class="switch-wrap justify-content-between">
-									<p>Pathways</p>
-									<div class="switch-wrap d-flex justify-content-between">
-										<div id="pathHead">
-											<select name="path" id="path">
-												<option value="">- Pathways -</option>
-											</select>
-										</div>
-									</div>
 								</div>
 								
 								<div class="button-group-area mt-40">
@@ -259,7 +260,7 @@
 					</div>
 					<!-- End Table -->
 
-					<p><button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><span><input type="text" value="100" placeholder="<300" style="width:50px;" id="neighbor-number" required></span> </p>
+					<p><button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><span><input type="text" value="50" placeholder="<100" style="width:50px;" id="neighbor-number" required></span> </p>
 
 					<div id="neighborhood-view" style="display: none;">
 
@@ -267,7 +268,8 @@
 
 							<!-- Start Network Neighborhood Area -->
 							<div class="col-lg-10 col-md-10"  id="neighborhood-graph">
-								<span class='fas fa-expand-arrows-alt' id="expandN" ></span>
+							<span class='fas fa-sync-alt' id="refreshN" ></span>
+							<span class='fas fa-expand-arrows-alt' id="expandN" ></span>
 							</div>
 							<!-- End Network Neighborhood Area -->
 							
@@ -304,23 +306,22 @@
 									</div>
 
 									<div class="switch-wrap justify-content-between">
+										<p>Pathways</p>
+										<div class="switch-wrap d-flex justify-content-between">
+											<div id="pathHeadN">
+												<select name="pathN" id="pathN">
+													<option value="">- Pathways -</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="switch-wrap justify-content-between">
 										<p>Other Conditions</p>
 										<div class="switch-wrap d-flex justify-content-between">
 											<div id="otherCondHeadN">
 												<select name="cond" id="otherCondN">
 													<option value="">- Conditions -</option>
-												</select>
-											</div>
-										</div>
-										<a id="loadN" class="genric-btn success circle">Load</a>
-									</div>
-
-									<div class="switch-wrap justify-content-between">
-										<p>Pathways</p>
-										<div class="switch-wrap d-flex justify-content-between">
-											<div id="pathHeadN">
-												<select name="path" id="pathN">
-													<option value="">- Pathways -</option>
 												</select>
 											</div>
 										</div>
@@ -530,6 +531,7 @@
 <script src='./sigma/sigma.layout.noverlap.js'></script>
 <script src="./sigma/sigma.renderers.snapshot.js"></script>
 <script src="./assets/js/load_graph.js"></script>
+<script src="./assets/js/load_neighbour_graph.js"></script>
 
 <script src="./assets/js/DataTables/datatables.min.js"></script>
 <script src="./assets/js/DataTables/dataTables.buttons.min.js"></script>
@@ -539,6 +541,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
 <script src="./assets/js/load_table.js"></script>
+<script src="./assets/js/load_neighbour_table.js"></script>
 
 <script>
 	var query = QueryStringToJSON();
@@ -609,8 +612,8 @@
 						$('#show-neighborhood').prop('disabled', true);
 						graph.tissue = data.metadata.tissue;
 						graph.condition = data.metadata.condition;
-						var s = load_graph(graph,'neighborhood-graph','N',true);
-						load_table(graph,'N',s);
+						var sN = load_neighbour_graph(graph,'neighborhood-graph');
+						load_neighbour_table(graph,'N',sN);
 					},
 					error: function(){
 						alert('Error');

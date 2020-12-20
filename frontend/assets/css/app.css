@@ -50,6 +50,23 @@ table {
 #expandN:hover{
   color: grey;
 }
+
+#refresh, #refreshN{
+  font-size: 36px;
+  position: absolute;
+  color: #c5c5c5;
+  float: right;
+  right: 20px;
+  top: 70px;
+  z-index: 2;
+}
+#refresh:hover{
+  color: grey;
+}
+#refreshN:hover{
+  color: grey;
+}
+
 #nav-tabContent,#nav-tabContentN{
   padding-top: 20px;
 }

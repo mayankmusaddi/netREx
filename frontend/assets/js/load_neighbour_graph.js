@@ -1,52 +1,40 @@
-// Add a method to the graph model that returns an object with every neighbors of a node inside:
-sigma.classes.graph.addMethod('neighbors', function(nodeId) {
-    var k,
-    neighbors = {},
-    index = this.allNeighborsIndex[nodeId] || {};
-    
-    for (k in index)
-    neighbors[k] = this.nodesIndex[k];
-    
-    return neighbors;
-});
-
-function load_graph(data, graphid, N, move){
+function load_neighbour_graph(data, graphid){
     function expand() {
         $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-10 col-md-10');
-		$('#sidepanel'+N).hide();
-		$('#expand'+N).addClass('fa fa-bars').removeClass('fas fa-expand-arrows-alt');
-		s.renderers[0].resize();
-		s.refresh();
+		$('#sidepanelN').hide();
+		$('#expandN').addClass('fa fa-bars').removeClass('fas fa-expand-arrows-alt');
+		sN.renderers[0].resize();
+		sN.refresh();
 	    $(this).one("click", compress);
 	}
 	function compress() {
         $('#'+graphid).addClass('col-lg-10 col-md-10').removeClass('col-lg-12 col-md-12');
-		$('#sidepanel'+N).show();
-		$('#expand'+N).addClass('fas fa-expand-arrows-alt').removeClass('fa fa-bars');
-		s.renderers[0].resize();
-		s.refresh();
+		$('#sidepanelN').show();
+		$('#expandN').addClass('fas fa-expand-arrows-alt').removeClass('fa fa-bars');
+		sN.renderers[0].resize();
+		sN.refresh();
 	    $(this).one("click", expand);
 	}
-    $('#expand'+N).one("click", expand);
+    $('#expandN').one("click", expand);
     
     function refreshScreen(){
-        s.renderers[0].dispatchEvent('outNode');
-		s.refresh();
+        sN.renderers[0].dispatchEvent('outNode');
+		sN.refresh();
 	    $(this).one("click", refreshScreen);
     }
-	$('#refresh'+N).one("click", refreshScreen);
+	$('#refreshN').one("click", refreshScreen);
 
     
     // Populate select timestamp options
     var timestamps = getTimestamps(data);
 
-	var $el = $('#regtime'+N);
+	var $el = $('#regtimeN');
 	$el.empty(); // remove old timestamps
 	$.each(timestamps, function(key,value) {
 		$el.append($("<option></option>")
 	   		.attr("value", value).text(key));
 	});
-	var $el = $('#regtimeHead'+N+' > div > ul');
+	var $el = $('#regtimeHeadN'+' > div > ul');
 	$el.empty(); // remove old timestamps
 	$.each(timestamps, function(key,value) {
 		$el.append($("<li></li>")
@@ -65,13 +53,13 @@ function load_graph(data, graphid, N, move){
     let toRemove = Object.keys(conditions).find(key => conditions[key] === data.condition);
     delete conditions[toRemove];
 
-    var $el = $('#otherCond'+N);
+    var $el = $('#otherCondN');
 	$el.empty(); // remove old conditions
 	$.each(conditions, function(key,value) {
 		$el.append($("<option></option>")
 	   		.attr("value", value).text(key));
 	});
-	var $el = $('#otherCondHead'+N+' > div > ul');
+	var $el = $('#otherCondHeadN'+' > div > ul');
 	$el.empty(); // remove old conditions
 	$.each(conditions, function(key,value) {
 		$el.append($("<li></li>")
@@ -79,13 +67,13 @@ function load_graph(data, graphid, N, move){
     });
     
     // Populate Pathway Dropdown
-    function loadPaths(pathway, N){
-        $(document).ready(()=>{
-            $(function(){
-                $('#path'+N).change(function(){
+    function loadPathsN(pathway){
+        // $(document).ready(()=>{
+            // $(function(){
+                $('#pathN').change(function(){
                     var data= $(this).val();
                     var nodeids = pathway[data];
-                    s.graph.nodes().forEach(function(n) {
+                    sN.graph.nodes().forEach(function(n) {
                         if (nodeids.includes(n.id)){
                             n.color = n.originalColor;
                             n.borderColor = n.originalBorderColor;
@@ -95,17 +83,17 @@ function load_graph(data, graphid, N, move){
                             n.borderColor = '#eee';
                         }
                     });
-                    s.graph.edges().forEach(function(e) {
+                    sN.graph.edges().forEach(function(e) {
                         if (nodeids.includes(e.source) && nodeids.includes(e.target))
                         e.color = e.originalColor;
                         else
                         e.color = '#eee';
                     });
-                    s.refresh()
+                    sN.refresh();
                 });
-                $('#path'+N).trigger('change');
-            });
-        });
+                $('#pathN').trigger('change');
+            // });
+        // });
     }
     $.getJSON('./pathway_list.json', function(paths) {
         var pathway = {};
@@ -121,21 +109,21 @@ function load_graph(data, graphid, N, move){
                 });
             }
         }
-        var $el = $('#path'+N);
+        var $el = $('#pathN');
         $.each(pathway, function(key,value) {
             $el.append($("<option></option>")
                    .attr("value", key).text(key));
         });
-        var $el = $('#pathHead'+N+' > div > ul');
+        var $el = $('#pathHeadN'+' > div > ul');
         $.each(pathway, function(key,value) {
             $el.append($("<li></li>")
                 .attr("data-value", key).attr("class", "option").text(key));
         });
-        loadPaths(pathway,N);
+        loadPathsN(pathway);
     });
 
-    $('.colorswitch'+N).click(function(){
-		$('.colorswitch'+N).each(function(){
+    $('.colorswitchN').click(function(){
+		$('.colorswitchN').each(function(){
 			$(this).prop('checked', false); 
 		}); 
 		$(this).prop('checked', true);
@@ -165,7 +153,7 @@ function load_graph(data, graphid, N, move){
         "Yellow" : '#FFFF00',
     };
     
-    s = new sigma({ 
+    sN = new sigma({ 
         graph: data,
         container: graphid,
         renderer: {
@@ -178,32 +166,32 @@ function load_graph(data, graphid, N, move){
         }
     });
     
-    filter = new sigma.plugins.filter(s);
+    filter = new sigma.plugins.filter(sN);
     var selectedNode;
     
-    var edges = s.graph.edges();
+    var edges = sN.graph.edges();
     for (var i = 0; i < edges.length; i += 1){
         edges[i].type = 'curve';
         edges[i].size = 0.1;
     }
     
     // We first need to save the original colors of our nodes and edges, like this:
-    s.graph.nodes().forEach(function(n) {
+    sN.graph.nodes().forEach(function(n) {
         n.originalColor = n.color;
         n.firstColor = n.color;
         n.originalBorderColor = n.borderColor;
     });
-    s.graph.edges().forEach(function(e) {
+    sN.graph.edges().forEach(function(e) {
         e.originalColor = e.color;
     });
     
     // When a node is clicked, we check for each node if it is a neighbor of the clicked one. If not, we set its color as grey, and else, it takes its original color. We do the same for the edges, and we only keep edges that have both extremities colored.
-    s.bind('overNode', function(e) {
+    sN.bind('overNode', function(e) {
         var nodeId = e.data.node.id,
-        toKeep = s.graph.neighbors(nodeId);
+        toKeep = sN.graph.neighbors(nodeId);
         toKeep[nodeId] = e.data.node;
         
-        s.graph.nodes().forEach(function(n) {
+        sN.graph.nodes().forEach(function(n) {
             if (toKeep[n.id]){
                 n.color = n.originalColor;
                 n.borderColor = n.originalBorderColor;
@@ -214,61 +202,54 @@ function load_graph(data, graphid, N, move){
             }
         });
         
-        s.graph.edges().forEach(function(e) {
+        sN.graph.edges().forEach(function(e) {
             if (toKeep[e.source] && toKeep[e.target])
             e.color = e.originalColor;
             else
             e.color = '#eee';
         });
-        s.refresh()
+        sN.refresh()
     });
     // When the stage is clicked, we just color each node and edge with its original color.
-    s.bind('outNode', function(e) {
-        s.graph.nodes().forEach(function(n) {
+    sN.bind('outNode', function(e) {
+        sN.graph.nodes().forEach(function(n) {
             n.color = n.originalColor;
             n.borderColor = n.originalBorderColor;
         });
         
-        s.graph.edges().forEach(function(e) {
+        sN.graph.edges().forEach(function(e) {
             e.color = e.originalColor;
         });
         
     });
+    //Initialize nodes as a circle
+    sN.graph.nodes().forEach(function(node, i, a) {
+        node.x = Math.cos(Math.PI * 2 * i / a.length);
+        node.y = Math.sin(Math.PI * 2 * i / a.length);
+    });
     
-    if(move){
-        //Initialize nodes as a circle
-        s.graph.nodes().forEach(function(node, i, a) {
-            node.x = Math.cos(Math.PI * 2 * i / a.length);
-            node.y = Math.sin(Math.PI * 2 * i / a.length);
-        });
+    //Call refresh to render the new graph
+    CustomShapes.init(sN);
+    sN.refresh();
+    
+    sN.startForceAtlas2();
+    setTimeout(function () {sN.stopForceAtlas2();},1000);
         
-        //Call refresh to render the new graph
-        CustomShapes.init(s);
-        s.refresh();
-        
-        s.startForceAtlas2();
-        setTimeout(
-            function () {
-                s.stopForceAtlas2();
-            }, 
-        1000);
-            
-        var config = {
-            nodeMargin: 1.0,
-            scaleNodes: 1.3,
-        };
-        // Configure the algorithm
-        var listener = s.configNoverlap(config);
-        // Bind all events:
-        listener.bind('start stop interpolate', function(event) {
-            console.log(event.type);
-        });
-        // Start the algorithm:
-        s.startNoverlap();
-    }
+    var config = {
+        nodeMargin: 1.0,
+        scaleNodes: 1.3,
+    };
+    // Configure the algorithm
+    var listener = sN.configNoverlap(config);
+    // Bind all events:
+    listener.bind('start stop interpolate', function(event) {
+        console.log(event.type);
+    });
+    // Start the algorithm:
+    sN.startNoverlap();
     
     if (selectedNode != undefined){
-        s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
+        sN.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
     };
 
     function updateQueryStringParameter(uri, key, value) {
@@ -282,41 +263,41 @@ function load_graph(data, graphid, N, move){
         }
     }
     
-    $(document).ready(()=>{
+    // $(document).ready(()=>{
 
-        $('#load'+N).click(()=>{
-            var val = $('#otherCond'+N).val();
+        $('#loadN').click(()=>{
+            var val = $('#otherCondN').val();
             var qs = window.location.href;
             var url = updateQueryStringParameter(qs,'condition', val);
             window.open(url, "_blank"); 
         });
 
-        $('#downloadimg'+N).click(()=>{
-            var graphimage = s.renderers[0].snapshot({format: 'jpg', background: 'white', filename: 'graph.jpg', labels: true});
+        $('#downloadimgN').click(()=>{
+            var graphimage = sN.renderers[0].snapshot({format: 'jpg', background: 'white', filename: 'graph.jpg', labels: true});
             
             $('#imgdownload').remove();
-            $('#sidepanel'+N).append($('<a>', {id: 'imgdownload', href: graphimage, download: 'graph.jpg'}));
+            $('#sidepanelN').append($('<a>', {id: 'imgdownload', href: graphimage, download: 'graph.jpg'}));
             $('#imgdownload')[0].click();
         });
         
-        $('#original'+N).click(()=>{
-            s.graph.nodes().forEach(function(n) {
+        $('#originalN').click(()=>{
+            sN.graph.nodes().forEach(function(n) {
                 n.originalColor = n.firstColor;
                 n.color = n.originalColor;
             });
-            s.refresh();
+            sN.refresh();
         });
-        $('#module'+N).click(()=>{
-            s.graph.nodes().forEach(function(n) {
+        $('#moduleN').click(()=>{
+            sN.graph.nodes().forEach(function(n) {
                 n.originalColor = colors[n.attributes.wgcna_modules];
                 n.color = n.originalColor;
             });
-            s.refresh();
+            sN.refresh();
         });
         
-        $('#regulation'+N).click(()=>{
-            var val = $('#regtime'+N).val();
-            s.graph.nodes().forEach(function(n) {
+        $('#regulationN').click(()=>{
+            var val = $('#regtimeN').val();
+            sN.graph.nodes().forEach(function(n) {
                 var color = colors["Grey"];
                 if(n.attributes.hasOwnProperty(val)){
                     if(n.attributes[val] === "Up")
@@ -327,16 +308,16 @@ function load_graph(data, graphid, N, move){
                 n.originalColor = color;
                 n.color = n.originalColor;
             });
-            s.refresh();
+            sN.refresh();
         });
         
-        $(function(){
-            $('#regtime'+N).change(function(){
+        // $(function(){
+            $('#regtimeN').change(function(){
                 var val= $(this).val();
                 var regTrigger = document.getElementById('regulation');
 
                 if(regTrigger.checked){
-                    s.graph.nodes().forEach(function(n) {
+                    sN.graph.nodes().forEach(function(n) {
                         var color = colors["Grey"];
                         if(n.attributes.hasOwnProperty(val)){
                             if(n.attributes[val] === "Up")
@@ -347,12 +328,11 @@ function load_graph(data, graphid, N, move){
                         n.originalColor = color;
                         n.color = n.originalColor;
                     });
-                    s.refresh();
+                    sN.refresh();
                 }
             })
-            $('#regtime'+N).trigger('change');
-        });
-    });
-
-    return s;
+            $('#regtimeN').trigger('change');
+        // });
+    // });
+    return sN;
 }

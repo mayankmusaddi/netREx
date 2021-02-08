@@ -172,7 +172,8 @@ function load_neighbour_graph(data, graphid){
     var edges = sN.graph.edges();
     for (var i = 0; i < edges.length; i += 1){
         edges[i].type = 'curve';
-        edges[i].size = 0.1;
+        edges[i].color = 'rgb(150,150,150)';
+
     }
     
     // We first need to save the original colors of our nodes and edges, like this:

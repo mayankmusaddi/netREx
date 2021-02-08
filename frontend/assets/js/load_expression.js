@@ -6,8 +6,6 @@ function load_expression(data, chartid, optionsid) {
     sidebar_width: 150,
     col_label_scale: 1.25,
     ini_expand: true,
-    // opacity_scale: "-linear",
-    // tile_colors : ['#1C86EE', '#ED9124'],
   };
 
   resize_container(args);

@@ -14,7 +14,7 @@ function load_table(data, N, s){
         { data: "attributes.kegg"},
     ];
 
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Label'}) );
+    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Gene ID'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'TF'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Module'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Description'}) );
@@ -22,7 +22,7 @@ function load_table(data, N, s){
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'IC4R	Expression'}) );
 
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'GO'}) );
-    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Mapman'}) );
+    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'MapMan'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'KEGG'}) );
 
     var desc_ind=[1,2,3,4,5];
@@ -65,6 +65,10 @@ function load_table(data, N, s){
         data: data.nodes,
         columnDefs: [ 
             {
+                targets: [0],
+                width: "10%",
+            },
+            {
                 targets: [5],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
@@ -81,8 +85,8 @@ function load_table(data, N, s){
                 // `data` option, which defaults to the column being worked with, in
                 // this case `data: 0`.
                 render : function ( d, type, row ) {
-                    // return "<a target='_blank' href=/netrex/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
-                    return "<a target='_blank' href=/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
+                    return "<a target='_blank' href=/netrex/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
+                    // return "<a target='_blank' href=/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
                 },
                 targets: 2
             },
@@ -92,14 +96,14 @@ function load_table(data, N, s){
         buttons: [
             {
                 extend: 'colvisGroup',
-                text: 'Description',
+                text: 'Gene Information',
                 className: "tabledesc",
                 show: [ ...desc_ind],
                 hide: [ ...func_ind, ...fc_ind]
             },
             {
                 extend: 'colvisGroup',
-                text: 'Function',
+                text: 'Gene Function',
                 className: "tablefunc",
                 show: [ ...func_ind ],
                 hide: [ ...desc_ind, ...fc_ind]

@@ -100,7 +100,7 @@
     </header>
 	
 	<!-- Slider Area Start-->
-	<div class="services-area" style="margin-bottom: -100px;"></div>
+	<div class="services-area" style="margin-bottom: -35px;"></div>
 	<!-- Slider Area End-->
 
 	<div class="container box_1170" id="loading-image">
@@ -108,22 +108,22 @@
 	</div>
 
 	<!-- Start Validate Area -->
-	<section class="sample-text-area">
+	<section class="sample-text-area" >
 	<div class="container box_1170">
 		<div id="validation">
 			<div id="metadata">
 				<p>
-				<h><b>Species</b> : Oryza Sativa</h><br>
-				<h><b>Tissue</b> : <span id = "tissue-type"></span></h><br>
-				<h><b>Condition</b> : <span id= "condition-type"></span></h>
+				<h4><b>Species</b> : <span id = "species-type"></span></h4>
+				<h4><b>Tissue</b> : <span id = "tissue-type"></span></h4>
+				<h4><b>Condition / Treatment</b> : <span id= "condition-type"></span></h4>
 			</p>
 			</div>
 			<div id="valid">
 				<p> A total of <span id ="numvalid"></span> genes among the query genes were found in the corresponding dataset</p>
-				  <table class="table table-bordered">
+				  <table class="table table-bordered" style="margin-top:10px;">
 					<thead class="thead-dark" style="background-color:#2f95f5; border-color: #175a99;">
 					  <tr>
-						<th scope="col">Valid Genes</th>
+						<th scope="col">Filtered Genes*</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -137,7 +137,7 @@
 				<table class="table table-bordered">
 					<thead class="thead-dark">
 					  <tr>
-						<th scope="col">Invalid Genes</th>
+						<th scope="col">Invalid Genes*</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -147,6 +147,7 @@
 					</tbody>
 				  </table>
 			</div>
+			<div style="text-align: right;"> * Genes are filtered from the complete network of genes showing fold change for the respective tissue and condition </div>
 		</div>
 	</div>
 	</section>
@@ -208,7 +209,7 @@
 									<div class="switch-wrap d-flex justify-content-between">
 										<div id="pathHead">
 											<select name="path" id="path">
-												<option value="">- Pathways -</option>
+												<option value="">- KEGG Pathways -</option>
 											</select>
 										</div>
 									</div>
@@ -227,7 +228,7 @@
 								</div>
 								
 								<div class="button-group-area mt-40">
-									<a id="downloadimg" class="genric-btn success circle">Download Image</a>
+									<a id="downloadimg" class="genric-btn success circle">Download</a>
 									<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
 								</div>
 							</div>
@@ -310,7 +311,7 @@
 										<div class="switch-wrap d-flex justify-content-between">
 											<div id="pathHeadN">
 												<select name="pathN" id="pathN">
-													<option value="">- Pathways -</option>
+													<option value="">- KEGG Pathways -</option>
 												</select>
 											</div>
 										</div>
@@ -329,7 +330,7 @@
 									</div>
 									
 									<div class="button-group-area mt-40">
-										<a id="downloadimgN" class="genric-btn success circle">Download Image</a>
+										<a id="downloadimgN" class="genric-btn success circle">Download</a>
 										<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
 									</div>
 								</div>
@@ -371,13 +372,13 @@
 			<div>
 				<p><button type="button" class="btn-outline-secondary" id="show-expression">Expression Viewer</button></p>
 				<div id="expression-view" style="display: none;">
+					<h4 class="text-heading" style="margin-top: 40px;margin-bottom: -20px; text-align:center">HeatMap - Fold-Change</h4>
 					<div id='expressionchart'></div>
 					<div id='expressionopts'></div>
-					<p>Expression Gradient</p>
 
+					<h4 class="text-heading" style="margin-top: 40px;margin-bottom: -20px; text-align:center">HeatMap - <i>p</i>-value</h4>
 					<div id='pvaluechart'></div>
 					<div id='pvalueopts'></div>
-					<p>P-value Gradient</p>
 
 				</div>
 			</div>
@@ -563,6 +564,7 @@
 	});
 
 	function loadPage(data){		
+		document.getElementById("species-type").innerHTML = capitalizeFirstLetter(data.metadata.species);
 		document.getElementById("tissue-type").innerHTML = capitalizeFirstLetter(data.metadata.tissue);
 		document.getElementById("condition-type").innerHTML = capitalizeFirstLetter(data.metadata.condition);
 		document.getElementById("numvalid").innerHTML = data.valid.length;
@@ -579,8 +581,8 @@
 		$('#show-network').click(function(){
 			$.ajax({
 				type: "POST",
-				// url: "/netrex/simple_network",
-				url: "/simple_network",
+				url: "/netrex/simple_network",
+				// url: "/simple_network",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
 				success: function (graph) {
@@ -602,8 +604,8 @@
 			if($('#neighbor-number').val()>0){
 				$.ajax({
 					type: "POST",
-					// url: "/netrex/neighborhood_network",
-					url: "/neighborhood_network",
+					url: "/netrex/neighborhood_network",
+					// url: "/neighborhood_network",
 					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
 					contentType: "application/json; charset=utf-8",
 					success: function (graph) {
@@ -625,8 +627,8 @@
 		$('#show-expression').click(function(){
 			$.ajax({
 				type: "POST",
-				// url: "/netrex/expression",
-				url: "/expression",
+				url: "/netrex/expression",
+				// url: "/expression",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
 				success: function (data) {

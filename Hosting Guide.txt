@@ -2,12 +2,21 @@ Docker Tips:
     docker system prune (To remove all dangling images)
     docker rmi <image name> (To remove certain image)
 
-Step 0: Run npm pack to create tarball
-Step 1: Build Docker Image (docker build -t <image name> <path to DockerFile folder>)
-Step 2: Export Docker Image (docker save -o <tar file name> <image name>)
-Step 3: SCP Tar Image to Server (scp <tar file> <server>:~ )
-Step 4: Load tar image into Docker (docker load -i <tar file>)
-Step 5: Run Docker image (docker run -d -p 3000:3000 <image name>)
+Step 0: Make Changes to 
+        query.html 116
+        validate.html 584, 607, 630
+        pathway.html 121, 370
+        module.html 120
+        condition.html 118
+        load_table.js 88
+        load_neighbour_table.js 82
+        
+Step 1: Run npm pack to create tarball
+Step 2: Build Docker Image (docker build -t <image name> <path to DockerFile folder>)
+Step 3: Export Docker Image (docker save -o <tar file name> <image name>)
+Step 4: SCP Tar Image to Server (scp <tar file> <server>:~ )
+Step 5: Load tar image into Docker (docker load -i <tar file>)
+Step 6: Run Docker image (docker run -d -p 3000:3000 <image name>)
 
 Docker Commands:
     docker image ls (To Display all the created images)

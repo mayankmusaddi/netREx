@@ -113,9 +113,9 @@
 				making and breaking of links among the entities depending upon the developmental stage, tissue and
 				environmental conditions. In field conditions, plants are generally exposed to multiple stresses. Thus
 				finding processes that are common or unique across various stress conditions can provide novel
-				insights clues towards multi-stress tolerant crops. Hence NetREx or "Network-based Rice Expression
-				Analysis Server for Abiotic Stress Conditions" comes into the picture which aims to represent this
-				coordinated association between genes of the rice plant under several Abiotic conditions.
+				insight towards developing multi-stress tolerant crops. In NetREx, user can explore coordinated
+				association between genes under different abiotic stress conditions and two phyto
+				hormone treatments.
 			</p>
 		</div>
 	</section>
@@ -125,13 +125,13 @@
 	<div class="whole-wrap">
 		<div class="container box_1170">
 			<div class="section-top-border">
-				<h3 class="mb-30">Graph Construction</h3>
+				<h3 class="mb-30 text-heading">Graph Construction</h3>
 				<div class="row">
 					<div class="col-md-3">
 						<img src="assets/img/elements/coexpression.png" alt="" class="img-fluid">
 					</div>
 					<div class="col-md-9 mt-sm-20">
-						<p>A typical transcriptomic experiment (microarray or RNA-seq) typically detects thousands of genes
+						<p>A typical transcriptomic experiment (microarray or RNA-seq) detects thousands of genes
 							differentially expressed with respect to control conditions. A functional analysis of such a large set of
 							genes is a daunting task. A popular approach is to construct co-expression networks based on the
 							similarity of gene expression profiles. Here, nodes represent genes and edges represent the strength of
@@ -147,72 +147,46 @@
 			<div>
 				<h3 class="text-heading">Dataset</h3>
 				<p class="sample-text">
-					For the construction of this resource we have considered publicly available mRNA-seq data from
-					TENOR database (Kawahara et al., 2016) that hosts genome-wide time-course transcriptome study of
-					rice shoots and roots under a wide variety of conditions, viz., environmental stresses (e.g., drought,
-					cold, flood, salinity), nutrient deficiencies and excesses (e.g., phosphate), heavy metal toxicity stress
-					(e.g., cadmium) and plant hormone treatments (abscisic acid (ABA) and jasmonic acid (JA)) have
+					For the construction of this resource environmental stresses (e.g., drought,
+					cold, flood, salinity) and plant hormone treatments (abscisic acid (ABA) and jasmonic acid (JA)) have
 					been used. All the experiments have been performed using a single mRNA-Seq platform under
 					standardized laboratory conditions and from the same rice cultivar Oryza sativa L. (cv. Nipponbare),
 					making it possible to compare gene expressions across different stress conditions. In NetREx, data for
 					four stress conditions (drought, cold, flood and osmotic stress) and two hormonal treatments (ABA
 					and JA) from seedlings (10 days after germination) have been considered for network construction
-					and analysis. First we construct a global rank-based stress network across four stress conditions and
-					two hormonal treatments, separately for root and shoot tissues. Stress-specific networks are then
+					and analysis. Two global rank-based stress networks across four stress conditions and
+					two hormonal treatments, have been constructed for root and shoot tissues. Stress-specific networks are then
 					derived from these global networks using differentially expressed genes.
 				</p>
 			</div>
 
 			<div class="section-top-border">
-				<h3 class="mb-30">Views</h3>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="single-defination">
-							<h4 class="mb-20">Network Viewer</h4>
-							<p>This module displays connectivity between query genes for a given stress and tissue. There are 
-								3 coloring options:
-								By default the nodes are sized and colored according to their degree. With the module option the
-								nodes are colored according to the module to which they belong. With the regulation option 
-								nodes are colour-coded based on up/down-regulation across time-points.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-defination">
-							<h4 class="mb-20">Network Neighbourhood Viewer</h4>
-							<p>In this view, the top 100 neighbours of the query genes based on
-								the k Total (connectivity in the whole network) is displayed. This module inherits most of the features
-								available in the “Network Viewer” and can be used by ticking the checkbox present
-								after the network viewer query box.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="single-defination">
-							<h4 class="mb-20">Module Viewer</h4>
-							<p>In NetREx, using WGCNA R package, we have identified co-expressed gene
-								modules for both root and shoot HRR networks. In this view, the top 100 highly connected
-								genes based on their within-module connectivity is shown and the genes are displayed with colour of the modules they belong to. 
-								The “Module Attribute” table provides the GO enriched terms for biological processes.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section-top-border">
-				<h3 class="mb-30">Conclusion</h3>
-				<div class="row">
-					<div class="col-lg-12">
-						<blockquote class="generic-blockquote">
-							Clusters of co-expressed genes often represent coordinated biological processes. Analysis of gene 
-							co-expression networks have been helpful in functional annotation of uncharacterized genes
-							In systems biology, network neighbourhood analysis is an important aspect as it facilitates a
-							“guilt-by-association” strategy by which we can find interesting genes which are closely
-							interacting/co-expressed with the initial “seed genes”.
-							Biologists are often interested in processes that are common across various stress conditions.
-							Modifying genes responsive to multiple stress conditions might help in developing multi-stress
-							resistant crops. At the same time, processes that are unique to a given stress might provide cues to
-							novel signalling or metabolic cascades associated with the specific stress.
-						</blockquote>
-					</div>
-				</div>
+				<h3 class="mb-30 text-heading">Viewers</h3>
+				<h4 class="mb-20 text-heading">Network Viewer</h4>
+				<p>It displays connectivity between query genes for a given stress condition
+					and tissue type. Nodes are coloured coded based on their expression levels (up/down w.r.t.
+					normal), module membership, and sized and coloured based on their degree. Based on the
+					functional annotation, biological pathways and processes that are activated or repressed under
+					given stress condition can be identified. Comparing it across two or more stress conditions,
+					processes that are unique or common to the processes can also be identified.
+					</p>
+					<br>
+				<h4 class="mb-20 text-heading">Network Neighbourhood Viewer</h4>
+				<p>It displays top neighbours of query genes, identified based on their connectivity in the
+					complete network. This can help in better capturing biological
+					pathways and processes that are activated or repressed under given stress condition can be
+					identified.
+					</p>
+					<br>
+				<h4 class="mb-20 text-heading">Module Viewer</h4>
+				<p>Genes that are co-expressed are put together in the same module. Thus by careful analysis of
+					query genes that are part of the same module, biological processes and pathways that are
+					activated/repressed and co-regulated can be identified. In this view, top 100 highly connected
+					genes based on their within-module connectivity (HRR100) is shown and the genes are
+					displayed with colour of the modules they belong to. The “Module Attribute” table provides the GO enriched terms for
+					biological processes.
+				</p>
+				<br>
 			</div>
 		</div>
 	</div>

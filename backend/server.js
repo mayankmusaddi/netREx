@@ -90,13 +90,21 @@ app.use("/validate", (req, res) => {
   file = require(jsonpath + query.condition + query.tissue);
 
   var genes = query.genes.split(/[ ,]+/).filter(Boolean);
+  if(query.species != "rice"){
+    mapping = require("../frontend/data/"+query.species+".json");
+    mapped_genes = [];
+    for(var i=0;i<genes.length;i++){
+      if(genes[i] in mapping)
+      mapped_genes.push(mapping[genes[i]]);
+    }
+    genes = mapped_genes;
+  }
+
   const nodes = file.nodes.filter((d) => genes.includes(d.label));
 
-  var valid = nodes.map((d) => {
-    return d.label;
-  });
+  var valid = nodes.map((d) => {return d.label;});
   var invalid = genes.filter((d) => !valid.includes(d));
-  var metadata = { condition: query.condition, tissue: query.tissue };
+  var metadata = { species : query.species, condition: query.condition, tissue: query.tissue };
 
   data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata };
   res.send(data);

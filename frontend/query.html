@@ -107,60 +107,59 @@
 	<!-- Start Sample Area -->
 	<section class="sample-text-area">
 		<div class="container box_1170" id="network-viewer">
-			<h3 class="text-heading">Gene Query Visualisation</h3>
-				<p class="sample-text">
-                	A query based search which graphically displays all the connections of the queried genes, with the option 
-                	for viewing the module colors, the regulations at different time stamps, and immediate neighbours.
+				<p>
+                	Submit a set of genes to view their network representation at different time-point for
+					different stress/hormone treatments, for root/shoot tissue in rice.
 				</p>
-
-			<div class="row">
-				<div class="col-lg-8">
-					<!-- <form class="form-contact" id="query-form" action="/netrex/validate.html" method="get"> -->
-					<form class="form-contact" id="query-form" action="/validate.html" method="get">
+				<br>
+				<div>
+					<form class="form-contact" id="query-form" action="/netrex/validate.html" method="get">
+					<!-- <form class="form-contact" id="query-form" action="/validate.html" method="get"> -->
 						<div class="row">
-
-							<div class="input-group-icon col-sm-12">
+							<div class="input-group-icon col-sm-3"><p>Species : </p></div>
+							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
 								<div class="form-select" id="speciesHead">
 									<select name="species" id="speciesN" required>
-											<option value="">- Species -</option>
-											<option value="rice">Oryza Sativa</option>
+										<option value="rice">Oryza Sativa</option>
+										<option value="arabidopsis">Arabidopsis Thaliana</option>
+										<option value="wheat">Triticum Aesticum</option>
+										<option value="maize">Zea Mays</option>
+										<option value="barley">Hordeum Vulgare</option>
+										<option value="sorghum">Sorghum Bicolor</option>
 									</select>
 								</div>
 							</div>
 
-							<div class="input-group-icon col-sm-12">
+							<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
+							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
 								<div class="form-select" id="tissueHead">
 									<select name="tissue" id="tissueN" required>
-											<option value="">- Tissue -</option>
-											<option value="root">Root</option>
-											<option value="shoot">Shoot</option>
+										<option value="root">Root</option>
+										<option value="shoot">Shoot</option>
 									</select>
 								</div>
 							</div>
 
-							<div class="input-group-icon col-sm-12">
-								<div class="icon"><i class="fas fa-cloud-meatball" aria-hidden="true"></i></div>
-								<div class="form-select" id="conditionTypeHead">
-									<select name="conditionType" id="conditionTypeN" required>
-											<option value="">- Condition Type -</option>
-											<option value="stress">Abiotic Stress</option>
-											<option value="hormone">Phytohormone Change</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="input-group-icon col-sm-12" style="display: none;" id="select-condition">
+							<div class="input-group-icon col-sm-3"><p>Stress / Hormone Treatment : </p></div>
+							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
 								<div class="form-select" id="conditionHead">
 									<select name="condition" id="conditionN" required>
-										<option value="">- Condition -</option>
+										<option value="stress" disabled><span>&#8226;</span> Abiotic Stress</option>
+										<option value="drought">Drought</option>
+										<option value="cold">Cold</option>
+										<option value="flood">Flood</option>
+										<option value="osmo">Osmosis</option>
+										<option value="hormone" disabled><span>&#8226;</span> Phytohormone Change</option>
+										<option value="aba">ABA</option>
+										<option value="ja">JA</option>
 									</select>
 								</div>
 							</div>
 							
-							<div class="col-sm-12">
+							<div class="col-sm-12" style="margin-top: 10px;">
 								<div class="form-group">
 									<textarea class="form-control w-100" name="genes" id="genes" cols="30" rows="9"	 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Comma/Space separated Query Gene List (<300)'" placeholder=" Enter Comma/Space separated Query Gene List (<300)" required></textarea>
 								</div>
@@ -175,31 +174,6 @@
 							<button type="reset" class="button boxed-btn">Reset</button>
 						</div>
 					</form>
-				</div>
-				
-				<div class="col-lg-3 offset-lg-1">
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-cloud-sun-rain"></i></span>
-						<div class="media-body">
-							<h3>Abiotic Stress Condition</h3>
-							<p>Coordinated association between genes when exposed to stress</p>
-						</div>
-					</div>
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-microscope"></i></span>
-						<div class="media-body">
-							<h3>Tissue Type</h3>
-							<p>Differentially expressed genes (DEGs) are determined in a tissue-specific manner</p>
-						</div>
-					</div>
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-dna"></i></span>
-						<div class="media-body">
-							<h3>Query Gene List</h3>
-							<p>For Gene Specific Connections</p>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 

@@ -118,8 +118,8 @@
 
 			<div class="row">
 				<div class="col-lg-8">
-					<!-- <form class="form-contact" action="/netrex/load" id="conditionForm"> -->
-					<form class="form-contact" action="/pathway" id="conditionForm">
+					<form class="form-contact" action="/netrex/pathway" id="conditionForm">
+					<!-- <form class="form-contact" action="/pathway" id="conditionForm"> -->
 						<div class="row">
 
 							<div class="input-group-icon col-sm-12">
@@ -367,7 +367,8 @@
 				condition:$("#conditionN").val(),
 				genes: genes,
 			});
-			var url = "/validate.html?"+params.toString();
+			var url = "/netrex/validate.html?"+params.toString();
+			// var url = "/validate.html?"+params.toString();
 			window.location.replace(url);
 		});
 

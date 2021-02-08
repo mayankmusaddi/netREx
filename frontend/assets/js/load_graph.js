@@ -11,6 +11,19 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
 });
 
 function load_graph(data, graphid, N, move){
+    console.log(data)
+    var edges = data.edges;
+    for (var i = 0; i < edges.length; i += 1){
+        edges[i].type = 'curve';
+        edges[i].color = 'rgb(100,100,100)';
+    }
+
+    // var nodes = data.nodes;
+    // for (var i = 0; i < nodes.length; i += 1){
+    //     rgb = nodes[i].color.replace(/[^\d,]/g, '').split(',');
+    //     nodes[i].color = "rgb("+(rgb[0]*0.5)+","+(rgb[0]*0.75)+","+(rgb[0]*0.2)+")";
+    // }
+
     function expand() {
         $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-10 col-md-10');
 		$('#sidepanel'+N).hide();
@@ -181,12 +194,6 @@ function load_graph(data, graphid, N, move){
     filter = new sigma.plugins.filter(s);
     var selectedNode;
     
-    var edges = s.graph.edges();
-    for (var i = 0; i < edges.length; i += 1){
-        edges[i].type = 'curve';
-        edges[i].size = 0.1;
-    }
-    
     // We first need to save the original colors of our nodes and edges, like this:
     s.graph.nodes().forEach(function(n) {
         n.originalColor = n.color;
@@ -267,9 +274,9 @@ function load_graph(data, graphid, N, move){
         s.startNoverlap();
     }
     
-    if (selectedNode != undefined){
-        s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
-    };
+    // if (selectedNode != undefined){
+    //     s.cameras[0].goTo({x:selectedNode['read_cam0:x'],y:selectedNode['read_cam0:y'],ratio:0.1});
+    // };
 
     function updateQueryStringParameter(uri, key, value) {
         var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");

@@ -4,7 +4,7 @@ Docker Tips:
 
 Step 0: Make Changes to 
         query.html 116
-        validate.html 584, 607, 630
+        validate.html 552, 584, 607, 630
         pathway.html 121, 370
         module.html 120
         condition.html 118

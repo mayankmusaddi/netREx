@@ -549,8 +549,8 @@
 	$(".sample-text-area").hide();
 	$.ajax({
         type: "POST",
-        // url: "/netrex/validate",
-        url: "/validate",
+        url: "/netrex/validate",
+        // url: "/validate",
         data: JSON.stringify(query),
         contentType: "application/json; charset=utf-8",
         success: function (data) {

@@ -15,7 +15,7 @@ function load_graph(data, graphid, N, move){
     var edges = data.edges;
     for (var i = 0; i < edges.length; i += 1){
         edges[i].type = 'curve';
-        edges[i].color = 'rgb(100,100,100)';
+        edges[i].color = 'rgb(150,150,150)';
     }
 
     // var nodes = data.nodes;
@@ -44,6 +44,7 @@ function load_graph(data, graphid, N, move){
     
     function refreshScreen(){
         s.renderers[0].dispatchEvent('outNode');
+        s.cameras[0].goTo({x:0,y:0,ratio:1});
 		s.refresh();
 	    $(this).one("click", refreshScreen);
     }
@@ -299,10 +300,11 @@ function load_graph(data, graphid, N, move){
         });
 
         $('#downloadimg'+N).click(()=>{
+            console.log("Hi")
             var graphimage = s.renderers[0].snapshot({format: 'jpg', background: 'white', filename: 'graph.jpg', labels: true});
             
             $('#imgdownload').remove();
-            $('#sidepanel'+N).append($('<a>', {id: 'imgdownload', href: graphimage, download: 'graph.jpg'}));
+            $('#'+graphid).append($('<a>', {id: 'imgdownload', href: graphimage, download: 'graph.jpg'}));
             $('#imgdownload')[0].click();
         });
         

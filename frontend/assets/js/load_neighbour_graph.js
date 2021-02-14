@@ -19,6 +19,7 @@ function load_neighbour_graph(data, graphid){
     
     function refreshScreen(){
         sN.renderers[0].dispatchEvent('outNode');
+        sN.cameras[0].goTo({x:0,y:0,ratio:1});
 		sN.refresh();
 	    $(this).one("click", refreshScreen);
     }

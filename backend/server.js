@@ -118,6 +118,7 @@ app.use("/module", (req, res) => {
   fs.readFile(datapath + query.tissue + "_modules_GO/" + query.module + ".txt", 'utf8', (err, data) => {
     if (err) console.log(err);
     file.go = csvJSON(data);
+    initTF(file.nodes);
     res.send(file);
   })
 });
@@ -132,26 +133,6 @@ app.use("/load", (req, res) => {
 app.use("/pathway", (req, res) => {
   var query = req.body;
   file = require(jsonpath + query.condition + query.tissue);
-  {
-  // fs.readFile(datapath + "kegg_pathway_hierarchy.csv", 'utf8', (err, data) => {
-  //   if (err) console.log(err);
-  //   var lines=data.split("\n");
-  //   var result = {};
-  //   var tag = "";
-  //   for(var i=0;i<lines.length;i++){
-  //     var line = lines[i].split("\t");
-  //     if(line.length == 1){
-  //       tag = line[0];
-  //       result[tag] = {};
-  //     }
-  //     else
-  //       result[tag][line[1]] = line[0]
-  //   }
-  //   console.log(result);
-  //   let d = JSON.stringify(result,null,2);
-  //   fs.writeFileSync('pathway_list.json', d);
-  // })
-  }
   var path_list = require("../frontend/data/gene_list.json");
   var all_genes = file.nodes.map((d) => d.label);
   var filtered_list = {};

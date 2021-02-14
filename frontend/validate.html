@@ -65,24 +65,24 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:130px"></a>
-                                <!-- <div>NetREx</div> -->
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation">    
+                                    <ul id="navigation">
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="overview.html">Overview</a></li>
-                                        <li><a href="query.html">Query</a>
+                                        <li class="active"><a href="query.html">Query</a>
                                         <li><a>Browse</a>
                                             <ul class="submenu">
                                                 <li><a href="module.html">Module Wise</a></li>
                                                 <li><a href="condition.html">Condition Wise</a></li>
+                                                <li><a href="pathway.html">Pathway Wise</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="dataset.html">Datasets</a></li>
+                                        <li><a href="tutorial.pdf">Help</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -100,7 +100,7 @@
     </header>
 	
 	<!-- Slider Area Start-->
-	<div class="services-area" style="margin-bottom: -35px;"></div>
+	<div class="services-area" style="margin-bottom: -95px;"></div>
 	<!-- Slider Area End-->
 
 	<div class="container box_1170" id="loading-image">
@@ -109,7 +109,13 @@
 
 	<!-- Start Validate Area -->
 	<section class="sample-text-area" >
-	<div class="container box_1170">
+	<div class="container box_1170">	
+		<div style = "margin-bottom: 20px;">
+			<p>
+				<button type="button" class="btn-outline-secondary" id="show-network">Network Viewer</button>
+				<button type="button" class="btn-outline-secondary" id="show-expression">Expression Viewer</button>
+			</p>
+		</div>
 		<div id="validation">
 			<div id="metadata">
 				<p>
@@ -159,14 +165,13 @@
 		<div id="options">
 			<!-- Start Graph Area -->
 			<div>
-				<p><button type="button" class="btn-outline-secondary" id="show-network">Network Viewer</button></p>
-
 				<div id="network-view" style="display: none;">
 
 					<div class="row" style="margin:0px">
 
 						<!-- Start Network Area -->
 						<div class="col-lg-10 col-md-10"  id="network-graph">
+							<span id="graph-title"></span>
 							<span class='fas fa-sync-alt' id="refresh" ></span>
 							<span class='fas fa-expand-arrows-alt' id="expand" ></span>
 						</div>
@@ -269,8 +274,9 @@
 
 							<!-- Start Network Neighborhood Area -->
 							<div class="col-lg-10 col-md-10"  id="neighborhood-graph">
-							<span class='fas fa-sync-alt' id="refreshN" ></span>
-							<span class='fas fa-expand-arrows-alt' id="expandN" ></span>
+								<span id="graph-titleN"></span>
+								<span class='fas fa-sync-alt' id="refreshN" ></span>
+								<span class='fas fa-expand-arrows-alt' id="expandN" ></span>
 							</div>
 							<!-- End Network Neighborhood Area -->
 							
@@ -370,7 +376,6 @@
 			
 			<!-- Start Expression Area -->
 			<div>
-				<p><button type="button" class="btn-outline-secondary" id="show-expression">Expression Viewer</button></p>
 				<div id="expression-view" style="display: none;">
 					<h4 class="text-heading" style="margin-top: 40px;margin-bottom: -20px; text-align:center">HeatMap - Fold-Change</h4>
 					<div id='expressionchart'></div>
@@ -388,95 +393,7 @@
 	</div>
 	</section>
 	<!-- End Visual Area -->
-
-	<footer>
-
-		<!-- Footer Start-->
-	   <div class="footer-main">
-		 <div class="footer-area footer-padding">
-			 <div class="container">
-				 <div class="row  justify-content-between">
-					 <div class="col-lg-3 col-md-4 col-sm-8">
-						  <div class="single-footer-caption mb-30">
-							   <!-- logo -->
-							  <div class="footer-logo">
-								  <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
-							  </div>
-							  <div class="footer-tittle">
-								  <div class="footer-pera">
-									  <p class="info1">A visualizer for the correlation network of rice genes based on fold changes.</p>
-								 </div>
-							  </div>
-						  </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-5">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Quick Links</h4>
-								 <ul>
-									 <li><a href="index.html">Home</a></li>
-									 <li><a href="overview.html">About</a></li>
-									 <li><a href="query.html">Query</a></li>
-									 <li><a href="datasets.html">Datasets</a></li>
-									 <li><a href="contact.html">Contact</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-7">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Support</h4>
-								 <ul>
-									 <li><a href="contact.html">Report a bug</a></li>
-									 <li><a href="contact.html">Privacy Policy</a></li>
-									 <li><a href="contact.html">Terms & Conditions</a></li>
-									 <li><a href="contact.html">Sitemap</a></li>
-									 <li><a href="contact.html">FAQs</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-3 col-md-6 col-sm-8">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Newsletter</h4>
-								 <div class="footer-pera footer-pera2">
-								  <p>For notification for any updates please subscribe!</p>
-							  </div>
-							  <!-- Form -->
-							  <div class="footer-form">
-								  <div id="mc_embed_signup">
-									  <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-										  <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
-										  <div class="form-icon">
-											  <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><img src="assets/img/shape/form_icon.png" alt=""></button>
-										  </div>
-										  <div class="mt-10 info"></div>
-									  </form>
-								  </div>
-							  </div>
-							 </div>
-						 </div>
-					 </div>
-				 </div>
-				 <!-- Copy-Right -->
-				 <div class="row align-items-center">
-					 <div class="col-xl-12 ">
-						 <div class="footer-copy-right">
-							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This application is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://researchweb.iiit.ac.in/~mayank.musaddi" target="_blank">Mayank Musaddi</a>
-   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						 </div>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	   </div>
-		<!-- Footer End-->
- 
-	</footer>
-<!-- JS here -->
+	<!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -549,8 +466,8 @@
 	$(".sample-text-area").hide();
 	$.ajax({
         type: "POST",
-        url: "/netrex/validate",
-        // url: "/validate",
+        // url: "/netrex/validate",
+        url: "/validate",
         data: JSON.stringify(query),
         contentType: "application/json; charset=utf-8",
         success: function (data) {
@@ -581,12 +498,16 @@
 		$('#show-network').click(function(){
 			$.ajax({
 				type: "POST",
-				url: "/netrex/simple_network",
-				// url: "/simple_network",
+				// url: "/netrex/simple_network",
+				url: "/simple_network",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
 				success: function (graph) {
 					$('#network-view').show();
+					$('html, body').animate({
+						scrollTop: $("#network-view").offset().top - 75
+					}, 1000);
+					$('#graph-title').append($('#tissue-type').text()+'<br>'+$('#condition-type').text());
 					$('#show-network').prop('disabled', true);
 					graph.tissue = data.metadata.tissue;
 					graph.condition = data.metadata.condition;
@@ -604,13 +525,17 @@
 			if($('#neighbor-number').val()>0){
 				$.ajax({
 					type: "POST",
-					url: "/netrex/neighborhood_network",
-					// url: "/neighborhood_network",
+					// url: "/netrex/neighborhood_network",
+					url: "/neighborhood_network",
 					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
 					contentType: "application/json; charset=utf-8",
 					success: function (graph) {
 						// $('#neighborhood-graph').html('<span class="fas fa-expand-arrows-alt" id="expandN" ></span>');
 						$('#neighborhood-view').show();
+						$('html, body').animate({
+    				    	scrollTop: $("#neighborhood-view").offset().top - 75
+						}, 1000);
+						$('#graph-titleN').append($('#tissue-type').text()+'<br>'+$('#condition-type').text());
 						$('#show-neighborhood').prop('disabled', true);
 						graph.tissue = data.metadata.tissue;
 						graph.condition = data.metadata.condition;
@@ -627,12 +552,15 @@
 		$('#show-expression').click(function(){
 			$.ajax({
 				type: "POST",
-				url: "/netrex/expression",
-				// url: "/expression",
+				// url: "/netrex/expression",
+				url: "/expression",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
 				success: function (data) {
 					$('#expression-view').show();
+					$('html, body').animate({
+    				    scrollTop: $("#expression-view").offset().top - 75
+    				}, 1000);
 					$('#show-expression').prop('disabled', true);
 					load_expression(data.exp, "#expressionchart", "#expressionopts");
 					load_expression(data.pval, "#pvaluechart", "#pvalueopts");

@@ -65,16 +65,14 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:130px"></a>
-                                <!-- <div>NetREx</div> -->
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation">    
+                                    <ul id="navigation">
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="overview.html">Overview</a></li>
                                         <li><a href="query.html">Query</a>
                                         <li class="active"><a>Browse</a>
                                             <ul class="submenu">
@@ -84,6 +82,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="dataset.html">Datasets</a></li>
+                                        <li><a href="tutorial.pdf">Help</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -113,80 +112,54 @@
 			<h3 class="text-heading">Pathway Browse</h3>
 				<p class="sample-text">
 					Browsing through the complete database of genes that play a key role at the specified tissue 
-					level when exposed through different abiotic stress conditions or phytohormone changes.
+					level when exposed through different abiotic stress conditions or phytohormone changes. Then
+					showing a classified list of the genes according to their pathways.
 				</p>
 
 			<div class="row">
-				<div class="col-lg-8">
-					<form class="form-contact" action="/netrex/pathway" id="conditionForm">
-					<!-- <form class="form-contact" action="/pathway" id="conditionForm"> -->
-						<div class="row">
-
-							<div class="input-group-icon col-sm-12">
+				<!-- <form class="form-contact" action="/netrex/pathway" id="conditionForm"> -->
+				<form class="form-contact" action="/pathway" id="conditionForm">
+					<div class="row">
+						<div class="input-group-icon col-sm-3"><p>Species : </p></div>
+						<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
 								<div class="form-select" id="speciesHead">
 									<select name="species" id="speciesN" required>
-											<option value="">- Species -</option>
-											<option value="rice">Oryza Sativa</option>
+										<option value="rice">Oryza Sativa</option>
 									</select>
 								</div>
-							</div>
-
-							<div class="input-group-icon col-sm-12">
-								<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
-								<div class="form-select" id="tissueHead">
-									<select name="tissue" id="tissueN" required>
-											<option value="">- Tissue -</option>
-											<option value="root">Root</option>
-											<option value="shoot">Shoot</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="input-group-icon col-sm-12">
-								<div class="icon"><i class="fas fa-cloud-meatball" aria-hidden="true"></i></div>
-								<div class="form-select" id="conditionTypeHead">
-									<select name="conditionType" id="conditionTypeN" required>
-											<option value="">- Condition Type -</option>
-											<option value="stress">Abiotic Stress</option>
-											<option value="hormone">Phytohormone Change</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="input-group-icon col-sm-12" style="display: none;" id="select-condition">
-								<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
-								<div class="form-select" id="conditionHead">
-									<select name="condition" id="conditionN" required>
-										<option value="">- Condition -</option>
-									</select>
-								</div>
-							</div>
-
 						</div>
-
-						<div class="form-group mt-3">
-							<button type="submit" class="button boxed-btn">Load Pathways</button>
+						<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
+						<div class="input-group-icon col-sm-8">
+							<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
+							<div class="form-select" id="tissueHead">
+								<select name="tissue" id="tissueN" required>
+									<option value="root">Root</option>
+									<option value="shoot">Shoot</option>
+								</select>
+							</div>
 						</div>
-					</form>
-				</div>
-				
-				<div class="col-lg-3 offset-lg-1">
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-microscope"></i></span>
-						<div class="media-body">
-							<h3>Tissue Type</h3>
-							<p>DEGs determined in a tissue-specific manner</p>
+						<div class="input-group-icon col-sm-3"><p>Stress / Hormone Treatment : </p></div>
+						<div class="input-group-icon col-sm-8">
+							<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
+							<div class="form-select" id="conditionHead">
+								<select name="condition" id="conditionN" required>
+									<option value="stress" disabled><span>&#8226;</span> Abiotic Stress</option>
+									<option value="drought">Drought</option>
+									<option value="cold">Cold</option>
+									<option value="flood">Flood</option>
+									<option value="osmo">Osmosis</option>
+									<option value="hormone" disabled><span>&#8226;</span> Phytohormone Change</option>
+									<option value="aba">ABA</option>
+									<option value="ja">JA</option>
+								</select>
+							</div>
 						</div>
 					</div>
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fas fa-cloud-sun-rain"></i></span>
-						<div class="media-body">
-							<h3>Abiotic Stress Condition</h3>
-							<p>Coordinated association between genes when exposed to stress</p>
-						</div>
+					<div class="form-group mt-3">
+						<button type="submit" class="button boxed-btn">Send</button>
 					</div>
-				</div>
+				</form>
 			</div>
 
 			<div class="container box_1170" id="loading-image" style="display: none;">
@@ -209,93 +182,6 @@
 	</section>
     <!-- End Sample Area -->
 
-	<footer>
-
-		<!-- Footer Start-->
-	   <div class="footer-main">
-		 <div class="footer-area footer-padding">
-			 <div class="container">
-				 <div class="row  justify-content-between">
-					 <div class="col-lg-3 col-md-4 col-sm-8">
-						  <div class="single-footer-caption mb-30">
-							   <!-- logo -->
-							  <div class="footer-logo">
-								  <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
-							  </div>
-							  <div class="footer-tittle">
-								  <div class="footer-pera">
-									  <p class="info1">A visualizer for the correlation network of rice genes based on fold changes.</p>
-								 </div>
-							  </div>
-						  </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-5">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Quick Links</h4>
-								 <ul>
-									 <li><a href="index.html">Home</a></li>
-									 <li><a href="overview.html">About</a></li>
-									 <li><a href="query.html">Query</a></li>
-									 <li><a href="datasets.html">Datasets</a></li>
-									 <li><a href="contact.html">Contact</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-7">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Support</h4>
-								 <ul>
-									 <li><a href="contact.html">Report a bug</a></li>
-									 <li><a href="contact.html">Privacy Policy</a></li>
-									 <li><a href="contact.html">Terms & Conditions</a></li>
-									 <li><a href="contact.html">Sitemap</a></li>
-									 <li><a href="contact.html">FAQs</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-3 col-md-6 col-sm-8">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Newsletter</h4>
-								 <div class="footer-pera footer-pera2">
-								  <p>For notification for any updates please subscribe!</p>
-							  </div>
-							  <!-- Form -->
-							  <div class="footer-form">
-								  <div id="mc_embed_signup">
-									  <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-										  <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
-										  <div class="form-icon">
-											  <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><img src="assets/img/shape/form_icon.png" alt=""></button>
-										  </div>
-										  <div class="mt-10 info"></div>
-									  </form>
-								  </div>
-							  </div>
-							 </div>
-						 </div>
-					 </div>
-				 </div>
-				 <!-- Copy-Right -->
-				 <div class="row align-items-center">
-					 <div class="col-xl-12 ">
-						 <div class="footer-copy-right">
-							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This application is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://researchweb.iiit.ac.in/~mayank.musaddi" target="_blank">Mayank Musaddi</a>
-   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						 </div>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	   </div>
-		<!-- Footer End-->
- 
-	</footer>
 	<!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
@@ -363,12 +249,11 @@
 			const params = new URLSearchParams({
 				species:$("#speciesN").val(),
 				tissue:$("#tissueN").val(),
-				conditionType:$("#conditionTypeN").val(),
 				condition:$("#conditionN").val(),
 				genes: genes,
 			});
-			var url = "/netrex/validate.html?"+params.toString();
-			// var url = "/validate.html?"+params.toString();
+			// var url = "/netrex/validate.html?"+params.toString();
+			var url = "/validate.html?"+params.toString();
 			window.location.replace(url);
 		});
 
@@ -416,59 +301,6 @@
 					});
 				});
 			});
-
 		}
-
-		$(document).ready(()=>{
-			$(function(){
-				$('#conditionTypeN').change(function(){
-					var data= $(this).val();
-					var options = {
-						'- Condition -' : '',
-					};
-					var stressCondition = {
-						'- Condition -' : '',
-						'Drought' : 'drought',
-						'Cold' : 'cold',
-						'Flood' : 'flood',
-						'Osmosis' : 'osmo',
-					};
-					var hormoneCondition = {
-						'- Condition -' : '',
-						'ABA' : 'aba',
-						'JA' : 'ja',
-					};
-					
-					if(data == "stress"){
-						$("#select-condition").show();
-						$("#conditionN").val('');
-						$("#conditionHead > div > span").html("- Condition -");
-						options = stressCondition;
-					}
-					else if(data == "hormone"){
-						$("#select-condition").show();
-						$("#conditionN").val('');
-						$("#conditionHead > div > span").html("- Condition -");
-						options = hormoneCondition;
-					}
-					else{
-						$("#select-condition").hide();
-					}
-					var $el = $("#conditionN");
-					$el.empty(); // remove old options
-					$.each(options, function(key,value) {
-					  $el.append($("<option></option>")
-					     .attr("value", value).text(key));
-					});
-					var $el = $("#conditionHead > div > ul");
-					$el.empty(); // remove old options
-					$.each(options, function(key,value) {
-					  $el.append($("<li></li>")
-					     .attr("data-value", value).attr("class", "option").text(key));
-					});
-			   });
-			   	$('#conditionTypeN').trigger('change');
-			});
-		});
 	</script>
 </html>

@@ -25,6 +25,8 @@
 			<link rel="stylesheet" href="assets/js/DataTables/datatables.min.css">
    			<link rel="stylesheet" href="assets/js/DataTables/dataTables.bootstrap.min.css">
 			<link rel="stylesheet" href="assets/js/DataTables/buttons.dataTables.min.css">
+
+			<link rel="stylesheet" href="assets/css/custom.css">
 			<link rel="stylesheet" href="assets/css/app.css">
 
 			<script src='assets/js/jquery.min.js'></script>
@@ -64,24 +66,24 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:130px"></a>
-                                <!-- <div>NetREx</div> -->
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation">    
+                                    <ul id="navigation">
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="overview.html">Overview</a></li>
                                         <li><a href="query.html">Query</a>
                                         <li class="active"><a>Browse</a>
                                             <ul class="submenu">
                                                 <li><a href="module.html">Module Wise</a></li>
                                                 <li><a href="condition.html">Condition Wise</a></li>
+                                                <li><a href="pathway.html">Pathway Wise</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="dataset.html">Datasets</a></li>
+                                        <li><a href="tutorial.pdf">Help</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -114,30 +116,28 @@
 					In this view, the top 100 highly connected genes based on their within-module connectivity is shown 
 					and the genes are displayed with colour of the modules they belong to.
 				</p>
-
-			<div class="row">
-				<div class="col-lg-8">
-					<form class="form-contact" action="/netrex/module" id="moduleForm">
-					<!-- <form class="form-contact" action="/module" id="moduleForm"> -->
+				<div>
+					<!-- <form class="form-contact" action="/netrex/module" id="moduleForm"> -->
+					<form class="form-contact" action="/module" id="moduleForm">
 						<div class="row">
 
-							<div class="input-group-icon col-sm-12">
-								
+							<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
+							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
-								<div class="form-select" id='tissueHead'>
+								<div class="form-select" id="tissueHead">
 									<select name="tissue" id="tissueM" required>
-										<option value="">- Tissue -</option>
 										<option value="root">Root</option>
 										<option value="shoot">Shoot</option>
 									</select>
 								</div>
 							</div>
 
-							<div class="input-group-icon col-sm-12">
+							<div class="input-group-icon col-sm-3"><p>Module : </p></div>
+							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fab fa-first-order-alt" aria-hidden="true"></i></div>
 								<div class="form-select" id="moduleHead">
 									<select name="module" id="module" required>
-										<option value="">- Module Color -</option>
+										<option value="black">Black</option>
 									</select>
 								</div>
 							</div>
@@ -147,17 +147,6 @@
 						</div>
 					</form>
 				</div>
-				
-				<div class="col-lg-3 offset-lg-1">
-					<div class="media contact-info">
-						<span class="contact-info__icon"><i class="fab fa-first-order-alt"></i></span>
-						<div class="media-body">
-							<h3>Module Color</h3>
-							<p>HRR Networks colored to denote different modules</p>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<div class="container box_1170" id="loading-image" style="display: none;">
 				<img src="assets/loading.gif" style="width: 70px;"><p>Please wait while data is being fetched. It'll take less than a minute...</p>
@@ -197,19 +186,16 @@
 			<!-- Start Graph Area -->
 			<div id="network-view" style="display: none;">
 				<div class="row" style="margin:0px">
+					
 					<!-- Start Network Area -->
-					<div class="col-lg-10 col-md-10"  id="network-graph">
-						<span class='fas fa-expand-arrows-alt' id="expand" ></span>
-					</div>
+					<div class="col-lg-12 col-md-12"  id="network-graph"></div>
 					<!-- End Network Area -->
 					
 					<!-- Start Network Options Area -->
-					<div class="col-lg-2 col-md-2 mt-sm-30" id="sidepanel">
-						<div class="single-element-widget">
-							<div class="button-group-area mt-40">
-								<a id="downloadimg" class="genric-btn success circle">Download Image</a>
-								<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
-							</div>
+					<div class="single-element-widget">
+						<div class="button-group-area mt-40">
+							<a id="downloadimg" class="genric-btn success circle">Download Image</a>
+							<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
 						</div>
 					</div>
 					<!-- End Network Options Area -->
@@ -220,93 +206,6 @@
 	</section>
     <!-- End Sample Area -->
 
-	<footer>
-
-		<!-- Footer Start-->
-	   <div class="footer-main">
-		 <div class="footer-area footer-padding">
-			 <div class="container">
-				 <div class="row  justify-content-between">
-					 <div class="col-lg-3 col-md-4 col-sm-8">
-						  <div class="single-footer-caption mb-30">
-							   <!-- logo -->
-							  <div class="footer-logo">
-								  <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
-							  </div>
-							  <div class="footer-tittle">
-								  <div class="footer-pera">
-									  <p class="info1">A visualizer for the correlation network of rice genes based on fold changes.</p>
-								 </div>
-							  </div>
-						  </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-5">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Quick Links</h4>
-								 <ul>
-									 <li><a href="index.html">Home</a></li>
-									 <li><a href="overview.html">About</a></li>
-									 <li><a href="query.html">Query</a></li>
-									 <li><a href="datasets.html">Datasets</a></li>
-									 <li><a href="contact.html">Contact</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-7">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Support</h4>
-								 <ul>
-									 <li><a href="contact.html">Report a bug</a></li>
-									 <li><a href="contact.html">Privacy Policy</a></li>
-									 <li><a href="contact.html">Terms & Conditions</a></li>
-									 <li><a href="contact.html">Sitemap</a></li>
-									 <li><a href="contact.html">FAQs</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-3 col-md-6 col-sm-8">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Newsletter</h4>
-								 <div class="footer-pera footer-pera2">
-								  <p>For notification for any updates please subscribe!</p>
-							  </div>
-							  <!-- Form -->
-							  <div class="footer-form">
-								  <div id="mc_embed_signup">
-									  <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-										  <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
-										  <div class="form-icon">
-											  <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><img src="assets/img/shape/form_icon.png" alt=""></button>
-										  </div>
-										  <div class="mt-10 info"></div>
-									  </form>
-								  </div>
-							  </div>
-							 </div>
-						 </div>
-					 </div>
-				 </div>
-				 <!-- Copy-Right -->
-				 <div class="row align-items-center">
-					 <div class="col-xl-12 ">
-						 <div class="footer-copy-right">
-							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This application is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://researchweb.iiit.ac.in/~mayank.musaddi" target="_blank">Mayank Musaddi</a>
-   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						 </div>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	   </div>
-		<!-- Footer End-->
- 
-	</footer>
 	<!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
@@ -382,7 +281,7 @@
 				success: function (data) {
 					$("#loading-image").hide();
 
-					$('#network-graph').html('<span class="fas fa-expand-arrows-alt" id="expand" ></span>');
+					$('#network-graph').html('<span id="graph-title"></span><span class="fas fa-sync-alt" id="refresh" ></span>');
 					$('#network-view').hide();
 					$('#show-network').prop('disabled', false);
 					
@@ -414,6 +313,7 @@
 		$(document).ready(()=>{
 			$('#show-network').click(function(){
 				$('#network-view').show();
+				$('#graph-title').append($("#tissueM option:selected").text()+'<br>'+$("#module option:selected").text());
 				$('#show-network').prop('disabled', true);
 				load_graph(graph,'network-graph','',false);
 			});
@@ -424,7 +324,6 @@
 				$('#tissueM').change(function(){
 					var data= $(this).val();
 					var rootModules = {
-						'- Module Color -' : '',
 						'Black' : 'black',
 						'Blue' : 'blue',
 						'Brown' : 'brown',
@@ -447,7 +346,6 @@
 						'Yellow' : 'yellow',
 					};
 					var shootModules = {
-						'- Module Color -' : '',
 						'Black' : 'black',
 						'Blue' : 'blue',
 						'Brown' : 'brown',

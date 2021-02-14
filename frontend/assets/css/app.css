@@ -50,7 +50,6 @@ table {
 #expandN:hover{
   color: grey;
 }
-
 #refresh, #refreshN{
   font-size: 36px;
   position: absolute;
@@ -65,6 +64,15 @@ table {
 }
 #refreshN:hover{
   color: grey;
+}
+#graph-title, #graph-titleN{
+  font-size: 30px;
+  position: absolute;
+  color: #c5c5c5;
+  float: left;
+  top: 10px;
+  left: 20px;
+  z-index: 2;
 }
 
 #nav-tabContent,#nav-tabContentN{

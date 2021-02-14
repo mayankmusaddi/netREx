@@ -51,24 +51,24 @@
                         <div class="col-xl-2 col-lg-2 col-md-2">
                             <div class="logo">
                                 <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:130px"></a>
-                                <!-- <div>NetREx</div> -->
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
-                                    <ul id="navigation">    
+                                    <ul id="navigation">
                                         <li><a href="index.html">Home</a></li>
-                                        <li><a href="overview.html">Overview</a></li>
                                         <li class="active"><a href="query.html">Query</a>
                                         <li><a>Browse</a>
                                             <ul class="submenu">
                                                 <li><a href="module.html">Module Wise</a></li>
                                                 <li><a href="condition.html">Condition Wise</a></li>
+                                                <li><a href="pathway.html">Pathway Wise</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="dataset.html">Datasets</a></li>
+                                        <li><a href="tutorial.pdf">Help</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -86,35 +86,23 @@
     </header>
 
     <main>
+
     <!-- Slider Area Start-->
-
-	<!-- <div class="services-area">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col-lg-8">
-					<div class="section-tittle text-center mb-80">
-						<h2>Visualisations</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 	<div class="services-area" style="margin-bottom: -40px;">
 	</div>
 	<!-- Slider Area End-->
 
 	<!-- Start Sample Area -->
 	<section class="sample-text-area">
-		<div class="container box_1170" id="network-viewer">
+		<div class="container" id="network-viewer">
 				<p>
                 	Submit a set of genes to view their network representation at different time-point for
 					different stress/hormone treatments, for root/shoot tissue in rice.
 				</p>
 				<br>
 				<div>
-					<form class="form-contact" id="query-form" action="/netrex/validate.html" method="get">
-					<!-- <form class="form-contact" id="query-form" action="/validate.html" method="get"> -->
+					<!-- <form class="form-contact" id="query-form" action="/netrex/validate.html" method="get"> -->
+					<form class="form-contact" id="query-form" action="/validate.html" method="get">
 						<div class="row">
 							<div class="input-group-icon col-sm-3"><p>Species : </p></div>
 							<div class="input-group-icon col-sm-8">
@@ -177,7 +165,7 @@
 			</div>
 		</div>
 
-		<div class="container box_1170" id="module-viewer">
+		<div class="container" id="module-viewer">
 			<div class="section-top-border"></div>
 			<h3 class="text-heading">NetREx Browse</h3>
 				<p class="sample-text">
@@ -204,93 +192,6 @@
 	</section>
     <!-- End Sample Area -->
 
-	<footer>
-
-		<!-- Footer Start-->
-	   <div class="footer-main">
-		 <div class="footer-area footer-padding">
-			 <div class="container">
-				 <div class="row  justify-content-between">
-					 <div class="col-lg-3 col-md-4 col-sm-8">
-						  <div class="single-footer-caption mb-30">
-							   <!-- logo -->
-							  <div class="footer-logo">
-								  <a href="index.html"><img src="assets/img/logo/f1.png" alt="" style="width:100px"></a>
-							  </div>
-							  <div class="footer-tittle">
-								  <div class="footer-pera">
-									  <p class="info1">A visualizer for the correlation network of rice genes based on fold changes.</p>
-								 </div>
-							  </div>
-						  </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-5">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Quick Links</h4>
-								 <ul>
-									 <li><a href="index.html">Home</a></li>
-									 <li><a href="overview.html">About</a></li>
-									 <li><a href="query.html">Query</a></li>
-									 <li><a href="datasets.html">Datasets</a></li>
-									 <li><a href="contact.html">Contact</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-2 col-md-4 col-sm-7">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Support</h4>
-								 <ul>
-									 <li><a href="contact.html">Report a bug</a></li>
-									 <li><a href="contact.html">Privacy Policy</a></li>
-									 <li><a href="contact.html">Terms & Conditions</a></li>
-									 <li><a href="contact.html">Sitemap</a></li>
-									 <li><a href="contact.html">FAQs</a></li>
-								 </ul>
-							 </div>
-						 </div>
-					 </div>
-					 <div class="col-lg-3 col-md-6 col-sm-8">
-						 <div class="single-footer-caption mb-50">
-							 <div class="footer-tittle">
-								 <h4>Newsletter</h4>
-								 <div class="footer-pera footer-pera2">
-								  <p>For notification for any updates please subscribe!</p>
-							  </div>
-							  <!-- Form -->
-							  <div class="footer-form">
-								  <div id="mc_embed_signup">
-									  <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
-										  <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '">
-										  <div class="form-icon">
-											  <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><img src="assets/img/shape/form_icon.png" alt=""></button>
-										  </div>
-										  <div class="mt-10 info"></div>
-									  </form>
-								  </div>
-							  </div>
-							 </div>
-						 </div>
-					 </div>
-				 </div>
-				 <!-- Copy-Right -->
-				 <div class="row align-items-center">
-					 <div class="col-xl-12 ">
-						 <div class="footer-copy-right">
-							<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-   Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This application is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://researchweb.iiit.ac.in/~mayank.musaddi" target="_blank">Mayank Musaddi</a>
-   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						 </div>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	   </div>
-		<!-- Footer End-->
- 
-	</footer>
 	<!-- JS here -->
 	
 		<!-- All JS Custom Plugins Link Here here -->
@@ -349,66 +250,11 @@
 					$("#tissueN").val('root');
 					$("#tissueHead > div > span").html("Root");
 
-					$("#conditionTypeN").val('stress').trigger('change');
-					$("#conditionTypeHead > div > span").html("Abiotic Stress");
-
 					$("#conditionN").val('drought');
 					$("#conditionHead > div > span").html("Drought");
 
 					$('textarea#genes').val('Os02g0255500,Os01g0285300,Os06g0644200,Os03g0437200,Os10g0575000,Os12g0586000,Os06g0211200,Os02g0766700,Os09g0456200,Os08g0472000,Os02g0776400,Os03g0316200,Os07g0687900,Os05g0528000,Os11g0177400,Os05g0537400,Os01g0583100,Os07g0164900,Os10g0457600,Os04g0209200,Os12g0617400,Os03g0645900,Os07g0154100,Os01g0385400,Os02g0526400,Os01g0165000,Os01g0615100,Os03g0125100,Os03g0128700,Os05g0595100,Os11g0113700');
 					$('#neighbor').prop('checked', false);
-				});
-
-				$(function(){
-					$('#conditionTypeN').change(function(){
-						var data= $(this).val();
-
-						var options = {
-							'- Condition -' : '',
-						};
-						var stressCondition = {
-							'- Condition -' : '',
-							'Drought' : 'drought',
-							'Cold' : 'cold',
-							'Flood' : 'flood',
-							'Osmosis' : 'osmo',
-						};
-						var hormoneCondition = {
-							'- Condition -' : '',
-							'ABA' : 'aba',
-							'JA' : 'ja',
-						};
-						
-						if(data == "stress"){
-							$("#select-condition").show();
-							$("#conditionN").val('');
-							$("#conditionHead > div > span").html("- Condition -");
-							options = stressCondition;
-						}
-						else if(data == "hormone"){
-							$("#select-condition").show();
-							$("#conditionN").val('');
-							$("#conditionHead > div > span").html("- Condition -");
-							options = hormoneCondition;
-						}
-						else{
-							$("#select-condition").hide();
-						}
-
-						var $el = $("#conditionN");
-						$el.empty(); // remove old options
-						$.each(options, function(key,value) {
-						  $el.append($("<option></option>")
-						     .attr("value", value).text(key));
-						});
-						var $el = $("#conditionHead > div > ul");
-						$el.empty(); // remove old options
-						$.each(options, function(key,value) {
-						  $el.append($("<li></li>")
-						     .attr("data-value", value).attr("class", "option").text(key));
-						});
-				   });
-				   $('#conditionTypeN').trigger('change');
 				});
 			});
 		</script>

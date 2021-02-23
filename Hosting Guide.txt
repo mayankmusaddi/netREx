@@ -3,11 +3,11 @@ Docker Tips:
     docker rmi <image name> (To remove certain image)
 
 Step 0: Make Changes to 
-        query.html 116
-        validate.html 552, 584, 607, 630
-        pathway.html 121, 370
+        query.html 104
+        validate.html 469, 501, 529, 555
+        pathway.html 120, 255
         module.html 120
-        condition.html 118
+        condition.html 117
         load_table.js 88
         load_neighbour_table.js 82
         
@@ -18,6 +18,12 @@ Step 4: SCP Tar Image to Server (scp <tar file> <server>:~ )
 Step 5: Load tar image into Docker (docker load -i <tar file>)
 Step 6: Run Docker image (docker run -d -p 3000:3000 <image name>)
 
+Alternate Short:
+Step 0: Same as above
+Step 1: docker context use bioinf
+Step 2: COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
+Step 3: docker-compose up -d
+
 Docker Commands:
     docker image ls (To Display all the created images)
     docker ps (To see the current running containers)
@@ -25,6 +31,16 @@ Docker Commands:
     docker rm <container name> (To remove container completely)
     docker exec <container name> <command> (Execute listed command inside container)
     docker exec -it <mycontainer> bash
+    COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build (For Fast Build)
+    docker-compose up -d (To compose image and deploy)
+    
+    export DOCKER_HOST="ssh://mayank@10.4.20.58" (To handle remote)
+    unset DOCKER_HOST
+
+    (To Debug any image)
+    docker run -it [image_name] /bin/bash
+    docker ps -a
+    docker commit [CONTAINER_ID] [new_image_name]
 
 Help:
 https://github.com/jacomyal/sigma.js/issues/448

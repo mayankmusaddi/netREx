@@ -5,8 +5,10 @@
 /.gitignore
 
 # dependencies
+/node_modules
 /.pnp
 .pnp.js
+/netrex-1.0.0.tgz
 /netrex.tar
 
 # testing

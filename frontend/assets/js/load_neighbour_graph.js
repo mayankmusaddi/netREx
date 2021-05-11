@@ -18,7 +18,6 @@ function load_neighbour_graph(data, graphid){
     $('#expandN').one("click", expand);
     
     function refreshScreen(){
-        sN.renderers[0].dispatchEvent('outNode');
         sN.cameras[0].goTo({x:0,y:0,ratio:1});
 		sN.refresh();
 	    $(this).one("click", refreshScreen);
@@ -233,13 +232,19 @@ function load_neighbour_graph(data, graphid){
     //Call refresh to render the new graph
     CustomShapes.init(sN);
     sN.refresh();
+
+    let dragListener = sigma.plugins.dragNodes(sN, sN.renderers[0])
+    // dragListener.bind('startdrag', function(event) {
+    //     console.log(event);
+    // });
     
     sN.startForceAtlas2();
+    // sN.startForceAtlas2({adjustSizes:true});
     setTimeout(function () {sN.stopForceAtlas2();},1000);
         
     var config = {
-        nodeMargin: 1.0,
-        scaleNodes: 1.3,
+        nodeMargin: 5.0,
+        scaleNodes: 3,
     };
     // Configure the algorithm
     var listener = sN.configNoverlap(config);

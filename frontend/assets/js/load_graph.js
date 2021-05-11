@@ -1,4 +1,6 @@
 // Add a method to the graph model that returns an object with every neighbors of a node inside:
+// sigma.settings.nodesPowRatio = 1;
+// sigma.settings.autoRescale = false;
 sigma.classes.graph.addMethod('neighbors', function(nodeId) {
     var k,
     neighbors = {},
@@ -43,7 +45,6 @@ function load_graph(data, graphid, N, move){
     $('#expand'+N).one("click", expand);
     
     function refreshScreen(){
-        s.renderers[0].dispatchEvent('outNode');
         s.cameras[0].goTo({x:0,y:0,ratio:1});
 		s.refresh();
 	    $(this).one("click", refreshScreen);
@@ -253,6 +254,11 @@ function load_graph(data, graphid, N, move){
         //Call refresh to render the new graph
         CustomShapes.init(s);
         s.refresh();
+
+        let dragListener = sigma.plugins.dragNodes(s, s.renderers[0])
+        // dragListener.bind('startdrag', function(event) {
+        //     console.log(event);
+        // });
         
         s.startForceAtlas2();
         setTimeout(

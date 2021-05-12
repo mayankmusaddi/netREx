@@ -30,8 +30,9 @@
 			<link rel="stylesheet" href="assets/css/jquery.tree-multiselect.min.css">
 
 			<script src='assets/js/lodash.min.js'></script>
-			
 			<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+			<script src="assets/js/global.js"></script>
+
    </head>
    <style>
 		.dt-buttons{
@@ -117,8 +118,7 @@
 				</p>
 
 			<div>
-				<!-- <form class="form-contact" action="/netrex/pathway" id="conditionForm"> -->
-				<form class="form-contact" action="/pathway" id="conditionForm">
+				<form class="form-contact" action="/netrex/pathway" id="conditionForm">
 					<div class="row">
 						<div class="input-group-icon col-sm-3"><p>Species : </p></div>
 						<div class="input-group-icon col-sm-8">
@@ -236,6 +236,7 @@
 		
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
+		document.getElementById('conditionForm').action = deployment_url+'pathway';
 		
 		$("#pathwayForm").submit(function(e) {
 			e.preventDefault(); // avoid to execute the actual submit of the form.
@@ -253,7 +254,7 @@
 				genes: genes,
 			});
 			// var url = "/netrex/validate.html?"+params.toString();
-			var url = "/validate.html?"+params.toString();
+			var url = deployment_url+"validate.html?"+params.toString();
 			window.location.replace(url);
 		});
 

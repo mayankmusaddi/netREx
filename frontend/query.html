@@ -23,6 +23,7 @@
 			<link rel="stylesheet" href="assets/css/style.css">
 			
 			<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+			<script src="assets/js/global.js"></script>
    </head>
 
    <body>
@@ -101,8 +102,7 @@
 				</p>
 				<br>
 				<div>
-					<!-- <form class="form-contact" id="query-form" action="/netrex/validate.html" method="get"> -->
-					<form class="form-contact" id="query-form" action="/validate.html" method="get">
+					<form class="form-contact" id="query-form" action="/netrex/validate.html" method="get">
 						<div class="row">
 							<div class="input-group-icon col-sm-3"><p>Species : </p></div>
 							<div class="input-group-icon col-sm-8">
@@ -231,6 +231,7 @@
 		
 		<!-- Personalised Scripts -->
 		<script type="text/javascript">
+			document.getElementById('query-form').action = deployment_url+'validate.html';
 			$("#query-form").submit(function(e) {
 				var text = $('textarea#genes').val();
 				var genes = text.split(/[ ,]+/).filter(Boolean);

@@ -28,8 +28,8 @@
 			<link rel="stylesheet" href="assets/css/app.css">
 
 			<script src='assets/js/lodash.min.js'></script>
-			
 			<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+			<script src="assets/js/global.js"></script>
    </head>
    <style>
 		.dt-buttons{
@@ -115,7 +115,6 @@
 
 			<div>
 				<form class="form-contact" action="/netrex/load" id="conditionForm">
-				<!-- <form class="form-contact" action="/load" id="conditionForm"> -->
 					<div class="row">
 						<div class="input-group-icon col-sm-3"><p>Species : </p></div>
 						<div class="input-group-icon col-sm-8">
@@ -241,6 +240,7 @@
 		
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
+		document.getElementById('conditionForm').action = deployment_url+'load';
 		// this is the id of the form
 		$("#conditionForm").submit(function(e) {
 			$("#loading-image").show();

@@ -79,7 +79,8 @@ function load_neighbour_table(data, N, sN){
                 // `data` option, which defaults to the column being worked with, in
                 // this case `data: 0`.
                 render : function ( d, type, row ) {
-                    return "<a target='_blank' href=/netrex/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
+                    return "<a target='_blank' href="+deployment_url+"module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
+                    // return "<a target='_blank' href=/netrex/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
                     // return "<a target='_blank' href=/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
                 },
                 targets: 2

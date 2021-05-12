@@ -31,8 +31,8 @@
 
 			<script src='assets/js/jquery.min.js'></script>
 			<script src='assets/js/lodash.min.js'></script>
-			
 			<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+			<script src="assets/js/global.js"></script>
    </head>
    <style>
 	   .dt-buttons{
@@ -117,8 +117,7 @@
 					and the genes are displayed with colour of the modules they belong to.
 				</p>
 				<div>
-					<!-- <form class="form-contact" action="/netrex/module" id="moduleForm"> -->
-					<form class="form-contact" action="/module" id="moduleForm">
+					<form class="form-contact" action="/netrex/module" id="moduleForm">
 						<div class="row">
 
 							<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
@@ -267,6 +266,7 @@
 		
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
+		document.getElementById('moduleForm').action = deployment_url+'module';
 		var graph;
 
 		$("#moduleForm").submit(function(e) {

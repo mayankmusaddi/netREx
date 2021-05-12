@@ -33,7 +33,8 @@
    <link rel="stylesheet" href="assets/css/custom.css">
    <link rel="stylesheet" href="assets/css/app.css">
 
-   <script src="./assets/js/underscore-min.js"></script> <!--Causing Issue with Complete Data-->
+   <script src="assets/js/global.js"></script>
+   <script src="assets/js/underscore-min.js"></script> <!--Causing Issue with Complete Data-->
    <script src='assets/js/jquery.min.js'></script>
    <script src='assets/js/lodash.min.js'></script>
 
@@ -469,7 +470,7 @@
 	$.ajax({
         type: "POST",
         // url: "/netrex/validate",
-        url: "/validate",
+        url: deployment_url+"validate",
         data: JSON.stringify(query),
         contentType: "application/json; charset=utf-8",
         success: function (data) {
@@ -501,7 +502,7 @@
 			$.ajax({
 				type: "POST",
 				// url: "/netrex/simple_network",
-				url: "/simple_network",
+				url: deployment_url+"simple_network",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
 				success: function (graph) {
@@ -528,7 +529,7 @@
 				$.ajax({
 					type: "POST",
 					// url: "/netrex/neighborhood_network",
-					url: "/neighborhood_network",
+					url: deployment_url+"neighborhood_network",
 					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
 					contentType: "application/json; charset=utf-8",
 					success: function (graph) {
@@ -555,7 +556,7 @@
 			$.ajax({
 				type: "POST",
 				// url: "/netrex/expression",
-				url: "/expression",
+				url: deployment_url+"expression",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
 				success: function (data) {

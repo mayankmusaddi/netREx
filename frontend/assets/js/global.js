@@ -1,0 +1,1 @@
+var deployment_url = '/'

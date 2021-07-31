@@ -88,7 +88,7 @@ app.use("/validate", (req, res) => {
   console.log(query);
   file = require(jsonpath + query.condition + query.tissue);
 
-  var genes = query.genes.split(/[ ,]+/).filter(Boolean);
+  var genes = query.genes.split(/[ ,+\s]/).filter(Boolean);
   if(query.species != "rice"){
     mapping = require("../frontend/data/"+query.species+".json");
     mapped_genes = [];

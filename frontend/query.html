@@ -150,11 +150,10 @@
 							<div class="col-sm-12" style="margin-top: 10px;">
 								<div class="form-group">
 									<textarea class="form-control w-100" name="genes" id="genes" cols="30" rows="9"	 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Comma/Space separated Query Gene List (<300)'" placeholder=" Enter Comma/Space separated Query Gene List (<300)" required></textarea>
+									<a id="example" class="genric-btn link">Load Example</a>
+									<input type="file" id="genesfile" name="genesfile">
 								</div>
 							</div>
-
-							<a id="example" class="genric-btn link">Load Example</a>
-
 						</div>
 
 						<div class="form-group mt-3">
@@ -234,12 +233,21 @@
 			document.getElementById('query-form').action = deployment_url+'validate.html';
 			$("#query-form").submit(function(e) {
 				var text = $('textarea#genes').val();
-				var genes = text.split(/[ ,]+/).filter(Boolean);
+  				var genes = text.split(/[ ,+\s]/).filter(Boolean);
 				if(genes.length > 300){
 					alert("Enter Less than 300 Genes");
 					e.preventDefault(); // avoid to execute the actual submit of the form.
 				}
 			});
+			$('input[name=genesfile]').change(function(e) {
+				var fileReader = new FileReader();
+				fileReader.onload = function() {
+					$('textarea#genes').val(fileReader.result);
+				};
+				var file = $('input[name=genesfile]').prop('files')[0];
+			  	fileReader.readAsText(file, "UTF-8");
+			});
+
 			$(document).ready(()=>{
 
 				$('#example').click(()=>{
@@ -255,7 +263,6 @@
 					$("#conditionHead > div > span").html("Drought");
 
 					$('textarea#genes').val('Os02g0255500,Os01g0285300,Os06g0644200,Os03g0437200,Os10g0575000,Os12g0586000,Os06g0211200,Os02g0766700,Os09g0456200,Os08g0472000,Os02g0776400,Os03g0316200,Os07g0687900,Os05g0528000,Os11g0177400,Os05g0537400,Os01g0583100,Os07g0164900,Os10g0457600,Os04g0209200,Os12g0617400,Os03g0645900,Os07g0154100,Os01g0385400,Os02g0526400,Os01g0165000,Os01g0615100,Os03g0125100,Os03g0128700,Os05g0595100,Os11g0113700');
-					$('#neighbor').prop('checked', false);
 				});
 			});
 		</script>

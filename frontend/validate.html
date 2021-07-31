@@ -469,7 +469,6 @@
 	$(".sample-text-area").hide();
 	$.ajax({
         type: "POST",
-        // url: "/netrex/validate",
         url: deployment_url+"validate",
         data: JSON.stringify(query),
         contentType: "application/json; charset=utf-8",

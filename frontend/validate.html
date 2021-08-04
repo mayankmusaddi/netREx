@@ -144,7 +144,7 @@
 				<table class="table table-bordered">
 					<thead class="thead-dark">
 					  <tr>
-						<th scope="col">Invalid Genes*</th>
+						<th scope="col">Invalid Genes</th>
 					  </tr>
 					</thead>
 					<tbody>
@@ -154,7 +154,12 @@
 					</tbody>
 				  </table>
 			</div>
-			<div style="text-align: right;"> * Genes are filtered from the complete network of genes showing fold change for the respective tissue and condition </div>
+			<div style="text-align: right;"> 
+				* Query Genes present in the list of DEGs for the chosen tissue and condition are referred as “filtered genes”.
+				 The remaining genes are referred as “invalid genes” for the chosen tissue/condition. Some of the genes may not 
+				 be DEGs at all time points – so genes which are DEGs in atleast 2 time points for the chosen Tissue/Condition 
+				 are selected.
+			</div>
 		</div>
 	</div>
 	</section>
@@ -267,7 +272,10 @@
 					</div>
 					<!-- End Table -->
 
-					<p><button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><span><input type="text" value="50" placeholder="<100" style="width:50px;" id="neighbor-number" required></span> </p>
+					<p>
+						<button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><br>
+						<input type="text" value="50" placeholder="<100" style="width:50px;" id="neighbor-number" required> *Number of Neighbours
+					</p>
 
 					<div id="neighborhood-view" style="display: none;">
 
@@ -500,7 +508,6 @@
 		$('#show-network').click(function(){
 			$.ajax({
 				type: "POST",
-				// url: "/netrex/simple_network",
 				url: deployment_url+"simple_network",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",
@@ -524,10 +531,12 @@
 		});
 	
 		$('#show-neighborhood').click(function(){
-			if($('#neighbor-number').val()>0){
+			if($('#neighbor-number').val()>100){
+				alert("Exceeding limit of 100 Neighbours");
+			}
+			else if($('#neighbor-number').val()>0){
 				$.ajax({
 					type: "POST",
-					// url: "/netrex/neighborhood_network",
 					url: deployment_url+"neighborhood_network",
 					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
 					contentType: "application/json; charset=utf-8",
@@ -554,7 +563,6 @@
 		$('#show-expression').click(function(){
 			$.ajax({
 				type: "POST",
-				// url: "/netrex/expression",
 				url: deployment_url+"expression",
 				data: JSON.stringify({"nodes": data.nodes}),
 				contentType: "application/json; charset=utf-8",

@@ -168,13 +168,12 @@
 			
 			<div class="row" id="pathway_options" style="display: none;">
 				<form class="form-contact" id="pathwayForm" style="width: 2500px;">
-					<div class="row">
-						<select id="gene-select" multiple="multiple">
-						</select>
-						<div class="form-group mt-3">
-							<button type="submit" class="button boxed-btn">Send</button>
-						</div>
-					</div>
+					<!-- <select id="gene-select" multiple="multiple">
+					</select>
+					<div class="form-group mt-3">
+						<button type="submit" class="button boxed-btn">Send</button>
+						<button type="submit" class="button boxed-btn">Submit Selected Genes</button>
+					</div> -->
 				</form>
 			</div>
 		</div>
@@ -253,7 +252,6 @@
 				condition:$("#conditionN").val(),
 				genes: genes,
 			});
-			// var url = "/netrex/validate.html?"+params.toString();
 			var url = deployment_url+"validate.html?"+params.toString();
 			window.location.replace(url);
 		});
@@ -269,8 +267,14 @@
 				data: form.serialize(),
 				success: function (data) {
 					$("#loading-image").hide();
+
+					$('#pathwayForm').html('<select id="gene-select" multiple="multiple"></select>');
+					$('#pathwayForm').append('<button type="submit" class="button boxed-btn">Submit Selected Genes</button>');
+					$('#pathwayForm').prepend('<button type="submit" class="button boxed-btn">Submit Selected Genes</button>');
+
 					$('#pathway_options').show();
 					loadGenes(data);
+
 				},
 				error: function(){
 					alert('Error');
@@ -279,27 +283,23 @@
 		});
 
 		function loadGenes(data){
-			$(document).ready(()=>{
-				$(function(){
-					$.getJSON('./pathway_list.json', function(paths) {
-						for(path in paths){
-							var subpaths = paths[path];
-							for(subpath in subpaths){
-								var pathcode = subpaths[subpath];
-								data[pathcode].forEach((gene, index) => {
-									$("#gene-select").append($("<option></option>")
-									   .attr("value", gene).attr("data-section", path+"/"+subpath).text(gene));
-								});
-							}
-						}
-						var tree = $("#gene-select").treeMultiselect({ 
-							searchable: true,
-							enableSelectAll: true, 
-							sortable: true,
-        					maxSelections: 300,
-							startCollapsed: true
+			$.getJSON('./pathway_list.json', function(paths) {
+				for(path in paths){
+					var subpaths = paths[path];
+					for(subpath in subpaths){
+						var pathcode = subpaths[subpath];
+						data[pathcode].forEach((gene, index) => {
+							$("#gene-select").append($("<option></option>")
+							   .attr("value", gene).attr("data-section", path+"/"+subpath).text(gene));
 						});
-					});
+					}
+				}
+				var tree = $("#gene-select").treeMultiselect({ 
+					searchable: true,
+					enableSelectAll: true, 
+					sortable: true,
+        			maxSelections: 300,
+					startCollapsed: true
 				});
 			});
 		}

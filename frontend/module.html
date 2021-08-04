@@ -110,11 +110,12 @@
 	<!-- Start Sample Area -->
 	<section class="sample-text-area">
 		<div class="container box_1170" id="module-viewer">
-			<h3 class="text-heading">Module Browse</h3>
+			<h3 class="text-heading">Browse Module-wise</h3>
 				<p class="sample-text">
-					Using WGCNA R package, we have identified co-expressed gene modules for both root and shoot HRR networks.
-					In this view, the top 100 highly connected genes based on their within-module connectivity is shown 
-					and the genes are displayed with colour of the modules they belong to.
+					Using WGCNA R package, co-expressed gene modules have been identified for both root 
+					and shoot HRR networks. In this view, top 100 highly connected genes based on their 
+					within-module connectivity are shown and the gene nodes are coloured by the modules 
+					they belong to.
 				</p>
 				<div>
 					<form class="form-contact" action="/netrex/module" id="moduleForm">
@@ -150,7 +151,8 @@
 			<div class="container box_1170" id="loading-image" style="display: none;">
 				<img src="assets/loading.gif" style="width: 70px;"><p>Please wait while data is being fetched. It'll take less than a minute...</p>
 			</div>
-
+			<p><button type="button" class="btn-outline-secondary" id="show-network" style="display: none;">Module Viewer</button></p>
+			
 			<!-- Start Table -->
 			<div id="querytable" style="display: none;">
 				<nav>
@@ -180,7 +182,6 @@
 			</div>
 			<!-- End Table -->
 
-			<p><button type="button" class="btn-outline-secondary" id="show-network" style="display: none;">Module Viewer</button></p>
 			
 			<!-- Start Graph Area -->
 			<div id="network-view" style="display: none;">
@@ -316,6 +317,9 @@
 				$('#graph-title').append($("#tissueM option:selected").text()+'<br>'+$("#module option:selected").text());
 				$('#show-network').prop('disabled', true);
 				load_graph(graph,'network-graph','',false);
+				$('html, body').animate({
+					scrollTop: $("#network-view").offset().top - 75
+				}, 1000);
 			});
 			$(function(){
 				var options = {

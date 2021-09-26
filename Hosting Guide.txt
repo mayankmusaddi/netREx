@@ -1,3 +1,10 @@
+Password-less SSH:
+    ssh-keygen
+    ssh-copy-id user@host
+
+Create Docker Context:
+docker context create remote ‐‐docker “host=ssh://user@remotemachine”
+
 Docker Tips:
     docker system prune (To remove all dangling images)
     docker rmi <image name> (To remove certain image)

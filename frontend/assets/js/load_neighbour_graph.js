@@ -1,6 +1,6 @@
 function load_neighbour_graph(data, graphid){
     function expand() {
-        $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-10 col-md-10');
+        $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-9 col-md-9');
 		$('#sidepanelN').hide();
 		$('#expandN').addClass('fa fa-bars').removeClass('fas fa-expand-arrows-alt');
 		sN.renderers[0].resize();
@@ -8,7 +8,7 @@ function load_neighbour_graph(data, graphid){
 	    $(this).one("click", compress);
 	}
 	function compress() {
-        $('#'+graphid).addClass('col-lg-10 col-md-10').removeClass('col-lg-12 col-md-12');
+        $('#'+graphid).addClass('col-lg-9 col-md-9').removeClass('col-lg-12 col-md-12');
 		$('#sidepanelN').show();
 		$('#expandN').addClass('fas fa-expand-arrows-alt').removeClass('fa fa-bars');
 		sN.renderers[0].resize();
@@ -50,8 +50,8 @@ function load_neighbour_graph(data, graphid){
         'ABA' : 'aba',
         'JA' : 'ja',
     };
-    let toRemove = Object.keys(conditions).find(key => conditions[key] === data.condition);
-    delete conditions[toRemove];
+    // let toRemove = Object.keys(conditions).find(key => conditions[key] === data.condition);
+    // delete conditions[toRemove];
 
     var $el = $('#otherCondN');
 	$el.empty(); // remove old conditions
@@ -72,24 +72,37 @@ function load_neighbour_graph(data, graphid){
             // $(function(){
                 $('#pathN').change(function(){
                     var data= $(this).val();
-                    var nodeids = pathway[data];
-                    sN.graph.nodes().forEach(function(n) {
-                        if (nodeids.includes(n.id)){
+                    if(data==='default'){
+                        sN.graph.nodes().forEach(function(n) {
                             n.color = n.originalColor;
                             n.borderColor = n.originalBorderColor;
-                        }
-                        else{
-                            n.color = '#eee';
-                            n.borderColor = '#eee';
-                        }
-                    });
-                    sN.graph.edges().forEach(function(e) {
-                        if (nodeids.includes(e.source) && nodeids.includes(e.target))
-                        e.color = e.originalColor;
-                        else
-                        e.color = '#eee';
-                    });
-                    sN.refresh();
+                        });
+                        
+                        sN.graph.edges().forEach(function(e) {
+                            e.color = e.originalColor;
+                        }); 
+                        sN.refresh();
+                    }
+                    else {
+                        var nodeids = pathway[data];
+                        sN.graph.nodes().forEach(function(n) {
+                            if (nodeids.includes(n.id)){
+                                n.color = n.originalColor;
+                                n.borderColor = n.originalBorderColor;
+                            }
+                            else{
+                                n.color = '#eee';
+                                n.borderColor = '#eee';
+                            }
+                        });
+                        sN.graph.edges().forEach(function(e) {
+                            if (nodeids.includes(e.source) && nodeids.includes(e.target))
+                            e.color = e.originalColor;
+                            else
+                            e.color = '#eee';
+                        });
+                        sN.refresh();
+                    }
                 });
                 $('#pathN').trigger('change');
             // });
@@ -209,7 +222,9 @@ function load_neighbour_graph(data, graphid){
             else
             e.color = '#eee';
         });
-        sN.refresh()
+        sN.refresh();
+        $("#pathN").val('default');
+		$("#pathHeadN > div > span").html('- None -');
     });
     // When the stage is clicked, we just color each node and edge with its original color.
     sN.bind('outNode', function(e) {
@@ -293,6 +308,10 @@ function load_neighbour_graph(data, graphid){
                 n.color = n.originalColor;
             });
             sN.refresh();
+            $("#view-textN").html("Default");
+            $("#color-textN").html("Color Darkness proportional to gene node's degree");
+            $("#pathN").val('default');
+		    $("#pathHeadN > div > span").html('- None -');
         });
         $('#moduleN').click(()=>{
             sN.graph.nodes().forEach(function(n) {
@@ -300,6 +319,10 @@ function load_neighbour_graph(data, graphid){
                 n.color = n.originalColor;
             });
             sN.refresh();
+            $("#view-textN").html("Module");
+            $("#color-textN").html("Color denotes the module colour in which the gene belongs");
+            $("#pathN").val('default');
+		    $("#pathHeadN > div > span").html('- None -');
         });
         
         $('#regulationN').click(()=>{
@@ -316,6 +339,10 @@ function load_neighbour_graph(data, graphid){
                 n.color = n.originalColor;
             });
             sN.refresh();
+            $("#view-textN").html("Regulation");
+            $("#color-textN").html("Red: Up-regulated and Blue: Down-regulated");
+            $("#pathN").val('default');
+		    $("#pathHeadN > div > span").html('- None -');
         });
         
         // $(function(){

@@ -2,7 +2,7 @@ table {border-collapse:collapse; table-layout:fixed;}
 table td {word-wrap:break-word;}
 
 #network-graph {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -10,7 +10,7 @@ table td {word-wrap:break-word;}
   position: relative;
 }
 #neighborhood-graph {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   padding: 0;
   margin: 0;

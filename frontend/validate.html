@@ -167,7 +167,7 @@
 
 	<!-- Start Visual Area -->
 	<section class="sample-text-area">
-	<div class="container box_1170 border-top-generic">
+	<div class="container box_1170 border-top-generic" style="max-width: 1440px;">
 		<div id="options">
 			<!-- Start Graph Area -->
 			<div>
@@ -176,7 +176,7 @@
 					<div class="row" style="margin:0px">
 
 						<!-- Start Network Area -->
-						<div class="col-lg-10 col-md-10"  id="network-graph">
+						<div class="col-lg-9 col-md-9"  id="network-graph">
 							<span id="graph-title"></span>
 							<span class='fas fa-sync-alt' id="refresh" ></span>
 							<span class='fas fa-expand-arrows-alt' id="expand" ></span>
@@ -184,20 +184,29 @@
 						<!-- End Network Area -->
 						
 						<!-- Start Network Options Area -->
-						<div class="col-lg-2 col-md-2 mt-sm-30" id="sidepanel">
+						<div class="col-lg-3 col-md-3 mt-sm-30" id="sidepanel">
 							<div class="single-element-widget">
-								<div class="switch-wrap justify-content-between">
+								<h3 style="color:white; text-decoration: underline;">Options</h3>
+								<div class="switch-wrap d-flex justify-content-between">
+									<p>Default View</p>
+									<div class="confirm-switch">
+										<input type="checkbox" id="original" class="colorswitch" checked>
+										<label for="original"></label>
+									</div>
+								</div>
+								<div class="switch-wrap d-flex justify-content-between">
 									<p>Up/Down DEGs</p>
-									<div class="switch-wrap d-flex justify-content-between">
-										<div id="regtimeHead">
-											<select name="time" id="regtime">
-												<option value="">- Time -</option>
-											</select>
-										</div>
-										<div class="confirm-switch">
-											<input type="checkbox" id="regulation" class="colorswitch">
-											<label for="regulation"></label>
-										</div>
+									<div class="confirm-switch">
+										<input type="checkbox" id="regulation" class="colorswitch">
+										<label for="regulation"></label>
+									</div>
+								</div>
+								<div class="switch-wrap d-flex justify-content-between">
+									<p>Choose Time Point</p>
+									<div id="regtimeHead">
+										<select name="time" id="regtime">
+											<option value="">- Time -</option>
+										</select>
 									</div>
 								</div>
 								<div class="switch-wrap d-flex justify-content-between">
@@ -207,40 +216,41 @@
 										<label for="module"></label>
 									</div>
 								</div>
+								
+
 								<div class="switch-wrap d-flex justify-content-between">
-									<p>Default View</p>
-									<div class="confirm-switch">
-										<input type="checkbox" id="original" class="colorswitch" checked>
-										<label for="original"></label>
+									<p>KEGG Pathways</p>
+									<div id="pathHead">
+										<select name="path" id="path">
+											<option value="default">- None -</option>
+										</select>
 									</div>
 								</div>
 
-								<div class="switch-wrap justify-content-between">
-									<p>Pathways</p>
-									<div class="switch-wrap d-flex justify-content-between">
-										<div id="pathHead">
-											<select name="path" id="path">
-												<option value="">- KEGG Pathways -</option>
-											</select>
-										</div>
+								<div class="switch-wrap d-flex justify-content-between">
+									<p>Stress/Treatment</p>
+									<div id="otherCondHead">
+										<select name="cond" id="otherCond">
+											<option value="">- Conditions -</option>
+										</select>
 									</div>
 								</div>
+								<a style="float: right;" id="load" class="genric-btn success circle">Load</a>
+								<br>
+								<br>
 
-								<div class="switch-wrap justify-content-between">
-									<p>Other Conditions</p>
-									<div class="switch-wrap d-flex justify-content-between">
-										<div id="otherCondHead">
-											<select name="cond" id="otherCond">
-												<option value="">- Conditions -</option>
-											</select>
-										</div>
-									</div>
-									<a id="load" class="genric-btn success circle">Load</a>
+								<div>
+									<h3 style="color:white; text-decoration: underline;">Description</h3>
+									<p style="font-weight: bold;">View</p>
+									<p id="view-text">Default</p>
+									<p style="font-weight: bold;">Size</p>
+									<p id="size-text">Size of Nodes proportional to gene node's degree</p>
+									<p style="font-weight: bold;">Color</p>
+									<p id="color-text">Color Darkness proportional to gene node's degree</p>
 								</div>
 								
 								<div class="button-group-area mt-40">
-									<a id="downloadimg" class="genric-btn success circle">Download</a>
-									<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
+									<a id="downloadimg" class="genric-btn success circle">Download Graph Image</a>
 								</div>
 							</div>
 						</div>
@@ -282,7 +292,7 @@
 						<div class="row" style="margin:0px">
 
 							<!-- Start Network Neighborhood Area -->
-							<div class="col-lg-10 col-md-10"  id="neighborhood-graph">
+							<div class="col-lg-9 col-md-9"  id="neighborhood-graph">
 								<span id="graph-titleN"></span>
 								<span class='fas fa-sync-alt' id="refreshN" ></span>
 								<span class='fas fa-expand-arrows-alt' id="expandN" ></span>
@@ -290,20 +300,28 @@
 							<!-- End Network Neighborhood Area -->
 							
 							<!-- Start Network Neighborhood Options Area -->
-							<div class="col-lg-2 col-md-2 mt-sm-30" id="sidepanelN">
+							<div class="col-lg-3 col-md-3 mt-sm-30" id="sidepanelN">
 								<div class="single-element-widget">
-									<div class="switch-wrap justify-content-between">
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>Default View</p>
+										<div class="confirm-switch">
+											<input type="checkbox" id="originalN" class="colorswitchN" checked>
+											<label for="originalN"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
 										<p>Up/Down DEGs</p>
-										<div class="switch-wrap d-flex justify-content-between">
-											<div id="regtimeHeadN">
-												<select name="time" id="regtimeN">
-													<option value="">- Time -</option>
-												</select>
-											</div>
-											<div class="confirm-switch">
-												<input type="checkbox" id="regulationN" class="colorswitchN">
-												<label for="regulationN"></label>
-											</div>
+										<div class="confirm-switch">
+											<input type="checkbox" id="regulationN" class="colorswitchN">
+											<label for="regulationN"></label>
+										</div>
+									</div>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>Choose Time Point</p>
+										<div id="regtimeHeadN">
+											<select name="time" id="regtimeN">
+												<option value="">- Time -</option>
+											</select>
 										</div>
 									</div>
 									<div class="switch-wrap d-flex justify-content-between">
@@ -313,27 +331,21 @@
 											<label for="moduleN"></label>
 										</div>
 									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>Default View</p>
-										<div class="confirm-switch">
-											<input type="checkbox" id="originalN" class="colorswitchN" checked>
-											<label for="originalN"></label>
-										</div>
-									</div>
+									
 
-									<div class="switch-wrap justify-content-between">
-										<p>Pathways</p>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>KEGG Pathways</p>
 										<div class="switch-wrap d-flex justify-content-between">
 											<div id="pathHeadN">
 												<select name="pathN" id="pathN">
-													<option value="">- KEGG Pathways -</option>
+													<option value="default">- None -</option>
 												</select>
 											</div>
 										</div>
 									</div>
 
-									<div class="switch-wrap justify-content-between">
-										<p>Other Conditions</p>
+									<div class="switch-wrap d-flex justify-content-between">
+										<p>Stress/Treatment</p>
 										<div class="switch-wrap d-flex justify-content-between">
 											<div id="otherCondHeadN">
 												<select name="cond" id="otherCondN">
@@ -341,7 +353,19 @@
 												</select>
 											</div>
 										</div>
-										<a id="loadN" class="genric-btn success circle">Load</a>
+									</div>
+									<a style="float: right;" id="loadN" class="genric-btn success circle">Load</a>
+									<br>
+									<br>
+
+									<div>
+										<h3 style="color:white; text-decoration: underline;">Description</h3>
+										<p style="font-weight: bold;">View</p>
+										<p id="view-textN">Default</p>
+										<p style="font-weight: bold;">Size</p>
+										<p id="size-textN">Size of Nodes proportional to gene node's degree</p>
+										<p style="font-weight: bold;">Color</p>
+										<p id="color-textN">Color Darkness proportional to gene node's degree</p>
 									</div>
 									
 									<div class="button-group-area mt-40">
@@ -490,10 +514,18 @@
 		}
 	});
 
-	function loadPage(data){		
+	function loadPage(data){
+		map_condition_type = {
+			"drought" : "Drought",
+			"cold" : "Cold",
+			"flood" : "Flood",
+			"osmo" : "Osmosis",
+			"aba" : "ABA",
+			"ja" : "JA",
+		}
 		document.getElementById("species-type").innerHTML = capitalizeFirstLetter(data.metadata.species);
 		document.getElementById("tissue-type").innerHTML = capitalizeFirstLetter(data.metadata.tissue);
-		document.getElementById("condition-type").innerHTML = capitalizeFirstLetter(data.metadata.condition);
+		document.getElementById("condition-type").innerHTML = map_condition_type[data.metadata.condition];
 		document.getElementById("numvalid").innerHTML = data.valid.length;
 		document.getElementById("valid-genes").innerHTML = data.valid.join(", ");
 		document.getElementById("invalid-genes").innerHTML = data.invalid.join(", ");
@@ -520,8 +552,13 @@
 					$('#show-network').prop('disabled', true);
 					graph.tissue = data.metadata.tissue;
 					graph.condition = data.metadata.condition;
+					$("#cond").val('drought');
+					$("#otherCondHead > div > span").html(map_condition_type[graph.condition]);
+					$("#regtime").val('reg_1hr');
+					$("#regtimeHead > div > span").html("1 hr");
 					var s = load_graph(graph,'network-graph','',true);
 					load_table(graph,'',s);
+
 				},
 				error: function(){
 					alert('Error');
@@ -541,7 +578,6 @@
 					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
 					contentType: "application/json; charset=utf-8",
 					success: function (graph) {
-						// $('#neighborhood-graph').html('<span class="fas fa-expand-arrows-alt" id="expandN" ></span>');
 						$('#neighborhood-view').show();
 						$('html, body').animate({
     				    	scrollTop: $("#neighborhood-view").offset().top - 75
@@ -550,6 +586,10 @@
 						$('#show-neighborhood').prop('disabled', true);
 						graph.tissue = data.metadata.tissue;
 						graph.condition = data.metadata.condition;
+						$("#condN").val('drought');
+						$("#otherCondHeadN > div > span").html(map_condition_type[graph.condition]);
+						$("#regtimeN").val('reg_1hr');
+						$("#regtimeHeadN > div > span").html("1 hr");
 						var sN = load_neighbour_graph(graph,'neighborhood-graph');
 						load_neighbour_table(graph,'N',sN);
 					},

@@ -165,15 +165,17 @@
 			<div class="container box_1170" id="loading-image" style="display: none;">
 				<img src="assets/loading.gif" style="width: 70px;"><p>Please wait while data is being fetched. It'll take less than a minute...</p>
 			</div>
+
 			
 			<div class="row" id="pathway_options" style="display: none;">
+				<div>
+					<p>
+						The list below displays all the genes, with respect to the selected tissue and stress/hormone treatment, 
+						clubbed according to the different KEGG pathways. One may select upto 300 genes and submit them to 
+						visualize their relationship from the application's viewers.
+					</p>
+				</div>
 				<form class="form-contact" id="pathwayForm" style="width: 2500px;">
-					<!-- <select id="gene-select" multiple="multiple">
-					</select>
-					<div class="form-group mt-3">
-						<button type="submit" class="button boxed-btn">Send</button>
-						<button type="submit" class="button boxed-btn">Submit Selected Genes</button>
-					</div> -->
 				</form>
 			</div>
 		</div>
@@ -269,8 +271,8 @@
 					$("#loading-image").hide();
 
 					$('#pathwayForm').html('<select id="gene-select" multiple="multiple"></select>');
-					$('#pathwayForm').append('<button type="submit" class="button boxed-btn">Submit Selected Genes</button>');
-					$('#pathwayForm').prepend('<button type="submit" class="button boxed-btn">Submit Selected Genes</button>');
+					$('#pathwayForm').append('<button type="submit" class="button boxed-btn" >Submit Selected Genes</button>');
+					$('#pathwayForm').prepend('<button type="submit" class="button boxed-btn" style="float:right;">Submit Selected Genes</button>');
 
 					$('#pathway_options').show();
 					loadGenes(data);
@@ -296,7 +298,7 @@
 				}
 				var tree = $("#gene-select").treeMultiselect({ 
 					searchable: true,
-					enableSelectAll: true, 
+					enableSelectAll: false, 
 					sortable: true,
         			maxSelections: 300,
 					startCollapsed: true

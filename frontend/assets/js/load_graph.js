@@ -278,7 +278,7 @@ function load_graph(data, graphid, N, move){
             function () {
                 s.stopForceAtlas2();
             }, 
-        1000);
+        800);
             
         var config = {
             nodeMargin: 1.0,

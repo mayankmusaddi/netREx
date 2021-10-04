@@ -255,7 +255,7 @@ function load_neighbour_graph(data, graphid){
     
     sN.startForceAtlas2();
     // sN.startForceAtlas2({adjustSizes:true});
-    setTimeout(function () {sN.stopForceAtlas2();},1000);
+    setTimeout(function () {sN.stopForceAtlas2();},1100);
         
     var config = {
         nodeMargin: 5.0,

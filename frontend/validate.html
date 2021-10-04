@@ -113,7 +113,7 @@
 	<div class="container box_1170">	
 		<div style = "margin-bottom: 20px;">
 			<p>
-				<button type="button" class="btn-outline-secondary" id="show-network">Network Viewer</button>
+				<button type="button" class="btn-outline-secondary" id="show-network">Network Viewers</button>
 				<button type="button" class="btn-outline-secondary" id="show-expression">Expression Viewer</button>
 			</p>
 		</div>
@@ -172,7 +172,7 @@
 			<!-- Start Graph Area -->
 			<div>
 				<div id="network-view" style="display: none;">
-
+					<h2>Network Viewer</h2>
 					<div class="row" style="margin:0px">
 
 						<!-- Start Network Area -->
@@ -194,19 +194,21 @@
 										<label for="original"></label>
 									</div>
 								</div>
-								<div class="switch-wrap d-flex justify-content-between">
-									<p>Up/Down DEGs</p>
-									<div class="confirm-switch">
-										<input type="checkbox" id="regulation" class="colorswitch">
-										<label for="regulation"></label>
+								<div class="switch-wrap justify-content-between">
+									<div class="d-flex justify-content-between">
+										<p>Up/Down DEGs</p>
+										<div class="confirm-switch">
+											<input type="checkbox" id="regulation" class="colorswitch">
+											<label for="regulation"></label>
+										</div>
 									</div>
-								</div>
-								<div class="switch-wrap d-flex justify-content-between">
-									<p>Choose Time Point</p>
-									<div id="regtimeHead">
-										<select name="time" id="regtime">
-											<option value="">- Time -</option>
-										</select>
+									<div class="d-flex justify-content-between">
+										<p>Choose Time Point</p>
+										<div id="regtimeHead">
+											<select name="time" id="regtime">
+												<option value="">- Time -</option>
+											</select>
+										</div>
 									</div>
 								</div>
 								<div class="switch-wrap d-flex justify-content-between">
@@ -233,18 +235,23 @@
 										<select name="cond" id="otherCond">
 											<option value="">- Conditions -</option>
 										</select>
+										<a id="load" class="genric-btn success"><i class="fas fa-chevron-right" style="size:15px;"></i></a>
 									</div>
 								</div>
-								<a style="float: right;" id="load" class="genric-btn success circle">Load</a>
+
+								<div class="switch-wrap d-flex justify-content-between">
+									<p>View Neighborhood</p>
+									<div class="justify-content-center">
+										<input type="text" value="50" placeholder="<100" style="width:50px; line-height: 40px; border:0px; text-align: center;" id="neighbor-number" required>
+										<a class="genric-btn success" id="show-neighborhood" style="margin-left: -5px;"><i class="fas fa-chevron-right" style="size:15px;"></i></a>
+									</div>
+								</div>
+
 								<br>
 								<br>
 
 								<div>
 									<h3 style="color:white; text-decoration: underline;">Description</h3>
-									<p style="font-weight: bold;">View</p>
-									<p id="view-text">Default</p>
-									<p style="font-weight: bold;">Size</p>
-									<p id="size-text">Size of Nodes proportional to gene node's degree</p>
 									<p style="font-weight: bold;">Color</p>
 									<p id="color-text">Color Darkness proportional to gene node's degree</p>
 								</div>
@@ -282,13 +289,10 @@
 					</div>
 					<!-- End Table -->
 
-					<p>
-						<button type="button" class="btn-outline-secondary" id="show-neighborhood">View Neighborhood</button><br>
-						<input type="text" value="50" placeholder="<100" style="width:50px;" id="neighbor-number" required> *Number of Neighbours
-					</p>
-
+					<br>
+					<br>
 					<div id="neighborhood-view" style="display: none;">
-
+						<h2>Network Neighborhood Viewer</h2>
 						<div class="row" style="margin:0px">
 
 							<!-- Start Network Neighborhood Area -->
@@ -302,6 +306,7 @@
 							<!-- Start Network Neighborhood Options Area -->
 							<div class="col-lg-3 col-md-3 mt-sm-30" id="sidepanelN">
 								<div class="single-element-widget">
+									<h3 style="color:white; text-decoration: underline;">Options</h3>
 									<div class="switch-wrap d-flex justify-content-between">
 										<p>Default View</p>
 										<div class="confirm-switch">
@@ -309,19 +314,21 @@
 											<label for="originalN"></label>
 										</div>
 									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>Up/Down DEGs</p>
-										<div class="confirm-switch">
-											<input type="checkbox" id="regulationN" class="colorswitchN">
-											<label for="regulationN"></label>
+									<div class="switch-wrap justify-content-between">
+										<div class="d-flex justify-content-between">
+											<p>Up/Down DEGs</p>
+											<div class="confirm-switch">
+												<input type="checkbox" id="regulationN" class="colorswitchN">
+												<label for="regulationN"></label>
+											</div>
 										</div>
-									</div>
-									<div class="switch-wrap d-flex justify-content-between">
-										<p>Choose Time Point</p>
-										<div id="regtimeHeadN">
-											<select name="time" id="regtimeN">
-												<option value="">- Time -</option>
-											</select>
+										<div class="d-flex justify-content-between">
+											<p>Choose Time Point</p>
+											<div id="regtimeHeadN">
+												<select name="time" id="regtimeN">
+													<option value="">- Time -</option>
+												</select>
+											</div>
 										</div>
 									</div>
 									<div class="switch-wrap d-flex justify-content-between">
@@ -331,45 +338,37 @@
 											<label for="moduleN"></label>
 										</div>
 									</div>
-									
 
 									<div class="switch-wrap d-flex justify-content-between">
 										<p>KEGG Pathways</p>
-										<div class="switch-wrap d-flex justify-content-between">
-											<div id="pathHeadN">
-												<select name="pathN" id="pathN">
-													<option value="default">- None -</option>
-												</select>
-											</div>
+										<div id="pathHeadN">
+											<select name="pathN" id="pathN">
+												<option value="default">- None -</option>
+											</select>
 										</div>
 									</div>
 
 									<div class="switch-wrap d-flex justify-content-between">
 										<p>Stress/Treatment</p>
-										<div class="switch-wrap d-flex justify-content-between">
-											<div id="otherCondHeadN">
-												<select name="cond" id="otherCondN">
-													<option value="">- Conditions -</option>
-												</select>
-											</div>
+										<div id="otherCondHeadN">
+											<select name="cond" id="otherCondN">
+												<option value="">- Conditions -</option>
+											</select>
+											<a id="loadN" class="genric-btn success"><i class="fas fa-chevron-right" style="size:15px;"></i></a>
 										</div>
 									</div>
-									<a style="float: right;" id="loadN" class="genric-btn success circle">Load</a>
+
 									<br>
 									<br>
 
 									<div>
 										<h3 style="color:white; text-decoration: underline;">Description</h3>
-										<p style="font-weight: bold;">View</p>
-										<p id="view-textN">Default</p>
-										<p style="font-weight: bold;">Size</p>
-										<p id="size-textN">Size of Nodes proportional to gene node's degree</p>
 										<p style="font-weight: bold;">Color</p>
 										<p id="color-textN">Color Darkness proportional to gene node's degree</p>
 									</div>
 									
 									<div class="button-group-area mt-40">
-										<a id="downloadimgN" class="genric-btn success circle">Download</a>
+										<a id="downloadimgN" class="genric-btn success circle">Download Graph Image</a>
 										<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
 									</div>
 								</div>

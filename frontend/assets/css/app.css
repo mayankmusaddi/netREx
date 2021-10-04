@@ -32,8 +32,18 @@ table {
 #sidepanel > div > div > p{
   color: white;
 }
+#sidepanel > div > div > div > p{
+  color: white;
+}
 #sidepanelN > div > div > p{
   color: white;
+}
+#sidepanelN > div > div > div > p{
+  color: white;
+}
+.switch-wrap {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #expand, #expandN{
   font-size: 36px;
@@ -81,13 +91,4 @@ table {
 #querytable,#querytableN{
   margin-top: 30px;
   margin-bottom: 20px;
-}
-/* #show-neighborhood{
-  color: cornflowerblue;
-} */
-#show-expression{
-  margin-top: 50px;
-}
-#show-neighborhood{
-  margin-top: 50px;
 }

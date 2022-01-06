@@ -6,6 +6,7 @@ function load_module_table(data){
         { data: "attributes.tf" },
         { data: "attributes.description"},
         { data: "attributes.msu_loc"},
+        { data: "attributes.ktotal"},
         { data: null},
 
         { data: "attributes.go"},
@@ -17,14 +18,15 @@ function load_module_table(data){
     $("#data-table>thead>tr").append( $('<th />', {text : 'TF'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'Description'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'MSU ID'}) );
+    $("#data-table>thead>tr").append( $('<th />', {html : 'k<sub>total</sub>'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'IC4R	Expression'}) );
 
     $("#data-table>thead>tr").append( $('<th />', {text : 'GO'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'Mapman'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'KEGG'}) );
 
-    var desc_ind=[1,2,3,4];
-    var func_ind=[5,6,7];
+    var desc_ind=[1,2,3,4,5];
+    var func_ind=[6,7,8];
 
     const set = (obj, path, val) => { 
         const keys = path.split('.');
@@ -46,7 +48,7 @@ function load_module_table(data){
         data: data.nodes,
         columnDefs: [ 
             {
-                targets: [4],
+                targets: [5],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
             },

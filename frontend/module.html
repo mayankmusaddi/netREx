@@ -112,16 +112,17 @@
 		<div class="container box_1170" id="module-viewer">
 			<h3 class="text-heading">Browse Module-wise</h3>
 				<p class="sample-text">
-					Using WGCNA R package, co-expressed gene modules have been identified for both root 
-					and shoot HRR networks. In this view, top 100 highly connected genes based on their 
-					within-module connectivity are shown and the gene nodes are coloured by the modules 
-					they belong to.
+					Click “Module viewer” to view top 100 highly connected genes based on their within-module 
+					connectivity. In this view, the size of the nodes correspond to its degree connectivity 
+					while the colour represents the module colour. The table lists the node and edge attributes
+					and function GO enrichment of these genes.
 				</p>
+				<br>
 				<div>
 					<form class="form-contact" action="/netrex/module" id="moduleForm">
 						<div class="row">
 
-							<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
+							<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Tissue : </p></div>
 							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
 								<div class="form-select" id="tissueHead">
@@ -132,7 +133,7 @@
 								</div>
 							</div>
 
-							<div class="input-group-icon col-sm-3"><p>Module : </p></div>
+							<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Module : </p></div>
 							<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fab fa-first-order-alt" aria-hidden="true"></i></div>
 								<div class="form-select" id="moduleHead">
@@ -158,8 +159,8 @@
 				<nav>
 					<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					  <a class="nav-item nav-link active" id="nav-node-tab" data-toggle="tab" href="#nav-node" role="tab" aria-controls="nav-node" aria-selected="true">Nodes</a>
-					  <a class="nav-item nav-link" id="nav-go-tab" data-toggle="tab" href="#nav-go" role="tab" aria-controls="nav-go" aria-selected="false">GO Enrichment</a>
 					  <a class="nav-item nav-link" id="nav-edge-tab" data-toggle="tab" href="#nav-edge" role="tab" aria-controls="nav-edge" aria-selected="false">Edges</a>
+					  <a class="nav-item nav-link" id="nav-go-tab" data-toggle="tab" href="#nav-go" role="tab" aria-controls="nav-go" aria-selected="false">GO Enrichment</a>
 					</div>
 				</nav>
 				<div class="tab-content" id="nav-tabContent">
@@ -168,13 +169,13 @@
 							<thead><tr></tr></thead>
 						</table>
 					</div>
-					<div class="tab-pane fade" id="nav-go" role="tabpanel" aria-labelledby="nav-go-tab">
-						<table id="go-table" class="display" style="width:100%">
+					<div class="tab-pane fade" id="nav-edge" role="tabpanel" aria-labelledby="nav-edge-tab">
+						<table id="edge-table" class="display" style="width:100%">
 							<thead><tr></tr></thead>
 						</table>
 					</div>
-					<div class="tab-pane fade" id="nav-edge" role="tabpanel" aria-labelledby="nav-edge-tab">
-						<table id="edge-table" class="display" style="width:100%">
+					<div class="tab-pane fade" id="nav-go" role="tabpanel" aria-labelledby="nav-go-tab">
+						<table id="go-table" class="display" style="width:100%">
 							<thead><tr></tr></thead>
 						</table>
 					</div>
@@ -280,6 +281,7 @@
 				url: url,
 				data: form.serialize(),
 				success: function (data) {
+					console.log(data);
 					$("#loading-image").hide();
 
 					$('#network-graph').html('<span id="graph-title"></span><span class="fas fa-sync-alt" id="refresh" ></span>');
@@ -298,8 +300,8 @@
 					  $('#go-table').DataTable().clear().destroy();
 					};
 					$('#data-table').html('<thead><tr></tr></thead>');
-					$('#go-table').html('<thead><tr></tr></thead>');
 					$('#edge-table').html('<thead><tr></tr></thead>');
+					$('#go-table').html('<thead><tr></tr></thead>');
 
 					$('#show-network').show();
 					$('#querytable').show();
@@ -401,8 +403,11 @@
 					
 					$('#tissueM').trigger('change');
 
-					$("#module").val(options[query.module]);
-					$("#moduleHead > div > span").html(query.module);
+					var module_val = query.module.replace(/\s+/g, '').toLowerCase();
+					var module_key = Object.keys(options).find(key => options[key] === module_val);
+
+					$("#module").val(module_val);
+					$("#moduleHead > div > span").html(module_key);
 
 					$("#moduleForm").submit();
 				}

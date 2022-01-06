@@ -112,15 +112,14 @@
 		<div class="container box_1170 border-top-generic">
 			<h3 class="text-heading">Pathway Browse</h3>
 				<p class="sample-text">
-					Browsing through the complete database of genes that play a key role at the specified tissue 
-					level when exposed through different abiotic stress conditions or phytohormone changes. Then
-					showing a classified list of the genes according to their pathways.
+					Allows the user to analyze the genes of selected pathway 
+					and their expression in chosen tissue and stress/treatment condition.
 				</p>
-
+				<br>
 			<div>
 				<form class="form-contact" action="/netrex/pathway" id="conditionForm">
 					<div class="row">
-						<div class="input-group-icon col-sm-3"><p>Species : </p></div>
+						<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Species : </p></div>
 						<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
 								<div class="form-select" id="speciesHead">
@@ -129,7 +128,7 @@
 									</select>
 								</div>
 						</div>
-						<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
+						<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Tissue : </p></div>
 						<div class="input-group-icon col-sm-8">
 							<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
 							<div class="form-select" id="tissueHead">
@@ -139,7 +138,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="input-group-icon col-sm-3"><p>Stress / Hormone Treatment : </p></div>
+						<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Stress / Hormone Treatment : </p></div>
 						<div class="input-group-icon col-sm-8">
 							<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
 							<div class="form-select" id="conditionHead">

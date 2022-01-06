@@ -25,6 +25,8 @@
 			<link rel="stylesheet" href="assets/js/DataTables/datatables.min.css">
    			<link rel="stylesheet" href="assets/js/DataTables/dataTables.bootstrap.min.css">
 			<link rel="stylesheet" href="assets/js/DataTables/buttons.dataTables.min.css">
+
+			<link rel="stylesheet" href="assets/css/custom.css">
 			<link rel="stylesheet" href="assets/css/app.css">
 
 			<script src='assets/js/lodash.min.js'></script>
@@ -109,14 +111,14 @@
 		<div class="container box_1170 border-top-generic">
 			<h3 class="text-heading">Browse Condition-wise</h3>
 				<p class="sample-text">
-					Allows the user to browse the genes and their attributes that are differentially 
-					expressed in a given tissue type  or stress condition.
+					Provides Tabular view of differentially expressed genes and
+					their attributes in the chosen tissue and stress condition.
 				</p>
-
+				<br>
 			<div>
 				<form class="form-contact" action="/netrex/load" id="conditionForm">
 					<div class="row">
-						<div class="input-group-icon col-sm-3"><p>Species : </p></div>
+						<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Species : </p></div>
 						<div class="input-group-icon col-sm-8">
 								<div class="icon"><i class="fa fa-leaf" aria-hidden="true"></i></div>
 								<div class="form-select" id="speciesHead">
@@ -125,7 +127,7 @@
 									</select>
 								</div>
 						</div>
-						<div class="input-group-icon col-sm-3"><p>Tissue : </p></div>
+						<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Tissue : </p></div>
 						<div class="input-group-icon col-sm-8">
 							<div class="icon"><i class="fas fa-microscope" aria-hidden="true"></i></div>
 							<div class="form-select" id="tissueHead">
@@ -135,7 +137,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="input-group-icon col-sm-3"><p>Stress / Hormone Treatment : </p></div>
+						<div class="input-group-icon col-sm-3"><p style="font-weight: bold">Stress / Hormone Treatment : </p></div>
 						<div class="input-group-icon col-sm-8">
 							<div class="icon"><i class="fas fa-cloud-sun-rain" aria-hidden="true"></i></div>
 							<div class="form-select" id="conditionHead">

@@ -5,6 +5,7 @@ function load_neighbour_table(data, N, sN){
         { data: "attributes.wgcna_modules"},
         { data: "attributes.description"},
         { data: "attributes.msu_loc"},
+        { data: "attributes.ktotal"},
         { data: null},
 
         { data: "attributes.go"},
@@ -17,16 +18,17 @@ function load_neighbour_table(data, N, sN){
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Module'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Description'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'MSU ID'}) );
+    $("#data-table"+N+">thead>tr").append( $('<th />', {html : 'k<sub>total</sub>'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'IC4R	Expression'}) );
 
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'GO'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Mapman'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'KEGG'}) );
 
-    var desc_ind=[1,2,3,4,5];
-    var func_ind=[6,7,8];
+    var desc_ind=[1,2,3,4,5,6];
+    var func_ind=[7,8,9];
     var fc_ind=[];
-    var ind = 9;
+    var ind = 10;
 
     var timestamps = getTimestamps(data);
     Object.keys(timestamps).forEach(function(key) {
@@ -35,7 +37,7 @@ function load_neighbour_table(data, N, sN){
         columns.push({data: "attributes.pval_"+time});
 
         $("#data-table"+N+">thead>tr").append( $('<th />', {text : "FC "+key}) );
-        $("#data-table"+N+">thead>tr").append( $('<th />', {text : "p-value "+key}) );
+        $("#data-table"+N+">thead>tr").append( $('<th />', {text : "𝑝 "+key}) );
 
         fc_ind.push(ind);
         ind++;
@@ -63,7 +65,7 @@ function load_neighbour_table(data, N, sN){
         data: data.nodes,
         columnDefs: [ 
             {
-                targets: [5],
+                targets: [6],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
             },

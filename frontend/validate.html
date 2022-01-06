@@ -113,7 +113,7 @@
 	<div class="container box_1170">	
 		<div style = "margin-bottom: 20px;">
 			<p>
-				<button type="button" class="btn-outline-secondary" id="show-network">Network Viewers</button>
+				<button type="button" class="btn-outline-secondary" id="show-network">Network Viewer</button>
 				<button type="button" class="btn-outline-secondary" id="show-expression">Expression Viewer</button>
 			</p>
 		</div>
@@ -155,10 +155,7 @@
 				  </table>
 			</div>
 			<div style="text-align: right;"> 
-				* Query Genes present in the list of DEGs for the chosen tissue and condition are referred as “filtered genes”.
-				 The remaining genes are referred as “invalid genes” for the chosen tissue/condition. Some of the genes may not 
-				 be DEGs at all time points – so genes which are DEGs in atleast 2 time points for the chosen Tissue/Condition 
-				 are selected.
+				* Filtered Genes – are DEGs in the chosen tissue-specific network and treatment condition
 			</div>
 		</div>
 	</div>
@@ -251,13 +248,13 @@
 								<br>
 
 								<div>
-									<h3 style="color:white; text-decoration: underline;">Description</h3>
-									<p style="font-weight: bold;">Color</p>
-									<p id="color-text">Color Darkness proportional to gene node's degree</p>
+									<!-- <h3 style="color:white; text-decoration: underline;">Description</h3> -->
+									<!-- <p style="font-weight: bold;">Color</p> -->
+									<p id="color-text">Node colour grading is proportional to its degree</p>
 								</div>
 								
 								<div class="button-group-area mt-40">
-									<a id="downloadimg" class="genric-btn success circle">Download Graph Image</a>
+									<a id="downloadimg" class="genric-btn success circle">Download Image</a>
 								</div>
 							</div>
 						</div>
@@ -362,13 +359,13 @@
 									<br>
 
 									<div>
-										<h3 style="color:white; text-decoration: underline;">Description</h3>
-										<p style="font-weight: bold;">Color</p>
-										<p id="color-textN">Color Darkness proportional to gene node's degree</p>
+										<!-- <h3 style="color:white; text-decoration: underline;">Description</h3> -->
+										<!-- <p style="font-weight: bold;">Color</p> -->
+										<p id="color-textN">Node colour grading is proportional to its degree</p>
 									</div>
 									
 									<div class="button-group-area mt-40">
-										<a id="downloadimgN" class="genric-btn success circle">Download Graph Image</a>
+										<a id="downloadimgN" class="genric-btn success circle">Download Image</a>
 										<!-- <a href="#" class="genric-btn warning circle">Force Atlas</a> -->
 									</div>
 								</div>

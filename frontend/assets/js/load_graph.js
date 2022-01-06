@@ -333,7 +333,7 @@ function load_graph(data, graphid, N, move){
             });
             s.refresh();
             $("#view-text").html("Default");
-            $("#color-text").html("Color Darkness proportional to gene node's degree");
+            $("#color-text").html("Node colour grading is proportional to its degree");
             $("#path").val('default');
 		    $("#pathHead > div > span").html('- None -');
         });
@@ -344,7 +344,7 @@ function load_graph(data, graphid, N, move){
             });
             s.refresh();
             $("#view-text").html("Module");
-            $("#color-text").html("Color denotes the module colour in which the gene belongs");
+            $("#color-text").html("Node colour indicates module membership");
             $("#path").val('default');
 		    $("#pathHead > div > span").html('- None -');
         });

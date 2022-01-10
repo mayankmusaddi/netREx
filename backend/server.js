@@ -44,6 +44,13 @@ function initNeighbour(nodes) {
   }
 }
 
+function initNeighbour2(nodes) {
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].size = 70;
+    nodes[i].borderColor = "#39ff14";
+  }
+}
+
 function sortByTime(dict) {
   var sortedDay = [];
   var sortedHour = [];
@@ -236,7 +243,8 @@ app.use("/neighborhood_network", (req, res) => {
   const nodes = query_nodes.concat(neighbour_nodes);
   ids = getIds(nodes);
   initTF(nodes);
-  initNeighbour(nodes);
+  // initNeighbour(nodes);
+  initNeighbour2(query_nodes);
 
   const edges = file.edges.filter(
     (d) => ids.includes(d.source) && ids.includes(d.target)

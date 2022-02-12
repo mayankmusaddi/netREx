@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const fs = require('fs')
+const fs = require('fs');
+const csv = require('csv-parser');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -107,13 +108,25 @@ app.use("/validate", (req, res) => {
   }
 
   const nodes = file.nodes.filter((d) => genes.includes(d.label));
-
+  // console.log(nodes);
   var valid = nodes.map((d) => {return d.label;});
   var invalid = genes.filter((d) => !valid.includes(d));
   var metadata = { species : query.species, condition: query.condition, tissue: query.tissue };
+  
+  fs.createReadStream(datapath+query.tissue.toUpperCase()+"/"+query.condition+"_full.csv")
+  .pipe(csv())
+  .on('data', function (row) {
+    // console.log(row)
+    let ni = nodes.findIndex(d => d.label === row.Label);
+    if(ni!== -1 && row.Symbol!==""){
+      nodes[ni].label = row.Symbol.split(",")[0];
+    }
+  })
+  .on('end', function () {
+      data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata };
+      res.send(data);
+  })
 
-  data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata };
-  res.send(data);
 });
 
 app.use("/module", (req, res) => {
@@ -231,7 +244,6 @@ app.use("/neighborhood_network", (req, res) => {
     if (!query_ids.includes(node_edges[i].target))
       neighbor_ids.push(node_edges[i].target);
   }
-
   const neighbour_nodes = file.nodes.filter((d) => neighbor_ids.includes(d.id));
   neighbour_nodes.sort((a, b) => a.attributes.rank - b.attributes.rank);
   neighbour_nodes.length = neighbor_number;
@@ -245,7 +257,6 @@ app.use("/neighborhood_network", (req, res) => {
   initTF(nodes);
   // initNeighbour(nodes);
   initNeighbour2(query_nodes);
-
   const edges = file.edges.filter(
     (d) => ids.includes(d.source) && ids.includes(d.target)
   );

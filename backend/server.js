@@ -116,7 +116,6 @@ app.use("/validate", (req, res) => {
   fs.createReadStream(datapath+query.tissue.toUpperCase()+"/"+query.condition+"_full.csv")
   .pipe(csv())
   .on('data', function (row) {
-    // console.log(row)
     let ni = nodes.findIndex(d => d.label === row.Label);
     if(ni!== -1 && row.Symbol!==""){
       nodes[ni].label = row.Symbol.split(",")[0];
@@ -260,9 +259,19 @@ app.use("/neighborhood_network", (req, res) => {
   const edges = file.edges.filter(
     (d) => ids.includes(d.source) && ids.includes(d.target)
   );
-  var graph = { nodes, edges };
 
-  res.send(graph);
+  fs.createReadStream(datapath+req.body.tissue.toUpperCase()+"/"+req.body.condition+"_full.csv")
+  .pipe(csv())
+  .on('data', function (row) {
+    let ni = nodes.findIndex(d => d.label === row.Label);
+    if(ni!== -1 && row.Symbol!==""){
+      nodes[ni].label = row.Symbol.split(",")[0];
+    }
+  })
+  .on('end', function () {
+      var graph = { nodes, edges };
+      res.send(graph);
+  })
 });
 
 app.listen(3000, function () {

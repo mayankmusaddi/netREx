@@ -572,7 +572,7 @@
 				$.ajax({
 					type: "POST",
 					url: deployment_url+"neighborhood_network",
-					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
+					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val(), "tissue": data.metadata.tissue,"condition": data.metadata.condition}),
 					contentType: "application/json; charset=utf-8",
 					success: function (graph) {
 						$('#neighborhood-view').show();

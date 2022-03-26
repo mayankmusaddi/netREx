@@ -255,11 +255,15 @@ function load_neighbour_graph(data, graphid){
     
     sN.startForceAtlas2();
     // sN.startForceAtlas2({adjustSizes:true});
-    setTimeout(function () {sN.stopForceAtlas2();},1100);
+    setTimeout(
+        function () {
+            sN.stopForceAtlas2();
+        },
+    12*sN.graph.nodes().length);
         
     var config = {
-        nodeMargin: 5.0,
-        scaleNodes: 3,
+        nodeMargin: 1.0,
+        scaleNodes: 1.3,
     };
     // Configure the algorithm
     var listener = sN.configNoverlap(config);

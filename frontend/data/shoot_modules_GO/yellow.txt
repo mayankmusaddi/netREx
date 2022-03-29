@@ -1,0 +1,66 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+biological_process (GO:0008150)	16969	478	3.25e+02	+	1.47e+00	4.61e-26	2.22e-22
+UNCLASSIFIED 	26690	358	5.11e+02	-	7.00e-01	4.61e-26	1.11e-22
+phosphorus metabolic process (GO:0006793)	2599	123	4.98e+01	+	2.47e+00	1.70e-19	2.72e-16
+phosphate-containing compound metabolic process (GO:0006796)	2563	121	4.91e+01	+	2.47e+00	4.17e-19	5.01e-16
+phosphorylation (GO:0016310)	1822	97	3.49e+01	+	2.78e+00	1.28e-18	1.23e-15
+cellular process (GO:0009987)	12532	352	2.40e+02	+	1.47e+00	2.88e-16	2.31e-13
+protein phosphorylation (GO:0006468)	1507	75	2.89e+01	+	2.60e+00	3.98e-13	2.74e-10
+protein modification process (GO:0036211)	3158	117	6.05e+01	+	1.93e+00	2.01e-11	1.21e-08
+cellular protein modification process (GO:0006464)	3158	117	6.05e+01	+	1.93e+00	2.01e-11	1.07e-08
+regulation of cellular process (GO:0050794)	3799	131	7.27e+01	+	1.80e+00	1.47e-10	7.07e-08
+regulation of biological process (GO:0050789)	4183	140	8.01e+01	+	1.75e+00	1.88e-10	8.22e-08
+biological regulation (GO:0065007)	4754	154	9.10e+01	+	1.69e+00	2.09e-10	8.37e-08
+organonitrogen compound metabolic process (GO:1901564)	5535	171	1.06e+02	+	1.61e+00	5.35e-10	1.98e-07
+cellular metabolic process (GO:0044237)	8644	240	1.66e+02	+	1.45e+00	1.05e-09	3.62e-07
+macromolecule modification (GO:0043412)	3466	119	6.64e+01	+	1.79e+00	1.64e-09	5.25e-07
+response to stimulus (GO:0050896)	3478	115	6.66e+01	+	1.73e+00	1.91e-08	5.75e-06
+metabolic process (GO:0008152)	10010	262	1.92e+02	+	1.37e+00	3.22e-08	9.12e-06
+cellular protein metabolic process (GO:0044267)	4052	128	7.76e+01	+	1.65e+00	4.07e-08	1.09e-05
+protein metabolic process (GO:0019538)	4554	136	8.72e+01	+	1.56e+00	3.56e-07	9.01e-05
+organic substance metabolic process (GO:0071704)	9130	237	1.75e+02	+	1.36e+00	4.97e-07	1.20e-04
+regulation of RNA biosynthetic process (GO:2001141)	2028	73	3.88e+01	+	1.88e+00	5.78e-07	1.32e-04
+regulation of transcription, DNA-templated (GO:0006355)	2028	73	3.88e+01	+	1.88e+00	5.78e-07	1.26e-04
+regulation of nucleic acid-templated transcription (GO:1903506)	2028	73	3.88e+01	+	1.88e+00	5.78e-07	1.21e-04
+cell communication (GO:0007154)	1228	51	2.35e+01	+	2.17e+00	6.00e-07	1.20e-04
+regulation of response to stress (GO:0080134)	151	15	2.89e+00	+	5.19e+00	6.56e-07	1.26e-04
+signal transduction (GO:0007165)	1050	46	2.01e+01	+	2.29e+00	6.70e-07	1.24e-04
+signaling (GO:0023052)	1065	46	2.04e+01	+	2.26e+00	8.47e-07	1.51e-04
+primary metabolic process (GO:0044238)	8591	223	1.65e+02	+	1.36e+00	1.34e-06	2.30e-04
+cellular macromolecule metabolic process (GO:0044260)	5163	147	9.89e+01	+	1.49e+00	1.47e-06	2.44e-04
+regulation of response to stimulus (GO:0048583)	293	20	5.61e+00	+	3.56e+00	2.52e-06	4.04e-04
+regulation of RNA metabolic process (GO:0051252)	2130	73	4.08e+01	+	1.79e+00	3.56e-06	5.52e-04
+cellular response to stimulus (GO:0051716)	1835	65	3.51e+01	+	1.85e+00	3.87e-06	5.81e-04
+regulation of nucleobase-containing compound metabolic process (GO:0019219)	2166	73	4.15e+01	+	1.76e+00	6.29e-06	9.17e-04
+regulation of cellular biosynthetic process (GO:0031326)	2291	76	4.39e+01	+	1.73e+00	7.63e-06	1.08e-03
+regulation of biosynthetic process (GO:0009889)	2298	76	4.40e+01	+	1.73e+00	7.87e-06	1.08e-03
+regulation of macromolecule biosynthetic process (GO:0010556)	2272	75	4.35e+01	+	1.72e+00	1.02e-05	1.36e-03
+nitrogen compound metabolic process (GO:0006807)	7241	188	1.39e+02	+	1.36e+00	1.27e-05	1.65e-03
+regulation of cellular macromolecule biosynthetic process (GO:2000112)	2268	74	4.34e+01	+	1.70e+00	1.47e-05	1.86e-03
+regulation of gene expression (GO:0010468)	2466	78	4.72e+01	+	1.65e+00	2.30e-05	2.83e-03
+protein autophosphorylation (GO:0046777)	113	11	2.16e+00	+	5.08e+00	2.38e-05	2.86e-03
+nitrogen compound transport (GO:0071705)	1005	40	1.92e+01	+	2.08e+00	2.60e-05	3.05e-03
+organic substance transport (GO:0071702)	1214	46	2.32e+01	+	1.98e+00	3.06e-05	3.51e-03
+regulation of response to salt stress (GO:1901000)	29	6	5.55e-01	+	1.08e+01	4.41e-05	4.93e-03
+transport (GO:0006810)	2477	77	4.74e+01	+	1.62e+00	4.63e-05	5.06e-03
+regulation of cellular metabolic process (GO:0031323)	2688	82	5.15e+01	+	1.59e+00	4.82e-05	5.15e-03
+regulation of response to osmotic stress (GO:0047484)	30	6	5.74e-01	+	1.04e+01	5.20e-05	5.44e-03
+regulation of metabolic process (GO:0019222)	2912	87	5.58e+01	+	1.56e+00	6.55e-05	6.70e-03
+regulation of macromolecule metabolic process (GO:0060255)	2827	85	5.41e+01	+	1.57e+00	6.96e-05	6.98e-03
+regulation of nitrogen compound metabolic process (GO:0051171)	2620	80	5.02e+01	+	1.59e+00	7.04e-05	6.91e-03
+establishment of localization (GO:0051234)	2510	77	4.81e+01	+	1.60e+00	7.11e-05	6.84e-03
+positive regulation of GTPase activity (GO:0043547)	20	5	3.83e-01	+	1.31e+01	9.00e-05	8.48e-03
+macromolecule metabolic process (GO:0043170)	6639	169	1.27e+02	+	1.33e+00	1.23e-04	1.14e-02
+regulation of primary metabolic process (GO:0080090)	2647	79	5.07e+01	+	1.56e+00	1.43e-04	1.29e-02
+regulation of GTPase activity (GO:0043087)	23	5	4.40e-01	+	1.14e+01	1.59e-04	1.41e-02
+localization (GO:0051179)	2616	78	5.01e+01	+	1.56e+00	1.74e-04	1.52e-02
+response to abiotic stimulus (GO:0009628)	527	24	1.01e+01	+	2.38e+00	1.77e-04	1.52e-02
+response to stress (GO:0006950)	2116	66	4.05e+01	+	1.63e+00	1.80e-04	1.52e-02
+G protein-coupled receptor signaling pathway (GO:0007186)	24	5	4.60e-01	+	1.09e+01	1.89e-04	1.57e-02
+phosphate ion homeostasis (GO:0055062)	5	3	9.57e-02	+	3.13e+01	3.45e-04	2.81e-02
+trivalent inorganic anion homeostasis (GO:0072506)	5	3	9.57e-02	+	3.13e+01	3.45e-04	2.76e-02
+peptidyl-serine phosphorylation (GO:0018105)	84	8	1.61e+00	+	4.97e+00	3.49e-04	2.75e-02
+peptidyl-serine modification (GO:0018209)	85	8	1.63e+00	+	4.92e+00	3.75e-04	2.91e-02
+positive regulation of hydrolase activity (GO:0051345)	29	5	5.55e-01	+	9.00e+00	4.10e-04	3.13e-02
+regulation of defense response (GO:0031347)	88	8	1.69e+00	+	4.75e+00	4.65e-04	3.50e-02
+activation of GTPase activity (GO:0090630)	17	4	3.26e-01	+	1.23e+01	5.74e-04	4.25e-02

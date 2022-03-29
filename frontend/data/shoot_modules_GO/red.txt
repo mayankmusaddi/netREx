@@ -1,0 +1,70 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+biological_process (GO:0008150)	16969	414	2.71e+02	+	1.53e+00	4.23e-27	2.04e-23
+UNCLASSIFIED 	26690	284	4.27e+02	-	6.66e-01	4.23e-27	1.02e-23
+metabolic process (GO:0008152)	10010	271	1.60e+02	+	1.69e+00	1.39e-20	2.23e-17
+cellular process (GO:0009987)	12532	314	2.00e+02	+	1.57e+00	1.95e-19	2.35e-16
+primary metabolic process (GO:0044238)	8591	237	1.37e+02	+	1.73e+00	1.94e-18	1.87e-15
+organic substance metabolic process (GO:0071704)	9130	245	1.46e+02	+	1.68e+00	1.14e-17	9.16e-15
+cellular metabolic process (GO:0044237)	8644	225	1.38e+02	+	1.63e+00	1.86e-14	1.28e-11
+small molecule metabolic process (GO:0044281)	1403	65	2.24e+01	+	2.90e+00	1.07e-13	6.44e-11
+small molecule catabolic process (GO:0044282)	184	22	2.94e+00	+	7.48e+00	2.32e-12	1.24e-09
+carboxylic acid metabolic process (GO:0019752)	818	45	1.31e+01	+	3.44e+00	3.88e-12	1.86e-09
+organic acid metabolic process (GO:0006082)	860	46	1.37e+01	+	3.35e+00	5.50e-12	2.41e-09
+oxoacid metabolic process (GO:0043436)	828	45	1.32e+01	+	3.40e+00	5.70e-12	2.28e-09
+carboxylic acid catabolic process (GO:0046395)	113	17	1.81e+00	+	9.41e+00	2.87e-11	1.06e-08
+carbohydrate metabolic process (GO:0005975)	1036	49	1.66e+01	+	2.96e+00	6.73e-11	2.31e-08
+organic acid catabolic process (GO:0016054)	123	17	1.97e+00	+	8.64e+00	9.50e-11	3.04e-08
+cellular catabolic process (GO:0044248)	1314	54	2.10e+01	+	2.57e+00	1.19e-09	3.59e-07
+catabolic process (GO:0009056)	1575	60	2.52e+01	+	2.38e+00	1.75e-09	4.95e-07
+organic substance catabolic process (GO:1901575)	1369	54	2.19e+01	+	2.47e+00	3.73e-09	9.97e-07
+organonitrogen compound metabolic process (GO:1901564)	5535	142	8.85e+01	+	1.60e+00	1.75e-08	4.44e-06
+nitrogen compound metabolic process (GO:0006807)	7241	174	1.16e+02	+	1.50e+00	2.80e-08	6.73e-06
+monocarboxylic acid metabolic process (GO:0032787)	376	24	6.01e+00	+	3.99e+00	3.22e-08	7.37e-06
+tricarboxylic acid cycle (GO:0006099)	54	10	8.63e-01	+	1.16e+01	6.16e-08	1.35e-05
+organonitrogen compound catabolic process (GO:1901565)	758	35	1.21e+01	+	2.89e+00	6.51e-08	1.36e-05
+monocarboxylic acid catabolic process (GO:0072329)	43	8	6.87e-01	+	1.16e+01	1.27e-06	2.54e-04
+fatty acid beta-oxidation (GO:0006635)	29	7	4.64e-01	+	1.51e+01	1.30e-06	2.50e-04
+fatty acid oxidation (GO:0019395)	31	7	4.96e-01	+	1.41e+01	1.92e-06	3.54e-04
+fatty acid catabolic process (GO:0009062)	33	7	5.28e-01	+	1.33e+01	2.75e-06	4.90e-04
+cellular amino acid catabolic process (GO:0009063)	68	9	1.09e+00	+	8.28e+00	3.50e-06	6.00e-04
+glyoxylate cycle (GO:0006097)	4	4	6.40e-02	+	6.25e+01	4.05e-06	6.71e-04
+glyoxylate metabolic process (GO:0046487)	4	4	6.40e-02	+	6.25e+01	4.05e-06	6.49e-04
+monosaccharide metabolic process (GO:0005996)	160	13	2.56e+00	+	5.08e+00	4.09e-06	6.35e-04
+biological regulation (GO:0065007)	4754	117	7.60e+01	+	1.54e+00	4.16e-06	6.25e-04
+aerobic respiration (GO:0009060)	120	11	1.92e+00	+	5.73e+00	7.80e-06	1.14e-03
+cellular respiration (GO:0045333)	130	11	2.08e+00	+	5.29e+00	1.57e-05	2.22e-03
+lipid oxidation (GO:0034440)	48	7	7.67e-01	+	9.12e+00	2.44e-05	3.36e-03
+lipid catabolic process (GO:0016042)	143	11	2.29e+00	+	4.81e+00	3.57e-05	4.76e-03
+localization (GO:0051179)	2616	70	4.18e+01	+	1.67e+00	3.96e-05	5.14e-03
+regulation of biological process (GO:0050789)	4183	101	6.69e+01	+	1.51e+00	4.33e-05	5.48e-03
+lipid modification (GO:0030258)	96	9	1.53e+00	+	5.86e+00	4.41e-05	5.44e-03
+cellular lipid catabolic process (GO:0044242)	96	9	1.53e+00	+	5.86e+00	4.41e-05	5.30e-03
+cellular amino acid metabolic process (GO:0006520)	400	19	6.40e+00	+	2.97e+00	4.56e-05	5.34e-03
+pentose metabolic process (GO:0019321)	21	5	3.36e-01	+	1.49e+01	4.76e-05	5.45e-03
+energy derivation by oxidation of organic compounds (GO:0015980)	150	11	2.40e+00	+	4.59e+00	5.36e-05	5.99e-03
+leucine metabolic process (GO:0006551)	10	4	1.60e-01	+	2.50e+01	5.37e-05	5.87e-03
+cellular carbohydrate metabolic process (GO:0044262)	411	19	6.57e+00	+	2.89e+00	6.43e-05	6.87e-03
+organic substance transport (GO:0071702)	1214	39	1.94e+01	+	2.01e+00	6.92e-05	7.24e-03
+fatty acid metabolic process (GO:0006631)	188	12	3.01e+00	+	3.99e+00	8.75e-05	8.96e-03
+protein folding (GO:0006457)	219	13	3.50e+00	+	3.71e+00	9.03e-05	9.04e-03
+regulation of biological quality (GO:0065008)	577	23	9.22e+00	+	2.49e+00	1.00e-04	9.83e-03
+lipid metabolic process (GO:0006629)	951	32	1.52e+01	+	2.10e+00	1.31e-04	1.26e-02
+cellular lipid metabolic process (GO:0044255)	676	25	1.08e+01	+	2.31e+00	1.70e-04	1.60e-02
+phosphate-containing compound metabolic process (GO:0006796)	2563	66	4.10e+01	+	1.61e+00	1.89e-04	1.75e-02
+phosphorus metabolic process (GO:0006793)	2599	67	4.16e+01	+	1.61e+00	2.00e-04	1.82e-02
+leucine catabolic process (GO:0006552)	5	3	7.99e-02	+	3.75e+01	2.05e-04	1.82e-02
+establishment of localization (GO:0051234)	2510	65	4.01e+01	+	1.62e+00	2.17e-04	1.90e-02
+regulation of cellular process (GO:0050794)	3799	90	6.07e+01	+	1.48e+00	2.52e-04	2.17e-02
+proteolysis (GO:0006508)	1199	37	1.92e+01	+	1.93e+00	2.63e-04	2.22e-02
+phosphorylation (GO:0016310)	1822	50	2.91e+01	+	1.72e+00	2.89e-04	2.39e-02
+response to stimulus (GO:0050896)	3478	83	5.56e+01	+	1.49e+00	3.27e-04	2.66e-02
+nitrogen compound transport (GO:0071705)	1005	32	1.61e+01	+	1.99e+00	3.41e-04	2.73e-02
+transport (GO:0006810)	2477	63	3.96e+01	+	1.59e+00	3.87e-04	3.05e-02
+cellular response to stimulus (GO:0051716)	1835	50	2.93e+01	+	1.70e+00	4.13e-04	3.20e-02
+generation of precursor metabolites and energy (GO:0006091)	444	18	7.10e+00	+	2.54e+00	4.55e-04	3.47e-02
+multicellular organism development (GO:0007275)	604	22	9.66e+00	+	2.28e+00	5.07e-04	3.81e-02
+L-arabinose metabolic process (GO:0046373)	8	3	1.28e-01	+	2.35e+01	5.83e-04	4.31e-02
+arabinose metabolic process (GO:0019566)	8	3	1.28e-01	+	2.35e+01	5.83e-04	4.24e-02
+protein metabolic process (GO:0019538)	4554	102	7.28e+01	+	1.40e+00	6.00e-04	4.31e-02
+defense response to bacterium (GO:0042742)	140	9	2.24e+00	+	4.02e+00	6.22e-04	4.40e-02
+system development (GO:0048731)	457	18	7.31e+00	+	2.46e+00	6.28e-04	4.38e-02

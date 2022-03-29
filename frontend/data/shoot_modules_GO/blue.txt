@@ -1,0 +1,177 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+cellular process (GO:0009987)	12532	861	5.62e+02	+	1.53e+00	1.08e-44	5.18e-41
+UNCLASSIFIED 	26690	883	1.20e+03	-	7.38e-01	2.07e-44	4.99e-41
+biological_process (GO:0008150)	16969	1074	7.61e+02	+	1.41e+00	2.07e-44	3.32e-41
+metabolic process (GO:0008152)	10010	709	4.49e+02	+	1.58e+00	2.47e-38	2.97e-35
+cellular metabolic process (GO:0044237)	8644	633	3.87e+02	+	1.63e+00	3.15e-37	3.03e-34
+organic substance biosynthetic process (GO:1901576)	2696	262	1.21e+02	+	2.17e+00	1.55e-29	1.24e-26
+biosynthetic process (GO:0009058)	2832	270	1.27e+02	+	2.13e+00	3.25e-29	2.23e-26
+cellular biosynthetic process (GO:0044249)	2585	252	1.16e+02	+	2.17e+00	1.62e-28	9.72e-26
+organic substance metabolic process (GO:0071704)	9130	619	4.09e+02	+	1.51e+00	3.19e-27	1.71e-24
+photosynthesis (GO:0015979)	187	56	8.38e+00	+	6.68e+00	2.75e-25	1.32e-22
+small molecule metabolic process (GO:0044281)	1403	150	6.29e+01	+	2.39e+00	1.87e-20	8.19e-18
+primary metabolic process (GO:0044238)	8591	556	3.85e+02	+	1.44e+00	1.49e-19	5.99e-17
+organonitrogen compound biosynthetic process (GO:1901566)	1378	146	6.18e+01	+	2.36e+00	1.69e-19	6.26e-17
+cellular nitrogen compound metabolic process (GO:0034641)	3077	246	1.38e+02	+	1.78e+00	3.20e-17	1.10e-14
+nitrogen compound metabolic process (GO:0006807)	7241	473	3.25e+02	+	1.46e+00	6.31e-17	2.02e-14
+cellular nitrogen compound biosynthetic process (GO:0044271)	1294	128	5.80e+01	+	2.21e+00	3.71e-15	1.11e-12
+heterocycle metabolic process (GO:0046483)	2467	202	1.11e+02	+	1.83e+00	3.88e-15	1.10e-12
+organic cyclic compound metabolic process (GO:1901360)	2670	212	1.20e+02	+	1.77e+00	1.22e-14	3.25e-12
+cellular aromatic compound metabolic process (GO:0006725)	2592	207	1.16e+02	+	1.78e+00	1.62e-14	4.11e-12
+oxoacid metabolic process (GO:0043436)	828	90	3.71e+01	+	2.42e+00	4.27e-13	1.03e-10
+carboxylic acid metabolic process (GO:0019752)	818	89	3.67e+01	+	2.43e+00	5.58e-13	1.28e-10
+organonitrogen compound metabolic process (GO:1901564)	5535	363	2.48e+02	+	1.46e+00	6.37e-13	1.39e-10
+small molecule biosynthetic process (GO:0044283)	571	70	2.56e+01	+	2.73e+00	1.72e-12	3.59e-10
+organic acid metabolic process (GO:0006082)	860	90	3.85e+01	+	2.33e+00	3.41e-12	6.84e-10
+photosynthesis, light reaction (GO:0019684)	84	25	3.77e+00	+	6.64e+00	4.81e-12	9.24e-10
+gene expression (GO:0010467)	1710	143	7.67e+01	+	1.87e+00	1.53e-11	2.82e-09
+cellular amino acid metabolic process (GO:0006520)	400	52	1.79e+01	+	2.90e+00	1.45e-10	2.58e-08
+tetrapyrrole metabolic process (GO:0033013)	62	20	2.78e+00	+	7.20e+00	1.96e-10	3.37e-08
+tetrapyrrole biosynthetic process (GO:0033014)	45	17	2.02e+00	+	8.43e+00	6.20e-10	1.03e-07
+cellular macromolecule biosynthetic process (GO:0034645)	1360	115	6.10e+01	+	1.89e+00	8.29e-10	1.33e-07
+generation of precursor metabolites and energy (GO:0006091)	444	54	1.99e+01	+	2.71e+00	8.64e-10	1.34e-07
+cellular amide metabolic process (GO:0043603)	821	80	3.68e+01	+	2.17e+00	1.16e-09	1.74e-07
+amide biosynthetic process (GO:0043604)	660	69	2.96e+01	+	2.33e+00	1.55e-09	2.26e-07
+macromolecule biosynthetic process (GO:0009059)	1414	117	6.34e+01	+	1.85e+00	1.77e-09	2.51e-07
+translation (GO:0006412)	586	63	2.63e+01	+	2.40e+00	2.12e-09	2.91e-07
+plastid organization (GO:0009657)	159	29	7.13e+00	+	4.07e+00	2.49e-09	3.32e-07
+peptide biosynthetic process (GO:0043043)	598	64	2.68e+01	+	2.39e+00	2.71e-09	3.52e-07
+porphyrin-containing compound metabolic process (GO:0006778)	60	18	2.69e+00	+	6.69e+00	4.09e-09	5.17e-07
+chlorophyll metabolic process (GO:0015994)	46	16	2.06e+00	+	7.76e+00	5.21e-09	6.42e-07
+heterocycle biosynthetic process (GO:0018130)	691	69	3.10e+01	+	2.23e+00	6.64e-09	7.98e-07
+organic cyclic compound biosynthetic process (GO:1901362)	847	79	3.80e+01	+	2.08e+00	9.30e-09	1.09e-06
+pigment biosynthetic process (GO:0046148)	73	19	3.27e+00	+	5.81e+00	1.09e-08	1.25e-06
+peptide metabolic process (GO:0006518)	715	70	3.20e+01	+	2.18e+00	1.16e-08	1.30e-06
+porphyrin-containing compound biosynthetic process (GO:0006779)	42	15	1.88e+00	+	7.97e+00	1.17e-08	1.28e-06
+chlorophyll biosynthetic process (GO:0015995)	31	13	1.39e+00	+	9.36e+00	2.39e-08	2.56e-06
+aromatic compound biosynthetic process (GO:0019438)	761	71	3.41e+01	+	2.08e+00	5.33e-08	5.58e-06
+alpha-amino acid metabolic process (GO:1901605)	247	34	1.11e+01	+	3.07e+00	6.16e-08	6.31e-06
+pigment metabolic process (GO:0042440)	88	19	3.94e+00	+	4.82e+00	1.40e-07	1.41e-05
+serine family amino acid metabolic process (GO:0009069)	61	16	2.73e+00	+	5.85e+00	1.42e-07	1.39e-05
+carboxylic acid biosynthetic process (GO:0046394)	402	45	1.80e+01	+	2.50e+00	1.94e-07	1.87e-05
+lipid metabolic process (GO:0006629)	951	81	4.26e+01	+	1.90e+00	2.18e-07	2.05e-05
+nucleobase-containing compound metabolic process (GO:0006139)	2249	156	1.01e+02	+	1.55e+00	2.75e-07	2.55e-05
+macromolecule metabolic process (GO:0043170)	6639	381	2.98e+02	+	1.28e+00	6.72e-07	6.10e-05
+transmembrane transport (GO:0055085)	1369	104	6.14e+01	+	1.69e+00	7.97e-07	7.10e-05
+organic acid biosynthetic process (GO:0016053)	425	45	1.91e+01	+	2.36e+00	8.06e-07	7.05e-05
+organophosphate metabolic process (GO:0019637)	614	57	2.75e+01	+	2.07e+00	1.16e-06	9.95e-05
+cellular lipid metabolic process (GO:0044255)	676	61	3.03e+01	+	2.01e+00	1.33e-06	1.12e-04
+carbohydrate biosynthetic process (GO:0016051)	277	33	1.24e+01	+	2.66e+00	1.80e-06	1.49e-04
+response to light stimulus (GO:0009416)	214	28	9.59e+00	+	2.92e+00	2.12e-06	1.73e-04
+chloroplast organization (GO:0009658)	130	21	5.83e+00	+	3.60e+00	2.14e-06	1.72e-04
+photosynthetic electron transport chain (GO:0009767)	35	11	1.57e+00	+	7.01e+00	2.93e-06	2.31e-04
+photosynthetic electron transport in photosystem I (GO:0009773)	15	8	6.72e-01	+	1.19e+01	3.11e-06	2.41e-04
+response to radiation (GO:0009314)	223	28	1.00e+01	+	2.80e+00	4.32e-06	3.30e-04
+heme biosynthetic process (GO:0006783)	17	8	7.62e-01	+	1.05e+01	6.36e-06	4.78e-04
+response to abiotic stimulus (GO:0009628)	527	49	2.36e+01	+	2.07e+00	6.38e-06	4.72e-04
+phosphorus metabolic process (GO:0006793)	2599	167	1.16e+02	+	1.43e+00	8.02e-06	5.84e-04
+regulation of photosynthesis (GO:0010109)	26	9	1.17e+00	+	7.72e+00	1.24e-05	8.89e-04
+response to toxic substance (GO:0009636)	277	31	1.24e+01	+	2.50e+00	1.27e-05	8.95e-04
+photosystem II repair (GO:0010206)	8	6	3.59e-01	+	1.67e+01	1.38e-05	9.62e-04
+chloroplast rRNA processing (GO:1901259)	20	8	8.96e-01	+	8.92e+00	1.63e-05	1.12e-03
+glycogen metabolic process (GO:0005977)	20	8	8.96e-01	+	8.92e+00	1.63e-05	1.10e-03
+energy reserve metabolic process (GO:0006112)	20	8	8.96e-01	+	8.92e+00	1.63e-05	1.09e-03
+heme metabolic process (GO:0042168)	20	8	8.96e-01	+	8.92e+00	1.63e-05	1.07e-03
+alpha-amino acid biosynthetic process (GO:1901607)	164	22	7.35e+00	+	2.99e+00	1.78e-05	1.15e-03
+glycine metabolic process (GO:0006544)	14	7	6.28e-01	+	1.12e+01	1.81e-05	1.16e-03
+detoxification (GO:0098754)	269	30	1.21e+01	+	2.49e+00	1.85e-05	1.17e-03
+cellular macromolecule metabolic process (GO:0044260)	5163	296	2.31e+02	+	1.28e+00	1.90e-05	1.19e-03
+phosphate-containing compound metabolic process (GO:0006796)	2563	163	1.15e+02	+	1.42e+00	2.10e-05	1.30e-03
+lipid biosynthetic process (GO:0008610)	549	49	2.46e+01	+	1.99e+00	2.38e-05	1.45e-03
+protein repair (GO:0030091)	15	7	6.72e-01	+	1.04e+01	2.56e-05	1.54e-03
+protoporphyrinogen IX biosynthetic process (GO:0006782)	10	6	4.48e-01	+	1.34e+01	3.42e-05	2.03e-03
+protoporphyrinogen IX metabolic process (GO:0046501)	10	6	4.48e-01	+	1.34e+01	3.42e-05	2.00e-03
+photosynthesis, light harvesting (GO:0009765)	23	8	1.03e+00	+	7.76e+00	3.68e-05	2.13e-03
+establishment of localization (GO:0051234)	2510	158	1.13e+02	+	1.40e+00	4.19e-05	2.40e-03
+monosaccharide biosynthetic process (GO:0046364)	40	10	1.79e+00	+	5.58e+00	4.40e-05	2.49e-03
+transport (GO:0006810)	2477	156	1.11e+02	+	1.41e+00	4.64e-05	2.60e-03
+vitamin biosynthetic process (GO:0009110)	71	13	3.18e+00	+	4.08e+00	5.84e-05	3.23e-03
+starch biosynthetic process (GO:0019252)	33	9	1.48e+00	+	6.08e+00	5.97e-05	3.26e-03
+photorespiration (GO:0009853)	18	7	8.07e-01	+	8.68e+00	6.43e-05	3.47e-03
+vitamin metabolic process (GO:0006766)	83	14	3.72e+00	+	3.76e+00	6.77e-05	3.62e-03
+cellular metabolic compound salvage (GO:0043094)	52	11	2.33e+00	+	4.72e+00	6.93e-05	3.66e-03
+localization (GO:0051179)	2616	162	1.17e+02	+	1.38e+00	7.20e-05	3.76e-03
+regulation of photosynthesis, light reaction (GO:0042548)	12	6	5.38e-01	+	1.12e+01	7.35e-05	3.80e-03
+serine family amino acid catabolic process (GO:0009071)	12	6	5.38e-01	+	1.12e+01	7.35e-05	3.76e-03
+response to chemical (GO:0042221)	1139	82	5.11e+01	+	1.61e+00	7.51e-05	3.80e-03
+glycine catabolic process (GO:0006546)	7	5	3.14e-01	+	1.59e+01	8.89e-05	4.45e-03
+photosystem II assembly (GO:0010207)	7	5	3.14e-01	+	1.59e+01	8.89e-05	4.41e-03
+glycine decarboxylation via glycine cleavage system (GO:0019464)	7	5	3.14e-01	+	1.59e+01	8.89e-05	4.36e-03
+nucleic acid metabolic process (GO:0090304)	1869	122	8.38e+01	+	1.46e+00	9.00e-05	4.37e-03
+regulation of generation of precursor metabolites and energy (GO:0043467)	13	6	5.83e-01	+	1.03e+01	1.04e-04	4.98e-03
+protein peptidyl-prolyl isomerization (GO:0000413)	65	12	2.91e+00	+	4.12e+00	1.04e-04	4.94e-03
+cellular response to toxic substance (GO:0097237)	227	25	1.02e+01	+	2.46e+00	1.12e-04	5.28e-03
+cellular detoxification (GO:1990748)	227	25	1.02e+01	+	2.46e+00	1.12e-04	5.23e-03
+cell redox homeostasis (GO:0045454)	28	8	1.26e+00	+	6.37e+00	1.17e-04	5.40e-03
+serine family amino acid biosynthetic process (GO:0009070)	46	10	2.06e+00	+	4.85e+00	1.21e-04	5.53e-03
+cellular amino acid catabolic process (GO:0009063)	68	12	3.05e+00	+	3.94e+00	1.51e-04	6.86e-03
+cellular amino acid biosynthetic process (GO:0008652)	203	23	9.10e+00	+	2.53e+00	1.72e-04	7.71e-03
+starch metabolic process (GO:0005982)	49	10	2.20e+00	+	4.55e+00	1.90e-04	8.45e-03
+thylakoid membrane organization (GO:0010027)	24	7	1.08e+00	+	6.51e+00	2.81e-04	1.24e-02
+carbon fixation (GO:0015977)	24	7	1.08e+00	+	6.51e+00	2.81e-04	1.23e-02
+plastid membrane organization (GO:0009668)	24	7	1.08e+00	+	6.51e+00	2.81e-04	1.22e-02
+embryo development (GO:0009790)	85	13	3.81e+00	+	3.41e+00	2.88e-04	1.24e-02
+cellular aldehyde metabolic process (GO:0006081)	52	10	2.33e+00	+	4.29e+00	2.89e-04	1.23e-02
+RNA metabolic process (GO:0016070)	1422	95	6.37e+01	+	1.49e+00	2.90e-04	1.22e-02
+cellular oxidant detoxification (GO:0098869)	215	23	9.64e+00	+	2.39e+00	2.92e-04	1.22e-02
+RNA processing (GO:0006396)	789	59	3.54e+01	+	1.67e+00	3.03e-04	1.25e-02
+tRNA aminoacylation for protein translation (GO:0006418)	63	11	2.82e+00	+	3.90e+00	3.06e-04	1.26e-02
+cellular polysaccharide metabolic process (GO:0044264)	259	26	1.16e+01	+	2.24e+00	3.22e-04	1.31e-02
+folic acid-containing compound metabolic process (GO:0006760)	25	7	1.12e+00	+	6.25e+00	3.46e-04	1.40e-02
+carbohydrate derivative metabolic process (GO:1901135)	623	49	2.79e+01	+	1.75e+00	3.47e-04	1.39e-02
+cellular carbohydrate metabolic process (GO:0044262)	411	36	1.84e+01	+	1.95e+00	3.57e-04	1.42e-02
+NAD(P)H dehydrogenase complex assembly (GO:0010275)	5	4	2.24e-01	+	1.78e+01	3.58e-04	1.41e-02
+carbohydrate metabolic process (GO:0005975)	1036	73	4.64e+01	+	1.57e+00	3.91e-04	1.53e-02
+cellular carbohydrate biosynthetic process (GO:0034637)	206	22	9.23e+00	+	2.38e+00	4.07e-04	1.58e-02
+tRNA metabolic process (GO:0006399)	207	22	9.28e+00	+	2.37e+00	4.27e-04	1.64e-02
+carotenoid metabolic process (GO:0016116)	18	6	8.07e-01	+	7.44e+00	4.27e-04	1.63e-02
+tetraterpenoid metabolic process (GO:0016108)	18	6	8.07e-01	+	7.44e+00	4.27e-04	1.62e-02
+alpha-amino acid catabolic process (GO:1901606)	55	10	2.47e+00	+	4.06e+00	4.28e-04	1.61e-02
+tRNA aminoacylation (GO:0043039)	66	11	2.96e+00	+	3.72e+00	4.35e-04	1.62e-02
+amino acid activation (GO:0043038)	66	11	2.96e+00	+	3.72e+00	4.35e-04	1.61e-02
+response to temperature stimulus (GO:0009266)	192	21	8.61e+00	+	2.44e+00	4.51e-04	1.66e-02
+cellular response to chemical stimulus (GO:0070887)	727	55	3.26e+01	+	1.69e+00	4.66e-04	1.70e-02
+organophosphate biosynthetic process (GO:0090407)	374	33	1.68e+01	+	1.97e+00	4.99e-04	1.80e-02
+pteridine-containing compound metabolic process (GO:0042558)	27	7	1.21e+00	+	5.78e+00	5.13e-04	1.84e-02
+peptidyl-proline modification (GO:0018208)	79	12	3.54e+00	+	3.39e+00	5.14e-04	1.83e-02
+embryo development ending in seed dormancy (GO:0009793)	79	12	3.54e+00	+	3.39e+00	5.14e-04	1.82e-02
+monocarboxylic acid metabolic process (GO:0032787)	376	33	1.69e+01	+	1.96e+00	5.29e-04	1.86e-02
+ncRNA metabolic process (GO:0034660)	468	39	2.10e+01	+	1.86e+00	5.43e-04	1.89e-02
+chloroplast RNA processing (GO:0031425)	12	5	5.38e-01	+	9.30e+00	5.80e-04	2.01e-02
+nucleobase-containing small molecule metabolic process (GO:0055086)	388	34	1.74e+01	+	1.95e+00	6.03e-04	2.07e-02
+purine-containing compound metabolic process (GO:0072521)	241	24	1.08e+01	+	2.22e+00	6.22e-04	2.12e-02
+small molecule catabolic process (GO:0044282)	184	20	8.25e+00	+	2.42e+00	6.63e-04	2.24e-02
+cellular ketone metabolic process (GO:0042180)	48	9	2.15e+00	+	4.18e+00	6.76e-04	2.27e-02
+water-soluble vitamin biosynthetic process (GO:0042364)	60	10	2.69e+00	+	3.72e+00	7.82e-04	2.61e-02
+protein metabolic process (GO:0019538)	4554	252	2.04e+02	+	1.23e+00	8.00e-04	2.65e-02
+water-soluble vitamin metabolic process (GO:0006767)	72	11	3.23e+00	+	3.41e+00	8.31e-04	2.74e-02
+Group II intron splicing (GO:0000373)	21	6	9.41e-01	+	6.37e+00	8.42e-04	2.75e-02
+plastid translation (GO:0032544)	7	4	3.14e-01	+	1.27e+01	8.74e-04	2.84e-02
+aspartate family amino acid metabolic process (GO:0009066)	61	10	2.73e+00	+	3.66e+00	8.76e-04	2.83e-02
+sulfur amino acid biosynthetic process (GO:0000097)	51	9	2.29e+00	+	3.94e+00	9.90e-04	3.17e-02
+glucose metabolic process (GO:0006006)	51	9	2.29e+00	+	3.94e+00	9.90e-04	3.15e-02
+response to UV (GO:0009411)	22	6	9.86e-01	+	6.08e+00	1.03e-03	3.27e-02
+sulfur compound biosynthetic process (GO:0044272)	112	14	5.02e+00	+	2.79e+00	1.05e-03	3.32e-02
+polysaccharide biosynthetic process (GO:0000271)	178	19	7.98e+00	+	2.38e+00	1.06e-03	3.31e-02
+cellular polysaccharide biosynthetic process (GO:0033692)	160	18	7.17e+00	+	2.51e+00	1.09e-03	3.39e-02
+cellular glucan metabolic process (GO:0006073)	195	20	8.74e+00	+	2.29e+00	1.11e-03	3.43e-02
+aspartate family amino acid biosynthetic process (GO:0009067)	52	9	2.33e+00	+	3.86e+00	1.12e-03	3.42e-02
+cellular protein metabolic process (GO:0044267)	4052	226	1.82e+02	+	1.24e+00	1.14e-03	3.46e-02
+dephosphorylation (GO:0016311)	372	32	1.67e+01	+	1.92e+00	1.14e-03	3.45e-02
+melatonin metabolic process (GO:0030186)	8	4	3.59e-01	+	1.12e+01	1.27e-03	3.81e-02
+DNA-templated transcription, termination (GO:0006353)	43	8	1.93e+00	+	4.15e+00	1.39e-03	4.15e-02
+ketone biosynthetic process (GO:0042181)	33	7	1.48e+00	+	4.73e+00	1.42e-03	4.22e-02
+quinone biosynthetic process (GO:1901663)	33	7	1.48e+00	+	4.73e+00	1.42e-03	4.19e-02
+quinone metabolic process (GO:1901661)	33	7	1.48e+00	+	4.73e+00	1.42e-03	4.17e-02
+glucan biosynthetic process (GO:0009250)	116	14	5.20e+00	+	2.69e+00	1.43e-03	4.16e-02
+ribonucleoprotein complex subunit organization (GO:0071826)	163	0	7.31e+00	-	0	1.45e-03	4.21e-02
+gluconeogenesis (GO:0006094)	24	6	1.08e+00	+	5.58e+00	1.51e-03	4.36e-02
+hexose biosynthetic process (GO:0019319)	24	6	1.08e+00	+	5.58e+00	1.51e-03	4.33e-02
+monocarboxylic acid biosynthetic process (GO:0072330)	170	18	7.62e+00	+	2.36e+00	1.56e-03	4.43e-02
+sulfur amino acid metabolic process (GO:0000096)	55	9	2.47e+00	+	3.65e+00	1.58e-03	4.48e-02
+developmental process (GO:0032502)	849	59	3.81e+01	+	1.55e+00	1.62e-03	4.57e-02
+purine-containing compound catabolic process (GO:0072523)	16	5	7.17e-01	+	6.97e+00	1.65e-03	4.62e-02
+cellular response to chemical stress (GO:0062197)	56	9	2.51e+00	+	3.59e+00	1.77e-03	4.91e-02
+xanthophyll metabolic process (GO:0016122)	9	4	4.03e-01	+	9.92e+00	1.77e-03	4.89e-02
+photosynthetic electron transport in photosystem II (GO:0009772)	9	4	4.03e-01	+	9.92e+00	1.77e-03	4.86e-02
+production of siRNA involved in RNA interference (GO:0030422)	25	6	1.12e+00	+	5.35e+00	1.81e-03	4.94e-02

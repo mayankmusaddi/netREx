@@ -1,0 +1,65 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+UNCLASSIFIED 	26690	237	3.05e+02	-	7.77e-01	9.11e-10	4.38e-06
+biological_process (GO:0008150)	16969	262	1.94e+02	+	1.35e+00	9.11e-10	2.19e-06
+biological regulation (GO:0065007)	4754	95	5.43e+01	+	1.75e+00	1.07e-07	1.72e-04
+regulation of biological process (GO:0050789)	4183	86	4.78e+01	+	1.80e+00	1.58e-07	1.90e-04
+regulation of cellular process (GO:0050794)	3799	80	4.34e+01	+	1.84e+00	1.65e-07	1.58e-04
+regulation of RNA metabolic process (GO:0051252)	2130	51	2.43e+01	+	2.09e+00	1.13e-06	9.03e-04
+response to stimulus (GO:0050896)	3478	72	3.98e+01	+	1.81e+00	1.26e-06	8.67e-04
+regulation of cellular biosynthetic process (GO:0031326)	2291	53	2.62e+01	+	2.02e+00	1.73e-06	1.04e-03
+regulation of RNA biosynthetic process (GO:2001141)	2028	49	2.32e+01	+	2.11e+00	1.78e-06	9.51e-04
+regulation of transcription, DNA-templated (GO:0006355)	2028	49	2.32e+01	+	2.11e+00	1.78e-06	8.56e-04
+regulation of nucleic acid-templated transcription (GO:1903506)	2028	49	2.32e+01	+	2.11e+00	1.78e-06	7.78e-04
+regulation of nucleobase-containing compound metabolic process (GO:0019219)	2166	51	2.48e+01	+	2.06e+00	2.27e-06	9.09e-04
+regulation of cellular metabolic process (GO:0031323)	2688	59	3.07e+01	+	1.92e+00	2.36e-06	8.74e-04
+regulation of biosynthetic process (GO:0009889)	2298	53	2.63e+01	+	2.02e+00	2.69e-06	9.23e-04
+regulation of cellular macromolecule biosynthetic process (GO:2000112)	2268	52	2.59e+01	+	2.01e+00	3.84e-06	1.23e-03
+regulation of macromolecule biosynthetic process (GO:0010556)	2272	52	2.60e+01	+	2.00e+00	3.92e-06	1.18e-03
+regulation of primary metabolic process (GO:0080090)	2647	57	3.03e+01	+	1.88e+00	7.65e-06	2.16e-03
+regulation of nitrogen compound metabolic process (GO:0051171)	2620	56	2.99e+01	+	1.87e+00	1.09e-05	2.91e-03
+cellular response to stimulus (GO:0051716)	1835	43	2.10e+01	+	2.05e+00	1.56e-05	3.96e-03
+signal transduction (GO:0007165)	1050	29	1.20e+01	+	2.42e+00	2.37e-05	5.71e-03
+response to abscisic acid (GO:0009737)	159	10	1.82e+00	+	5.50e+00	2.50e-05	5.73e-03
+signaling (GO:0023052)	1065	29	1.22e+01	+	2.38e+00	2.87e-05	6.26e-03
+regulation of metabolic process (GO:0019222)	2912	59	3.33e+01	+	1.77e+00	2.93e-05	6.13e-03
+response to alcohol (GO:0097305)	163	10	1.86e+00	+	5.37e+00	3.06e-05	6.13e-03
+alpha-amino acid biosynthetic process (GO:1901607)	164	10	1.87e+00	+	5.33e+00	3.21e-05	6.18e-03
+abscisic acid-activated signaling pathway (GO:0009738)	75	7	8.57e-01	+	8.17e+00	4.13e-05	7.64e-03
+dephosphorylation (GO:0016311)	372	15	4.25e+00	+	3.53e+00	4.21e-05	7.49e-03
+carbohydrate metabolic process (GO:0005975)	1036	28	1.18e+01	+	2.36e+00	4.43e-05	7.60e-03
+cellular response to abscisic acid stimulus (GO:0071215)	76	7	8.69e-01	+	8.06e+00	4.47e-05	7.41e-03
+cellular response to alcohol (GO:0097306)	76	7	8.69e-01	+	8.06e+00	4.47e-05	7.16e-03
+response to lipid (GO:0033993)	250	12	2.86e+00	+	4.20e+00	5.05e-05	7.84e-03
+regulation of macromolecule metabolic process (GO:0060255)	2827	57	3.23e+01	+	1.76e+00	5.06e-05	7.60e-03
+tryptophan biosynthetic process (GO:0000162)	15	4	1.71e-01	+	2.33e+01	5.46e-05	7.95e-03
+indolalkylamine biosynthetic process (GO:0046219)	15	4	1.71e-01	+	2.33e+01	5.46e-05	7.72e-03
+regulation of gene expression (GO:0010468)	2466	51	2.82e+01	+	1.81e+00	5.85e-05	8.04e-03
+response to abiotic stimulus (GO:0009628)	527	18	6.02e+00	+	2.99e+00	6.05e-05	8.08e-03
+cellular response to heat (GO:0034605)	33	5	3.77e-01	+	1.33e+01	6.66e-05	8.66e-03
+amine biosynthetic process (GO:0009309)	36	5	4.11e-01	+	1.22e+01	9.68e-05	1.22e-02
+cellular biogenic amine biosynthetic process (GO:0042401)	36	5	4.11e-01	+	1.22e+01	9.68e-05	1.19e-02
+response to temperature stimulus (GO:0009266)	192	10	2.19e+00	+	4.56e+00	1.12e-04	1.35e-02
+positive regulation of abscisic acid-activated signaling pathway (GO:0009789)	6	3	6.86e-02	+	4.37e+01	1.15e-04	1.34e-02
+cellular process (GO:0009987)	12532	183	1.43e+02	+	1.28e+00	1.26e-04	1.44e-02
+cellular lipid metabolic process (GO:0044255)	676	20	7.73e+00	+	2.59e+00	1.59e-04	1.78e-02
+small molecule biosynthetic process (GO:0044283)	571	18	6.53e+00	+	2.76e+00	1.59e-04	1.74e-02
+gene expression (GO:0010467)	1710	5	1.95e+01	-	2.56e-01	1.61e-04	1.72e-02
+cellular amino acid biosynthetic process (GO:0008652)	203	10	2.32e+00	+	4.31e+00	1.73e-04	1.81e-02
+alpha-amino acid metabolic process (GO:1901605)	247	11	2.82e+00	+	3.90e+00	1.93e-04	1.97e-02
+seed germination (GO:0009845)	22	4	2.51e-01	+	1.59e+01	1.98e-04	1.98e-02
+response to hormone (GO:0009725)	589	18	6.73e+00	+	2.67e+00	2.29e-04	2.25e-02
+organic hydroxy compound metabolic process (GO:1901615)	256	11	2.93e+00	+	3.76e+00	2.59e-04	2.49e-02
+response to endogenous stimulus (GO:0009719)	596	18	6.81e+00	+	2.64e+00	2.63e-04	2.48e-02
+indolalkylamine metabolic process (GO:0006586)	25	4	2.86e-01	+	1.40e+01	3.06e-04	2.83e-02
+tryptophan metabolic process (GO:0006568)	25	4	2.86e-01	+	1.40e+01	3.06e-04	2.78e-02
+carboxylic acid biosynthetic process (GO:0046394)	402	14	4.59e+00	+	3.05e+00	3.22e-04	2.87e-02
+alcohol metabolic process (GO:0006066)	107	7	1.22e+00	+	5.72e+00	3.28e-04	2.87e-02
+cell communication (GO:0007154)	1228	29	1.40e+01	+	2.07e+00	3.37e-04	2.90e-02
+response to oxygen-containing compound (GO:1901700)	404	14	4.62e+00	+	3.03e+00	3.38e-04	2.85e-02
+indole-containing compound biosynthetic process (GO:0042435)	26	4	2.97e-01	+	1.35e+01	3.50e-04	2.90e-02
+seedling development (GO:0090351)	27	4	3.09e-01	+	1.30e+01	3.98e-04	3.24e-02
+lipid metabolic process (GO:0006629)	951	24	1.09e+01	+	2.21e+00	5.35e-04	4.29e-02
+cellular biogenic amine metabolic process (GO:0006576)	54	5	6.17e-01	+	8.10e+00	5.47e-04	4.31e-02
+cellular amine metabolic process (GO:0044106)	54	5	6.17e-01	+	8.10e+00	5.47e-04	4.24e-02
+organic acid biosynthetic process (GO:0016053)	425	14	4.86e+00	+	2.88e+00	5.48e-04	4.18e-02
+response to chemical (GO:0042221)	1139	27	1.30e+01	+	2.07e+00	5.76e-04	4.33e-02

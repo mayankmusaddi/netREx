@@ -1,0 +1,13 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+UNCLASSIFIED 	26690	146	2.01e+02	-	7.28e-01	1.73e-09	8.31e-06
+biological_process (GO:0008150)	16969	182	1.27e+02	+	1.43e+00	1.73e-09	4.15e-06
+regulation of cellular process (GO:0050794)	3799	56	2.85e+01	+	1.96e+00	1.69e-06	2.71e-03
+biological regulation (GO:0065007)	4754	64	3.57e+01	+	1.79e+00	4.68e-06	5.63e-03
+lipid metabolic process (GO:0006629)	951	22	7.14e+00	+	3.08e+00	5.04e-06	4.85e-03
+cellular lipid metabolic process (GO:0044255)	676	18	5.08e+00	+	3.54e+00	5.96e-06	4.78e-03
+regulation of biological process (GO:0050789)	4183	57	3.14e+01	+	1.81e+00	1.24e-05	8.53e-03
+cellular process (GO:0009987)	12532	130	9.42e+01	+	1.38e+00	2.25e-05	1.35e-02
+dephosphorylation (GO:0016311)	372	12	2.79e+00	+	4.29e+00	3.70e-05	1.98e-02
+signal transduction (GO:0007165)	1050	21	7.89e+00	+	2.66e+00	6.56e-05	3.15e-02
+signaling (GO:0023052)	1065	21	8.00e+00	+	2.62e+00	7.97e-05	3.48e-02
+isoprenoid metabolic process (GO:0006720)	185	8	1.39e+00	+	5.76e+00	1.10e-04	4.40e-02

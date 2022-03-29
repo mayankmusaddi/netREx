@@ -1,0 +1,33 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+defense response (GO:0006952)	1050	129	3.46e+01	+	3.73e+00	2.02e-34	9.71e-31
+response to stress (GO:0006950)	2116	159	6.96e+01	+	2.28e+00	1.66e-20	3.98e-17
+response to stimulus (GO:0050896)	3478	221	1.14e+02	+	1.93e+00	7.82e-20	1.25e-16
+biological_process (GO:0008150)	16969	732	5.59e+02	+	1.31e+00	8.96e-20	1.08e-16
+UNCLASSIFIED 	26690	705	8.78e+02	-	8.03e-01	8.96e-20	8.62e-17
+phosphorylation (GO:0016310)	1822	126	6.00e+01	+	2.10e+00	6.11e-14	4.90e-11
+protein phosphorylation (GO:0006468)	1507	110	4.96e+01	+	2.22e+00	1.11e-13	7.63e-11
+phosphate-containing compound metabolic process (GO:0006796)	2563	150	8.44e+01	+	1.78e+00	5.91e-11	3.55e-08
+phosphorus metabolic process (GO:0006793)	2599	151	8.55e+01	+	1.77e+00	7.89e-11	4.21e-08
+protein modification process (GO:0036211)	3158	171	1.04e+02	+	1.65e+00	5.93e-10	2.85e-07
+cellular protein modification process (GO:0006464)	3158	171	1.04e+02	+	1.65e+00	5.93e-10	2.59e-07
+macromolecule modification (GO:0043412)	3466	176	1.14e+02	+	1.54e+00	3.05e-08	1.22e-05
+protein metabolic process (GO:0019538)	4554	206	1.50e+02	+	1.37e+00	5.42e-06	2.00e-03
+organonitrogen compound metabolic process (GO:1901564)	5535	243	1.82e+02	+	1.33e+00	5.55e-06	1.91e-03
+metabolic process (GO:0008152)	10010	403	3.29e+02	+	1.22e+00	9.53e-06	3.06e-03
+cellular protein metabolic process (GO:0044267)	4052	184	1.33e+02	+	1.38e+00	1.51e-05	4.53e-03
+cellular process (GO:0009987)	12532	489	4.12e+02	+	1.19e+00	1.54e-05	4.37e-03
+organic substance metabolic process (GO:0071704)	9130	369	3.01e+02	+	1.23e+00	2.17e-05	5.79e-03
+L-arabinose metabolic process (GO:0046373)	8	5	2.63e-01	+	1.90e+01	3.39e-05	8.58e-03
+arabinose metabolic process (GO:0019566)	8	5	2.63e-01	+	1.90e+01	3.39e-05	8.15e-03
+cellular response to light stimulus (GO:0071482)	34	8	1.12e+00	+	7.15e+00	4.69e-05	1.07e-02
+protein autophosphorylation (GO:0046777)	113	14	3.72e+00	+	3.76e+00	5.67e-05	1.24e-02
+translation (GO:0006412)	586	4	1.93e+01	-	2.07e-01	7.50e-05	1.57e-02
+protein-chromophore linkage (GO:0018298)	38	8	1.25e+00	+	6.40e+00	9.26e-05	1.85e-02
+cellular response to radiation (GO:0071478)	39	8	1.28e+00	+	6.23e+00	1.08e-04	2.09e-02
+recognition of pollen (GO:0048544)	110	13	3.62e+00	+	3.59e+00	1.58e-04	2.93e-02
+cell recognition (GO:0008037)	110	13	3.62e+00	+	3.59e+00	1.58e-04	2.82e-02
+nitrogen compound metabolic process (GO:0006807)	7241	294	2.38e+02	+	1.23e+00	1.58e-04	2.72e-02
+primary metabolic process (GO:0044238)	8591	342	2.83e+02	+	1.21e+00	1.63e-04	2.70e-02
+pollen-pistil interaction (GO:0009875)	113	13	3.72e+00	+	3.50e+00	2.02e-04	3.23e-02
+peptide biosynthetic process (GO:0043043)	598	5	1.97e+01	-	2.54e-01	2.39e-04	3.71e-02
+cellular macromolecule metabolic process (GO:0044260)	5163	217	1.70e+02	+	1.28e+00	2.67e-04	4.01e-02

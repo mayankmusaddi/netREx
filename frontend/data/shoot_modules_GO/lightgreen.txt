@@ -1,0 +1,21 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+protein folding (GO:0006457)	219	10	3.36e-01	+	2.98e+01	2.43e-12	1.17e-08
+response to stimulus (GO:0050896)	3478	20	5.34e+00	+	3.75e+00	1.59e-07	3.82e-04
+cellular response to stress (GO:0033554)	611	9	9.38e-01	+	9.60e+00	4.50e-07	7.21e-04
+response to stress (GO:0006950)	2116	14	3.25e+00	+	4.31e+00	3.48e-06	4.18e-03
+biological_process (GO:0008150)	16969	45	2.60e+01	+	1.73e+00	3.64e-06	3.51e-03
+UNCLASSIFIED 	26690	22	4.10e+01	-	5.37e-01	3.64e-06	2.92e-03
+cellular response to stimulus (GO:0051716)	1835	13	2.82e+00	+	4.62e+00	3.95e-06	2.72e-03
+chaperone-mediated protein folding (GO:0061077)	77	4	1.18e-01	+	3.39e+01	7.66e-06	4.61e-03
+cellular process (GO:0009987)	12532	37	1.92e+01	+	1.92e+00	8.30e-06	4.44e-03
+positive regulation of hydrolase activity (GO:0051345)	29	3	4.45e-02	+	6.74e+01	1.65e-05	7.94e-03
+positive regulation of ATPase activity (GO:0032781)	3	2	4.60e-03	+	4.34e+02	2.31e-05	1.01e-02
+regulation of ATPase activity (GO:0043462)	4	2	6.14e-03	+	3.26e+02	3.46e-05	1.38e-02
+biological regulation (GO:0065007)	4754	19	7.30e+00	+	2.60e+00	6.86e-05	2.54e-02
+chaperone cofactor-dependent protein refolding (GO:0051085)	52	3	7.98e-02	+	3.76e+01	8.52e-05	2.93e-02
+'de novo' posttranslational protein folding (GO:0051084)	52	3	7.98e-02	+	3.76e+01	8.52e-05	2.73e-02
+ERAD pathway (GO:0036503)	55	3	8.44e-02	+	3.55e+01	9.99e-05	3.00e-02
+cellular response to topologically incorrect protein (GO:0035967)	55	3	8.44e-02	+	3.55e+01	9.99e-05	2.83e-02
+'de novo' protein folding (GO:0006458)	57	3	8.75e-02	+	3.43e+01	1.11e-04	2.95e-02
+response to topologically incorrect protein (GO:0035966)	57	3	8.75e-02	+	3.43e+01	1.11e-04	2.80e-02
+response to organonitrogen compound (GO:0010243)	70	3	1.07e-01	+	2.79e+01	1.98e-04	4.76e-02

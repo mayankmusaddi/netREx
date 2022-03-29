@@ -1,0 +1,2 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+defense response (GO:0006952)	1050	33	8.73e+00	+	3.78e+00	1.67e-10	8.01e-07

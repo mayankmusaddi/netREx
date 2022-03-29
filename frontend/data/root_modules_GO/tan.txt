@@ -1,0 +1,4 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+sulfur compound metabolic process (GO:0006790)	298	13	2.40e+00	+	5.41e+00	1.65e-06	7.92e-03
+biological_process (GO:0008150)	16969	181	1.37e+02	+	1.32e+00	2.14e-06	5.15e-03
+UNCLASSIFIED 	26690	171	2.15e+02	-	7.95e-01	2.14e-06	3.43e-03

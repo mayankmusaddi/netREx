@@ -1,0 +1,51 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+Golgi vesicle transport (GO:0048193)	182	13	5.92e-01	+	2.20e+01	9.49e-14	4.56e-10
+protein folding (GO:0006457)	219	13	7.12e-01	+	1.83e+01	8.77e-13	2.11e-09
+nitrogen compound transport (GO:0071705)	1005	20	3.27e+00	+	6.12e+00	1.54e-10	2.46e-07
+cellular protein localization (GO:0034613)	564	15	1.83e+00	+	8.18e+00	8.05e-10	9.68e-07
+vesicle-mediated transport (GO:0016192)	479	14	1.56e+00	+	8.99e+00	9.41e-10	9.05e-07
+cellular macromolecule localization (GO:0070727)	574	15	1.87e+00	+	8.03e+00	1.02e-09	8.14e-07
+intra-Golgi vesicle-mediated transport (GO:0006891)	28	6	9.11e-02	+	6.59e+01	1.30e-09	8.95e-07
+cellular localization (GO:0051641)	834	17	2.71e+00	+	6.27e+00	2.86e-09	1.72e-06
+organic substance transport (GO:0071702)	1214	20	3.95e+00	+	5.07e+00	3.69e-09	1.97e-06
+protein localization (GO:0008104)	771	16	2.51e+00	+	6.38e+00	6.75e-09	3.24e-06
+intracellular transport (GO:0046907)	679	15	2.21e+00	+	6.79e+00	9.17e-09	4.01e-06
+protein transport (GO:0015031)	696	15	2.26e+00	+	6.63e+00	1.26e-08	5.06e-06
+establishment of protein localization (GO:0045184)	702	15	2.28e+00	+	6.57e+00	1.41e-08	5.22e-06
+establishment of localization in cell (GO:0051649)	712	15	2.32e+00	+	6.48e+00	1.69e-08	5.82e-06
+endoplasmic reticulum to Golgi vesicle-mediated transport (GO:0006888)	89	7	2.89e-01	+	2.42e+01	3.04e-08	9.74e-06
+intracellular protein transport (GO:0006886)	487	12	1.58e+00	+	7.58e+00	9.57e-08	2.88e-05
+macromolecule localization (GO:0033036)	959	16	3.12e+00	+	5.13e+00	1.28e-07	3.62e-05
+protein N-linked glycosylation (GO:0006487)	38	5	1.24e-01	+	4.05e+01	2.91e-07	7.77e-05
+glycosylation (GO:0070085)	211	8	6.86e-01	+	1.17e+01	6.49e-07	1.64e-04
+protein glycosylation (GO:0006486)	150	7	4.88e-01	+	1.43e+01	8.81e-07	2.12e-04
+macromolecule glycosylation (GO:0043413)	150	7	4.88e-01	+	1.43e+01	8.81e-07	2.02e-04
+glycoprotein biosynthetic process (GO:0009101)	151	7	4.91e-01	+	1.43e+01	9.19e-07	2.01e-04
+glycoprotein metabolic process (GO:0009100)	162	7	5.27e-01	+	1.33e+01	1.44e-06	3.02e-04
+cellular process (GO:0009987)	12532	68	4.08e+01	+	1.67e+00	1.55e-06	3.12e-04
+localization (GO:0051179)	2616	24	8.51e+00	+	2.82e+00	4.34e-06	8.34e-04
+transport (GO:0006810)	2477	23	8.06e+00	+	2.85e+00	5.82e-06	1.08e-03
+establishment of localization (GO:0051234)	2510	23	8.16e+00	+	2.82e+00	7.20e-06	1.28e-03
+response to endoplasmic reticulum stress (GO:0034976)	82	5	2.67e-01	+	1.87e+01	9.96e-06	1.71e-03
+ubiquitin-dependent ERAD pathway (GO:0030433)	45	4	1.46e-01	+	2.73e+01	2.00e-05	3.32e-03
+vacuole organization (GO:0007033)	49	4	1.59e-01	+	2.51e+01	2.74e-05	4.39e-03
+UNCLASSIFIED 	26690	62	8.68e+01	-	7.14e-01	2.99e-05	4.64e-03
+biological_process (GO:0008150)	16969	80	5.52e+01	+	1.45e+00	2.99e-05	4.50e-03
+ERAD pathway (GO:0036503)	55	4	1.79e-01	+	2.24e+01	4.20e-05	6.11e-03
+peptidyl-amino acid modification (GO:0018193)	404	8	1.31e+00	+	6.09e+00	6.41e-05	9.07e-03
+protein peptidyl-prolyl isomerization (GO:0000413)	65	4	2.11e-01	+	1.89e+01	7.77e-05	1.07e-02
+response to organonitrogen compound (GO:0010243)	70	4	2.28e-01	+	1.76e+01	1.02e-04	1.36e-02
+lytic vacuole organization (GO:0080171)	3	2	9.76e-03	+	2.05e+02	1.04e-04	1.35e-02
+chaperone-mediated protein folding (GO:0061077)	77	4	2.50e-01	+	1.60e+01	1.45e-04	1.84e-02
+peptidyl-proline modification (GO:0018208)	79	4	2.57e-01	+	1.56e+01	1.59e-04	1.97e-02
+cellular response to stress (GO:0033554)	611	9	1.99e+00	+	4.53e+00	2.03e-04	2.44e-02
+protein N-linked glycosylation via asparagine (GO:0018279)	5	2	1.63e-02	+	1.23e+02	2.17e-04	2.54e-02
+peptidyl-asparagine modification (GO:0018196)	5	2	1.63e-02	+	1.23e+02	2.17e-04	2.48e-02
+cellular response to unfolded protein (GO:0034620)	35	3	1.14e-01	+	2.64e+01	2.59e-04	2.90e-02
+response to nitrogen compound (GO:1901698)	92	4	2.99e-01	+	1.34e+01	2.79e-04	3.05e-02
+protein maturation (GO:0051604)	93	4	3.02e-01	+	1.32e+01	2.90e-04	3.10e-02
+response to unfolded protein (GO:0006986)	37	3	1.20e-01	+	2.49e+01	3.02e-04	3.16e-02
+carbohydrate derivative biosynthetic process (GO:1901137)	393	7	1.28e+00	+	5.48e+00	3.48e-04	3.56e-02
+protein localization to organelle (GO:0033365)	285	6	9.27e-01	+	6.47e+00	3.93e-04	3.93e-02
+endosome organization (GO:0007032)	8	2	2.60e-02	+	7.69e+01	4.62e-04	4.53e-02
+ADP transport (GO:0015866)	8	2	2.60e-02	+	7.69e+01	4.62e-04	4.44e-02

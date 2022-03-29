@@ -1,0 +1,17 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+plastid organization (GO:0009657)	159	12	1.31e+00	+	9.13e+00	2.11e-08	1.02e-04
+ncRNA metabolic process (GO:0034660)	468	17	3.87e+00	+	4.39e+00	7.07e-07	1.70e-03
+RNA metabolic process (GO:0016070)	1422	31	1.18e+01	+	2.64e+00	1.54e-06	2.47e-03
+chloroplast organization (GO:0009658)	130	9	1.07e+00	+	8.37e+00	2.44e-06	2.93e-03
+nucleic acid metabolic process (GO:0090304)	1869	35	1.55e+01	+	2.26e+00	1.06e-05	1.02e-02
+tRNA metabolic process (GO:0006399)	207	10	1.71e+00	+	5.84e+00	1.40e-05	1.12e-02
+gene expression (GO:0010467)	1710	32	1.41e+01	+	2.26e+00	2.87e-05	1.97e-02
+heterocycle metabolic process (GO:0046483)	2467	41	2.04e+01	+	2.01e+00	2.97e-05	1.78e-02
+organic cyclic compound metabolic process (GO:1901360)	2670	43	2.21e+01	+	1.95e+00	3.72e-05	1.99e-02
+photosynthesis (GO:0015979)	187	9	1.55e+00	+	5.82e+00	3.87e-05	1.86e-02
+nucleobase-containing compound metabolic process (GO:0006139)	2249	38	1.86e+01	+	2.04e+00	3.90e-05	1.71e-02
+metabolic process (GO:0008152)	10010	117	8.28e+01	+	1.41e+00	4.14e-05	1.66e-02
+cellular aromatic compound metabolic process (GO:0006725)	2592	42	2.14e+01	+	1.96e+00	4.53e-05	1.68e-02
+cellular nitrogen compound metabolic process (GO:0034641)	3077	47	2.54e+01	+	1.85e+00	7.37e-05	2.53e-02
+plastid transcription (GO:0042793)	9	3	7.44e-02	+	4.03e+01	1.14e-04	3.65e-02
+ncRNA processing (GO:0034470)	385	12	3.18e+00	+	3.77e+00	1.25e-04	3.76e-02

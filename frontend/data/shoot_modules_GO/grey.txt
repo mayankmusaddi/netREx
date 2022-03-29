@@ -1,0 +1,4 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+UNCLASSIFIED 	26690	289	3.45e+02	-	8.38e-01	2.52e-06	1.21e-02
+biological_process (GO:0008150)	16969	275	2.19e+02	+	1.25e+00	2.52e-06	6.05e-03
+phosphorylation (GO:0016310)	1822	46	2.35e+01	+	1.95e+00	2.99e-05	4.79e-02

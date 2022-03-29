@@ -1,0 +1,213 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+nucleic acid metabolic process (GO:0090304)	1869	133	2.05e+01	+	6.47e+00	3.95e-66	1.90e-62
+heterocycle metabolic process (GO:0046483)	2467	149	2.71e+01	+	5.49e+00	7.04e-66	1.69e-62
+nucleobase-containing compound metabolic process (GO:0006139)	2249	143	2.47e+01	+	5.78e+00	1.24e-65	1.98e-62
+ncRNA metabolic process (GO:0034660)	468	78	5.15e+00	+	1.52e+01	1.21e-62	1.45e-59
+organic cyclic compound metabolic process (GO:1901360)	2670	150	2.94e+01	+	5.11e+00	1.98e-62	1.90e-59
+cellular aromatic compound metabolic process (GO:0006725)	2592	147	2.85e+01	+	5.16e+00	1.52e-61	1.22e-58
+cellular nitrogen compound metabolic process (GO:0034641)	3077	158	3.38e+01	+	4.67e+00	4.62e-61	3.18e-58
+gene expression (GO:0010467)	1710	121	1.88e+01	+	6.44e+00	1.76e-59	1.06e-56
+RNA metabolic process (GO:0016070)	1422	111	1.56e+01	+	7.10e+00	2.77e-58	1.48e-55
+RNA processing (GO:0006396)	789	88	8.67e+00	+	1.01e+01	1.76e-57	8.48e-55
+ncRNA processing (GO:0034470)	385	69	4.23e+00	+	1.63e+01	3.10e-57	1.36e-54
+ribonucleoprotein complex biogenesis (GO:0022613)	443	64	4.87e+00	+	1.31e+01	7.07e-48	2.83e-45
+ribosome biogenesis (GO:0042254)	350	56	3.85e+00	+	1.46e+01	4.51e-44	1.67e-41
+rRNA processing (GO:0006364)	250	49	2.75e+00	+	1.78e+01	2.30e-42	7.90e-40
+rRNA metabolic process (GO:0016072)	261	49	2.87e+00	+	1.71e+01	1.42e-41	4.55e-39
+nitrogen compound metabolic process (GO:0006807)	7241	200	7.96e+01	+	2.51e+00	5.25e-38	1.58e-35
+cellular component organization or biogenesis (GO:0071840)	2333	103	2.56e+01	+	4.02e+00	5.01e-33	1.42e-30
+cellular component biogenesis (GO:0044085)	1079	71	1.19e+01	+	5.99e+00	2.03e-32	5.43e-30
+macromolecule metabolic process (GO:0043170)	6639	179	7.30e+01	+	2.45e+00	1.00e-31	2.54e-29
+cellular process (GO:0009987)	12532	261	1.38e+02	+	1.89e+00	2.11e-31	5.08e-29
+organic substance metabolic process (GO:0071704)	9130	212	1.00e+02	+	2.11e+00	1.03e-29	2.36e-27
+cellular metabolic process (GO:0044237)	8644	204	9.50e+01	+	2.15e+00	2.33e-29	5.10e-27
+primary metabolic process (GO:0044238)	8591	200	9.45e+01	+	2.12e+00	9.94e-28	2.08e-25
+metabolic process (GO:0008152)	10010	215	1.10e+02	+	1.95e+00	1.03e-25	2.07e-23
+UNCLASSIFIED 	26690	181	2.93e+02	-	6.17e-01	1.11e-24	2.13e-22
+biological_process (GO:0008150)	16969	299	1.87e+02	+	1.60e+00	1.11e-24	2.05e-22
+tRNA metabolic process (GO:0006399)	207	30	2.28e+00	+	1.32e+01	6.14e-23	1.09e-20
+RNA modification (GO:0009451)	291	32	3.20e+00	+	1.00e+01	4.39e-21	7.55e-19
+tRNA processing (GO:0008033)	129	20	1.42e+00	+	1.41e+01	3.13e-16	5.18e-14
+macromolecule methylation (GO:0043414)	171	21	1.88e+00	+	1.12e+01	3.81e-15	6.11e-13
+maturation of SSU-rRNA (GO:0030490)	46	13	5.06e-01	+	2.57e+01	6.50e-14	1.01e-11
+RNA methylation (GO:0001510)	76	15	8.36e-01	+	1.80e+01	7.29e-14	1.10e-11
+organelle organization (GO:0006996)	1306	48	1.44e+01	+	3.34e+00	1.07e-12	1.55e-10
+tRNA modification (GO:0006400)	94	15	1.03e+00	+	1.45e+01	1.13e-12	1.60e-10
+ribosomal small subunit biogenesis (GO:0042274)	77	14	8.47e-01	+	1.65e+01	1.33e-12	1.83e-10
+methylation (GO:0032259)	329	24	3.62e+00	+	6.64e+00	1.60e-12	2.13e-10
+ribosomal large subunit biogenesis (GO:0042273)	97	14	1.07e+00	+	1.31e+01	2.16e-11	2.80e-09
+maturation of 5.8S rRNA (GO:0000460)	43	10	4.73e-01	+	2.12e+01	2.71e-10	3.42e-08
+cellular component organization (GO:0016043)	2018	56	2.22e+01	+	2.52e+00	5.70e-10	7.02e-08
+organic substance biosynthetic process (GO:1901576)	2696	67	2.96e+01	+	2.26e+00	9.05e-10	1.09e-07
+cellular nitrogen compound biosynthetic process (GO:0044271)	1294	42	1.42e+01	+	2.95e+00	1.13e-09	1.33e-07
+protein import (GO:0017038)	111	13	1.22e+00	+	1.07e+01	1.16e-09	1.33e-07
+biosynthetic process (GO:0009058)	2832	69	3.11e+01	+	2.22e+00	1.23e-09	1.38e-07
+cellular biosynthetic process (GO:0044249)	2585	65	2.84e+01	+	2.29e+00	1.43e-09	1.57e-07
+organonitrogen compound biosynthetic process (GO:1901566)	1378	43	1.52e+01	+	2.84e+00	2.22e-09	2.37e-07
+maturation of 5.8S rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000466)	30	8	3.30e-01	+	2.43e+01	6.78e-09	7.09e-07
+ribonucleoprotein complex assembly (GO:0022618)	157	14	1.73e+00	+	8.11e+00	6.88e-09	7.04e-07
+maturation of LSU-rRNA (GO:0000470)	47	9	5.17e-01	+	1.74e+01	9.51e-09	9.53e-07
+cellular amino acid metabolic process (GO:0006520)	400	21	4.40e+00	+	4.78e+00	1.05e-08	1.03e-06
+ribonucleoprotein complex subunit organization (GO:0071826)	163	14	1.79e+00	+	7.81e+00	1.07e-08	1.03e-06
+DNA repair (GO:0006281)	327	19	3.60e+00	+	5.28e+00	1.15e-08	1.08e-06
+DNA metabolic process (GO:0006259)	444	22	4.88e+00	+	4.51e+00	1.26e-08	1.17e-06
+maturation of SSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000462)	33	8	3.63e-01	+	2.21e+01	1.29e-08	1.17e-06
+maturation of LSU-rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000463)	21	7	2.31e-01	+	3.03e+01	1.67e-08	1.49e-06
+cellular response to DNA damage stimulus (GO:0006974)	347	19	3.82e+00	+	4.98e+00	2.82e-08	2.46e-06
+establishment of protein localization to organelle (GO:0072594)	249	16	2.74e+00	+	5.84e+00	4.48e-08	3.85e-06
+cellular macromolecule metabolic process (GO:0044260)	5163	98	5.68e+01	+	1.73e+00	8.43e-08	7.12e-06
+small nucleolar ribonucleoprotein complex assembly (GO:0000491)	8	5	8.80e-02	+	5.68e+01	1.78e-07	1.48e-05
+nucleoside monophosphate metabolic process (GO:0009123)	70	9	7.70e-01	+	1.17e+01	2.07e-07	1.69e-05
+protein localization to organelle (GO:0033365)	285	16	3.13e+00	+	5.11e+00	2.55e-07	2.04e-05
+nucleoside monophosphate biosynthetic process (GO:0009124)	52	8	5.72e-01	+	1.40e+01	2.88e-07	2.27e-05
+mitochondrial RNA metabolic process (GO:0000959)	37	7	4.07e-01	+	1.72e+01	4.66e-07	3.61e-05
+RNA localization (GO:0006403)	81	9	8.91e-01	+	1.01e+01	6.40e-07	4.88e-05
+DNA conformation change (GO:0071103)	138	11	1.52e+00	+	7.25e+00	8.05e-07	6.05e-05
+nuclear transport (GO:0051169)	110	10	1.21e+00	+	8.27e+00	8.42e-07	6.23e-05
+nucleocytoplasmic transport (GO:0006913)	110	10	1.21e+00	+	8.27e+00	8.42e-07	6.13e-05
+DNA duplex unwinding (GO:0032508)	62	8	6.82e-01	+	1.17e+01	9.65e-07	6.93e-05
+DNA geometric change (GO:0032392)	62	8	6.82e-01	+	1.17e+01	9.65e-07	6.83e-05
+tRNA aminoacylation for protein translation (GO:0006418)	63	8	6.93e-01	+	1.16e+01	1.08e-06	7.51e-05
+nucleic acid phosphodiester bond hydrolysis (GO:0090305)	322	16	3.54e+00	+	4.52e+00	1.18e-06	8.12e-05
+cellular protein-containing complex assembly (GO:0034622)	410	18	4.51e+00	+	3.99e+00	1.41e-06	9.52e-05
+heterocycle biosynthetic process (GO:0018130)	691	24	7.60e+00	+	3.16e+00	1.48e-06	9.86e-05
+tRNA aminoacylation (GO:0043039)	66	8	7.26e-01	+	1.10e+01	1.48e-06	9.78e-05
+amino acid activation (GO:0043038)	66	8	7.26e-01	+	1.10e+01	1.48e-06	9.64e-05
+protein import into nucleus (GO:0006606)	45	7	4.95e-01	+	1.41e+01	1.51e-06	9.68e-05
+ribonucleoside monophosphate biosynthetic process (GO:0009156)	46	7	5.06e-01	+	1.38e+01	1.72e-06	1.09e-04
+import into nucleus (GO:0051170)	46	7	5.06e-01	+	1.38e+01	1.72e-06	1.08e-04
+protein localization to nucleus (GO:0034504)	48	7	5.28e-01	+	1.33e+01	2.23e-06	1.37e-04
+cellular macromolecule biosynthetic process (GO:0034645)	1360	36	1.50e+01	+	2.41e+00	2.26e-06	1.37e-04
+cellular response to stress (GO:0033554)	611	22	6.72e+00	+	3.28e+00	2.31e-06	1.39e-04
+ribonucleoside monophosphate metabolic process (GO:0009161)	49	7	5.39e-01	+	1.30e+01	2.52e-06	1.50e-04
+establishment of RNA localization (GO:0051236)	72	8	7.92e-01	+	1.01e+01	2.70e-06	1.58e-04
+RNA transport (GO:0050658)	72	8	7.92e-01	+	1.01e+01	2.70e-06	1.56e-04
+nucleic acid transport (GO:0050657)	72	8	7.92e-01	+	1.01e+01	2.70e-06	1.54e-04
+protein-containing complex subunit organization (GO:0043933)	528	20	5.80e+00	+	3.45e+00	3.22e-06	1.82e-04
+intracellular transport (GO:0046907)	679	23	7.47e+00	+	3.08e+00	3.63e-06	2.03e-04
+nucleobase-containing compound biosynthetic process (GO:0034654)	536	20	5.89e+00	+	3.39e+00	4.00e-06	2.21e-04
+box C/D snoRNP assembly (GO:0000492)	7	4	7.70e-02	+	5.20e+01	4.29e-06	2.34e-04
+chromosome organization (GO:0051276)	447	18	4.91e+00	+	3.66e+00	4.46e-06	2.41e-04
+protein-containing complex assembly (GO:0065003)	450	18	4.95e+00	+	3.64e+00	4.87e-06	2.60e-04
+protein transport (GO:0015031)	696	23	7.65e+00	+	3.01e+00	5.36e-06	2.83e-04
+establishment of protein localization (GO:0045184)	702	23	7.72e+00	+	2.98e+00	6.13e-06	3.21e-04
+macromolecule biosynthetic process (GO:0009059)	1414	36	1.55e+01	+	2.32e+00	6.56e-06	3.39e-04
+establishment of localization in cell (GO:0051649)	712	23	7.83e+00	+	2.94e+00	7.65e-06	3.91e-04
+mitochondrion organization (GO:0007005)	147	10	1.62e+00	+	6.19e+00	9.50e-06	4.81e-04
+small molecule metabolic process (GO:0044281)	1403	35	1.54e+01	+	2.27e+00	1.19e-05	5.99e-04
+rRNA modification (GO:0000154)	42	6	4.62e-01	+	1.30e+01	1.34e-05	6.62e-04
+mitochondrial gene expression (GO:0140053)	42	6	4.62e-01	+	1.30e+01	1.34e-05	6.56e-04
+intracellular protein transport (GO:0006886)	487	18	5.35e+00	+	3.36e+00	1.36e-05	6.61e-04
+organic cyclic compound biosynthetic process (GO:1901362)	847	25	9.31e+00	+	2.68e+00	1.37e-05	6.60e-04
+nucleus organization (GO:0006997)	26	5	2.86e-01	+	1.75e+01	2.00e-05	9.54e-04
+multicellular organism development (GO:0007275)	604	20	6.64e+00	+	3.01e+00	2.12e-05	1.00e-03
+RNA export from nucleus (GO:0006405)	46	6	5.06e-01	+	1.19e+01	2.14e-05	9.98e-04
+nuclear export (GO:0051168)	71	7	7.81e-01	+	8.97e+00	2.34e-05	1.08e-03
+cellular amide metabolic process (GO:0043603)	821	24	9.03e+00	+	2.66e+00	2.36e-05	1.08e-03
+protein localization (GO:0008104)	771	23	8.48e+00	+	2.71e+00	2.58e-05	1.17e-03
+mRNA metabolic process (GO:0016071)	469	17	5.16e+00	+	3.30e+00	2.97e-05	1.34e-03
+cellular localization (GO:0051641)	834	24	9.17e+00	+	2.62e+00	3.01e-05	1.34e-03
+peptidyl-lysine modification (GO:0018205)	135	9	1.48e+00	+	6.06e+00	3.07e-05	1.36e-03
+cellular macromolecule localization (GO:0070727)	574	19	6.31e+00	+	3.01e+00	3.41e-05	1.49e-03
+purine ribonucleoside monophosphate biosynthetic process (GO:0009168)	30	5	3.30e-01	+	1.52e+01	3.69e-05	1.60e-03
+purine nucleoside monophosphate biosynthetic process (GO:0009127)	30	5	3.30e-01	+	1.52e+01	3.69e-05	1.59e-03
+embryo sac development (GO:0009553)	30	5	3.30e-01	+	1.52e+01	3.69e-05	1.57e-03
+cleavage involved in rRNA processing (GO:0000469)	31	5	3.41e-01	+	1.47e+01	4.25e-05	1.79e-03
+cellular component assembly (GO:0022607)	636	20	6.99e+00	+	2.86e+00	4.27e-05	1.78e-03
+translation (GO:0006412)	586	19	6.44e+00	+	2.95e+00	4.46e-05	1.85e-03
+purine ribonucleoside monophosphate metabolic process (GO:0009167)	33	5	3.63e-01	+	1.38e+01	5.56e-05	2.29e-03
+purine nucleoside monophosphate metabolic process (GO:0009126)	33	5	3.63e-01	+	1.38e+01	5.56e-05	2.27e-03
+peptide biosynthetic process (GO:0043043)	598	19	6.57e+00	+	2.89e+00	5.78e-05	2.34e-03
+aromatic compound biosynthetic process (GO:0019438)	761	22	8.37e+00	+	2.63e+00	6.01e-05	2.41e-03
+carboxylic acid metabolic process (GO:0019752)	818	23	8.99e+00	+	2.56e+00	6.17e-05	2.45e-03
+amide biosynthetic process (GO:0043604)	660	20	7.26e+00	+	2.76e+00	6.97e-05	2.75e-03
+peptide metabolic process (GO:0006518)	715	21	7.86e+00	+	2.67e+00	7.10e-05	2.77e-03
+oxoacid metabolic process (GO:0043436)	828	23	9.10e+00	+	2.53e+00	7.36e-05	2.85e-03
+anatomical structure development (GO:0048856)	718	21	7.89e+00	+	2.66e+00	7.51e-05	2.89e-03
+tRNA methylation (GO:0030488)	36	5	3.96e-01	+	1.26e+01	8.08e-05	3.09e-03
+cellular protein localization (GO:0034613)	564	18	6.20e+00	+	2.90e+00	8.52e-05	3.23e-03
+multicellular organismal process (GO:0032501)	782	22	8.60e+00	+	2.56e+00	8.80e-05	3.31e-03
+developmental process involved in reproduction (GO:0003006)	321	13	3.53e+00	+	3.68e+00	8.84e-05	3.29e-03
+tRNA wobble uridine modification (GO:0002098)	19	4	2.09e-01	+	1.91e+01	1.04e-04	3.84e-03
+RNA phosphodiester bond hydrolysis, endonucleolytic (GO:0090502)	125	8	1.37e+00	+	5.82e+00	1.10e-04	4.05e-03
+macromolecule localization (GO:0033036)	959	25	1.05e+01	+	2.37e+00	1.15e-04	4.18e-03
+protein targeting to mitochondrion (GO:0006626)	64	6	7.04e-01	+	8.53e+00	1.17e-04	4.22e-03
+reproductive process (GO:0022414)	579	18	6.37e+00	+	2.83e+00	1.17e-04	4.20e-03
+reproduction (GO:0000003)	581	18	6.39e+00	+	2.82e+00	1.22e-04	4.34e-03
+cellular amino acid biosynthetic process (GO:0008652)	203	10	2.23e+00	+	4.48e+00	1.27e-04	4.48e-03
+RNA phosphodiester bond hydrolysis (GO:0090501)	204	10	2.24e+00	+	4.46e+00	1.32e-04	4.62e-03
+reproductive structure development (GO:0048608)	290	12	3.19e+00	+	3.76e+00	1.35e-04	4.70e-03
+gametophyte development (GO:0048229)	96	7	1.06e+00	+	6.63e+00	1.39e-04	4.81e-03
+reproductive system development (GO:0061458)	291	12	3.20e+00	+	3.75e+00	1.39e-04	4.78e-03
+ribose phosphate biosynthetic process (GO:0046390)	130	8	1.43e+00	+	5.60e+00	1.43e-04	4.87e-03
+nucleoside phosphate biosynthetic process (GO:1901293)	167	9	1.84e+00	+	4.90e+00	1.45e-04	4.89e-03
+tRNA wobble base modification (GO:0002097)	21	4	2.31e-01	+	1.73e+01	1.46e-04	4.90e-03
+protein localization to mitochondrion (GO:0070585)	67	6	7.37e-01	+	8.15e+00	1.47e-04	4.92e-03
+establishment of protein localization to mitochondrion (GO:0072655)	67	6	7.37e-01	+	8.15e+00	1.47e-04	4.89e-03
+developmental process (GO:0032502)	849	23	9.33e+00	+	2.46e+00	1.71e-04	5.63e-03
+organic acid metabolic process (GO:0006082)	860	23	9.46e+00	+	2.43e+00	1.85e-04	6.04e-03
+system development (GO:0048731)	457	15	5.02e+00	+	2.99e+00	2.44e-04	7.93e-03
+branched-chain amino acid biosynthetic process (GO:0009082)	25	4	2.75e-01	+	1.46e+01	2.64e-04	8.53e-03
+nucleobase-containing compound transport (GO:0015931)	146	8	1.61e+00	+	4.98e+00	3.02e-04	9.67e-03
+rRNA methylation (GO:0031167)	26	4	2.86e-01	+	1.40e+01	3.02e-04	9.63e-03
+mitochondrial translation (GO:0032543)	26	4	2.86e-01	+	1.40e+01	3.02e-04	9.57e-03
+embryo development ending in seed dormancy (GO:0009793)	79	6	8.69e-01	+	6.91e+00	3.39e-04	1.07e-02
+nucleobase biosynthetic process (GO:0046112)	27	4	2.97e-01	+	1.35e+01	3.44e-04	1.08e-02
+organophosphate biosynthetic process (GO:0090407)	374	13	4.11e+00	+	3.16e+00	3.70e-04	1.15e-02
+branched-chain amino acid metabolic process (GO:0009081)	28	4	3.08e-01	+	1.30e+01	3.90e-04	1.20e-02
+ribonucleoprotein complex export from nucleus (GO:0071426)	52	5	5.72e-01	+	8.75e+00	3.92e-04	1.20e-02
+ribonucleoprotein complex localization (GO:0071166)	52	5	5.72e-01	+	8.75e+00	3.92e-04	1.19e-02
+protein methylation (GO:0006479)	85	6	9.35e-01	+	6.42e+00	4.90e-04	1.48e-02
+protein alkylation (GO:0008213)	85	6	9.35e-01	+	6.42e+00	4.90e-04	1.47e-02
+embryo development (GO:0009790)	85	6	9.35e-01	+	6.42e+00	4.90e-04	1.46e-02
+pseudouridine synthesis (GO:0001522)	30	4	3.30e-01	+	1.21e+01	4.95e-04	1.47e-02
+mRNA processing (GO:0006397)	338	12	3.72e+00	+	3.23e+00	5.14e-04	1.52e-02
+DNA topological change (GO:0006265)	12	3	1.32e-01	+	2.27e+01	5.28e-04	1.55e-02
+protein-containing complex localization (GO:0031503)	56	5	6.16e-01	+	8.12e+00	5.37e-04	1.57e-02
+carbohydrate derivative biosynthetic process (GO:1901137)	393	13	4.32e+00	+	3.01e+00	5.79e-04	1.68e-02
+gene silencing by RNA (GO:0031047)	88	6	9.67e-01	+	6.20e+00	5.82e-04	1.68e-02
+nitrogen compound transport (GO:0071705)	1005	24	1.10e+01	+	2.17e+00	5.98e-04	1.71e-02
+ribonucleotide biosynthetic process (GO:0009260)	124	7	1.36e+00	+	5.13e+00	6.04e-04	1.72e-02
+double-strand break repair (GO:0006302)	124	7	1.36e+00	+	5.13e+00	6.04e-04	1.71e-02
+DNA recombination (GO:0006310)	163	8	1.79e+00	+	4.46e+00	6.06e-04	1.70e-02
+regulation of mRNA metabolic process (GO:1903311)	90	6	9.89e-01	+	6.06e+00	6.51e-04	1.82e-02
+nucleotide biosynthetic process (GO:0009165)	165	8	1.81e+00	+	4.41e+00	6.54e-04	1.82e-02
+mRNA transport (GO:0051028)	59	5	6.49e-01	+	7.71e+00	6.70e-04	1.85e-02
+mRNA modification (GO:0016556)	33	4	3.63e-01	+	1.10e+01	6.87e-04	1.89e-02
+cytidine to uridine editing (GO:0016554)	14	3	1.54e-01	+	1.95e+01	7.76e-04	2.12e-02
+endonucleolytic cleavage of tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA) (GO:0000479)	14	3	1.54e-01	+	1.95e+01	7.76e-04	2.11e-02
+endonucleolytic cleavage involved in rRNA processing (GO:0000478)	14	3	1.54e-01	+	1.95e+01	7.76e-04	2.10e-02
+'de novo' IMP biosynthetic process (GO:0006189)	15	3	1.65e-01	+	1.82e+01	9.23e-04	2.48e-02
+regulation of mRNA stability (GO:0043488)	64	5	7.04e-01	+	7.11e+00	9.45e-04	2.52e-02
+regulation of mRNA catabolic process (GO:0061013)	65	5	7.15e-01	+	7.00e+00	1.01e-03	2.68e-02
+nucleobase metabolic process (GO:0009112)	37	4	4.07e-01	+	9.83e+00	1.02e-03	2.69e-02
+regulation of RNA stability (GO:0043487)	66	5	7.26e-01	+	6.89e+00	1.08e-03	2.83e-02
+mitochondrial mRNA modification (GO:0080156)	16	3	1.76e-01	+	1.71e+01	1.09e-03	2.84e-02
+protein targeting (GO:0006605)	225	9	2.47e+00	+	3.64e+00	1.14e-03	2.97e-02
+post-embryonic development (GO:0009791)	372	12	4.09e+00	+	2.93e+00	1.14e-03	2.96e-02
+organic acid biosynthetic process (GO:0016053)	425	13	4.67e+00	+	2.78e+00	1.16e-03	2.97e-02
+base conversion or substitution editing (GO:0016553)	17	3	1.87e-01	+	1.61e+01	1.27e-03	3.25e-02
+megagametogenesis (GO:0009561)	17	3	1.87e-01	+	1.61e+01	1.27e-03	3.23e-02
+ribosome assembly (GO:0042255)	70	5	7.70e-01	+	6.50e+00	1.38e-03	3.48e-02
+mitochondrial transport (GO:0006839)	105	6	1.15e+00	+	5.20e+00	1.39e-03	3.49e-02
+purine nucleotide biosynthetic process (GO:0006164)	105	6	1.15e+00	+	5.20e+00	1.39e-03	3.48e-02
+negative regulation of gene expression (GO:0010629)	281	10	3.09e+00	+	3.24e+00	1.44e-03	3.60e-02
+IMP biosynthetic process (GO:0006188)	18	3	1.98e-01	+	1.52e+01	1.47e-03	3.64e-02
+protein phosphorylation (GO:0006468)	1507	5	1.66e+01	-	3.02e-01	1.48e-03	3.64e-02
+organonitrogen compound metabolic process (GO:1901564)	5535	85	6.09e+01	+	1.40e+00	1.51e-03	3.71e-02
+macromolecule modification (GO:0043412)	3466	58	3.81e+01	+	1.52e+00	1.64e-03	4.01e-02
+mitochondrial RNA modification (GO:1900864)	19	3	2.09e-01	+	1.44e+01	1.69e-03	4.10e-02
+mismatch repair (GO:0006298)	19	3	2.09e-01	+	1.44e+01	1.69e-03	4.08e-02
+regulation of transcription by RNA polymerase I (GO:0006356)	4	2	4.40e-02	+	4.55e+01	1.72e-03	4.14e-02
+GMP biosynthetic process (GO:0006177)	4	2	4.40e-02	+	4.55e+01	1.72e-03	4.11e-02
+positive regulation of transcription by RNA polymerase I (GO:0045943)	4	2	4.40e-02	+	4.55e+01	1.72e-03	4.09e-02
+nuclear pore organization (GO:0006999)	4	2	4.40e-02	+	4.55e+01	1.72e-03	4.07e-02
+tRNA aminoacylation for mitochondrial protein translation (GO:0070127)	4	2	4.40e-02	+	4.55e+01	1.72e-03	4.05e-02
+purine-containing compound biosynthetic process (GO:0072522)	111	6	1.22e+00	+	4.92e+00	1.82e-03	4.26e-02
+organic substance transport (GO:0071702)	1214	26	1.33e+01	+	1.95e+00	1.87e-03	4.36e-02
+IMP metabolic process (GO:0046040)	20	3	2.20e-01	+	1.36e+01	1.93e-03	4.47e-02
+carbohydrate metabolic process (GO:0005975)	1036	2	1.14e+01	-	1.76e-01	2.00e-03	4.62e-02
+ribose phosphate metabolic process (GO:0019693)	245	9	2.69e+00	+	3.34e+00	2.00e-03	4.60e-02
+alpha-amino acid metabolic process (GO:1901605)	247	9	2.72e+00	+	3.31e+00	2.11e-03	4.83e-02
+carboxylic acid biosynthetic process (GO:0046394)	402	12	4.42e+00	+	2.72e+00	2.14e-03	4.88e-02
+small molecule biosynthetic process (GO:0044283)	571	15	6.28e+00	+	2.39e+00	2.15e-03	4.88e-02

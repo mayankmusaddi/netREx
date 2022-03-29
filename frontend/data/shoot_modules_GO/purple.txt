@@ -1,0 +1,62 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+UNCLASSIFIED 	26690	154	2.31e+02	-	6.66e-01	1.93e-15	9.29e-12
+biological_process (GO:0008150)	16969	224	1.47e+02	+	1.52e+00	1.93e-15	4.64e-12
+cellular process (GO:0009987)	12532	177	1.09e+02	+	1.63e+00	1.39e-13	2.23e-10
+lipid metabolic process (GO:0006629)	951	34	8.23e+00	+	4.13e+00	9.37e-12	1.13e-08
+metabolic process (GO:0008152)	10010	145	8.67e+01	+	1.67e+00	2.09e-11	2.01e-08
+small molecule metabolic process (GO:0044281)	1403	39	1.21e+01	+	3.21e+00	3.59e-10	2.88e-07
+cellular lipid metabolic process (GO:0044255)	676	26	5.85e+00	+	4.44e+00	6.53e-10	4.49e-07
+cellular metabolic process (GO:0044237)	8644	126	7.48e+01	+	1.68e+00	7.76e-10	4.66e-07
+organic substance metabolic process (GO:0071704)	9130	131	7.90e+01	+	1.66e+00	7.77e-10	4.15e-07
+lipid biosynthetic process (GO:0008610)	549	21	4.75e+00	+	4.42e+00	3.25e-08	1.56e-05
+carotenoid metabolic process (GO:0016116)	18	6	1.56e-01	+	3.85e+01	4.54e-08	1.99e-05
+tetraterpenoid metabolic process (GO:0016108)	18	6	1.56e-01	+	3.85e+01	4.54e-08	1.82e-05
+carotene biosynthetic process (GO:0016120)	8	5	6.93e-02	+	7.22e+01	5.52e-08	2.04e-05
+biosynthetic process (GO:0009058)	2832	54	2.45e+01	+	2.20e+00	8.73e-08	3.00e-05
+primary metabolic process (GO:0044238)	8591	117	7.44e+01	+	1.57e+00	2.38e-07	7.64e-05
+phosphate-containing compound metabolic process (GO:0006796)	2563	49	2.22e+01	+	2.21e+00	2.85e-07	8.57e-05
+organic substance biosynthetic process (GO:1901576)	2696	50	2.33e+01	+	2.14e+00	5.40e-07	1.53e-04
+phosphorus metabolic process (GO:0006793)	2599	49	2.25e+01	+	2.18e+00	5.49e-07	1.47e-04
+carotenoid biosynthetic process (GO:0016117)	15	5	1.30e-01	+	3.85e+01	6.33e-07	1.60e-04
+tetraterpenoid biosynthetic process (GO:0016109)	15	5	1.30e-01	+	3.85e+01	6.33e-07	1.52e-04
+cellular biosynthetic process (GO:0044249)	2585	48	2.24e+01	+	2.14e+00	9.68e-07	2.22e-04
+terpene biosynthetic process (GO:0046246)	17	5	1.47e-01	+	3.40e+01	1.06e-06	2.32e-04
+transmembrane transport (GO:0055085)	1369	31	1.19e+01	+	2.62e+00	1.87e-06	3.90e-04
+organophosphate metabolic process (GO:0019637)	614	19	5.32e+00	+	3.57e+00	3.10e-06	6.22e-04
+hydrocarbon biosynthetic process (GO:0120251)	22	5	1.90e-01	+	2.62e+01	3.14e-06	6.03e-04
+lipid modification (GO:0030258)	96	8	8.31e-01	+	9.62e+00	3.44e-06	6.37e-04
+sulfur compound metabolic process (GO:0006790)	298	13	2.58e+00	+	5.04e+00	3.57e-06	6.35e-04
+carotene metabolic process (GO:0016119)	23	5	1.99e-01	+	2.51e+01	3.79e-06	6.51e-04
+carboxylic acid metabolic process (GO:0019752)	818	22	7.08e+00	+	3.11e+00	4.70e-06	7.79e-04
+oxoacid metabolic process (GO:0043436)	828	22	7.17e+00	+	3.07e+00	5.66e-06	9.07e-04
+organic acid metabolic process (GO:0006082)	860	22	7.45e+00	+	2.95e+00	1.01e-05	1.56e-03
+carbohydrate metabolic process (GO:0005975)	1036	24	8.97e+00	+	2.68e+00	1.95e-05	2.93e-03
+cellular carbohydrate metabolic process (GO:0044262)	411	14	3.56e+00	+	3.93e+00	2.25e-05	3.28e-03
+organic hydroxy compound metabolic process (GO:1901615)	256	11	2.22e+00	+	4.96e+00	2.28e-05	3.23e-03
+terpene metabolic process (GO:0042214)	38	5	3.29e-01	+	1.52e+01	3.34e-05	4.59e-03
+glycerolipid metabolic process (GO:0046486)	178	9	1.54e+00	+	5.84e+00	3.82e-05	5.10e-03
+isoprenoid metabolic process (GO:0006720)	185	9	1.60e+00	+	5.62e+00	5.08e-05	6.60e-03
+phospholipid metabolic process (GO:0006644)	232	10	2.01e+00	+	4.98e+00	5.22e-05	6.60e-03
+hydrocarbon metabolic process (GO:0120252)	44	5	3.81e-01	+	1.31e+01	6.35e-05	7.82e-03
+transport (GO:0006810)	2477	41	2.14e+01	+	1.91e+00	8.41e-05	1.01e-02
+ion transmembrane transport (GO:0034220)	530	15	4.59e+00	+	3.27e+00	8.91e-05	1.04e-02
+isoprenoid biosynthetic process (GO:0008299)	157	8	1.36e+00	+	5.89e+00	9.74e-05	1.12e-02
+establishment of localization (GO:0051234)	2510	41	2.17e+01	+	1.89e+00	1.36e-04	1.52e-02
+dephosphorylation (GO:0016311)	372	12	3.22e+00	+	3.73e+00	1.40e-04	1.53e-02
+monocarboxylic acid metabolic process (GO:0032787)	376	12	3.26e+00	+	3.69e+00	1.54e-04	1.65e-02
+pigment metabolic process (GO:0042440)	88	6	7.62e-01	+	7.87e+00	1.66e-04	1.73e-02
+ion transport (GO:0006811)	635	16	5.50e+00	+	2.91e+00	1.91e-04	1.96e-02
+terpenoid metabolic process (GO:0006721)	134	7	1.16e+00	+	6.03e+00	2.29e-04	2.30e-02
+phosphatidylinositol dephosphorylation (GO:0046856)	32	4	2.77e-01	+	1.44e+01	2.53e-04	2.49e-02
+localization (GO:0051179)	2616	41	2.26e+01	+	1.81e+00	2.96e-04	2.84e-02
+phospholipid dephosphorylation (GO:0046839)	34	4	2.94e-01	+	1.36e+01	3.13e-04	2.95e-02
+chloride transport (GO:0006821)	14	3	1.21e-01	+	2.48e+01	3.90e-04	3.61e-02
+NAD metabolic process (GO:0019674)	14	3	1.21e-01	+	2.48e+01	3.90e-04	3.54e-02
+inorganic ion transmembrane transport (GO:0098660)	362	11	3.13e+00	+	3.51e+00	4.30e-04	3.83e-02
+phosphatidylinositol metabolic process (GO:0046488)	109	6	9.44e-01	+	6.36e+00	4.93e-04	4.31e-02
+organophosphate biosynthetic process (GO:0090407)	374	11	3.24e+00	+	3.40e+00	5.59e-04	4.80e-02
+sulfur compound biosynthetic process (GO:0044272)	112	6	9.70e-01	+	6.19e+00	5.65e-04	4.77e-02
+cellular carbohydrate biosynthetic process (GO:0034637)	206	8	1.78e+00	+	4.49e+00	5.66e-04	4.69e-02
+disaccharide metabolic process (GO:0005984)	73	5	6.32e-01	+	7.91e+00	5.73e-04	4.67e-02
+pigment biosynthetic process (GO:0046148)	73	5	6.32e-01	+	7.91e+00	5.73e-04	4.60e-02
+small molecule biosynthetic process (GO:0044283)	571	14	4.94e+00	+	2.83e+00	6.15e-04	4.84e-02

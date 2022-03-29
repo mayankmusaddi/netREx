@@ -15,7 +15,6 @@
 
 # datasets
 /frontend/json
-/frontend/data
 
 # misc
 .DS_Store

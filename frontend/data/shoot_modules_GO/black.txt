@@ -1,0 +1,29 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+biological_process (GO:0008150)	16969	318	2.39e+02	+	1.33e+00	2.12e-10	1.02e-06
+UNCLASSIFIED 	26690	298	3.77e+02	-	7.91e-01	2.12e-10	5.09e-07
+phosphorylation (GO:0016310)	1822	63	2.57e+01	+	2.45e+00	2.33e-10	3.73e-07
+cellular process (GO:0009987)	12532	245	1.77e+02	+	1.39e+00	5.00e-09	6.02e-06
+protein phosphorylation (GO:0006468)	1507	51	2.13e+01	+	2.40e+00	2.62e-08	2.52e-05
+cellular metabolic process (GO:0044237)	8644	178	1.22e+02	+	1.46e+00	8.29e-08	6.65e-05
+organic substance metabolic process (GO:0071704)	9130	185	1.29e+02	+	1.44e+00	1.17e-07	8.05e-05
+macromolecule modification (GO:0043412)	3466	88	4.89e+01	+	1.80e+00	1.31e-07	7.85e-05
+nitrogen compound metabolic process (GO:0006807)	7241	154	1.02e+02	+	1.51e+00	1.49e-07	7.98e-05
+defense response (GO:0006952)	1050	38	1.48e+01	+	2.56e+00	2.91e-07	1.40e-04
+primary metabolic process (GO:0044238)	8591	174	1.21e+02	+	1.44e+00	4.09e-07	1.79e-04
+response to stimulus (GO:0050896)	3478	86	4.91e+01	+	1.75e+00	6.61e-07	2.65e-04
+phosphate-containing compound metabolic process (GO:0006796)	2563	68	3.62e+01	+	1.88e+00	1.12e-06	4.14e-04
+phosphorus metabolic process (GO:0006793)	2599	68	3.67e+01	+	1.85e+00	2.04e-06	7.02e-04
+metabolic process (GO:0008152)	10010	193	1.41e+02	+	1.37e+00	2.15e-06	6.88e-04
+response to stress (GO:0006950)	2116	58	2.99e+01	+	1.94e+00	3.01e-06	9.04e-04
+organonitrogen compound metabolic process (GO:1901564)	5535	119	7.81e+01	+	1.52e+00	3.47e-06	9.80e-04
+protein modification process (GO:0036211)	3158	77	4.46e+01	+	1.73e+00	4.98e-06	1.33e-03
+cellular protein modification process (GO:0006464)	3158	77	4.46e+01	+	1.73e+00	4.98e-06	1.26e-03
+macromolecule metabolic process (GO:0043170)	6639	134	9.37e+01	+	1.43e+00	1.74e-05	4.18e-03
+cellular macromolecule metabolic process (GO:0044260)	5163	109	7.28e+01	+	1.50e+00	2.46e-05	5.64e-03
+cellular protein metabolic process (GO:0044267)	4052	89	5.72e+01	+	1.56e+00	3.67e-05	8.01e-03
+multi-organism process (GO:0051704)	199	12	2.81e+00	+	4.27e+00	4.56e-05	9.54e-03
+protein metabolic process (GO:0019538)	4554	97	6.43e+01	+	1.51e+00	5.09e-05	1.02e-02
+organic acid metabolic process (GO:0006082)	860	28	1.21e+01	+	2.31e+00	6.78e-05	1.30e-02
+sialylation (GO:0097503)	5	3	7.05e-02	+	4.25e+01	1.42e-04	2.64e-02
+multi-multicellular organism process (GO:0044706)	141	9	1.99e+00	+	4.52e+00	2.69e-04	4.80e-02
+pollination (GO:0009856)	141	9	1.99e+00	+	4.52e+00	2.69e-04	4.63e-02

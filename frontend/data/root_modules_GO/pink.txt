@@ -1,0 +1,103 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+carboxylic acid metabolic process (GO:0019752)	818	57	9.41e+00	+	6.06e+00	2.90e-26	1.39e-22
+oxoacid metabolic process (GO:0043436)	828	57	9.52e+00	+	5.99e+00	5.11e-26	1.23e-22
+cellular process (GO:0009987)	12532	256	1.44e+02	+	1.78e+00	2.28e-25	3.65e-22
+organic acid metabolic process (GO:0006082)	860	57	9.89e+00	+	5.76e+00	2.99e-25	3.59e-22
+small molecule metabolic process (GO:0044281)	1403	69	1.61e+01	+	4.28e+00	2.36e-23	2.27e-20
+biological_process (GO:0008150)	16969	305	1.95e+02	+	1.56e+00	9.50e-23	7.61e-20
+UNCLASSIFIED 	26690	197	3.07e+02	-	6.42e-01	9.50e-23	6.53e-20
+organonitrogen compound metabolic process (GO:1901564)	5535	137	6.36e+01	+	2.15e+00	4.06e-18	2.44e-15
+sulfur compound metabolic process (GO:0006790)	298	28	3.43e+00	+	8.17e+00	1.76e-16	9.41e-14
+cellular metabolic process (GO:0044237)	8644	176	9.94e+01	+	1.77e+00	2.38e-15	1.15e-12
+glutathione metabolic process (GO:0006749)	95	17	1.09e+00	+	1.56e+01	1.35e-14	5.88e-12
+metabolic process (GO:0008152)	10010	192	1.15e+02	+	1.67e+00	2.00e-14	8.02e-12
+purine ribonucleotide metabolic process (GO:0009150)	210	21	2.41e+00	+	8.70e+00	3.58e-13	1.32e-10
+organic substance metabolic process (GO:0071704)	9130	176	1.05e+02	+	1.68e+00	4.43e-13	1.52e-10
+purine nucleotide metabolic process (GO:0006163)	220	21	2.53e+00	+	8.30e+00	8.17e-13	2.62e-10
+monocarboxylic acid metabolic process (GO:0032787)	376	26	4.32e+00	+	6.01e+00	1.60e-12	4.80e-10
+cellular modified amino acid metabolic process (GO:0006575)	136	17	1.56e+00	+	1.09e+01	2.52e-12	7.12e-10
+nucleotide metabolic process (GO:0009117)	292	23	3.36e+00	+	6.85e+00	2.66e-12	7.12e-10
+ribonucleotide metabolic process (GO:0009259)	237	21	2.73e+00	+	7.71e+00	3.04e-12	7.70e-10
+purine ribonucleoside diphosphate metabolic process (GO:0009179)	79	14	9.08e-01	+	1.54e+01	3.28e-12	7.90e-10
+purine nucleoside diphosphate metabolic process (GO:0009135)	79	14	9.08e-01	+	1.54e+01	3.28e-12	7.52e-10
+purine-containing compound metabolic process (GO:0072521)	241	21	2.77e+00	+	7.58e+00	4.08e-12	8.93e-10
+ribose phosphate metabolic process (GO:0019693)	245	21	2.82e+00	+	7.45e+00	5.45e-12	1.14e-09
+nucleoside phosphate metabolic process (GO:0006753)	309	23	3.55e+00	+	6.47e+00	7.80e-12	1.56e-09
+ribonucleoside diphosphate metabolic process (GO:0009185)	85	14	9.77e-01	+	1.43e+01	7.91e-12	1.52e-09
+nucleoside diphosphate phosphorylation (GO:0006165)	85	14	9.77e-01	+	1.43e+01	7.91e-12	1.46e-09
+nucleoside diphosphate metabolic process (GO:0009132)	106	15	1.22e+00	+	1.23e+01	9.97e-12	1.78e-09
+nucleotide phosphorylation (GO:0046939)	88	14	1.01e+00	+	1.38e+01	1.20e-11	2.06e-09
+small molecule biosynthetic process (GO:0044283)	571	30	6.57e+00	+	4.57e+00	2.12e-11	3.51e-09
+cellular amino acid metabolic process (GO:0006520)	400	25	4.60e+00	+	5.44e+00	3.32e-11	5.32e-09
+ADP metabolic process (GO:0046031)	77	13	8.85e-01	+	1.47e+01	3.36e-11	5.22e-09
+ATP generation from ADP (GO:0006757)	77	13	8.85e-01	+	1.47e+01	3.36e-11	5.06e-09
+glycolytic process (GO:0006096)	77	13	8.85e-01	+	1.47e+01	3.36e-11	4.90e-09
+nitrogen compound metabolic process (GO:0006807)	7241	143	8.33e+01	+	1.72e+00	3.48e-11	4.93e-09
+pyruvate metabolic process (GO:0006090)	98	14	1.13e+00	+	1.24e+01	4.37e-11	6.01e-09
+nucleobase-containing small molecule metabolic process (GO:0055086)	388	24	4.46e+00	+	5.38e+00	1.01e-10	1.34e-08
+carboxylic acid biosynthetic process (GO:0046394)	402	23	4.62e+00	+	4.98e+00	1.03e-09	1.34e-07
+organic acid biosynthetic process (GO:0016053)	425	23	4.89e+00	+	4.71e+00	2.80e-09	3.55e-07
+cellular amino acid biosynthetic process (GO:0008652)	203	16	2.33e+00	+	6.85e+00	5.66e-09	6.98e-07
+organophosphate metabolic process (GO:0019637)	614	27	7.06e+00	+	3.82e+00	8.26e-09	9.93e-07
+response to toxic substance (GO:0009636)	277	18	3.19e+00	+	5.65e+00	1.09e-08	1.27e-06
+carbohydrate derivative metabolic process (GO:1901135)	623	27	7.16e+00	+	3.77e+00	1.10e-08	1.26e-06
+alpha-amino acid metabolic process (GO:1901605)	247	17	2.84e+00	+	5.99e+00	1.26e-08	1.41e-06
+primary metabolic process (GO:0044238)	8591	152	9.88e+01	+	1.54e+00	1.95e-08	2.13e-06
+ATP metabolic process (GO:0046034)	167	14	1.92e+00	+	7.29e+00	2.47e-08	2.64e-06
+detoxification (GO:0098754)	269	17	3.09e+00	+	5.50e+00	4.06e-08	4.25e-06
+carbohydrate catabolic process (GO:0016052)	270	17	3.10e+00	+	5.48e+00	4.28e-08	4.38e-06
+generation of precursor metabolites and energy (GO:0006091)	444	21	5.11e+00	+	4.11e+00	1.21e-07	1.21e-05
+catabolic process (GO:0009056)	1575	44	1.81e+01	+	2.43e+00	1.26e-07	1.23e-05
+alpha-amino acid biosynthetic process (GO:1901607)	164	13	1.89e+00	+	6.89e+00	1.43e-07	1.38e-05
+organic substance catabolic process (GO:1901575)	1369	39	1.57e+01	+	2.48e+00	4.80e-07	4.52e-05
+response to chemical (GO:0042221)	1139	34	1.31e+01	+	2.60e+00	8.37e-07	7.74e-05
+cellular amide metabolic process (GO:0043603)	821	27	9.44e+00	+	2.86e+00	2.08e-06	1.89e-04
+tricarboxylic acid metabolic process (GO:0072350)	17	5	1.95e-01	+	2.56e+01	4.18e-06	3.72e-04
+biosynthetic process (GO:0009058)	2832	61	3.26e+01	+	1.87e+00	4.27e-06	3.73e-04
+peptide metabolic process (GO:0006518)	715	24	8.22e+00	+	2.92e+00	5.50e-06	4.73e-04
+carbohydrate metabolic process (GO:0005975)	1036	30	1.19e+01	+	2.52e+00	6.61e-06	5.58e-04
+organonitrogen compound biosynthetic process (GO:1901566)	1378	36	1.58e+01	+	2.27e+00	8.72e-06	7.23e-04
+protein import (GO:0017038)	111	9	1.28e+00	+	7.05e+00	1.01e-05	8.24e-04
+transport (GO:0006810)	2477	54	2.85e+01	+	1.90e+00	1.06e-05	8.48e-04
+mitochondrion organization (GO:0007005)	147	10	1.69e+00	+	5.92e+00	1.39e-05	1.10e-03
+establishment of localization (GO:0051234)	2510	54	2.89e+01	+	1.87e+00	1.88e-05	1.45e-03
+cellular response to toxic substance (GO:0097237)	227	12	2.61e+00	+	4.60e+00	2.19e-05	1.67e-03
+cellular detoxification (GO:1990748)	227	12	2.61e+00	+	4.60e+00	2.19e-05	1.64e-03
+cellular nitrogen compound metabolic process (GO:0034641)	3077	62	3.54e+01	+	1.75e+00	2.32e-05	1.71e-03
+serine family amino acid biosynthetic process (GO:0009070)	46	6	5.29e-01	+	1.13e+01	2.74e-05	1.99e-03
+cellular biosynthetic process (GO:0044249)	2585	54	2.97e+01	+	1.82e+00	3.76e-05	2.70e-03
+xenobiotic transport (GO:0042908)	50	6	5.75e-01	+	1.04e+01	4.20e-05	2.97e-03
+localization (GO:0051179)	2616	54	3.01e+01	+	1.80e+00	4.35e-05	3.03e-03
+protein localization to organelle (GO:0033365)	285	13	3.28e+00	+	3.97e+00	4.36e-05	2.99e-03
+organic substance biosynthetic process (GO:1901576)	2696	55	3.10e+01	+	1.77e+00	5.44e-05	3.69e-03
+cellular response to chemical stimulus (GO:0070887)	727	22	8.36e+00	+	2.63e+00	6.02e-05	4.02e-03
+cellular oxidant detoxification (GO:0098869)	215	11	2.47e+00	+	4.45e+00	6.32e-05	4.17e-03
+sulfur compound biosynthetic process (GO:0044272)	112	8	1.29e+00	+	6.21e+00	7.29e-05	4.74e-03
+citrate metabolic process (GO:0006101)	5	3	5.75e-02	+	5.22e+01	7.84e-05	5.03e-03
+transmembrane transport (GO:0055085)	1369	33	1.57e+01	+	2.10e+00	9.43e-05	5.97e-03
+serine family amino acid metabolic process (GO:0009069)	61	6	7.01e-01	+	8.55e+00	1.16e-04	7.26e-03
+L-serine biosynthetic process (GO:0006564)	6	3	6.90e-02	+	4.35e+01	1.17e-04	7.19e-03
+xenobiotic detoxification by transmembrane export across the plasma membrane (GO:1990961)	39	5	4.48e-01	+	1.12e+01	1.40e-04	8.53e-03
+xenobiotic export (GO:0046618)	39	5	4.48e-01	+	1.12e+01	1.40e-04	8.43e-03
+protein maturation (GO:0051604)	93	7	1.07e+00	+	6.55e+00	1.52e-04	9.00e-03
+establishment of protein localization to organelle (GO:0072594)	249	11	2.86e+00	+	3.84e+00	2.17e-04	1.27e-02
+mitochondrial transmembrane transport (GO:1990542)	69	6	7.93e-01	+	7.56e+00	2.17e-04	1.26e-02
+protein transmembrane import into intracellular organelle (GO:0044743)	48	5	5.52e-01	+	9.06e+00	3.41e-04	1.95e-02
+export across plasma membrane (GO:0140115)	48	5	5.52e-01	+	9.06e+00	3.41e-04	1.93e-02
+aromatic amino acid family metabolic process (GO:0009072)	77	6	8.85e-01	+	6.78e+00	3.77e-04	2.11e-02
+small molecule catabolic process (GO:0044282)	184	9	2.12e+00	+	4.25e+00	3.96e-04	2.19e-02
+cellular response to oxidative stress (GO:0034599)	51	5	5.86e-01	+	8.53e+00	4.41e-04	2.41e-02
+glucose metabolic process (GO:0006006)	51	5	5.86e-01	+	8.53e+00	4.41e-04	2.38e-02
+L-serine metabolic process (GO:0006563)	29	4	3.33e-01	+	1.20e+01	5.20e-04	2.78e-02
+cellular catabolic process (GO:0044248)	1314	30	1.51e+01	+	1.99e+00	5.48e-04	2.89e-02
+tricarboxylic acid cycle (GO:0006099)	54	5	6.21e-01	+	8.05e+00	5.62e-04	2.94e-02
+aerobic respiration (GO:0009060)	120	7	1.38e+00	+	5.07e+00	6.51e-04	3.37e-02
+protein import into mitochondrial matrix (GO:0030150)	31	4	3.56e-01	+	1.12e+01	6.53e-04	3.34e-02
+cellular response to chemical stress (GO:0062197)	56	5	6.44e-01	+	7.77e+00	6.56e-04	3.32e-02
+organophosphate ester transport (GO:0015748)	57	5	6.55e-01	+	7.63e+00	7.07e-04	3.54e-02
+acetate metabolic process (GO:0006083)	2	2	2.30e-02	+	8.70e+01	7.62e-04	3.78e-02
+acetyl-CoA biosynthetic process from acetate (GO:0019427)	2	2	2.30e-02	+	8.70e+01	7.62e-04	3.74e-02
+purine ribonucleoside monophosphate metabolic process (GO:0009167)	33	4	3.79e-01	+	1.05e+01	8.10e-04	3.93e-02
+purine nucleoside monophosphate metabolic process (GO:0009126)	33	4	3.79e-01	+	1.05e+01	8.10e-04	3.89e-02
+organic substance transport (GO:0071702)	1214	28	1.40e+01	+	2.01e+00	9.06e-04	4.31e-02
+cellular respiration (GO:0045333)	130	7	1.49e+00	+	4.68e+00	1.02e-03	4.80e-02

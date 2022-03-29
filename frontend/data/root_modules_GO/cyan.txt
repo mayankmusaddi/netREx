@@ -1,0 +1,23 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+biological_process (GO:0008150)	16969	177	1.27e+02	+	1.39e+00	2.77e-08	1.33e-04
+UNCLASSIFIED 	26690	150	2.00e+02	-	7.50e-01	2.77e-08	6.66e-05
+defense response (GO:0006952)	1050	23	7.86e+00	+	2.92e+00	6.94e-06	1.11e-02
+regulation of nucleobase-containing compound metabolic process (GO:0019219)	2166	36	1.62e+01	+	2.22e+00	1.01e-05	1.21e-02
+chromatin organization (GO:0006325)	272	11	2.04e+00	+	5.40e+00	1.04e-05	9.97e-03
+biological regulation (GO:0065007)	4754	63	3.56e+01	+	1.77e+00	1.04e-05	8.37e-03
+response to stress (GO:0006950)	2116	35	1.58e+01	+	2.21e+00	1.49e-05	1.02e-02
+regulation of cellular biosynthetic process (GO:0031326)	2291	36	1.72e+01	+	2.10e+00	3.29e-05	1.98e-02
+chromatin remodeling (GO:0043044)	7	3	5.24e-02	+	5.72e+01	4.70e-05	2.51e-02
+regulation of RNA metabolic process (GO:0051252)	2130	34	1.60e+01	+	2.13e+00	4.72e-05	2.27e-02
+chromosome organization (GO:0051276)	447	13	3.35e+00	+	3.88e+00	4.82e-05	2.11e-02
+regulation of biosynthetic process (GO:0009889)	2298	36	1.72e+01	+	2.09e+00	5.22e-05	2.09e-02
+regulation of RNA biosynthetic process (GO:2001141)	2028	33	1.52e+01	+	2.17e+00	5.47e-05	2.02e-02
+regulation of transcription, DNA-templated (GO:0006355)	2028	33	1.52e+01	+	2.17e+00	5.47e-05	1.88e-02
+regulation of nucleic acid-templated transcription (GO:1903506)	2028	33	1.52e+01	+	2.17e+00	5.47e-05	1.75e-02
+regulation of cellular macromolecule biosynthetic process (GO:2000112)	2268	35	1.70e+01	+	2.06e+00	8.02e-05	2.41e-02
+regulation of macromolecule biosynthetic process (GO:0010556)	2272	35	1.70e+01	+	2.06e+00	8.15e-05	2.30e-02
+chromatin remodeling (GO:0006338)	94	6	7.04e-01	+	8.52e+00	1.07e-04	2.86e-02
+organelle organization (GO:0006996)	1306	24	9.78e+00	+	2.45e+00	1.11e-04	2.82e-02
+regulation of transcription by RNA polymerase II (GO:0006357)	490	13	3.67e+00	+	3.54e+00	1.18e-04	2.83e-02
+regulation of nitrogen compound metabolic process (GO:0051171)	2620	38	1.96e+01	+	1.94e+00	1.51e-04	3.46e-02
+cellular component organization (GO:0016043)	2018	31	1.51e+01	+	2.05e+00	1.84e-04	4.02e-02

@@ -1,0 +1,32 @@
+GO biological process complete	Oryza sativa - REFLIST (43659)	Gene-List	Gene-List (expected)	Over/Under Representation	Fold Enrichment	raw P-value	FDR
+sulfur compound metabolic process (GO:0006790)	298	14	8.19e-01	+	1.71e+01	2.21e-13	1.06e-09
+glutathione metabolic process (GO:0006749)	95	9	2.61e-01	+	3.45e+01	1.42e-11	3.42e-08
+peptide metabolic process (GO:0006518)	715	16	1.97e+00	+	8.14e+00	1.93e-10	3.09e-07
+cellular modified amino acid metabolic process (GO:0006575)	136	9	3.74e-01	+	2.41e+01	2.86e-10	3.43e-07
+cellular amide metabolic process (GO:0043603)	821	16	2.26e+00	+	7.09e+00	1.35e-09	1.30e-06
+mitochondrion organization (GO:0007005)	147	7	4.04e-01	+	1.73e+01	2.48e-07	1.99e-04
+organonitrogen compound metabolic process (GO:1901564)	5535	36	1.52e+01	+	2.37e+00	5.68e-07	3.90e-04
+UNCLASSIFIED 	26690	46	7.34e+01	-	6.27e-01	7.00e-07	4.21e-04
+biological_process (GO:0008150)	16969	74	4.66e+01	+	1.59e+00	7.00e-07	3.74e-04
+cellular process (GO:0009987)	12532	60	3.44e+01	+	1.74e+00	1.30e-06	6.27e-04
+carboxylic acid metabolic process (GO:0019752)	818	12	2.25e+00	+	5.34e+00	3.24e-06	1.42e-03
+oxoacid metabolic process (GO:0043436)	828	12	2.28e+00	+	5.27e+00	3.66e-06	1.47e-03
+organic acid metabolic process (GO:0006082)	860	12	2.36e+00	+	5.08e+00	5.34e-06	1.98e-03
+cellular amino acid metabolic process (GO:0006520)	400	8	1.10e+00	+	7.28e+00	1.80e-05	6.18e-03
+serine family amino acid metabolic process (GO:0009069)	61	4	1.68e-01	+	2.39e+01	3.19e-05	1.02e-02
+ribosomal subunit export from nucleus (GO:0000054)	20	3	5.50e-02	+	5.46e+01	3.42e-05	1.03e-02
+rRNA-containing ribonucleoprotein complex export from nucleus (GO:0071428)	20	3	5.50e-02	+	5.46e+01	3.42e-05	9.67e-03
+ribosome localization (GO:0033750)	20	3	5.50e-02	+	5.46e+01	3.42e-05	9.13e-03
+nitrogen compound metabolic process (GO:0006807)	7241	38	1.99e+01	+	1.91e+00	6.12e-05	1.55e-02
+organelle organization (GO:0006996)	1306	13	3.59e+00	+	3.62e+00	7.06e-05	1.70e-02
+positive regulation of RNA polymerase II transcription preinitiation complex assembly (GO:0045899)	3	2	8.25e-03	+	2.43e+02	7.41e-05	1.70e-02
+regulation of RNA polymerase II transcription preinitiation complex assembly (GO:0045898)	3	2	8.25e-03	+	2.43e+02	7.41e-05	1.62e-02
+L-serine metabolic process (GO:0006563)	29	3	7.97e-02	+	3.76e+01	9.40e-05	1.97e-02
+cysteine metabolic process (GO:0006534)	32	3	8.80e-02	+	3.41e+01	1.23e-04	2.47e-02
+positive regulation of transcription initiation from RNA polymerase II promoter (GO:0060261)	5	2	1.37e-02	+	1.46e+02	1.55e-04	2.98e-02
+regulation of transcription initiation from RNA polymerase II promoter (GO:0060260)	5	2	1.37e-02	+	1.46e+02	1.55e-04	2.87e-02
+positive regulation of DNA-templated transcription, initiation (GO:2000144)	5	2	1.37e-02	+	1.46e+02	1.55e-04	2.76e-02
+cellular component organization or biogenesis (GO:0071840)	2333	17	6.41e+00	+	2.65e+00	2.35e-04	4.04e-02
+nuclear transport (GO:0051169)	110	4	3.02e-01	+	1.32e+01	2.84e-04	4.71e-02
+nucleocytoplasmic transport (GO:0006913)	110	4	3.02e-01	+	1.32e+01	2.84e-04	4.55e-02
+metabolic process (GO:0008152)	10010	45	2.75e+01	+	1.64e+00	3.06e-04	4.74e-02

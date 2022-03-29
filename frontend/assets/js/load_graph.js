@@ -353,10 +353,10 @@ function load_graph(data, graphid, N, move){
             var val = $('#regtime'+N).val();
             s.graph.nodes().forEach(function(n) {
                 var color = colors["Grey"];
-                if(n.attributes.hasOwnProperty(val)){
+                if(n.attributes.hasOwnProperty(val) && n.attributes[val]!=""){
                     if(n.attributes[val] === "Up")
                     color = colors["Red"];
-                    else
+                    else if(n.attributes[val] === "Down")
                     color = colors["Blue"];
                 }
                 n.originalColor = color;
@@ -377,10 +377,10 @@ function load_graph(data, graphid, N, move){
                 if(regTrigger.checked){
                     s.graph.nodes().forEach(function(n) {
                         var color = colors["Grey"];
-                        if(n.attributes.hasOwnProperty(val)){
+                        if(n.attributes.hasOwnProperty(val) && n.attributes[val]!=""){
                             if(n.attributes[val] === "Up")
                             color = colors["Red"];
-                            else
+                            else if(n.attributes[val] === "Down")
                             color = colors["Blue"];
                         }
                         n.originalColor = color;

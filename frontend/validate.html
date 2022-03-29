@@ -554,7 +554,7 @@
 					$("#regtimeHead > div > span").html("1 hr");
 					var s = load_graph(graph,'network-graph','',true);
 					load_table(graph,'',s);
-
+					console.log('simple: ',graph);
 				},
 				error: function(){
 					alert('Error');
@@ -571,7 +571,7 @@
 				$.ajax({
 					type: "POST",
 					url: deployment_url+"neighborhood_network",
-					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val()}),
+					data: JSON.stringify({"nodes": data.nodes, "neighbor_number":$('#neighbor-number').val(), "tissue": data.metadata.tissue,"condition": data.metadata.condition}),
 					contentType: "application/json; charset=utf-8",
 					success: function (graph) {
 						$('#neighborhood-view').show();
@@ -588,6 +588,7 @@
 						$("#regtimeHeadN > div > span").html("1 hr");
 						var sN = load_neighbour_graph(graph,'neighborhood-graph');
 						load_neighbour_table(graph,'N',sN);
+						console.log('neighborhood: ',graph);
 					},
 					error: function(){
 						alert('Error');

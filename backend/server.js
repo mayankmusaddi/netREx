@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const fs = require('fs')
+const fs = require('fs');
+const csv = require('csv-parser');
 
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({ limit: '50mb', extended: false }));
@@ -28,7 +29,7 @@ function getIds(nodes) {
 function initTF(nodes) {
   for (var i = 0; i < nodes.length; i++) {
     nodes[i].type = "circle";
-    if ("tf" in nodes[i].attributes) {
+    if ("tf" in nodes[i].attributes && nodes[i].attributes.tf!="") {
       nodes[i].type = "equilateral";
       nodes[i].equilateral = { numPoints: 3 };
     }
@@ -37,10 +38,8 @@ function initTF(nodes) {
 
 function initNeighbour(nodes) {
   for (var i = 0; i < nodes.length; i++) {
-    if (nodes[i].attributes.neighbor != "true") {
-      nodes[i].size = 70;
-      nodes[i].borderColor = "#39ff14";
-    }
+    nodes[i].size = 70;
+    nodes[i].borderColor = "#39ff14";
   }
 }
 
@@ -105,8 +104,18 @@ app.use("/validate", (req, res) => {
   var invalid = genes.filter((d) => !valid.includes(d));
   var metadata = { species : query.species, condition: query.condition, tissue: query.tissue };
 
-  data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata };
-  res.send(data);
+  fs.createReadStream(datapath+query.tissue.toUpperCase()+"/"+query.condition+"_full.csv")
+  .pipe(csv({mapHeaders: ({ header, index }) => header.trim().toLowerCase()}))
+  .on('data', function (row) {
+    let ni = nodes.findIndex(d => d.label === row.label);
+    delete row.id;
+    delete row.label;
+    if(ni != -1) nodes[ni].attributes = row;
+  })
+  .on('end', function () {
+      data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata };
+      res.send(data);
+  })
 });
 
 app.use("/module", (req, res) => {
@@ -236,14 +245,24 @@ app.use("/neighborhood_network", (req, res) => {
   const nodes = query_nodes.concat(neighbour_nodes);
   ids = getIds(nodes);
   initTF(nodes);
-  initNeighbour(nodes);
+  initNeighbour(query_nodes);
 
   const edges = file.edges.filter(
     (d) => ids.includes(d.source) && ids.includes(d.target)
   );
-  var graph = { nodes, edges };
 
-  res.send(graph);
+  fs.createReadStream(datapath+req.body.tissue.toUpperCase()+"/"+req.body.condition+"_full.csv")
+  .pipe(csv({mapHeaders: ({ header, index }) => header.trim().toLowerCase()}))
+  .on('data', function (row) {
+    let ni = nodes.findIndex(d => d.label === row.label);
+    delete row.id;
+    delete row.label;
+    if(ni != -1) nodes[ni].attributes = row;
+  })
+  .on('end', function () {
+      var graph = { nodes, edges };
+      res.send(graph);
+  })
 });
 
 app.listen(3000, function () {

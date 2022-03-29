@@ -333,10 +333,10 @@ function load_neighbour_graph(data, graphid){
             var val = $('#regtimeN').val();
             sN.graph.nodes().forEach(function(n) {
                 var color = colors["Grey"];
-                if(n.attributes.hasOwnProperty(val)){
+                if(n.attributes.hasOwnProperty(val) && n.attributes[val]!=""){
                     if(n.attributes[val] === "Up")
                     color = colors["Red"];
-                    else
+                    else if(n.attributes[val] === "Down")
                     color = colors["Blue"];
                 }
                 n.originalColor = color;
@@ -357,10 +357,10 @@ function load_neighbour_graph(data, graphid){
                 if(regTrigger.checked){
                     sN.graph.nodes().forEach(function(n) {
                         var color = colors["Grey"];
-                        if(n.attributes.hasOwnProperty(val)){
+                        if(n.attributes.hasOwnProperty(val) && n.attributes[val]!=""){
                             if(n.attributes[val] === "Up")
                             color = colors["Red"];
-                            else
+                            else if(n.attributes[val] === "Down")
                             color = colors["Blue"];
                         }
                         n.originalColor = color;

@@ -14,7 +14,7 @@
 /build
 
 # datasets
-# /frontend/json
+/frontend/json
 
 # misc
 .DS_Store

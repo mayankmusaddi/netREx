@@ -108,7 +108,7 @@ function load_neighbour_graph(data, graphid){
             // });
         // });
     }
-    $.getJSON('./pathway_list.json', function(paths) {
+    $.getJSON('./data/pathway_list.json', function(paths) {
         var pathway = {};
         for(path in paths){
             var subpaths = paths[path];

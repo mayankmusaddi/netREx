@@ -90,7 +90,7 @@ app.use("/validate", (req, res) => {
 
   var genes = query.genes.split(/[ ,+\s]/).filter(Boolean);
   if(query.species != "rice"){
-    mapping = require("../frontend/data/"+query.species+".json");
+    mapping = require("../frontend/data/orthologs/"+query.species+".json");
     mapped_genes = [];
     for(var i=0;i<genes.length;i++){
       if(genes[i] in mapping)

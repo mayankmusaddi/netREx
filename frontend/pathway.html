@@ -284,7 +284,7 @@
 		});
 
 		function loadGenes(data){
-			$.getJSON('./pathway_list.json', function(paths) {
+			$.getJSON('./data/pathway_list.json', function(paths) {
 				for(path in paths){
 					var subpaths = paths[path];
 					for(subpath in subpaths){

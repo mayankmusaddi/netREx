@@ -114,7 +114,7 @@ app.use("/module", (req, res) => {
   console.log("Query: " + JSON.stringify(query));
   file = require(jsonpath + query.tissue + query.module);
 
-  fs.readFile(datapath + query.tissue + "_modules_GO/" + query.module + ".txt", 'utf8', (err, data) => {
+  fs.readFile(datapath + query.tissue.toUpperCase() + "/GO/" + query.module + ".txt", 'utf8', (err, data) => {
     if (err) console.log(err);
     file.go = csvJSON(data);
     initTF(file.nodes);

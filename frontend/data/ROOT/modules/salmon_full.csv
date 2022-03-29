@@ -1,0 +1,101 @@
+id,Label,TF,KEGG,Symbol,kTotal,Rank,WGCNA_Modules, IntraModular Connectivity,Description,GO,MapMan,MSU_LOC
+0,Os05g0547700,,,,30.9471060055436,1905,Salmon,22.7622474740784,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os05g46954
+1,Os12g0405400,,,,35.447632422293,1537,Salmon,22.5673550784024,Conserved hypothetical protein.,,,None
+2,Os06g0188550,,,,34.1339170955524,1639,Salmon,21.8450763105689,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os06g08884
+3,Os05g0148000,,,,30.4237029251596,1945,Salmon,20.5390125571984,"Hypothetical conserved gene., Conserved hypothetical protein.",,['not assigned.unknown'],LOC_Os05g05530
+4,Os05g0435500,,,,27.0766813486436,2321,Salmon,20.2006459021105,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os05g35980
+5,Os03g0293850,,,,34.1129373166325,1642,Salmon,19.6352035140113,Similar to Ribosomal protein S15 containing protein.,,['not assigned.unknown'],LOC_Os03g18264
+6,Os06g0361500,,,,39.3000326418229,1270,Salmon,18.9984152710782,"Similar to cDNA clone:J013000C15, full insert sequence.",,,None
+7,Os09g0131400,,,,28.0408720045295,2208,Salmon,18.7179128931649,"Hypothetical protein., Similar to tobamovirus multiplication 3.",,['not assigned.unknown'],"LOC_Os09g04504, LOC_Os09g04508"
+8,Os03g0751800,,,,24.6386644486198,2655,Salmon,18.6074678067807,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os03g54063
+9,Os06g0188500,,,,22.680776541534,2944,Salmon,18.4515780314596,Non-protein coding transcript.,,,None
+10,Os07g0434100,,,,24.6389411752739,2654,Salmon,18.3220870706821,Hypothetical gene.,,,None
+11,Os08g0254200,,,,29.548119396689,2031,Salmon,18.0394638626337,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os08g15444
+12,Os03g0180500,,,,26.9275673793671,2334,Salmon,17.4500853927251,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os03g08284
+13,Os02g0453800,,,,31.6330836184277,1840,Salmon,17.0975887257032,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os02g25650
+14,Os11g0661000,,,,23.1645906149158,2868,Salmon,16.2636641543355,"Pentatricopeptide repeat domain containing protein., Non-protein coding transcript.","Molecular Function: binding (GO:0005488),",['RNA.regulation of transcription.MYB domain transcription factor family'],LOC_Os11g43934
+15,Os03g0597200,,,YSA,32.8410527501377,1734,Salmon,15.8758857536366,"Pentatricopeptide repeat protein, Chloroplast development",Molecular Function: protein binding (GO:0005515),['development.unspecified'],LOC_Os03g40020
+16,Os02g0461100,,,,24.896028881345,2619,Salmon,15.8382291108658,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os02g26294
+17,Os10g0412600,,,,23.1561931441022,2869,Salmon,15.634131949668,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os10g27274
+18,Os07g0184500,,,,23.5607593590245,2809,Salmon,15.5866225194576,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os07g08669
+19,Os02g0770300,,,,21.9354640816364,3063,Salmon,15.5255399540117,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os02g53080
+20,Os06g0135000,,,,30.776424191358,1925,Salmon,15.3790597051538,Similar to Hypersensitive-induced reaction protein 4.,,['not assigned.unknown'],LOC_Os06g04399
+21,Os02g0326500,,,,26.1762249839216,2442,Salmon,15.0357587685952,Similar to targeting protein-related.,,['not assigned.unknown'],LOC_Os02g22084
+22,Os03g0338200,,,,23.1460003768595,2872,Salmon,14.8268706518393,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os03g21964
+23,Os11g0123033,,,,26.3890509431923,2412,Salmon,14.7706801272912,Amidase family protein.,"Molecular Function: carbon-nitrogen ligase activity, with glutamine as amido-N-donor (GO:0016884)",,None
+24,Os02g0252600,,,,23.1551150333744,2870,Salmon,14.7663137237827,"Aminotransferase, class IV family protein.","Biological Process: metabolic process (GO:0008152), Molecular Function: catalytic activity (GO:0003824)",['not assigned.unknown'],LOC_Os02g15360
+25,Os04g0269900,,,,19.6780816910353,3487,Salmon,14.6052895180368,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os04g20210
+26,Os08g0184600,,,,31.0929320641211,1889,Salmon,14.4988152238041,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os08g08586
+27,Os04g0217600,,,,27.2462369301681,2298,Salmon,14.3533534039153,Hypothetical gene.,,,None
+28,Os03g0745400,,,,28.1556527537759,2195,Salmon,13.5959237211741,"Conserved hypothetical protein., Hypothetical conserved gene.",,,None
+29,Os02g0464400,,,,23.9686271135844,2756,Salmon,13.4860325341458,"Similar to D-mannose binding lectin family protein, expressed.",,['not assigned.unknown'],LOC_Os02g26550
+30,Os12g0197600,,,,32.6000605830031,1759,Salmon,13.4287792534891,Hypothetical gene.,,['not assigned.unknown'],LOC_Os12g09584
+31,Os06g0232800,,,,16.256864003475,4279,Salmon,13.403986044515,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os06g12649
+32,Os01g0101600,,,,19.9340755488233,3423,Salmon,13.3060778917101,"Immunoglobulin-like fold domain containing protein., Hypothetical conserved gene.","Molecular Function: nucleotide binding (GO:0000166), Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: protein binding (GO:0005515), Molecular Function: zinc ion binding (GO:0008270),",['RNA.RNA binding'],LOC_Os01g01150
+33,Os09g0429600,,,,15.5838968884749,4466,Salmon,13.2102047738454,Non-protein coding transcript.,,['not assigned.unknown'],LOC_Os09g26004
+34,Os06g0146200,,,,20.7231019325986,3271,Salmon,12.6104169217052,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os06g05368
+35,Os09g0385300,,,,28.6096060507982,2137,Salmon,12.5349543704402,Hypothetical protein.,,['not assigned.unknown'],LOC_Os09g21689
+36,Os08g0232100,,,,18.2625252539597,3774,Salmon,12.3234308614307,Hypothetical gene.,,['not assigned.unknown'],LOC_Os08g13469
+37,Os06g0334600,,,,17.1165780441115,4036,Salmon,12.3121835940923,Hypothetical protein.,,['not assigned.unknown'],LOC_Os06g22829
+38,Os06g0667400,,,,21.6205323904997,3109,Salmon,12.2889118520606,Conserved hypothetical protein.,,,None
+39,Os01g0923400,,,,15.2757225628654,4540,Salmon,12.1693573343231,Hypothetical conserved gene.,,['not assigned.unknown'],LOC_Os01g69904
+40,Os06g0527500,,,,19.9895832081323,3417,Salmon,12.0211540107013,Conserved hypothetical protein.,,,None
+41,Os03g0227800,,,,20.0452837394027,3408,Salmon,11.9777907380809,"Conserved hypothetical protein., Similar to cDNA clone:001-004-G07, full insert sequence., Similar to cDNA clone:001-042-G02, full insert sequence.",,['not assigned.unknown'],LOC_Os03g12670
+42,Os07g0417766,,,,21.7596642754374,3080,Salmon,11.9610217005336,Hypothetical conserved gene.,,['not assigned.unknown'],LOC_Os07g23485
+43,Os02g0665000,,"Pyruvate metabolism, Carbon fixation in photosynthetic organisms, Metabolic pathways, Carbon metabolism",,21.7725058005936,3079,Salmon,11.9259991486205,"Similar to Malic enzyme., Similar to NADP-malic enzyme.","Biological Process: malate metabolic process (GO:0006108), Biological Process: oxidation-reduction process (GO:0055114), Molecular Function: malic enzyme activity (GO:0004470), Molecular Function: oxidoreductase activity, acting on the CH-OH group of donors, NAD or NADP as acceptor (GO:0016616), Molecular Function: malate dehydrogenase (oxaloacetate-decarboxylating) activity (GO:0016619)",['TCA / org. transformation.other organic acid transformaitons.malic'],LOC_Os02g44550
+44,Os09g0387150,,,,24.8767893089644,2622,Salmon,11.925020990925,Conserved hypothetical protein.,,['not assigned.unknown'],"LOC_Os09g21796, LOC_Os09g21802"
+45,Os04g0378400,,,,19.696470864089,3481,Salmon,11.8697776847864,Non-protein coding transcript.,,,None
+46,Os10g0382400,,,,16.651520143613,4173,Salmon,11.8377900601852,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os10g24094
+47,Os08g0310300,,,,17.6383673452403,3902,Salmon,11.6178215116901,Hypothetical gene.,,['not assigned.unknown'],LOC_Os08g21879
+48,Os08g0421400,,,,16.2930505344388,4268,Salmon,11.5369000087887,Hypothetical protein.,,['not assigned.unknown'],LOC_Os08g32570
+49,Os10g0204300,,,,18.401265188123,3739,Salmon,11.4365615422003,Similar to Phosphoenolpyruvate carboxykinase.,,['not assigned.unknown'],LOC_Os10g13694
+50,Os12g0191200,,,,19.1139607338826,3602,Salmon,11.4024728904255,Hypothetical conserved gene.,,,None
+51,Os01g0961600,,,,35.9037686020479,1505,Salmon,11.3077710709529,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os01g73080
+52,Os01g0375100,,,OsDjC6,24.6161841551858,2658,Salmon,11.292143792547,Similar to DnAJ-like protein slr0093.,"Biological Process: protein folding (GO:0006457), Molecular Function: heat shock protein binding (GO:0031072), Molecular Function: unfolded protein binding (GO:0051082)",['stress.abiotic.heat'],LOC_Os01g27740
+53,Os03g0591000,,,,15.3950619473007,4506,Salmon,11.1956342605004,"Non-protein coding transcript., Hypothetical protein.",,['not assigned.unknown'],LOC_Os03g39407
+54,Os10g0421500,,,,15.8563248896456,4392,Salmon,10.5509612155643,"Similar to cDNA clone:J013149A17, full insert sequence., Similar to cDNA clone:J033095I19, full insert sequence.",,['not assigned.unknown'],LOC_Os10g28570
+55,Os02g0478050,,,,14.2405926410187,4830,Salmon,10.4997500623212,Similar to predicted protein.,,['not assigned.unknown'],LOC_Os02g27674
+56,Os10g0318000,,,,30.0923790215729,1976,Salmon,10.288065780816,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os10g16990
+57,Os02g0716100,,,,12.4714468594915,5421,Salmon,10.0756664100836,Hypothetical conserved gene.,,['not assigned.unknown'],LOC_Os02g48550
+58,Os02g0216700,,,,20.6919976392418,3276,Salmon,9.92710609621701,Hypothetical gene.,,,None
+59,Os07g0264000,,,,20.0872785217368,3392,Salmon,9.84766594083045,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os07g16030
+60,Os01g0500600,,,,21.9055492849742,3066,Salmon,9.84546675391138,Hypothetical protein.,,,None
+61,Os11g0104150,,,,29.2701439333452,2068,Salmon,9.81161921050247,Conserved hypothetical protein.,,,None
+62,Os02g0542200,FAR1,,,21.0379839133902,3217,Salmon,9.77215413607157,Similar to H0525E10.9 protein.,"Biological Process: regulation of transcription, DNA-dependent (GO:0006355), Molecular Function: sequence-specific DNA binding transcription factor activity (GO:0003700), Molecular Function: zinc ion binding (GO:0008270), Molecular Function: sequence-specific DNA binding (GO:0043565)",['signalling.light'],LOC_Os02g33750
+63,Os03g0754300,,,,21.5499957208218,3122,Salmon,9.67265595931705,Conserved hypothetical protein.,,,None
+64,Os11g0689800,,,,18.6626123401467,3689,Salmon,9.5811627808019,Non-protein coding transcript.,,['not assigned.unknown'],LOC_Os11g46300
+65,Os03g0177100,,,,15.7936375846055,4402,Salmon,9.56362136698012,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os03g07994
+66,Os02g0525600,,,,22.4572632662977,2977,Salmon,9.54288014843255,Similar to H0502B11.1 protein.,,['not assigned.unknown'],LOC_Os02g32469
+67,Os10g0465000,,,OsWD40-177,18.5730595330364,3707,Salmon,9.44170832202406,"Hypothetical conserved gene., Conserved hypothetical protein.","Molecular Function: protein binding (GO:0005515),",['development.unspecified'],LOC_Os10g32770
+68,Os04g0219000,,,,16.4938600149672,4222,Salmon,9.41596173153915,"Similar to cDNA, clone: J075169H23, full insert sequence.",,,None
+69,Os07g0696000,,,,14.2849672766905,4814,Salmon,9.10278937575403,Conserved hypothetical protein.,,,None
+70,Os03g0399600,,,,12.6428576487121,5369,Salmon,8.95412682344333,"Hypothetical protein., Conserved hypothetical protein., Non-protein coding transcript.",,,None
+71,Os10g0183000,,,"OsLSR, LSR",15.7152893281303,4427,Salmon,8.91979730668443,"NB-LRR protein, Immune response, NB-ARC domain containing protein.","Molecular Function: ADP binding (GO:0043531), Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)",['stress.biotic.PR-proteins'],LOC_Os10g10360
+72,Os04g0282000,,,,16.3859520692008,4248,Salmon,8.63340253817091,Hypothetical conserved gene.,,,None
+73,Os07g0615900,FAR1,,"OsGATA23, OsGATA23b",20.4889376307657,3317,Salmon,8.41263288005335,"Hypothetical conserved gene., Zinc finger, GATA-type domain containing protein.","Biological Process: regulation of transcription, DNA-dependent (GO:0006355), Molecular Function: sequence-specific DNA binding transcription factor activity (GO:0003700), Molecular Function: zinc ion binding (GO:0008270), Molecular Function: sequence-specific DNA binding (GO:0043565)",['signalling.light'],LOC_Os07g42400
+74,Os04g0111900,,,RGA3,26.3680659080593,2416,Salmon,8.27433970205409,Similar to Resistance gene analog PIC22 (Fragment).,"Biological Process: defense response (GO:0006952), Molecular Function: ADP binding (GO:0043531)",['stress.biotic.PR-proteins'],LOC_Os04g02110
+75,Os11g0417132,,,,11.8234493272459,5642,Salmon,8.15102428650601,Conserved hypothetical protein.,,,None
+76,Os03g0145700,,,,14.8127201121133,4670,Salmon,8.1216048594958,"Hypothetical conserved gene., Conserved hypothetical protein.",,['not assigned.unknown'],"LOC_Os03g05220, LOC_Os03g05225"
+77,Os12g0235600,,,,11.3305782455353,5819,Salmon,7.977915625221,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os12g13295
+78,Os08g0307000,,,,15.9039928152093,4378,Salmon,7.8665364016132,Conserved hypothetical protein.,,['not assigned.unknown'],LOC_Os08g21541
+79,Os12g0489400,,,,14.6514671106468,4714,Salmon,7.85078066921526,"Hypothetical protein., Hypothetical gene.",,['not assigned.unknown'],LOC_Os12g30555
+80,Os02g0636700,,,OsGRAM15,15.5574769675712,4475,Salmon,7.77846496241169,GRAM domain containing protein.,,['hormone metabolism.abscisic acid.induced-regulated-responsive-activated'],LOC_Os02g42440
+81,Os05g0452500,,,,14.4384677995604,4772,Salmon,7.67027099210257,Conserved hypothetical protein.,,,None
+82,Os02g0649000,,,,13.5270936726497,5057,Salmon,7.66527549907576,Non-protein coding transcript.,,,None
+83,Os02g0166200,,,,10.4260216748015,6163,Salmon,7.65935451088332,Non-protein coding transcript.,,,None
+84,Os02g0691800,,,,11.8685212485258,5623,Salmon,7.56022047127859,Similar to asparagine synthase family protein.,,,None
+85,Os07g0220600,,,,11.5689051798386,5723,Salmon,7.55641050024112,Hypothetical conserved gene.,,,None
+86,Os02g0144300,,,,13.0131820753112,5241,Salmon,7.3988896139332,Similar to H0114G12.9 protein.,,,None
+87,Os11g0549401,,,,15.332484459102,4524,Salmon,7.38265093973986,Hypothetical gene.,,,None
+88,Os05g0269000,,,,18.340031079506,3753,Salmon,7.36210358297549,Hypothetical conserved gene.,,['not assigned.unknown'],LOC_Os05g18650
+89,Os11g0312000,,,,10.5474886928736,6112,Salmon,7.13145669081904,Non-protein coding transcript.,,,None
+90,Os11g0173600,,,,12.9561650274146,5264,Salmon,7.11143860156444,Non-protein coding transcript.,,,None
+91,Os02g0264700,,,,17.2420929950528,4013,Salmon,6.85902008523632,Similar to flagelliform silk protein-like protein [Oryza sativa (japonica cultivar-group)].,,['not assigned.unknown'],LOC_Os02g16490
+92,Os03g0161950,,,,20.1834609816268,3373,Salmon,6.78328026920972,Hypothetical conserved gene.,,['not assigned.unknown'],LOC_Os03g06640
+93,Os12g0191150,,,,15.9543761827093,4364,Salmon,6.77805228459576,Similar to soluble inorganic pyrophosphatase.,"Biological Process: phosphate-containing compound metabolic process (GO:0006796), Cellular Component: cytoplasm (GO:0005737), Molecular Function: magnesium ion binding (GO:0000287), Molecular Function: inorganic diphosphatase activity (GO:0004427)",,None
+94,Os12g0610950,,,,13.36309411469,5119,Salmon,6.64409039434121,Conserved hypothetical protein.,,,None
+95,Os12g0250900,,,,9.29707991323334,6581,Salmon,6.5994451515821,BRCT domain containing protein.,Cellular Component: intracellular (GO:0005622),['not assigned.unknown'],LOC_Os12g14840
+96,Os03g0444900,WRKY,,WRKY81,18.3575749456543,3749,Salmon,6.59852598722297,Similar to WRKY transcription factor 30.,"Biological Process: regulation of transcription, DNA-dependent (GO:0006355), Molecular Function: sequence-specific DNA binding transcription factor activity (GO:0003700), Molecular Function: sequence-specific DNA binding (GO:0043565)",['RNA.regulation of transcription.WRKY domain transcription factor family'],LOC_Os03g33012
+97,Os04g0479700,,,,8.54599346025982,6929,Salmon,6.55328743221075,Similar to Phosphomethylpyrimidine kinase/thiamin-phosphate pyrophosphorylase.,,['not assigned.unknown'],LOC_Os04g40340
+98,Os02g0806700,,,,13.013547607574,5240,Salmon,6.52785767700179,Similar to Retroelement pol polyprotein-like.,"Molecular Function: protein binding (GO:0005515), Molecular Function: zinc ion binding (GO:0008270)",['protein.degradation.ubiquitin.E3.RING'],LOC_Os02g56280
+99,Os08g0461600,,,,15.6103316163224,4456,Salmon,6.52225511348042,"Zinc finger, CCHC-type domain containing protein.","Molecular Function: nucleic acid binding (GO:0003676), Molecular Function: zinc ion binding (GO:0008270)",,None

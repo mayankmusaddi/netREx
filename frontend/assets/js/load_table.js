@@ -3,6 +3,7 @@ function load_table(data, N, s){
 
     var columns = [
         { data: "label" },
+        { data: "attributes.symbol" },
         { data: "attributes.tf" },
         { data: "attributes.wgcna_modules"},
         { data: "attributes.description"},
@@ -16,6 +17,7 @@ function load_table(data, N, s){
     ];
 
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Gene ID'}) );
+    $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Name'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'TF'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Module'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'Description'}) );
@@ -27,10 +29,10 @@ function load_table(data, N, s){
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'MapMan'}) );
     $("#data-table"+N+">thead>tr").append( $('<th />', {text : 'KEGG'}) );
 
-    var desc_ind=[1,2,3,4,5,6];
-    var func_ind=[7,8,9];
+    var desc_ind=[1,2,3,4,5,6,7];
+    var func_ind=[8,9,10];
     var fc_ind=[];
-    var ind = 10;
+    var ind = 11;
 
     var timestamps = getTimestamps(data);
     Object.keys(timestamps).forEach(function(key) {
@@ -65,13 +67,9 @@ function load_table(data, N, s){
 
     var table = $("#data-table"+N).DataTable( {
         data: data.nodes,
-        columnDefs: [ 
+        columnDefs: [
             {
-                targets: [0],
-                width: "10%",
-            },
-            {
-                targets: [6],
+                targets: [7],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
             },
@@ -83,15 +81,10 @@ function load_table(data, N, s){
                 targets: [ ...fc_ind],
             },
             {
-                // The `data` parameter refers to the data for the cell (defined by the
-                // `data` option, which defaults to the column being worked with, in
-                // this case `data: 0`.
-                render : function ( d, type, row ) {
+                render : function(d,type,row){
                     return "<a target='_blank' href="+deployment_url+"module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
-                    // return "<a target='_blank' href=/netrex/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
-                    // return "<a target='_blank' href=/module.html?tissue="+data.tissue+"&module="+d+" >"+ d +"</a>";
                 },
-                targets: 2
+                targets: 3
             },
         ],
         columns: columns,

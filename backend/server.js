@@ -108,6 +108,7 @@ app.use("/validate", (req, res) => {
   .pipe(csv({mapHeaders: ({ header, index }) => header.trim().toLowerCase()}))
   .on('data', function (row) {
     let ni = nodes.findIndex(d => d.label === row.label);
+    row.rapid = row.label;
     delete row.id;
     delete row.label;
     if(ni != -1) nodes[ni].attributes = row;
@@ -255,6 +256,7 @@ app.use("/neighborhood_network", (req, res) => {
   .pipe(csv({mapHeaders: ({ header, index }) => header.trim().toLowerCase()}))
   .on('data', function (row) {
     let ni = nodes.findIndex(d => d.label === row.label);
+    row.rapid = row.label;
     delete row.id;
     delete row.label;
     if(ni != -1) nodes[ni].attributes = row;

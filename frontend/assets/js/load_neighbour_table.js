@@ -1,6 +1,6 @@
 function load_neighbour_table(data, N, sN){
     var columns = [
-        { data: "label" },
+        { data: "attributes.rapid" },
         { data: "attributes.symbol" },
         { data: "attributes.tf" },
         { data: "attributes.wgcna_modules"},

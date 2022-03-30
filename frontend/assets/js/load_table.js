@@ -2,7 +2,7 @@ function load_table(data, N, s){
     $(document).ready(()=>{
 
     var columns = [
-        { data: "label" },
+        { data: "attributes.rapid" },
         { data: "attributes.symbol" },
         { data: "attributes.tf" },
         { data: "attributes.wgcna_modules"},

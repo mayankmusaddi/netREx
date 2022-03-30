@@ -19,11 +19,16 @@ function load_graph(data, graphid, N, move){
         edges[i].color = 'rgb(150,150,150)';
     }
 
-    // var nodes = data.nodes;
-    // for (var i = 0; i < nodes.length; i += 1){
-    //     rgb = nodes[i].color.replace(/[^\d,]/g, '').split(',');
-    //     nodes[i].color = "rgb("+(rgb[0]*0.5)+","+(rgb[0]*0.75)+","+(rgb[0]*0.2)+")";
-    // }
+    var nodes = data.nodes;
+    for (var i = 0; i < nodes.length; i += 1){
+        var row = nodes[i].attributes;
+        if("symbol" in row && row.symbol!=""){
+            var cut = row.symbol.length;
+            if (row.symbol.indexOf(',')!=-1 && row.symbol.indexOf(',')<cut) cut = row.symbol.indexOf(',');
+            if (row.symbol.indexOf('|')!=-1 && row.symbol.indexOf('|')<cut) cut = row.symbol.indexOf('|');
+            nodes[i].label = row.symbol.substr(0, cut);
+        }
+    }
 
     function expand() {
         $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-9 col-md-9');

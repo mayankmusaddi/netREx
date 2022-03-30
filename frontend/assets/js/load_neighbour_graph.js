@@ -1,4 +1,21 @@
 function load_neighbour_graph(data, graphid){
+    var edges = data.edges;
+    for (var i = 0; i < edges.length; i += 1){
+        edges[i].type = 'curve';
+        edges[i].color = 'rgb(150,150,150)';
+    }
+
+    var nodes = data.nodes;
+    for (var i = 0; i < nodes.length; i += 1){
+        var row = nodes[i].attributes;
+        if("symbol" in row && row.symbol!=""){
+            var cut = row.symbol.length;
+            if (row.symbol.indexOf(',')!=-1 && row.symbol.indexOf(',')<cut) cut = row.symbol.indexOf(',');
+            if (row.symbol.indexOf('|')!=-1 && row.symbol.indexOf('|')<cut) cut = row.symbol.indexOf('|');
+            nodes[i].label = row.symbol.substr(0, cut);
+        }
+    }
+
     function expand() {
         $('#'+graphid).addClass('col-lg-12 col-md-12').removeClass('col-lg-9 col-md-9');
 		$('#sidepanelN').hide();
@@ -181,13 +198,6 @@ function load_neighbour_graph(data, graphid){
     
     filter = new sigma.plugins.filter(sN);
     var selectedNode;
-    
-    var edges = sN.graph.edges();
-    for (var i = 0; i < edges.length; i += 1){
-        edges[i].type = 'curve';
-        edges[i].color = 'rgb(150,150,150)';
-
-    }
     
     // We first need to save the original colors of our nodes and edges, like this:
     sN.graph.nodes().forEach(function(n) {

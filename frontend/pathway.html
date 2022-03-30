@@ -245,16 +245,19 @@
 			var genes = [];
 			for(i=0;i<selectobject.length;i++)
 				genes.push($(selectobject[i]).parent().data("value"));
-			genes = genes.join();
-
-			const params = new URLSearchParams({
-				species:$("#speciesN").val(),
-				tissue:$("#tissueN").val(),
-				condition:$("#conditionN").val(),
-				genes: genes,
-			});
-			var url = deployment_url+"validate.html?"+params.toString();
-			window.location.replace(url);
+			if (genes.length > 300){
+				alert('Error: Select Less than 300 genes');
+			} else {
+				genes = genes.join();
+				const params = new URLSearchParams({
+					species:$("#speciesN").val(),
+					tissue:$("#tissueN").val(),
+					condition:$("#conditionN").val(),
+					genes: genes,
+				});
+				var url = deployment_url+"validate.html?"+params.toString();
+				window.location.replace(url);
+			}
 		});
 
 		$("#conditionForm").submit(function(e) {
@@ -299,7 +302,6 @@
 					searchable: true,
 					enableSelectAll: false, 
 					sortable: true,
-        			maxSelections: 300,
 					startCollapsed: true
 				});
 			});

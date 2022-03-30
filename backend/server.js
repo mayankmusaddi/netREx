@@ -124,12 +124,25 @@ app.use("/module", (req, res) => {
   console.log("Query: " + JSON.stringify(query));
   file = require(jsonpath + query.tissue + query.module);
 
-  fs.readFile(datapath + query.tissue.toUpperCase() + "/GO/" + query.module + ".txt", 'utf8', (err, data) => {
-    if (err) console.log(err);
-    file.go = csvJSON(data);
-    initTF(file.nodes);
-    res.send(file);
+  var nodes = file.nodes;
+  fs.createReadStream(datapath+query.tissue.toUpperCase()+"/modules/"+query.module+"_full.csv")
+  .pipe(csv({mapHeaders: ({ header, index }) => header.trim().toLowerCase()}))
+  .on('data', function (row) {
+    let ni = nodes.findIndex(d => d.label === row.label);
+    row.rapid = row.label;
+    delete row.id;
+    delete row.label;
+    if(ni != -1) nodes[ni].attributes = row;
   })
+  .on('end', function () {
+      fs.readFile(datapath + query.tissue.toUpperCase() + "/GO/" + query.module + ".txt", 'utf8', (err, data) => {
+        if (err) console.log(err);
+        file.go = csvJSON(data);
+        initTF(nodes);
+        res.send(file);
+      })
+  })
+
 });
 
 app.use("/load", (req, res) => {

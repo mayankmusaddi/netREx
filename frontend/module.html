@@ -288,24 +288,23 @@
 					$('#network-view').hide();
 					$('#show-network').prop('disabled', false);
 					
-
-					graph = data;
 					if ($.fn.DataTable.isDataTable("#data-table")) {
-					  $('#data-table').DataTable().clear().destroy();
+						$('#data-table').DataTable().clear().destroy();
 					};
 					if ($.fn.DataTable.isDataTable("#edge-table")) {
 					  $('#edge-table').DataTable().clear().destroy();
 					};
 					if ($.fn.DataTable.isDataTable("#go-table")) {
-					  $('#go-table').DataTable().clear().destroy();
+						$('#go-table').DataTable().clear().destroy();
 					};
 					$('#data-table').html('<thead><tr></tr></thead>');
 					$('#edge-table').html('<thead><tr></tr></thead>');
 					$('#go-table').html('<thead><tr></tr></thead>');
-
+					
 					$('#show-network').show();
 					$('#querytable').show();
 					
+					graph = data;
 					load_module_table(graph);
 				},
 				error: function(){

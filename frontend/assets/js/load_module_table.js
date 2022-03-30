@@ -2,7 +2,8 @@ function load_module_table(data){
     $(document).ready(()=>{
 
     var columns = [
-        { data: "label" },
+        { data: "attributes.rapid" },
+        { data: "attributes.symbol" },
         { data: "attributes.tf" },
         { data: "attributes.description"},
         { data: "attributes.msu_loc"},
@@ -14,7 +15,8 @@ function load_module_table(data){
         { data: "attributes.kegg"},
     ];
 
-    $("#data-table>thead>tr").append( $('<th />', {text : 'Label'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'Gene ID'}) );
+    $("#data-table>thead>tr").append( $('<th />', {text : 'Name'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'TF'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'Description'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'MSU ID'}) );
@@ -25,8 +27,8 @@ function load_module_table(data){
     $("#data-table>thead>tr").append( $('<th />', {text : 'Mapman'}) );
     $("#data-table>thead>tr").append( $('<th />', {text : 'KEGG'}) );
 
-    var desc_ind=[1,2,3,4,5];
-    var func_ind=[6,7,8];
+    var desc_ind=[1,2,3,4,5,6];
+    var func_ind=[7,8,9];
 
     const set = (obj, path, val) => { 
         const keys = path.split('.');
@@ -48,7 +50,7 @@ function load_module_table(data){
         data: data.nodes,
         columnDefs: [ 
             {
-                targets: [5],
+                targets: [6],
                 data: null,
                 defaultContent: "<button class='btn-light'>Click!</button>"
             },

@@ -134,9 +134,20 @@ app.use("/module", (req, res) => {
 
 app.use("/load", (req, res) => {
   var query = req.body;
-  console.log("Query: " + JSON.stringify(query));
-  file = require(jsonpath + query.condition + query.tissue);
-  res.send(file);
+  var nodes = [];
+  fs.createReadStream(datapath+query.tissue.toUpperCase()+"/"+query.condition+"_full.csv")
+  .pipe(csv({mapHeaders: ({ header, index }) => header.trim().toLowerCase()}))
+  .on('data', function (row) {
+    row.rapid = row.label;
+    delete row.id;
+    delete row.label;
+    node = {"attributes": row};
+    nodes.push(node);
+  })
+  .on('end', function () {
+      data = { nodes: nodes };
+      res.send(data);
+  })
 });
 
 app.use("/pathway", (req, res) => {

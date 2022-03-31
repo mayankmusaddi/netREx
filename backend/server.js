@@ -214,7 +214,15 @@ app.use("/expression", (req, res) => {
     .map(() => Array(nodes.length).fill(0));
 
   for (var i = 0; i < nodes.length; i++) {
-    col_nodes.push({ name: nodes[i].label, rank: i, clust: i });
+    var label = nodes[i].label;
+    var row = nodes[i].attributes;
+    if("symbol" in row && row.symbol!=""){
+        var cut = row.symbol.length;
+        if (row.symbol.indexOf(',')!=-1 && row.symbol.indexOf(',')<cut) cut = row.symbol.indexOf(',');
+        if (row.symbol.indexOf('|')!=-1 && row.symbol.indexOf('|')<cut) cut = row.symbol.indexOf('|');
+        label = row.symbol.substr(0, cut);
+    }
+    col_nodes.push({ name: label, rank: i, clust: i });
     var j = 0;
     Object.keys(timestamps).forEach(function (key) {
       var value = nodes[i].attributes[timestamps[key]];

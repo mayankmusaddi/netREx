@@ -98,7 +98,10 @@
 		<div class="container" id="network-viewer">
 				<p>
                 	Submit RAPDB Gene IDs of Rice genes or Ensemble Stable Gene IDs of other crops to be queried 
-					and select appropriate tissue and stress/hormone treatments.
+					and select appropriate tissue and stress/hormone treatments. 
+					<a id="help-query" data-toggle="tooltip" data-placement="top" title="Help!" target='_blank'>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</a>
 				</p>
 				<br>
 				<div>
@@ -231,6 +234,7 @@
 		<!-- Personalised Scripts -->
 		<script type="text/javascript">
 			document.getElementById('query-form').action = deployment_url+'validate.html';
+			document.getElementById('help-query').setAttribute('href', deployment_url+'tutorial.pdf#3%2E1%2E%20Query%20Form')
 			$("#query-form").submit(function(e) {
 				var text = $('textarea#genes').val();
   				var genes = text.split(/[ ,+\s]/).filter(Boolean);

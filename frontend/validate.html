@@ -183,7 +183,11 @@
 						<!-- Start Network Options Area -->
 						<div class="col-lg-3 col-md-3 mt-sm-30" id="sidepanel">
 							<div class="single-element-widget">
-								<h3 style="color:white; text-decoration: underline;">Options</h3>
+								<h3 style="color:white; text-decoration: underline;">Options
+									<a id="help-options" data-toggle="tooltip" data-placement="top" title="Help!" target='_blank'>
+										<i class="fa fa-question-circle" aria-hidden="true"></i>
+									</a>
+								</h3>
 								<div class="switch-wrap d-flex justify-content-between">
 									<p>Default View</p>
 									<div class="confirm-switch">
@@ -493,6 +497,7 @@
 <script src="./assets/js/load_neighbour_table.js"></script>
 
 <script>
+	document.getElementById('help-options').setAttribute('href', deployment_url+'tutorial.pdf#4%2E2%2E%20Options')
 	var query = QueryStringToJSON();
 	$(".sample-text-area").hide();
 	$.ajax({

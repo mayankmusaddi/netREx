@@ -158,7 +158,37 @@
 				* Filtered Genes – are DEGs in the chosen tissue-specific network and treatment condition
 			</div>
 		</div>
+		<p><button type="button" class="btn-info" id="show-mapping-table" style="display: none;">Show/Hide Orthologs Mapping</button></p>
+	
+		<!-- Start Table -->
+		<div id="mappingtable" style="display: none;">
+			<nav>
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				  <a class="nav-item nav-link active" id="nav-valid-tab" data-toggle="tab" href="#nav-valid" role="tab" aria-controls="nav-valid" aria-selected="true">Valid Mapping</a>
+				  <a class="nav-item nav-link" id="nav-invalid-tab" data-toggle="tab" href="#nav-invalid" role="tab" aria-controls="nav-invalid" aria-selected="false">Invalid Mapping</a>
+				  <a class="nav-item nav-link" id="nav-unmapped-tab" data-toggle="tab" href="#nav-unmapped" role="tab" aria-controls="nav-unmapped" aria-selected="false">Unmapped</a>
+				</div>
+			</nav>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="nav-valid" role="tabpanel" aria-labelledby="nav-valid-tab">
+					<table id="valid-table" class="display" style="width:100%">
+						<thead><tr></tr></thead>
+					</table>
+				</div>
+				<div class="tab-pane fade" id="nav-invalid" role="tabpanel" aria-labelledby="nav-invalid-tab">
+					<table id="invalid-table" class="display" style="width:100%">
+						<thead><tr></tr></thead>
+					</table>
+				</div>
+				<div class="tab-pane fade" id="nav-unmapped" role="tabpanel" aria-labelledby="nav-unmapped-tab">
+					<table id="unmapped-table" class="display" style="width:100%">
+						<thead><tr></tr></thead>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
+	<!-- End Table -->
 	</section>
 	<!-- End Validate Area -->
 
@@ -495,6 +525,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js "></script>
 <script src="./assets/js/load_table.js"></script>
 <script src="./assets/js/load_neighbour_table.js"></script>
+<script src="./assets/js/load_mapping_table.js"></script>
 
 <script>
 	document.getElementById('help-options').setAttribute('href', deployment_url+'tutorial.pdf#4%2E2%2E%20Options')
@@ -530,7 +561,15 @@
 		document.getElementById("numvalid").innerHTML = data.valid.length;
 		document.getElementById("valid-genes").innerHTML = data.valid.join(", ");
 		document.getElementById("invalid-genes").innerHTML = data.invalid.join(", ");
-		
+		console.log("validate: ", data);
+
+		if(data.metadata.species != 'rice'){
+			$('#show-mapping-table').show();
+			load_mapping_table(data);
+		}
+		$("#show-mapping-table").click(function(){
+			  $('#mappingtable').toggle();
+		});
 		$("#show-network-table").click(function(){
 			  $('#querytable').toggle();
 		});

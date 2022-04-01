@@ -87,13 +87,17 @@ app.use("/validate", (req, res) => {
   console.log(query);
   file = require(jsonpath + query.condition + query.tissue);
 
+  var invalid = [];
   var genes = query.genes.split(/[ ,+\s]/).filter(Boolean);
+  var mapping = {};
   if(query.species != "rice"){
-    mapping = require("../frontend/data/orthologs/"+query.species+".json");
+    mapping_db = require("../frontend/data/orthologs/"+query.species+".json");
     mapped_genes = [];
     for(var i=0;i<genes.length;i++){
-      if(genes[i] in mapping)
-      mapped_genes.push(mapping[genes[i]]);
+      if(genes[i] in mapping_db){
+        mapped_genes.push(mapping_db[genes[i]]);
+        mapping[mapping_db[genes[i]]] = genes[i];
+      } else invalid.push(genes[i]);
     }
     genes = mapped_genes;
   }
@@ -101,7 +105,8 @@ app.use("/validate", (req, res) => {
   const nodes = file.nodes.filter((d) => genes.includes(d.label));
 
   var valid = nodes.map((d) => {return d.label;});
-  var invalid = genes.filter((d) => !valid.includes(d));
+  invalid = invalid.concat(genes.filter((d) => !valid.includes(d)));
+
   var metadata = { species : query.species, condition: query.condition, tissue: query.tissue };
 
   fs.createReadStream(datapath+query.tissue.toUpperCase()+"/"+query.condition+"_full.csv")
@@ -114,7 +119,7 @@ app.use("/validate", (req, res) => {
     if(ni != -1) nodes[ni].attributes = row;
   })
   .on('end', function () {
-      data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata };
+      data = { nodes: nodes, valid: valid, invalid: invalid, metadata: metadata, mapping: mapping };
       res.send(data);
   })
 });

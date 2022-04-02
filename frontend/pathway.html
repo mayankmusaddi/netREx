@@ -114,6 +114,9 @@
 				<p class="sample-text">
 					Allows the user to analyze the genes of selected pathway 
 					and their expression in chosen tissue and stress/treatment condition.
+					<a id="help-pathway" data-toggle="tooltip" data-placement="top" title="Help!" target='_blank'>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</a>
 				</p>
 				<br>
 			<div>
@@ -236,6 +239,7 @@
 		
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
+		document.getElementById('help-pathway').setAttribute('href', deployment_url+'tutorial.pdf#6%2E3%2E%20Pathway%20Wise');
 		document.getElementById('conditionForm').action = deployment_url+'pathway';
 		
 		$("#pathwayForm").submit(function(e) {

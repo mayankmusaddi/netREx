@@ -113,6 +113,9 @@
 				<p class="sample-text">
 					Provides Tabular view of differentially expressed genes and
 					their attributes in the chosen tissue and stress condition.
+					<a id="help-condition" data-toggle="tooltip" data-placement="top" title="Help!" target='_blank'>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</a>
 				</p>
 				<br>
 			<div>
@@ -242,6 +245,7 @@
 		
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
+		document.getElementById('help-condition').setAttribute('href', deployment_url+'tutorial.pdf#6%2E2%2E%20Condition%20Wise');
 		document.getElementById('conditionForm').action = deployment_url+'load';
 		// this is the id of the form
 		$("#conditionForm").submit(function(e) {

@@ -116,6 +116,9 @@
 					connectivity. In this view, the size of the nodes correspond to its degree connectivity 
 					while the colour represents the module colour. The table lists the node and edge attributes
 					and function GO enrichment of these genes.
+					<a id="help-module" data-toggle="tooltip" data-placement="top" title="Help!" target='_blank'>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</a>
 				</p>
 				<br>
 				<div>
@@ -268,6 +271,7 @@
 		
 	<!-- Personalised Scripts -->
 	<script type="text/javascript">
+		document.getElementById('help-module').setAttribute('href', deployment_url+'tutorial.pdf#6%2E1%2E%20Module%20Wise');
 		document.getElementById('moduleForm').action = deployment_url+'module';
 		var graph;
 

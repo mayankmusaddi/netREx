@@ -1,3 +1,41 @@
+function load_name_table(data){
+    var namecolumns = [
+        { data: "attributes.rapid" },
+        { data: "attributes.symbol" }
+    ];
+    $("#name-table>thead>tr").append( $('<th />', {text : 'Valid RAP ID'}) );
+    $("#name-table>thead>tr").append( $('<th />', {text : 'Name'}) );
+    var nametable = $("#name-table").DataTable( {
+        data: data.nodes,
+        columns: namecolumns,
+        dom: 'lfrtiBp',
+        columnDefs: [
+            { className: 'dt-centre'}
+        ],
+        buttons: [
+            {
+                extend: 'copyHtml5',
+                text: '<i class="fas fa-copy"></i> Copy',
+                titleAttr: 'Copy'
+            },
+            {
+                extend: 'excelHtml5',
+                text: '<i class="fas fa-file-excel"></i> Excel',
+                titleAttr: 'Excel'
+            },
+            {
+                extend: 'csvHtml5',
+                text: '<i class="fas fa-file-csv"></i> CSV',
+                titleAttr: 'CSV'
+            },
+            {
+                extend: 'pdfHtml5',
+                text: '<i class="fas fa-file-pdf"></i> PDF',
+                titleAttr: 'PDF'
+            },
+        ]
+    });
+}
 function load_mapping_table(data){
     $(document).ready(()=>{
 

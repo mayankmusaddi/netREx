@@ -77,7 +77,7 @@ function load_module_table(data){
 
     $("#data-table tbody").on( 'click', 'button', function () {
         var data = table.row( $(this).parents('tr') ).data();
-        window.open("http://expression.ic4r.org/expression-api?term="+data.label, "Expression Chart", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
+        window.open("http://expression.ic4r.org/expression-api?term="+data.attributes.rapid, "Expression Chart", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
     } );
 
     new $.fn.dataTable.Buttons( table, {

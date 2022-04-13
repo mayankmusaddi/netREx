@@ -84,7 +84,7 @@ function csvJSON(csv){
 
 app.use("/validate", (req, res) => {
   var query = req.body;
-  console.log(query);
+  // console.log(query);
   file = require(jsonpath + query.condition + query.tissue);
 
   var invalid = [];
@@ -126,7 +126,7 @@ app.use("/validate", (req, res) => {
 
 app.use("/module", (req, res) => {
   var query = req.body;
-  console.log("Query: " + JSON.stringify(query));
+  // console.log("Query: " + JSON.stringify(query));
   file = require(jsonpath + query.tissue + query.module);
 
   var nodes = file.nodes;
@@ -184,7 +184,7 @@ app.use("/pathway", (req, res) => {
 
 app.use("/submit", (req, res) => {
   var query = req.body;
-  console.log(query);
+  // console.log(query);
 });
 
 app.use("/expression", (req, res) => {

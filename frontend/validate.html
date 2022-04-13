@@ -163,9 +163,17 @@
 				* Filtered Genes – are DEGs in the chosen tissue-specific network and treatment condition
 			</div>
 		</div>
-		<p><button type="button" class="btn-info" id="show-mapping-table" style="display: none;">Show/Hide Orthologs Mapping</button></p>
-	
 		<!-- Start Table -->
+		<p><button type="button" class="btn-info" id="show-name-table" style="display: none;">Show/Hide Gene Name Mapping</button></p>
+		<div id="nametable" style="display: none;">
+			<table id="name-table" class="display" style="width:100%">
+				<thead><tr></tr></thead>
+			</table>
+		</div>
+		<!-- End Table -->
+
+		<!-- Start Table -->
+		<p><button type="button" class="btn-info" id="show-mapping-table" style="display: none;">Show/Hide Orthologs Mapping</button></p>
 		<div id="mappingtable" style="display: none;">
 			<nav>
 				<div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -192,8 +200,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- End Table -->
 	</div>
-	<!-- End Table -->
 	</section>
 	<!-- End Validate Area -->
 
@@ -581,12 +589,18 @@
 		document.getElementById("numvalid").innerHTML = data.valid.length;
 		document.getElementById("valid-genes").innerHTML = data.valid.join(", ");
 		document.getElementById("invalid-genes").innerHTML = data.invalid.join(", ");
-		console.log("validate: ", data);
 
 		if(data.metadata.species != 'rice'){
 			$('#show-mapping-table').show();
 			load_mapping_table(data);
+		} else {
+			$('#show-name-table').show();
+			load_name_table(data);
 		}
+
+		$("#show-name-table").click(function(){
+			  $('#nametable').toggle();
+		});
 		$("#show-mapping-table").click(function(){
 			  $('#mappingtable').toggle();
 		});
@@ -618,7 +632,6 @@
 					$("#regtimeHead > div > span").html("1 hr");
 					var s = load_graph(graph,'network-graph','',true);
 					load_table(graph,'',s);
-					console.log('simple: ',graph);
 				},
 				error: function(){
 					alert('Error');
@@ -652,7 +665,6 @@
 						$("#regtimeHeadN > div > span").html("1 hr");
 						var sN = load_neighbour_graph(graph,'neighborhood-graph');
 						load_neighbour_table(graph,'N',sN);
-						console.log('neighborhood: ',graph);
 					},
 					error: function(){
 						alert('Error');

@@ -279,7 +279,7 @@ function load_neighbour_graph(data, graphid){
     var listener = sN.configNoverlap(config);
     // Bind all events:
     listener.bind('start stop interpolate', function(event) {
-        console.log(event.type);
+        // console.log(event.type);
     });
     // Start the algorithm:
     sN.startNoverlap();

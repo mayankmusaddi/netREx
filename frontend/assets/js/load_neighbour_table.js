@@ -114,8 +114,7 @@ function load_neighbour_table(data, N, sN){
 
     $("#data-table"+N+' tbody').on( 'click', 'button', function () {
         var data = table.row( $(this).parents('tr') ).data();
-        // console.log(data.label);
-        window.open("http://expression.ic4r.org/expression-api?term="+data.label, "Expression Chart", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
+        window.open("http://expression.ic4r.org/expression-api?term="+data.attributes.rapid, "Expression Chart", "width=1000,height=650,scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,left=100,top=100");
     } );
 
     $('#data-table'+N).on( 'mouseenter', 'tbody tr', function () {

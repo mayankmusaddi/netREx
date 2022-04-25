@@ -1,4 +1,5 @@
 function load_name_table(data){
+    console.log("T: ", data);
     var namecolumns = [
         { data: "attributes.rapid" },
         { data: "attributes.symbol" }

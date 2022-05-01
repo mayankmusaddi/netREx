@@ -369,7 +369,7 @@ function load_graph(data, graphid, N, move){
             });
             s.refresh();
             $("#view-text").html("Regulation");
-            $("#color-text").html("Red: Up-regulated and Blue: Down-regulated");
+            $("#color-text").html("Node colour:<br>Red: Up-regulated<br>Blue: Down-regulated");
             $("#path").val('default');
 		    $("#pathHead > div > span").html('- None -');
         });

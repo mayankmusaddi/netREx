@@ -354,7 +354,7 @@ function load_neighbour_graph(data, graphid){
             });
             sN.refresh();
             $("#view-textN").html("Regulation");
-            $("#color-textN").html("Red: Up-regulated and Blue: Down-regulated");
+            $("#color-textN").html("Node colour:<br>Red: Up-regulated<br>Blue: Down-regulated");
             $("#pathN").val('default');
 		    $("#pathHeadN > div > span").html('- None -');
         });
